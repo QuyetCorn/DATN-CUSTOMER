@@ -58,7 +58,15 @@
                                             <div class="wrap_log">
                                                 <span class="ti_login ti_ ti-user"></span>
                                                 <div class="log">
-                                                    <a class="text-color" href="dangnhapdangky" title="Đăng nhập">Đăng nhập</a>
+                                                    <ul>
+                                                    @if(Auth::check())
+                                                    <li><a class="text-color" title="Đăng nhập">{{Auth::user()->ho_ten}}</a>
+                                                    <li><a class="text-color" href="dangxuat" title="Đăng xuất">Đăng Xuất</a>
+                                                    @else
+                                                    <a class="text-color" href="dangnhapdangky" title="Đăng nhập">Đăng nhập hoặc Đăng ký</a>
+                                                    @endif
+                                                    </ul>
+                                                    
                                                 </div>
                                             </div>
                                         </div>

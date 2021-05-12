@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+use App\KhachHang;
+use App\User;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +16,11 @@ use Illuminate\Support\Facades\Auth;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::group(['middleware' => 'guest', 'namespace' => 'User'], function() {
+    Route::get('/dangnhapdangky', 'DangNhapDangKyController@index')->name('dangnhapdangky');
+    Route::post('/dangnhap','DangNhapDangKyController@kiemTraDangNhap')->name('dangnhap');
+    Route::get('/dangxuat','DangNhapDangKyController@dangXuat')->name('dangxuat');
+});
 
 //Gr User
 Route::group(['namespace' => 'User'], function() {
@@ -21,7 +29,10 @@ Route::group(['namespace' => 'User'], function() {
     Route::get('/tintuc', 'TinTucController@index')->name('tintuc');
     Route::get('/chitietsanpham', 'CTSPController@index')->name('chitietsanpham');
     Route::get('/chitiettintuc', 'TinTucController@chitiettintuc')->name('chitiettintuc');
-    Route::get('/dangnhapdangky', 'DangNhapDangKyController@index')->name('dangnhapdangky');
+
+    // Route::get('/dangnhapdangky', 'DangNhapDangKyController@index')->name('dangnhapdangky');
+    // Route::post('dangnhap','DangNhapDangKyController@kiemTraDangNhap')->name('dangnhap');
+
     Route::get('/giohang', 'GioHangController@index')->name('giohang');
     Route::get('/thanhtoan', 'ThanhToanController@index')->name('thanhtoan');
     Route::get('/gioithieu', 'GioiThieuController@index')->name('gioithieu');
@@ -36,3 +47,4 @@ Route::group(['namespace' => 'User'], function() {
     Route::get('/sanphammoi', 'DanhMucController@sanphammoiIndex')->name('sanphammoi');
     Route::get('/sanphamnoibat', 'DanhMucController@sanphamnoibatIndex')->name('sanphamnoibat');
 });
+

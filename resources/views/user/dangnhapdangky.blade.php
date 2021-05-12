@@ -1,4 +1,4 @@
-
+ 
 <!DOCTYPE html>
 <html>
 
@@ -30,21 +30,33 @@
 
 	<div class="w3layoutscontaineragileits">
 	<h2></h2>
-		<form action="#" method="post">
-			<input type="email" Name="Username" placeholder="EMAIL" required="">
-			<input type="password" Name="Password" placeholder="MẬT KHẨU" required="">
-			<ul class="agileinfotickwthree">
-				<li>
-					<input type="checkbox" id="brand1" value="">
-					<label for="brand1"><span></span>Nhớ Mật Khẩu</label>
-					<a href="#">Quên Mật Khẩu?</a>
-				</li>
-			</ul>
-			<div class="aitssendbuttonw3ls">
-				<input type="submit" value="ĐĂNG NHẬP">
-				<p> Đăng Ký Tài Khoản Mới <span>→</span> <a class="w3_play_icon1" href="#small-dialog1"> Click Vào Đây</a></p>
-				<div class="clear"></div>
+		<form action="{{ route('dangnhap') }}" method="POST">
+
+			<input type="hidden" name="_token" value="{{csrf_token()}}">
+			<div class="results">
+ 				@if(Session::get('message'))
+				 <div class="alert alert-danger">
+ 					{{ Session::get('message') }}
+				 </div>
+				@endif
+				<br>
 			</div>
+				<span class="text-danger">@error('email') {{ $message }} @enderror</span>
+				<input type="email" name="email" placeholder="EMAIL" value="{{ old ('email')}}"> <br>
+				<span class="text-danger">@error('password') {{ $message }} @enderror</span>
+				<input type="password" name="password" placeholder="MẬT KHẨU" >
+				<ul class="agileinfotickwthree">
+					<li>
+						<input type="checkbox" id="brand1" value="">
+						<label for="brand1"><span></span>Nhớ Mật Khẩu</label>
+						<a href="#">Quên Mật Khẩu?</a>
+					</li>
+				</ul>
+				<div class="aitssendbuttonw3ls">
+					<input type="submit" value="ĐĂNG NHẬP">
+					<p> Đăng Ký Tài Khoản Mới <span>→</span> <a class="w3_play_icon1" href="#small-dialog1"> Click Vào Đây</a></p>
+					<div class="clear"></div>
+				</div>
 		</form>
 	</div>
 	
@@ -112,9 +124,32 @@ Tôi chấp nhận các Điều khoản & Điều kiện</label>
 		});
 																		
 		});
+
+		$(document).ready(function() {
+                $('form').parsley();
+
+                @if (session('status'))
+                    @if (session('status') == 'success')
+                        alertify.success("{!! session('message') !!}");
+                    @else
+                        alertify.error("{!! session('message') !!}");
+                    @endif
+                @endif
+
+                $('#username').focus();
+
+                $(".password").click(function() {
+                    $(this).toggleClass("fa-eye fa-eye-slash");
+                    var input = $($(this).attr("toggle"));
+                    if (input.attr("type") == "password") {
+                        input.attr("type", "text");
+                    } else {
+                        input.attr("type", "password");
+                    }
+                });
+            });
 	</script>
 
 </body>
 <!-- //Body -->
-
 </html>
