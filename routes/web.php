@@ -20,6 +20,7 @@ Route::group(['middleware' => 'guest', 'namespace' => 'User'], function() {
     Route::get('/dangnhapdangky', 'DangNhapDangKyController@index')->name('dangnhapdangky');
     Route::post('/dangnhap','DangNhapDangKyController@kiemTraDangNhap')->name('dangnhap');
     Route::get('/dangxuat','DangNhapDangKyController@dangXuat')->name('dangxuat');
+    Route::post('/dangky','DangNhapDangKyController@Dangky')->name('dangky');
 });
 
 //Gr User

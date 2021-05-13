@@ -65,27 +65,28 @@
 		<div class="contact-form1">
 			<div class="contact-w3-agileits">
 				<h3>Form Đăng Ký</h3>
-				<form action="#" method="post">
+				<form action="{{ route('dangky') }}" method="post">
+				{{ csrf_field() }}
 						<div class="form-sub-w3ls">
-							<input placeholder="Họ Tên"  type="text" required="">
+							<input placeholder="Họ Tên"  type="text" required="" name="txtname">
 							<div class="icon-agile">
 								<i class="fa fa-user" aria-hidden="true"></i>
 							</div>
 						</div>
 						<div class="form-sub-w3ls">
-							<input placeholder="Email" class="mail" type="email" required="">
+							<input placeholder="Email" class="mail" type="email" required="" name="txtemail">
 							<div class="icon-agile">
 								<i class="fa fa-envelope-o" aria-hidden="true"></i>
 							</div>
 						</div>
 						<div class="form-sub-w3ls">
-							<input placeholder="Mật Khẩu"  type="password" required="">
+							<input placeholder="Mật Khẩu"  type="password" required=""name="txtpassword">
 							<div class="icon-agile">
 								<i class="fa fa-unlock-alt" aria-hidden="true"></i>
 							</div>
 						</div>
 						<div class="form-sub-w3ls">
-							<input placeholder="Nhập Lại Mật Khẩu"  type="password" required="">
+							<input placeholder="Nhập Lại Mật Khẩu"  type="password" required=""name="txtrepassword">
 							<div class="icon-agile">
 								<i class="fa fa-unlock-alt" aria-hidden="true"></i>
 							</div>

@@ -14,7 +14,10 @@ class DangNhapDangKyController extends Controller
     public function index(){
         return view('user.dangnhapdangky');
     }
-
+    public function __construct()
+    {
+        
+    }
     public function kiemTraDangNhap(Request $request){
  
         $this->validate($request,
@@ -72,5 +75,18 @@ class DangNhapDangKyController extends Controller
     public function dangXuat() {
         Auth::logout();
         return redirect()->route('trangchu');
+    }
+    public function dangky(Request $request) {
+        $user = new khachhang;
+        $user->ho_ten = $request->txtname;
+        $user->email = $request->txtemail;
+        $user->password = Hash::make($request->txtpassword);
+        if($request->txtrepassword===$request->txtpassword)
+        {
+        $user->save();
+        return redirect()->route('dangnhapdangky');
+        }
+        else
+        return back()->with('message','nhập lại mật khẩu không chính xác!');
     }
 }
