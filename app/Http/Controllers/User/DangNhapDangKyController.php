@@ -18,6 +18,22 @@ class DangNhapDangKyController extends Controller
     {
         
     }
+
+    public function dangky(Request $request) {
+        $user = new khachhang;
+        $user->ho_ten = $request->txtname;
+        $user->email = $request->txtemail;
+        $user->password = Hash::make($request->txtpassword);
+        if($request->txtrepassword===$request->txtpassword)
+        {
+        $user->save();
+        return redirect()->route('dangnhapdangky')->with('message','Đăng ký thành công !');;
+        }
+        else
+        return back()->with('message','nhập lại mật khẩu không chính xác!');
+    }
+
+
     public function kiemTraDangNhap(Request $request){
  
         $this->validate($request,
@@ -44,49 +60,12 @@ class DangNhapDangKyController extends Controller
         } else{
             return back()->with('message','Email hoặc mật khẩu chưa chính xác!');
         }
-
-        // $email = KhachHang::where('email','=',$request->email)->first();
-        // $password = KhachHang::where('password','=',$request->password)->first();
-        // if($email) {
-        //     if($password) {
-        //         $request->session()->put('LoggedUser',$email->id);
-        //         return redirect()->route('trangchu');
-        //     }else{
-        //         return back()->with('message','Mật khẩu không chính xác!');
-        //     }
-        // } else {
-        //     return back()->with('message','Email đăng nhập không tồn tại!');
-        // }
-
-        // $email = KhachHang::where('email','=',$request->email)->first();
-        // //$password = KhachHang::where('password','=',$request->password)->first();
-        // if($email) {
-        //     if(Hash::check($request->password,$email->password)) {
-        //         $request->session()->put('LoggedUser',$email->id);
-        //         return redirect('trangchu');
-        //     }else{
-        //         return back()->with('message','Mật khẩu không chính xác!');
-        //     }
-        // } else {
-        //     return back()->with('message','Email đăng nhập không tồn tại!');
-        // }
     }
 
-    public function dangXuat() {
+    public function dangxuat() {
         Auth::logout();
         return redirect()->route('trangchu');
     }
-    public function dangky(Request $request) {
-        $user = new khachhang;
-        $user->ho_ten = $request->txtname;
-        $user->email = $request->txtemail;
-        $user->password = Hash::make($request->txtpassword);
-        if($request->txtrepassword===$request->txtpassword)
-        {
-        $user->save();
-        return redirect()->route('dangnhapdangky');
-        }
-        else
-        return back()->with('message','nhập lại mật khẩu không chính xác!');
-    }
+
+    
 }

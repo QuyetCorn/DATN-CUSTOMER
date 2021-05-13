@@ -16,24 +16,25 @@ use App\User;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::group(['middleware' => 'guest', 'namespace' => 'User'], function() {
-    Route::get('/dangnhapdangky', 'DangNhapDangKyController@index')->name('dangnhapdangky');
-    Route::post('/dangnhap','DangNhapDangKyController@kiemTraDangNhap')->name('dangnhap');
-    Route::get('/dangxuat','DangNhapDangKyController@dangXuat')->name('dangxuat');
-    Route::post('/dangky','DangNhapDangKyController@Dangky')->name('dangky');
-});
+
+    
+
 
 //Gr User
 Route::group(['namespace' => 'User'], function() {
+    //Đăng nhập đăng ký đăng xuất
+    Route::get('/dangnhapdangky', 'DangNhapDangKyController@index')->name('dangnhapdangky');
+    Route::post('/dangnhap','DangNhapDangKyController@kiemTraDangNhap')->name('dangnhap');
+    Route::get('/dangxuat','DangNhapDangKyController@dangxuat')->name('dangxuat');
+    Route::post('/dangky','DangNhapDangKyController@Dangky')->name('dangky');
+
+
+    //page
     Route::get('/trangchu', 'TrangChuController@index')->name('trangchu');
     Route::get('/sanpham', 'SanPhamController@index')->name('sanpham');
     Route::get('/tintuc', 'TinTucController@index')->name('tintuc');
     Route::get('/chitietsanpham', 'CTSPController@index')->name('chitietsanpham');
     Route::get('/chitiettintuc', 'TinTucController@chitiettintuc')->name('chitiettintuc');
-
-    // Route::get('/dangnhapdangky', 'DangNhapDangKyController@index')->name('dangnhapdangky');
-    // Route::post('dangnhap','DangNhapDangKyController@kiemTraDangNhap')->name('dangnhap');
-
     Route::get('/giohang', 'GioHangController@index')->name('giohang');
     Route::get('/thanhtoan', 'ThanhToanController@index')->name('thanhtoan');
     Route::get('/gioithieu', 'GioiThieuController@index')->name('gioithieu');
