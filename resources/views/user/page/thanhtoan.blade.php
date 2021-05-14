@@ -88,10 +88,14 @@
                                     </h2>
 
 
-                                    <a href="/account/login?returnUrl=/checkout/c68a360ec1344491884313dbb3c67508">
-                                        <i class="fa fa-user-circle-o fa-lg"></i>
-                                        <span>Đăng nhập </span>
-                                    </a>
+                                    <ul>
+                                                    @if(Auth::check())
+                                                    <li><a class="text-color">{{Auth::user()->ho_ten}}</a>
+                                                    <li><a class="text-color" href="dangxuat" title="Đăng xuất">Đăng Xuất</a>
+                                                    @else
+                                                    <li><a class="text-color" href="dangnhapdangky" title="Đăng nhập">Đăng nhập hoặc Đăng ký</a>
+                                                    @endif
+                                                    </ul>
 
 
                                 </div>
