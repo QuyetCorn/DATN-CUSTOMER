@@ -50,6 +50,10 @@ Route::group(['namespace' => 'User'], function() {
     Route::get('/sanphamnoibat', 'DanhMucController@sanphamnoibatIndex')->name('sanphamnoibat');
 });
 
+Route::get('/mess', function () {
+    return view('user.page.message');
+});
+
 
 Auth::routes();
 
