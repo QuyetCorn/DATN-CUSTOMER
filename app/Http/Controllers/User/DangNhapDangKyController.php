@@ -21,8 +21,8 @@ class DangNhapDangKyController extends Controller
 
     public function dangky(Request $request) {
         $user = new khachhang;
-        $email = new khachhang::where('email','=', $request->txtemail)->count();
-        if( $email){
+        $email = KhachHang::where('email','=',$request->email)->count();
+        if( $email>0){
             return back()->with('message','Email da tồn tại!');
         }
         else{
