@@ -21,16 +21,23 @@ class DangNhapDangKyController extends Controller
 
     public function dangky(Request $request) {
         $user = new khachhang;
-        $user->ho_ten = $request->txtname;
-        $user->email = $request->txtemail;
-        $user->password = Hash::make($request->txtpassword);
-        if($request->txtrepassword===$request->txtpassword)
-        {
-        $user->save();
-        return redirect()->route('dangnhapdangky')->with('message','Đăng ký thành công !');;
+        $email = new khachhang::where('email','=', $request->txtemail)->count();
+        if( $email){
+            return back()->with('message','Email da tồn tại!');
         }
-        else
-        return back()->with('message','nhập lại mật khẩu không chính xác!');
+        else{
+            if($request->txtrepassword===$request->txtpassword)
+            {
+            $user->ho_ten = $request->txtname;
+            $user->email = $request->txtemail;
+            $user->password = Hash::make($request->txtpassword);
+        
+            $user->save();
+            return back()->with('message','Đăng ký thành công !');;
+            }
+            else
+            return back()->with('message','nhập lại mật khẩu không chính xác!');
+         }
     }
 
 
