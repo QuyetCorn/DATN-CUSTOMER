@@ -14,9 +14,9 @@ class ChiTietSanPham extends Model
         return $this->belongsTo('App\LoaiSanPham','loai_sp_id','id');
     }
 
-    public function chitiethoadon() {
-        return $this->hasMany('App\ChiTietHoaDon','san_pham_id','id');
-    }
+    // public function chitiethoadon() {
+    //     return $this->hasMany('App\ChiTietHoaDon','san_pham_id','id');
+    // }
 
     public function nhasanxuat() {
         return $this->hasOne('App\NhaSanXuat','nha_sx_id','id');

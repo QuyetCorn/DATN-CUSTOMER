@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class HoaDon extends Migration
+class CreateHoaDon extends Migration
 {
     /**
      * Run the migrations.
@@ -31,6 +31,6 @@ class HoaDon extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('hoa_don');
     }
 }

@@ -19,7 +19,7 @@ class CreateChiTietHoaDon extends Migration
             $table->foreignId('san_pham_id');
             $table->integer('so_luong')->default(0);
             $table->double('don_gia');
-            $table->double('giam_gia');->nullable();
+            $table->double('giam_gia')->nullable();
             $table->double('thanh_tien');
             $table->timestamps();
             $table->softDeletes();
