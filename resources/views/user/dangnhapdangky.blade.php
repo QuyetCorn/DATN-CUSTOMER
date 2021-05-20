@@ -93,7 +93,7 @@
 						</div>
 					<div class="login-check">
 						 <label class="checkbox"><input type="checkbox" name="checkbox" checked="">
-Tôi chấp nhận các Điều khoản & Điều kiện</label>
+							Tôi chấp nhận các Điều khoản & Điều kiện</label>
 					</div>
 					<div class="submit-w3l">
 						<input type="submit" value="Đăng Ký">

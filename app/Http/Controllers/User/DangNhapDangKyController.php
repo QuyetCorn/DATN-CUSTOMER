@@ -16,17 +16,16 @@ class DangNhapDangKyController extends Controller
     }
     public function __construct()
     {
-        
     }
 
     public function dangky(Request $request) {
         $user = new khachhang;
-        $email = KhachHang::where('email','=',$request->email)->count();
-        if( $email>0){
-            return back()->with('message','Email da tồn tại!');
+        $email = KhachHang::where('email','Like',$request->txtemail) ->first();
+        if($email){
+            return back()->with('message','Email đã tồn tại!');
         }
         else{
-            if($request->txtrepassword===$request->txtpassword)
+            if($request->txtrepassword==$request->txtpassword)
             {
             $user->ho_ten = $request->txtname;
             $user->email = $request->txtemail;
@@ -74,5 +73,8 @@ class DangNhapDangKyController extends Controller
         return redirect()->route('trangchu');
     }
 
+    public function nguoidung() {
+        return view('user.page.NguoiDung');
+    }
     
 }

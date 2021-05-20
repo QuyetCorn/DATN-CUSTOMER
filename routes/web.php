@@ -27,7 +27,7 @@ Route::group(['namespace' => 'User'], function() {
     Route::post('/dangnhap','DangNhapDangKyController@kiemTraDangNhap')->name('dangnhap');
     Route::get('/dangxuat','DangNhapDangKyController@dangxuat')->name('dangxuat');
     Route::post('/dangky','DangNhapDangKyController@Dangky')->name('dangky');
-
+    Route::get('/nguoidung','DangNhapDangKyController@nguoidung')->name('nguoidung');
 
     //page
     Route::get('/trangchu', 'TrangChuController@index')->name('trangchu');
