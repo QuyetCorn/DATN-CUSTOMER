@@ -9,4 +9,8 @@ class KhachHang extends Model
 {
     use HasFactory;
     protected $table = "khach_hang";
+
+    public function hoadon() {
+        return $this->hasMany('App\HoaDon','khach_hang_id','id');
+    }
 }
