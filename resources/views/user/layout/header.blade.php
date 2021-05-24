@@ -60,7 +60,7 @@
                                                 <div class="log">
                                                     <ul>
                                                     @if(Auth::check())
-                                                    <li><a class="text-color"href="nguoidung">{{Auth::user()->ho_ten}}</a>
+                                                    <li><a class="text-color"href="{{route('nguoidung',Auth::user()->id)}}">{{Auth::user()->ho_ten}}</a>
                                                     <li><a class="text-color" href="dangxuat" title="Đăng xuất">Đăng Xuất</a>
                                                     @else
                                                     <li><a class="text-color" href="dangnhapdangky" title="Đăng nhập">Đăng nhập hoặc Đăng ký</a>

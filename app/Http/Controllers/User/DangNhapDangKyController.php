@@ -73,8 +73,5 @@ class DangNhapDangKyController extends Controller
         return redirect()->route('trangchu');
     }
 
-    public function nguoidung() {
-        return view('user.page.NguoiDung');
-    }
-    
+  
 }

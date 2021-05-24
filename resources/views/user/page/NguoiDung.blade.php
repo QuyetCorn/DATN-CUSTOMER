@@ -49,7 +49,7 @@
                         </div>
                         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 details-pro">
                             <div class="title_pr">
-                                <h1 class="title-product" itemprop="name">Tên Người Dùng</h1>
+                                <h1 class="title-product" itemprop="name">{{$user->ho_ten}}</h1>
                                 
                                 <div class="reviews_details_product">
                                     <div class="sapo-product-reviews-badge sapo-product-reviews-badge-detail" data-id="9724997"></div>
@@ -66,7 +66,7 @@
                                     
                                         <span>
                                             
-                                            123@admin
+                                        {{$user->email}}
                                             
                                         </span>
                                 
@@ -76,7 +76,7 @@
                                     
                                         <span>
                                             
-                                            123@admin
+                                        {{$user->sdt}}
                                             
                                         </span>
                                 
@@ -86,7 +86,7 @@
                                     
                                         <span>
                                             
-                                            123@admin
+                                        {{$user->dia_chi}}
                                             
                                         </span>
                                 
@@ -96,7 +96,7 @@
                                     
                                         <span>
                                             
-                                            123@admin
+                                        {{$user->gioi_tinh}}
                                             
                                         </span>
                                 
@@ -111,13 +111,14 @@
                                         
                                     </div>
                                     <div class="form-group form_button_details ">                           
-                                        <button type="submit" class="btn btn-lg button_cart_buy_enable add_to_cart " id="btn-add">
+                                        <button type="submit" class="btn btn-lg button_cart_buy_enable add_to_cart" onclick= "edit_khachhang({{ $user->id }})">
                                             <i class="fa fa-shopping-basket hidden"></i>&nbsp;&nbsp;<span>Cập nhật Thông Tin</span>
                                         </button>									
-                                        <a class="btn btn-lg button_cart_buy_enable add_to_cart " href=".btn-submit"> Đổi Mật Khẩu </a>
-                                        
+                                        <button type="button" class="btn btn-lg button_cart_buy_enable add_to_cart " data-toggle="modal" data-target="#Doi-Password">
+                                        Đổi Mật Khẩu
+                                        </button>
 
-                                    </div>
+                                      
                                     
                         
                             </div>
@@ -128,7 +129,7 @@
                 </div>
                 <!-- Tab -->
 
-    </div>
+                 </div>
 
                                     </div>
                                 </div>	
@@ -141,98 +142,166 @@
                 </div>
                 
 
-
-
-
-
-
                 <!-- Endtab -->
                 </div>
             </div>
         </div>	
-        
  </section>
-	<!-- for register popup -->
-	
-    <div class="modal fade" id="formModal" aria-hidden="true">
+
+   	<!-- for register popup -->
+      <!-- Modal password -->
+        <div class="modal fade" id="Doi-Password" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="modal-header">
-                        <h4 class="modal-title" id="formModalLabel">Create Todo</h4>
-                    </div>
-                    <div class="modal-body">
-                        <form id="myForm" name="myForm" class="form-horizontal" novalidate="">
-
-                            <div class="form-group">
-                                <label>Title</label>
-                                <input type="text" class="form-control" id="title" name="title"
-                                        placeholder="Enter title" value="">
-                            </div>
-
-                            <div class="form-group">
-                                <label>Description</label>
-                                    <input type="text" class="form-control" id="description" name="description"
-                                        placeholder="Enter Description" value="">
-                            </div>
-                        </form>
-                    </div>
+                <div class="modal-header">
+                    <h5 class="modal-title" id="password">Đổi Mật Khẩu</h5>
+                    
+                </div>
+                <div class="modal-body">
+                <form id="form-password" >
+				{{ csrf_field() }}
+						<div class="form-sub-w3ls">
+							<input placeholder="Mật Khẩu"  type="password" required="" name="txtPassword" id="Password">
+							
+						</div>
+                        <div class="form-sub-w3ls">
+							<input placeholder="Mật Khẩu Mới"  type="password" required="" id="Newpassword">
+						
+						</div>
+						<div class="form-sub-w3ls">
+							<input placeholder="Nhập Lại Mật Khẩu"  type="password" required="" id="Repassword">
+							
+						</div>
+					</div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" id="btn-save" value="add">Save changes
-                        </button>
-                        <input type="hidden" id="todo_id" name="todo_id" value="0">
+                    <button type="submit" class="btn btn-primary">Save changes</button>
                     </div>
+				</form>
+                </div>
+               
                 </div>
             </div>
+            </div>
+
+        </div>
+         <!-- Modal update -->
+         <div class="modal fade" id="update-khachhang" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="update">Đổi thông tin</h5>
+                    
+                </div>
+                <div class="modal-body">
+                <form id="form-update" >
+				{{ csrf_field() }}
+                        <input type="hidden" id="id" name="id">
+						<div class="form-sub-w3ls">
+							<input placeholder="họ tên" type="text" required="" name="name" id="name">
+							
+						</div>
+                        <div class="form-sub-w3ls">
+							<input placeholder="Số Điện Thoại"type="text" required="" name="phone" id="phone">
+						
+						</div>
+						<div class="form-sub-w3ls">
+							<input placeholder="Địa Chỉ"type="text" required="" name="lat" id="lat">
+							
+						</div>
+                        <div class="form-sub-w3ls">
+							<input placeholder="Giới Tính"  type="text" required="" name="type" id="type">
+							
+						</div>
+					</div>
+                    <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Save changes</button>
+                    </div>
+				</form>
+                </div>
+               
+                </div>
+            </div>
+            </div>
+
         </div>
 	<!-- //for register popup -->
-    
-<script type="text/javascript">
-    $(document).ready(function() {
-                $(".btn-submit").click(function(e){
-                    e.preventDefault();
-
-                    var _token = $("input[name='_token']").val();
-                    var email = $("#email").val();
-                    var pswd = $("#pwd").val();
-                    var address = $("#address").val();
-
-                    $.ajax({
-                        url: "{{ route('ajax.request.store') }}",
-                        type:'POST',
-                        data: {_token:_token, email:email, pswd:pswd,address:address},
-                        success: function(data) {
-                        printMsg(data);
-                        }
-                    });
-                }); 
-
-                function printMsg (msg) {
-                if($.isEmptyObject(msg.error)){
-                    console.log(msg.success);
-                    $('.alert-block').css('display','block').append('<strong>'+msg.success+'</strong>');
-                }else{
-                    $.each( msg.error, function( key, value ) {
-                    $('.'+key+'_err').text(value);
-                    });
-                }
-                }
-            });
-   
-</script>
-
-
-
 
 
 
     
 <link href="//bizweb.dktcdn.net/100/286/794/themes/637857/assets/bpr-products-module.css?1618737291739" rel="stylesheet" type="text/css" />
 <div class="sapo-product-reviews-module"></div>
-    
 
+
+
+<script type="text/javascript">
+           
+        $("#form-password").submit(function(e){
+            e.preventDefault();
+            var pswd = $("#Password").val();
+            var newpswd = $("#Newpassword").val();
+            var repswd = $("#Repassword").val();
+            $.ajax({
+                url: "{{ route('doipassword',$user->id)}}",
+                type:'POST',
+                data: {
+                    Password :pswd,
+                    Newpassword :newpswd,
+                    Repassword :repswd
+                },
+                success: function(response) {
+                  $("#form-password").reset();
+                  $("#Doi-Password").modal("hide");
+                },
+                orror: function(response) {
+                  $("#Doi-Password").modal("hide");
+                },
+            });
+        });
+        
+	</script>    
+
+<script type="text/javascript">
+           
+        function edit_khachhang(id)
+        {
+            $.get('/edits_khachhang/'+id, function(users){
+                $('#id').val(users.id);
+                $('#name').val(users.ho_ten);
+                $('#phone').val(users.sdt);
+                $('#lat').val(users.dia_chi);
+                $('#type').val(users.gioi_tinh);
+                $("#update-khachhang").modal('toggle');
+            })
+            
+        }
+        $("#form-update").submit(function(e){
+            e.preventDefault();
+            var id= $('#id').val();
+            var name= $('#name').val();
+             var phone=  $('#phone').val();
+             var lat = $('#lat').val();
+            var type = $('#type').val();
+            $.ajax({
+                url: "{{ route('update_nguoidung')}}",
+                type:'PUT',
+                data: {
+                    id:id,
+                    name:name,
+                    phone:phone,
+                    lat:lat,
+                    types:type,
+                },
+                success: function(response) {
+                  $("#form-update").reset();
+                  $("#form-update").modal("hide");
+                },
+            });
+        });
+        
+	</script>    
 
 @endsection	
-
 
     <script type='text/javascript'>
     

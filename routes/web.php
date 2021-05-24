@@ -27,8 +27,12 @@ Route::group(['namespace' => 'User'], function() {
     Route::post('/dangnhap','DangNhapDangKyController@kiemTraDangNhap')->name('dangnhap');
     Route::get('/dangxuat','DangNhapDangKyController@dangxuat')->name('dangxuat');
     Route::post('/dangky','DangNhapDangKyController@Dangky')->name('dangky');
-    Route::get('/nguoidung','DangNhapDangKyController@nguoidung')->name('nguoidung');
-
+   
+   //người dùng
+    Route::get('/nguoidung/{id}','khachhangController@nguoidung')->name('nguoidung');
+    Route::post('/doipassword','khachhangController@nguoidung')->name('doipassword');
+    Route::get('/edits_khachhang/{id}','khachhangController@edit_khachhang');
+    Route::put('/edit_khachhang','khachhangController@edit')->name('update_nguoidung');
     //page
     Route::get('/trangchu', 'TrangChuController@index')->name('trangchu');
     Route::get('/sanpham', 'SanPhamController@index')->name('sanpham');
@@ -66,3 +70,4 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
