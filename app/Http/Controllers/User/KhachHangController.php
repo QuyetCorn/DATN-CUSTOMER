@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use App\Models\KhachHang;
+use App\Classes\Helper;
 use Session;
 class KhachHangController extends Controller
 {
@@ -15,26 +16,43 @@ class KhachHangController extends Controller
         return view('user.page.NguoiDung',compact('user'));
     }
     
-    public function doipassword($id,request $request) {
-        $user = khachhang::findOrFail($id);
-        $pass = Hash::make($request->txtpassword);
+    public function doipassword(request $request) {
+        $user = khachhang::findOrFail($request->id);
+        $this->validate($request, [
+            'txtpassword' => 'required',
+        ]);
+        $pass = Hash::make($request->password);
         if(Auth::check($pass, $user->password))
         {
-            $this->validate($request, [
-                'txtpassword' => 'required',
-            ]);
-            $user->password = Hash::make($request->txtpassword);
+            $user->password = $pass;
             $user->save();
         }
         return view('user.page.NguoiDung',compact('user'));
          
     }
-    public function edit_khachhang($id){
+    public function getedit_khachhang($id){
         $user = khachhang::findOrFail($id);
-        return view('user.page.NguoiDung',compact('user'));
+        return response()->json($user);
     }
-    public function edit(request $request){
+
+    public function edit_khachhang(request $request,Khachhang $khachhang){
+
+        //$data=$request->validate([
+        //    'lat' => 'required',
+        //    'name' => 'required',
+        //    'phone' => 'required',
+        //    'type' => 'required',
+        //]);
+      
+        //$khachhang->update($data);
+
         $user = khachhang::find( $request->id);
+        $user->hinh_dai_dien = Helper::imageUpload($request->image);
+        $user->ho_ten=$request->name;
+        $user->sdt=$request->phone;
+        $user->dia_chi=$request->lat;
+        $user->gioi_tinh= $request->type;
+        $user->save();
         return view('user.page.NguoiDung',compact('user'));
     }
 }

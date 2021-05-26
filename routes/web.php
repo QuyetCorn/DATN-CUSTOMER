@@ -30,9 +30,9 @@ Route::group(['namespace' => 'User'], function() {
    
    //người dùng
     Route::get('/nguoidung/{id}','khachhangController@nguoidung')->name('nguoidung');
-    Route::post('/doipassword','khachhangController@nguoidung')->name('doipassword');
-    Route::get('/edits_khachhang/{id}','khachhangController@edit_khachhang');
-    Route::put('/edit_khachhang','khachhangController@edit')->name('update_nguoidung');
+    Route::put('/doipassword','khachhangController@nguoidung')->name('doipassword');
+    Route::get('/edits_khachhang/{id}','khachhangController@getedit_khachhang');
+    Route::put('/edit_khachhang','khachhangController@edit_khachhang')->name('update_nguoidung');
     //page
     Route::get('/trangchu', 'TrangChuController@index')->name('trangchu');
     Route::get('/sanpham', 'SanPhamController@index')->name('sanpham');

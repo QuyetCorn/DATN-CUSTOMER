@@ -35,16 +35,12 @@
             
                 <div class="details">
                     <div class="rows">
-                        <div class="product-detail-left product-images col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                        <div class="product-detail-left col-xs-12 col-sm-6 col-md-6 col-lg-6">
                             <div class="row">
                                 <div class="col_large_default large-image"  >
-                                
-                                        <img style=" border: 1px #d4d4d4 solid; padding: 10px;border-radius:50%;-moz-border-radius:50%; -webkit-border-radius:50%;" class="img-responsive col-sm-8" alt="Balo Mikkor Irvin Charcoal/Orange" src="assets/images/khanh.jpg" data-zoom-image="https://bizweb.dktcdn.net/100/286/794/products/1-3.jpg?v=1517327927920"/>
-                                    
+                                        <img style=" border: 1px #d4d4d4 solid; padding: 10px;border-radius:50%;-moz-border-radius:50%; -webkit-border-radius:50%;" class="img-responsive col-sm-8" src="{!!asset('assets/images/'.$user->hinh_dai_dien)!!}" data-zoom-image="https://bizweb.dktcdn.net/100/286/794/products/1-3.jpg?v=1517327927920"/>
                                 </div>
                                
-                                
-                                
                             </div>
                         </div>
                         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 details-pro">
@@ -160,7 +156,8 @@
                 <div class="modal-body">
                 <form id="form-password" >
 				{{ csrf_field() }}
-						<div class="form-sub-w3ls">
+                    <input type="hidden" id="id" name="id">
+						<div class="form-sub-w3ls ">
 							<input placeholder="Mật Khẩu"  type="password" required="" name="txtPassword" id="Password">
 							
 						</div>
@@ -196,6 +193,21 @@
                 <form id="form-update" >
 				{{ csrf_field() }}
                         <input type="hidden" id="id" name="id">
+                        
+                        <div class="col_large_default large-image margin-bottom-10"  >
+                        <label type="text">hình ảnh:</label>
+                        <img id="image_show" style=" border: 1px #d4d4d4 solid;border-radius:50%;-moz-border-radius:50%; -webkit-border-radius:50%;" class="img-responsive" src="{!!asset('assets/images/'.$user->hinh_dai_dien)!!}" data-zoom-image="https://bizweb.dktcdn.net/100/286/794/products/1-3.jpg?v=1517327927920"/>    
+                        <div class="form-sub-w3ls margin-top-10">
+                        <label for="file"> choose profile image: </label>
+                            <input  type="file" required=""name="image" id="image_file"> 
+						</div>
+                        
+                         </div>
+                        
+                     
+							
+
+						
 						<div class="form-sub-w3ls">
 							<input placeholder="họ tên" type="text" required="" name="name" id="name">
 							
@@ -212,6 +224,8 @@
 							<input placeholder="Giới Tính"  type="text" required="" name="type" id="type">
 							
 						</div>
+                        
+                       
 					</div>
                     <div class="modal-footer">
                     <button type="submit" class="btn btn-primary">Save changes</button>
@@ -238,24 +252,29 @@
            
         $("#form-password").submit(function(e){
             e.preventDefault();
+            var id= $('#id').val();
             var pswd = $("#Password").val();
             var newpswd = $("#Newpassword").val();
             var repswd = $("#Repassword").val();
+            var _token=$("input[name=_token]").val();
             $.ajax({
-                url: "{{ route('doipassword',$user->id)}}",
-                type:'POST',
+                url: "{{ route('doipassword')}}",
+                type:'PUT',
                 data: {
+                    id:id,
                     Password :pswd,
                     Newpassword :newpswd,
-                    Repassword :repswd
+                    Repassword :repswd,
+                    _token:_token
                 },
                 success: function(response) {
+                    $('#id').text(response.id);
+                    $('# Password').text(response.password);
+                    $('#Newpassword').text();
+                    $('#Repassword').text();
                   $("#form-password").reset();
                   $("#Doi-Password").modal("hide");
-                },
-                orror: function(response) {
-                  $("#Doi-Password").modal("hide");
-                },
+                }
             });
         });
         
@@ -271,31 +290,44 @@
                 $('#phone').val(users.sdt);
                 $('#lat').val(users.dia_chi);
                 $('#type').val(users.gioi_tinh);
+                $('#image').val(users.image);
                 $("#update-khachhang").modal('toggle');
-            })
+            });
             
         }
         $("#form-update").submit(function(e){
             e.preventDefault();
             var id= $('#id').val();
             var name= $('#name').val();
-             var phone=  $('#phone').val();
-             var lat = $('#lat').val();
+            var phone=  $('#phone').val();
+            var lat = $('#lat').val();
             var type = $('#type').val();
+           var image= $('#image_file').val();
+            var _token=$("input[name=_token]").val();
             $.ajax({
                 url: "{{ route('update_nguoidung')}}",
                 type:'PUT',
                 data: {
                     id:id,
-                    name:name,
+                   name:name,
                     phone:phone,
                     lat:lat,
-                    types:type,
+                    type:type,
+                    image:image,
+                    _token:_token
                 },
                 success: function(response) {
-                  $("#form-update").reset();
+                    $('#id').text(response.id);
+                    $('#name').text(response.ho_ten);
+                    $('#phone').text(response.sdt);
+                    $('#lat').text(response.dia_chi);
+                    $('#type').text(response.gioi_tinh);
+                    $('#image').text(response.hinh_dai_dien);
+                    $('#update-khachhang').modal('toggle');
+                    $("#form-update").reset();
                   $("#form-update").modal("hide");
-                },
+                }
+               
             });
         });
         
