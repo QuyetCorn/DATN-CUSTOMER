@@ -3,98 +3,40 @@
 
 
 <section class="awe-section-1">
-        <h3 class="hidden">&nbsp;</h3>
+        
         <section class="section_slider_banner">
-            <h3 class="hidden">&nbsp;</h3>
+            
             <div class="container">
-                <div class="">
+                
                     <div class="slider-layout-1 col-md-9 col-sm-12 col-xs-12">
                         <div class="owl-carousel" data-nav="true" data-lg-items="1" data-md-items="1" data-height="false" data-xs-items="1" data-sm-items="1" data-margin="0">
     
     
-    
+                            @foreach($slide as $sl)
                             <div class="item">
                                 <a href="#">
                                     <picture>
-                                        <source media="(max-width: 480px)" srcset="//bizweb.dktcdn.net/thumb/large/100/286/794/themes/637857/assets/slide_img_1.png?1618737291739">
-                                        <source media="(min-width: 481px) and (max-width: 600px)" srcset="//bizweb.dktcdn.net/100/286/794/themes/637857/assets/slide_img_1.png?1618737291739">
-                                        <source media="(min-width: 601px) and (max-width: 1023px)" srcset="//bizweb.dktcdn.net/100/286/794/themes/637857/assets/slide_img_1.png?1618737291739">
-                                        <source media="(min-width: 1024px) and (max-width: 1199px)" srcset="//bizweb.dktcdn.net/100/286/794/themes/637857/assets/slide_img_1.png?1618737291739">
-                                        <source media="(min-width: 1200px)" srcset="//bizweb.dktcdn.net/100/286/794/themes/637857/assets/slide_img_1.png?1618737291739">
-                                        <img class="border-radius-10" src="//bizweb.dktcdn.net/100/286/794/themes/637857/assets/slide_img_1.png?1618737291739" alt="slide 1" />
+                                        <img style="height: 585px;"class="border-radius-10" src="assets/images/{{$sl->image}}" alt="slide {{$sl->id}}" />
                                     </picture>
                                 </a>
                             </div>
-    
-    
-    
-    
-    
-                            <div class="item">
-                                <a href="#">
-                                    <picture>
-                                        <source media="(max-width: 480px)" srcset="//bizweb.dktcdn.net/thumb/large/100/286/794/themes/637857/assets/slide_img_2.png?1618737291739">
-                                        <source media="(min-width: 481px) and (max-width: 600px)" srcset="//bizweb.dktcdn.net/100/286/794/themes/637857/assets/slide_img_2.png?1618737291739">
-                                        <source media="(min-width: 601px) and (max-width: 1023px)" srcset="//bizweb.dktcdn.net/100/286/794/themes/637857/assets/slide_img_2.png?1618737291739">
-                                        <source media="(min-width: 1024px) and (max-width: 1199px)" srcset="//bizweb.dktcdn.net/100/286/794/themes/637857/assets/slide_img_2.png?1618737291739">
-                                        <source media="(min-width: 1200px)" srcset="//bizweb.dktcdn.net/100/286/794/themes/637857/assets/slide_img_2.png?1618737291739">
-                                        <img class="border-radius-10" src="//bizweb.dktcdn.net/100/286/794/themes/637857/assets/slide_img_2.png?1618737291739" alt="slide 2" />
-                                    </picture>
-                                </a>
-                            </div>
-    
-    
-    
-    
-    
-                            <div class="item">
-                                <a href="#">
-                                    <picture>
-                                        <source media="(max-width: 480px)" srcset="//bizweb.dktcdn.net/thumb/large/100/286/794/themes/637857/assets/slide_img_3.png?1618737291739">
-                                        <source media="(min-width: 481px) and (max-width: 600px)" srcset="//bizweb.dktcdn.net/100/286/794/themes/637857/assets/slide_img_3.png?1618737291739">
-                                        <source media="(min-width: 601px) and (max-width: 1023px)" srcset="//bizweb.dktcdn.net/100/286/794/themes/637857/assets/slide_img_3.png?1618737291739">
-                                        <source media="(min-width: 1024px) and (max-width: 1199px)" srcset="//bizweb.dktcdn.net/100/286/794/themes/637857/assets/slide_img_3.png?1618737291739">
-                                        <source media="(min-width: 1200px)" srcset="//bizweb.dktcdn.net/100/286/794/themes/637857/assets/slide_img_3.png?1618737291739">
-                                        <img class="border-radius-10" src="//bizweb.dktcdn.net/100/286/794/themes/637857/assets/slide_img_3.png?1618737291739" alt="slide 3" />
-                                    </picture>
-                                </a>
-                            </div>
-    
-    
-    
+                            @endforeach
     
     
                         </div>
                     </div>
-    
+
+                    @foreach($sup_slide as $ssl)
                     <div class="banner-top-layout-1 col-md-3 col-sm-12 col-xs-12 clearfix spcustom_html">
     
-    
-    
-    
-    
                         <div class="col-md-12 col-xs-4">
-                            <a class="banner banner-1" href="#"><img class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/100/286/794/themes/637857/assets/banner_slide_img_1.png?1618737291739" alt="banner 1"></a>
-                        </div>
-    
-    
-    
-    
-    
-                        <div class="col-md-12 col-xs-4">
-                            <a class="banner banner-2" href="#"><img class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/100/286/794/themes/637857/assets/banner_slide_img_2.png?1618737291739" alt="banner 2"></a>
-                        </div>
-    
-    
-    
-    
-    
-                        <div class="col-md-12 col-xs-4">
-                            <a class="banner banner-3" href="#"><img class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/100/286/794/themes/637857/assets/banner_slide_img_3.png?1618737291739" alt="banner 3"></a>
+                            <a class="banner banner-{{$ssl->id}}" href="#"><img class="img-responsive lazyload" src="assets/images/{{$ssl->images}}" data-src="assets/images/{{$ssl->image}}" alt="banner {{$ssl->id}}"></a>
                         </div>
     
                     </div>
-                </div>
+                    @endforeach 
+                    
+                
             </div>
         </section>
     </section>
