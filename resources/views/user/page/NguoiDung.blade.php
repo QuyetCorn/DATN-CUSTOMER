@@ -110,7 +110,12 @@
                                         <button type="submit" class="btn btn-lg button_cart_buy_enable add_to_cart" onclick= "edit_khachhang({{ $user->id }})">
                                             <i class="fa fa-shopping-basket hidden"></i>&nbsp;&nbsp;<span>Cập nhật Thông Tin</span>
                                         </button>									
-                                        <button type="button" class="btn btn-lg button_cart_buy_enable add_to_cart " data-toggle="modal" data-target="#Doi-Password">
+                                        @if(Session::get('message'))
+                                        <div class="alert alert-danger">
+                                        {{ Session::get('message') }}
+                                        </div>
+                                        @endif
+                                        <button type="submit" class="btn btn-lg button_cart_buy_enable add_to_cart " onclick= "edit_doipassword({{ $user->id }})">
                                         Đổi Mật Khẩu
                                         </button>
 
@@ -156,9 +161,9 @@
                 <div class="modal-body">
                 <form id="form-password" >
 				{{ csrf_field() }}
-                    <input type="hidden" id="id" name="id">
+                    <input type="hidden" id="id_1" name="id">
 						<div class="form-sub-w3ls ">
-							<input placeholder="Mật Khẩu"  type="password" required="" name="txtPassword" id="Password">
+							<input placeholder="Mật Khẩu"  type="password" required="" id="Password">
 							
 						</div>
                         <div class="form-sub-w3ls">
@@ -194,20 +199,6 @@
 				{{ csrf_field() }}
                         <input type="hidden" id="id" name="id">
                         
-                        <div class="col_large_default large-image margin-bottom-10"  >
-                        <label type="text">hình ảnh:</label>
-                        <img id="image_show" style=" border: 1px #d4d4d4 solid;border-radius:50%;-moz-border-radius:50%; -webkit-border-radius:50%;" class="img-responsive" src="{!!asset('assets/images/'.$user->hinh_dai_dien)!!}" data-zoom-image="https://bizweb.dktcdn.net/100/286/794/products/1-3.jpg?v=1517327927920"/>    
-                        <div class="form-sub-w3ls margin-top-10">
-                        <label for="file"> choose profile image: </label>
-                            <input  type="file" required=""name="image" id="image_file"> 
-						</div>
-                        
-                         </div>
-                        
-                     
-							
-
-						
 						<div class="form-sub-w3ls">
 							<input placeholder="họ tên" type="text" required="" name="name" id="name">
 							
@@ -225,7 +216,6 @@
 							
 						</div>
                         
-                       
 					</div>
                     <div class="modal-footer">
                     <button type="submit" class="btn btn-primary">Save changes</button>
@@ -252,32 +242,33 @@
            
         $("#form-password").submit(function(e){
             e.preventDefault();
-            var id= $('#id').val();
-            var pswd = $("#Password").val();
-            var newpswd = $("#Newpassword").val();
-            var repswd = $("#Repassword").val();
+            var id= $('#id_1').val();
+            var Password = $('#Password').val();
+            var Newpassword =  $('#Newpassword').val();
+            var repassword = $('#repassword').val();
             var _token=$("input[name=_token]").val();
             $.ajax({
                 url: "{{ route('doipassword')}}",
                 type:'PUT',
                 data: {
                     id:id,
-                    Password :pswd,
-                    Newpassword :newpswd,
-                    Repassword :repswd,
+                    Password:Password,
+                    Newpassword: Newpassword,
+                    repassword:repassword,
                     _token:_token
                 },
                 success: function(response) {
-                    $('#id').text(response.id);
-                    $('# Password').text(response.password);
-                    $('#Newpassword').text();
-                    $('#Repassword').text();
-                  $("#form-password").reset();
-                  $("#Doi-Password").modal("hide");
+                    $('#id_1').text(response.id);
+                    Password = $('#Password').val();
+                    Newpassword =  $('#Newpassword').val();
+                    repassword = $('#repassword').val();
+                    $('#Doi-Password').modal('toggle');
+                    $("#form-password").reset();
+                  $("#form-password").modal("hide");
                 }
+               
             });
         });
-        
 	</script>    
 
 <script type="text/javascript">
@@ -302,7 +293,7 @@
             var phone=  $('#phone').val();
             var lat = $('#lat').val();
             var type = $('#type').val();
-           var image= $('#image_file').val();
+           
             var _token=$("input[name=_token]").val();
             $.ajax({
                 url: "{{ route('update_nguoidung')}}",
@@ -313,7 +304,6 @@
                     phone:phone,
                     lat:lat,
                     type:type,
-                    image:image,
                     _token:_token
                 },
                 success: function(response) {
@@ -322,10 +312,12 @@
                     $('#phone').text(response.sdt);
                     $('#lat').text(response.dia_chi);
                     $('#type').text(response.gioi_tinh);
-                    $('#image').text(response.hinh_dai_dien);
                     $('#update-khachhang').modal('toggle');
                     $("#form-update").reset();
                   $("#form-update").modal("hide");
+                    setTimeout(function() {
+                    window.location.href="{{ route('nguoidung',$user->id) }}"                    
+                  }, 500);
                 }
                
             });

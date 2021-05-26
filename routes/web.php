@@ -31,6 +31,7 @@ Route::group(['namespace' => 'User'], function() {
    //người dùng
     Route::get('/nguoidung/{id}','khachhangController@nguoidung')->name('nguoidung');
     Route::put('/doipassword','khachhangController@nguoidung')->name('doipassword');
+    Route::get('/edits_doipassword/{id}','khachhangController@getedit_doipassword');
     Route::get('/edits_khachhang/{id}','khachhangController@getedit_khachhang');
     Route::put('/edit_khachhang','khachhangController@edit_khachhang')->name('update_nguoidung');
     //page

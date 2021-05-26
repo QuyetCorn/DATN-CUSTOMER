@@ -15,19 +15,22 @@ class KhachHangController extends Controller
         $user = khachhang::findOrFail($id);
         return view('user.page.NguoiDung',compact('user'));
     }
+
+    public function getedit_doipassword($id){
+        $user = khachhang::findOrFail($id);
+        return response()->json($user);
+    }
     
     public function doipassword(request $request) {
         $user = khachhang::findOrFail($request->id);
-        $this->validate($request, [
-            'txtpassword' => 'required',
-        ]);
         $pass = Hash::make($request->password);
         if(Auth::check($pass, $user->password))
         {
             $user->password = $pass;
             $user->save();
+            return back()->with('message','Email hoặc mật khẩu chưa chính xác!');
         }
-        return view('user.page.NguoiDung',compact('user'));
+        return back()->with('message','Email hoặc mật khẩu chưa chính xác!');
          
     }
     public function getedit_khachhang($id){
@@ -35,7 +38,7 @@ class KhachHangController extends Controller
         return response()->json($user);
     }
 
-    public function edit_khachhang(request $request,Khachhang $khachhang){
+    public function edit_khachhang(request $request){
 
         //$data=$request->validate([
         //    'lat' => 'required',
@@ -47,7 +50,7 @@ class KhachHangController extends Controller
         //$khachhang->update($data);
 
         $user = khachhang::find( $request->id);
-        $user->hinh_dai_dien = Helper::imageUpload($request->image);
+       // $user->hinh_dai_dien = Helper::imageUpload($request->image);
         $user->ho_ten=$request->name;
         $user->sdt=$request->phone;
         $user->dia_chi=$request->lat;
