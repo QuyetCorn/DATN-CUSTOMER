@@ -59,26 +59,28 @@
 </div>
 </div>
 
+
 <section class="products-view products-view-grid collection_reponsive">
     <div class="row">
+        @foreach($sanpham as $sp)
         <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 product-col">
             <div class="item saler_item">
                                 
                 <div class="product-box">															
                     <div class="product-thumbnail">
-                        
+                        @if($sp->phan_tram_giam>0)
                         <span class="sale_count">
-                            <span class="bf_">- 4% </span>
+                            <span class="bf_">- {{$sp->phan_tram_giam}}% </span>
                         </span>
-
-                        <a href="/giay-converse-star-collar-break" class="image_link display_flex" data-images="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/13min9a0b67fc1d89427789067b4b5.jpg?v=1516862290637"  title="Giày Converse Star Collar Break">
-                            <img class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/13min9a0b67fc1d89427789067b4b5.jpg?v=1516862290637" alt="giay-converse-star-collar-break"/>
+                        @endif
+                        <a href="#" class="image_link display_flex" data-images="assets/images/{{$sp->hinh_anh}}"  title="{{$sp->ten_sp}}">
+                            <img class="img-responsive lazyload" src="assets/images/{{$sp->hinh_anh}}" data-src="assets/images/{{$sp->hinh_anh}}" alt="{{$sp->ten_sp}}"/>
                         </a>
 
                         <div class="product-action-grid clearfix">
                             <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9746938" enctype="multipart/form-data">
                                 <div>
-                                    <a title="xem nhanh" href="/giay-converse-star-collar-break" data-handle="giay-converse-star-collar-break" class="button_wh_40 btn_view right-to quick-view"><i class="fa fa-search"></i>
+                                    <a title="xem nhanh" href="x" data-handle="giay-converse-star-collar-break" class="button_wh_40 btn_view right-to quick-view"><i class="fa fa-search"></i>
                                         <span class="tooltips qv"><span>Xem nhanh</span></span>
                                     </a>
                                 </div>
@@ -92,15 +94,19 @@
                             <div class="bizweb-product-reviews-badge" data-id="9746938"></div>
                         </div>
     
-                        <h3 class="product-name"><a class="text2line" href="/giay-converse-star-collar-break" title="Giày Converse Star Collar Break">Giày Converse Star Collar Break</a></h3>
+                        <h3 class="product-name"><a class="text2line" href="/giay-converse-star-collar-break" title="{{$sp->ten_sp}}">{{$sp->ten_sp}}</a></h3>
 
+                        @if($sp->giam_gia>0)
                         <div class="price-box clearfix">			
                             <span class="price product-price-old">
-                                500.000₫			
+                            {{$sp->gia}}			
                             </span>		
-            
-                            <span class="price product-price">480.000₫</span>
-                    </div>		
+                            <span class="price product-price">{{$sp->giam_gia}}</span>
+                        </div>
+                        @else
+                        <span class="price product-price">{{$sp->gia}}</span>
+                        @endif
+
     
     
                     <div class="action__">
@@ -121,331 +127,20 @@
 
                 </div>
             </div>			
-        </div>
-    </div>		
+        </div>  
+    </div>
+    @endforeach
 <!--End 1 sp  -->
 
-        <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 product-col">
-            <div class="item saler_item">
-            
 
-<div class="product-box">															
-<div class="product-thumbnail">
-    
-    <span class="sale_count"><span class="bf_">- 
-9% 
-</span></span>
-    
-    
-    <a href="/balo-laplop-solo-pro-arc-black" class="image_link display_flex" data-images="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/1-4-2.jpg?v=1517304826530"  title="Balo laplop Solo Pro ARC Black">
+
         
-        
-        <img class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/1-4-2.jpg?v=1517304826530" alt="balo-laplop-solo-pro-arc-black"/>
-        
-        
-    </a>
-    <div class="product-action-grid clearfix">
-        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9725087" enctype="multipart/form-data">
-            <div>
-                <a title="xem nhanh" href="/balo-laplop-solo-pro-arc-black" data-handle="balo-laplop-solo-pro-arc-black" class="button_wh_40 btn_view right-to quick-view"><i class="fa fa-search"></i>
-                    <span class="tooltips qv"><span>Xem nhanh</span></span>
-                </a>
-            </div>
-        </form>
-    </div>
-</div>
-<div class="product-info">
-    
-    <div class="reviews-product-list grid_reviews">
-        <div class="bizweb-product-reviews-badge" data-id="9725087"></div>
-    </div>
-    
-    <h3 class="product-name"><a class="text2line" href="/balo-laplop-solo-pro-arc-black" title="Balo laplop Solo Pro ARC Black">Balo laplop Solo Pro ARC Black</a></h3>
+
 
     
     
-    <div class="price-box clearfix">			
-        
-        <span class="price product-price-old">
-            950.000₫			
-        </span>		
-            
-        <span class="price product-price">860.000₫</span>
-    </div>		
-    
-    
-    <div class="action__">
-        
-        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9725087" enctype="multipart/form-data">
-            <div>
-                
-                <input type="hidden" name="variantId" value="15530193" />
-                <button class=" cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng">
-                    <span><span class="fa fa-shopping-basket"></span></span>
-                    Giỏ hàng
-                </button>
-                
-            </div>
-        </form>
-        
-    </div>
 
-</div>
-</div>			
-            </div>
-        </div>		
-
-        <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 product-col">
-            <div class="item saler_item">
-            
-
-<div class="product-box">															
-<div class="product-thumbnail">
-    
-    <span class="sale_count"><span class="bf_">- 
-38% 
-</span></span>
-    
-    
-
-    <a href="/balo-mikkor-irvin-charcoal-orange" class="image_link display_flex" data-images="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/1-3.jpg?v=1517327927920"  title="Balo Mikkor Irvin Charcoal/Orange">
-        
-        
-        <img class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/1-3.jpg?v=1517327927920" alt="balo-mikkor-irvin-charcoal-orange"/>
-        
-        
-    </a>
-    <div class="product-action-grid clearfix">
-        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9724997" enctype="multipart/form-data">
-            <div>
-                <a title="xem nhanh" href="/balo-mikkor-irvin-charcoal-orange" data-handle="balo-mikkor-irvin-charcoal-orange" class="button_wh_40 btn_view right-to quick-view"><i class="fa fa-search"></i>
-                    <span class="tooltips qv"><span>Xem nhanh</span></span>
-                </a>
-            </div>
-        </form>
-    </div>
-</div>
-<div class="product-info">
-    
-    <div class="reviews-product-list grid_reviews">
-        <div class="bizweb-product-reviews-badge" data-id="9724997"></div>
-    </div>
-    
-    <h3 class="product-name"><a class="text2line" href="/balo-mikkor-irvin-charcoal-orange" title="Balo Mikkor Irvin Charcoal/Orange">Balo Mikkor Irvin Charcoal/Orange</a></h3>
-
-    
-    
-    <div class="price-box clearfix">			
-        
-        <span class="price product-price-old">
-            1.200.000₫			
-        </span>		
-            
-        <span class="price product-price">750.000₫</span>
-    </div>		
-    
-    
-    <div class="action__">
-        
-        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9724997" enctype="multipart/form-data">
-            <div>
-                
-                <input type="hidden" name="variantId" value="15530094" />
-                <button class=" cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng">
-                    <span><span class="fa fa-shopping-basket"></span></span>
-                    Giỏ hàng
-                </button>
-                
-            </div>
-        </form>
-        
-    </div>
-
-</div>
-</div>			
-            </div>
-        </div>		
-
-        <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 product-col">
-            <div class="item saler_item">
-            
-<div class="product-box">															
-<div class="product-thumbnail">
-    
-    <span class="sale_count"><span class="bf_">- 
-20% 
-</span></span>
-    
-    
-
-    <a href="/balo-thoi-trang-easyopen-black" class="image_link display_flex" data-images="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/1-2.jpg?v=1516616201157"  title="Balo Thời Trang EasyOpen Black">
-        
-        
-        <img class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/1-2.jpg?v=1516616201157" alt="balo-thoi-trang-easyopen-black"/>
-        
-        
-    </a>
-    <div class="product-action-grid clearfix">
-        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9724957" enctype="multipart/form-data">
-            <div>
-                <a title="xem nhanh" href="/balo-thoi-trang-easyopen-black" data-handle="balo-thoi-trang-easyopen-black" class="button_wh_40 btn_view right-to quick-view"><i class="fa fa-search"></i>
-                    <span class="tooltips qv"><span>Xem nhanh</span></span>
-                </a>
-            </div>
-        </form>
-    </div>
-</div>
-<div class="product-info">
-    
-    <div class="reviews-product-list grid_reviews">
-        <div class="bizweb-product-reviews-badge" data-id="9724957"></div>
-    </div>
-    
-    <h3 class="product-name"><a class="text2line" href="/balo-thoi-trang-easyopen-black" title="Balo Thời Trang EasyOpen Black">Balo Thời Trang EasyOpen Black</a></h3>
-
-    
-    
-    <div class="price-box clearfix">			
-        
-        <span class="price product-price-old">
-            560.000₫			
-        </span>		
-            
-        <span class="price product-price">449.000₫</span>
-    </div>		
-    
-    
-    <div class="action__">
-        
-        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9724957" enctype="multipart/form-data">
-            <div>
-                
-                <input type="hidden" name="variantId" value="15530038" />
-                <button class=" cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng">
-                    <span><span class="fa fa-shopping-basket"></span></span>
-                    Giỏ hàng
-                </button>
-                
-            </div>
-        </form>
-        
-    </div>
-
-</div>
-</div>			
-            </div>
-        </div>		
-
-        <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 product-col">
-            <div class="item saler_item">
-
-<div class="product-box">															
-<div class="product-thumbnail">
-    
-    <span class="sale_count"><span class="bf_">- 
-45% 
-</span></span>
-    
-    
-
-    <a href="/balo-targus-groove-x-compact-orange" class="image_link display_flex" data-images="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/1-1.jpg?v=1517329871667"  title="Balo Targus Groove X Compact Orange">
-        
-        
-        <img class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/1-1.jpg?v=1517329871667" alt="balo-targus-groove-x-compact-orange"/>
-        
-        
-    </a>
-    <div class="product-action-grid clearfix">
-        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9724851" enctype="multipart/form-data">
-            <div>
-                <a title="xem nhanh" href="/balo-targus-groove-x-compact-orange" data-handle="balo-targus-groove-x-compact-orange" class="button_wh_40 btn_view right-to quick-view"><i class="fa fa-search"></i>
-                    <span class="tooltips qv"><span>Xem nhanh</span></span>
-                </a>
-            </div>
-        </form>
-    </div>
-</div>
-<div class="product-info">
-    
-    <div class="reviews-product-list grid_reviews">
-        <div class="bizweb-product-reviews-badge" data-id="9724851"></div>
-    </div>
-    
-    <h3 class="product-name"><a class="text2line" href="/balo-targus-groove-x-compact-orange" title="Balo Targus Groove X Compact Orange">Balo Targus Groove X Compact Orange</a></h3>
-
-    
-    
-    <div class="price-box clearfix">			
-        
-        <span class="price product-price-old">
-            1.139.000₫			
-        </span>		
-            
-        <span class="price product-price">625.000₫</span>
-    </div>		
-    
-    
-    <div class="action__">
-        
-        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9724851" enctype="multipart/form-data">
-            <div>
-                
-                <input type="hidden" name="variantId" value="15529910" />
-                <button class=" cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng">
-                    <span><span class="fa fa-shopping-basket"></span></span>
-                    Giỏ hàng
-                </button>
-                
-            </div>
-        </form>
-        
-    </div>
-
-</div>
-</div>			
-            </div>
-        </div>		
-        <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 product-col">
-            <div class="item saler_item">
-
-<div class="product-box">															
-<div class="product-thumbnail">
-    
-    
-
-    <a href="/balo-cong-so-simplecarry-schuler-d-grey" class="image_link display_flex" data-images="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/1.jpg?v=1516614838040"  title="Balo Công Sở SimpleCarry Schuler D.grey">
-        
-        
-        <img class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/1.jpg?v=1516614838040" alt="balo-cong-so-simplecarry-schuler-d-grey"/>
-        
-        
-    </a>
-    <div class="product-action-grid clearfix">
-        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9724376" enctype="multipart/form-data">
-            <div>
-                <a title="xem nhanh" href="/balo-cong-so-simplecarry-schuler-d-grey" data-handle="balo-cong-so-simplecarry-schuler-d-grey" class="button_wh_40 btn_view right-to quick-view"><i class="fa fa-search"></i>
-                    <span class="tooltips qv"><span>Xem nhanh</span></span>
-                </a>
-            </div>
-        </form>
-    </div>
-</div>
-<div class="product-info">
-    
-    <div class="reviews-product-list grid_reviews">
-        <div class="bizweb-product-reviews-badge" data-id="9724376"></div>
-    </div>
-    
-    <h3 class="product-name"><a class="text2line" href="/balo-cong-so-simplecarry-schuler-d-grey" title="Balo Công Sở SimpleCarry Schuler D.grey">Balo Công Sở SimpleCarry Schuler D.grey</a></h3>
-
-    
-    
-    <div class="price-box clearfix">
-        <span class="price product-price">395.000₫</span>
-    </div>
-    
-    
-    <div class="action__">
+    <!-- <div class="action__">
         
         <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9724376" enctype="multipart/form-data">
             <div>
@@ -459,12 +154,11 @@
             </div>
         </form>
         
-    </div>
-
+    </div> -->
 </div>
 </div>			
-            </div>
-        </div>		
+</div>
+</div>		
         
     
     

@@ -15,7 +15,8 @@ class CreateLoaiSPTable extends Migration
     {
         Schema::create('loai_sp', function (Blueprint $table) {
             $table->id();
-            $table->string('ten');
+            $table->string('ten_loai');
+            $table->string('ten_kieu');
             $table->timestamps();
             $table->softDeletes();
         });

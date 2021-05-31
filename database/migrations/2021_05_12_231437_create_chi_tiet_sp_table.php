@@ -19,11 +19,11 @@ class CreateChiTietSPTable extends Migration
             $table->foreignId('loai_sp_id');
             $table->foreignId('nha_sx_id');
             $table->string('ten_sp');
-            $table->double('gia');
+            $table->string('gia');
             $table->string('mo_ta')->nullable();
-            $table->json('mau_sac')->nullable();
+            $table->string('mau_sac')->nullable();
             $table->integer('so_luong')->default(0);
-            $table->double('giam_gia', 5, 2)->nullable();
+            $table->string('giam_gia', 5, 2)->nullable();
             $table->longText('hinh_anh')->nullable();
             $table->timestamps();
             $table->softDeletes();
