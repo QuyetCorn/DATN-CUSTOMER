@@ -3,7 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-
+use App\Models\LoaiSanPham;
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -23,6 +23,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        view()->composer('user.layout.header',function($view){
+            $loai_sp = LoaiSanPham::all();
+            $view->with('loai_sp',$loai_sp);
+        });
     }
 }

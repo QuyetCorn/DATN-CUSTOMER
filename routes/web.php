@@ -44,6 +44,7 @@ Route::group(['namespace' => 'User'], function() {
     Route::get('/thanhtoan', 'ThanhToanController@index')->name('thanhtoan');
     Route::get('/gioithieu', 'GioiThieuController@index')->name('gioithieu');
     Route::get('/lienhe', 'LienHeController@index')->name('lienhe');
+    Route::get('/loai_sp/{type}', 'LoaiSPController@index')->name('loai_sp');
 
     // Danh muc
     Route::get('/balo', 'DanhMucController@baloIndex')->name('balo');
@@ -55,9 +56,6 @@ Route::group(['namespace' => 'User'], function() {
     Route::get('/sanphamnoibat', 'DanhMucController@sanphamnoibatIndex')->name('sanphamnoibat');
 });
 
-Route::get('/mess', function () {
-    return view('user.page.message');
-});
 
 
 Auth::routes();

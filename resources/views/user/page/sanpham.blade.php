@@ -99,12 +99,12 @@
                         @if($sp->giam_gia>0)
                         <div class="price-box clearfix">			
                             <span class="price product-price-old">
-                            {{$sp->gia}}			
+                            {{number_format($sp->gia)}}đ		
                             </span>		
-                            <span class="price product-price">{{$sp->giam_gia}}</span>
+                            <span class="price product-price">{{number_format($sp->giam_gia)}}đ</span>
                         </div>
                         @else
-                        <span class="price product-price">{{$sp->gia}}</span>
+                        <span class="price product-price">{{number_format($sp->gia)}}đ</span>
                         @endif
 
     
@@ -132,50 +132,22 @@
     @endforeach
 <!--End 1 sp  -->
 
-
-
-        
-
-
-    
-    
-
-    <!-- <div class="action__">
-        
-        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9724376" enctype="multipart/form-data">
-            <div>
-                
-                <input type="hidden" name="variantId" value="15529457" />
-                <button class=" cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng">
-                    <span><span class="fa fa-shopping-basket"></span></span>
-                    Giỏ hàng
-                </button>
-                
-            </div>
-        </form>
-        
-    </div> -->
+<div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 product-col">
+<!-- <div class="item saler_item"> -->
+    <div class="product-box">															
+        <div class="product-thumbnail">
+        </div>
+    </div>			
 </div>
-</div>			
-</div>
-</div>		
-        
     
-    
-</div>
-<div class="text-xs-right xs_padding col-lg-12 col-md-12 col-sm-12 col-xs-12">
-    
-</div>
-
 </section>		
                 
-            </div>
-        </section>
+</div>
+</section>
         
         <aside class="dqdt-sidebar sidebar left left-content col-xs-12 col-lg-3 col-md-3 col-sm-12  col-lg-pull-9 col-md-pull-9">
             
 
-<script src="//bizweb.dktcdn.net/100/286/794/themes/637857/assets/search_filter.js?1618737291739" type="text/javascript"></script>
 <div class="aside-filter">
 <div class="filter-container thismobile">	
     <div class="filter-container__selected-filter" style="display: none;">
@@ -717,14 +689,6 @@ function doSearch(page, options) {
         });
     </script>	
 
-
-<div class="">
-<div class="">
-    <a href="#" title="#" class="banner">
-        <img class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/100/286/794/themes/637857/assets/banner_sidebar_collection.png?1618737291739" alt="#">
-    </a>
-</div>
-</div>
             <span class="border-das-sider"></span>
         </aside>
         <div id="open-filters" class="open-filters hidden-lg hidden-md">

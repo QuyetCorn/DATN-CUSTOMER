@@ -57,7 +57,7 @@
                         <div class="owl_product_ owl-carousel" data-nav="true" data-lg-items="5" data-md-items="4" data-height="false" data-xs-items="2" data-sm-items="3" data-margin="0">
   
 <!-- San pham 1 -->     
-                        @foreach($sanpham as $sp)
+                        @foreach($sanphamsale as $sp)
                             <div class="item saler_item first">
                                 <div class="owl_item_product">
 
@@ -98,9 +98,9 @@
                                             <div class="price-box clearfix">
     
                                                 <span class="price product-price-old">
-                                                    {{$sp->gia}}
+                                                    {{number_format($sp->gia)}}đ
                                                 </span>
-                                                <span class="price product-price">{{$sp->giam_gia}}</span>
+                                                <span class="price product-price">{{number_format($sp->giam_gia)}}đ</span>
                                             </div>
     
     
