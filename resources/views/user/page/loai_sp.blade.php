@@ -11,9 +11,8 @@
                         <a itemprop="url" href="trangchu" ><span >Trang chủ</span></a>						
                         <span class="mr_lr"> <i class="fa fa-angle-right"></i> </span>
                     </li>
-                    @foreach($loaisp as $loai)
-                    <li><strong ><span >{{$loai->ten_loai}}</span></strong></li>
-                    @endforeach
+                    <li><strong ><span >{{$loaisp->ten_loai}}</span></strong></li>
+                    
                 </ul>
             </div>
         </div>
@@ -26,9 +25,9 @@
             <section class="main_container collection collection_container col-lg-9 col-md-9 col-sm-12 col-lg-push-3 col-md-push-3">
                 <div class="page_title margin-top-5">
                     <h1 class="title_page_h1">
-                    @foreach($loaisp as $loai)
-                    <span>{{$loai->ten_loai}}</span>
-                    @endforeach </h1>
+                    
+                    <span>{{$loaisp->ten_loai}}</span>
+                     </h1>
                 </div>
                 
                 <div class="category-products products">

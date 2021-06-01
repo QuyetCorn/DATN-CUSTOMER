@@ -10,7 +10,7 @@ use App\Models\LoaiSanPham;
 class LoaiSPController extends Controller
 {
     public function index($type) {
-        $loaisp = LoaiSanPham::where('id',$type)->get();
+        $loaisp = LoaiSanPham::where('id',$type)->first();
         $sp_theoloai = ChiTietSanPham::where('loai_sp_id',$type)->get();
         return view('user.page.loai_sp',compact('sp_theoloai','loaisp'));
     }

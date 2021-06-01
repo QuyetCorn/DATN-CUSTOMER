@@ -18,7 +18,7 @@ class CreateHoaDon extends Migration
             $table->foreignId('khach_hang_id');
             $table->datetime('ngay_dat');
             $table->double('tong_tien');
-            $table->string('ghi_chu')->nullable();
+            $table->string('ghi_chu', 255)->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

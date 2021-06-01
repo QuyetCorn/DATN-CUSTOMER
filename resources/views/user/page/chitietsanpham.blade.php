@@ -19,7 +19,7 @@
                     <span class="mr_lr"> <i class="fa fa-angle-right"></i> </span>
                 </li>
                 
-                <li><strong><span >Balo Mikkor Irvin Charcoal/Orange</span></strong><li>
+                <li><strong><span >{{$chitietsanpham->ten_sp}}</span></strong><li>
                 
             </ul>
         </div>
@@ -32,282 +32,6 @@
 <div class="container bg_white">
     <div class="row row_product">
         <div id="sidebar_product" class="col-lg-3 col-md-3 col-sm-12 col-xs-12 sidebar_product_details">
-            <aside class="aside-item collection-category">
-                <div class="title_module title_background">
-                    <h2>
-                        <span>Danh mục</span>
-                        <span class="ti ti-align-right"></span>
-                    </h2>
-                </div>
-                <div class="aside-content aside-cate-link-cls">
-                    <nav class="cate_padding nav-category navbar-toggleable-md">
-                        <ul class="nav-ul nav navbar-pills">
-                            
-                            
-                            <li class="nav-item  lv1">
-                                <a href="/balo" class="nav-link">Balo
-
-                                </a>
-                                <i class="fa fa-angle-down"></i>
-                                <ul class="dropdown-menu">
-                                    
-                                    
-                                    <li class="nav-item lv2 ">
-                                        <a class="nav-link" href="/balo-laptop">Balo laptop</a>
-                                    </li>
-                                    
-                                    
-                                    
-                                    <li class="nav-item lv2 ">
-                                        <a class="nav-link" href="/balo-du-lich">Balo du lịch</a>
-                                    </li>
-                                    
-                                    
-                                    
-                                    <li class="nav-item lv2 ">
-                                        <a class="nav-link" href="/balo-may-anh">Balo máy ảnh</a>
-                                    </li>
-                                    
-                                    
-                                    
-                                    <li class="nav-item lv2 ">
-                                        <a class="nav-link" href="/balo-da-nang">Balo đa năng</a>
-                                    </li>
-                                    
-                                    
-                                    
-                                    <li class="nav-item lv2 ">
-                                        <a class="nav-link" href="/balo-da">Balo da</a>
-                                    </li>
-                                    
-                                    
-                                    
-                                    <li class="nav-item lv2 ">
-                                        <a class="nav-link" href="/balo-chong-nuoc">Balo chống nước</a>
-                                    </li>
-                                    
-                                    
-
-                                </ul>
-                            </li>
-                            
-                            
-                            
-                            <li class="nav-item  lv1">
-                                <a href="/tui-xach-1" class="nav-link">Túi xách
-
-                                </a>
-                                <i class="fa fa-angle-down"></i>
-                                <ul class="dropdown-menu">
-                                    
-                                    
-                                    <li class="nav-item lv2 ">
-                                        <a class="nav-link" href="/tui-xach-nam">Túi xách nam</a>
-                                    </li>
-                                    
-                                    
-                                    
-                                    <li class="nav-item lv2 ">
-                                        <a class="nav-link" href="/tui-xach-du-lich">Túi xách du lịch</a>
-                                    </li>
-                                    
-                                    
-                                    
-                                    <li class="nav-item lv2 ">
-                                        <a class="nav-link" href="/tui-xach-thoi-trang">Túi xách thời trang</a>
-                                    </li>
-                                    
-                                    
-                                    
-                                    <li class="nav-item lv2 ">
-                                        <a class="nav-link" href="/tui-chong-soc">Túi Chống Sốc</a>
-                                    </li>
-                                    
-                                    
-                                    
-                                    <li class="nav-item lv2 ">
-                                        <a class="nav-link" href="/tui-xach-may-anh">Túi Xách Máy Ảnh</a>
-                                    </li>
-                                    
-                                    
-
-                                </ul>
-                            </li>
-                            
-                            
-                            
-                            <li class="nav-item  lv1">
-                                <a href="/vali" class="nav-link">Vali
-
-                                </a>
-                                <i class="fa fa-angle-down"></i>
-                                <ul class="dropdown-menu">
-                                    
-                                    
-                                    <li class="nav-item lv2 ">
-                                        <a class="nav-link" href="/vali-du-lich">Vali du lịch</a>
-                                    </li>
-                                    
-                                    
-                                    
-                                    <li class="nav-item lv2 ">
-                                        <a class="nav-link" href="/vali-keo-tre-em">Vali kéo trẻ em</a>
-                                    </li>
-                                    
-                                    
-                                    
-                                    <li class="nav-item lv2 ">
-                                        <a class="nav-link" href="/vali-du-lich-7-tac">Vali Du Lịch 7 Tấc</a>
-                                    </li>
-                                    
-                                    
-                                    
-                                    <li class="nav-item lv2 ">
-                                        <a class="nav-link" href="/vali-du-lich-5-tac">Vali Du Lịch 5 Tấc</a>
-                                    </li>
-                                    
-                                    
-
-                                </ul>
-                            </li>
-                            
-                            
-                            
-                            <li class="nav-item  lv1">
-                                <a href="/" class="nav-link">Thời trang nữ
-
-                                </a>
-                                <i class="fa fa-angle-down"></i>
-                                <ul class="dropdown-menu">
-                                    
-                                    
-                                    <li class="nav-item lv2 ">
-                                        <a class="nav-link" href="/tui-xach-thoi-trang">Túi xách thời trang</a>
-                                    </li>
-                                    
-                                    
-
-                                </ul>
-                            </li>
-                            
-                            
-                            
-                            <li class="nav-item  lv1">
-                                <a href="/thoi-trang-nam" class="nav-link">Thời trang nam
-
-                                </a>
-                                <i class="fa fa-angle-down"></i>
-                                <ul class="dropdown-menu">
-                                    
-                                    
-                                    <li class="nav-item lv2 ">
-                                        <a class="nav-link" href="/ao-phong-nam">Áo phông nam</a>
-                                    </li>
-                                    
-                                    
-                                    
-                                    <li class="nav-item lv2 ">
-                                        <a class="nav-link" href="/giay-thoi-trang-nam">Giày thời trang nam</a>
-                                    </li>
-                                    
-                                    
-
-                                </ul>
-                            </li>
-                            
-                            
-                            
-
-                            <li class="nav-item  lv1">
-                                <a class="nav-link" href="/thoi-trang-tre-em">Thời trang trẻ em
-
-                                </a>
-                            </li>
-                            
-                            
-                            
-                            <li class="nav-item  lv1">
-                                <a href="/frontpage" class="nav-link">Sản phẩm mới
-
-                                </a>
-                                <i class="fa fa-angle-down"></i>
-                                <ul class="dropdown-menu">
-                                    
-                                    
-                                    <li class="dropdown-submenu nav-item lv2 ">
-                                        <a class="nav-link" href="/">Sản phẩm mới 1</a>
-                                        <i class="fa fa-angle-down"></i>
-                                        <ul class="dropdown-menu">
-                                            
-                                            
-                                            <li class="dropdown-submenu nav-item lv3 ">
-                                                <a class="nav-link" href="/collections/all">Thời trang nữ</a>
-                                                <i class="fa fa-angle-down"></i>
-                                                <ul class="dropdown-menu">
-                                                    
-                                                    <li class="dropdown-submenu nav-item lv4">
-                                                        <a class="nav-link" href="/tui-xach-thoi-trang">Túi xách thời trang</a>
-                                                    </li>
-                                                    
-                                                </ul>
-                                            </li>
-                                            
-                                            
-                                            
-                                            <li class="nav-item lv3 ">
-                                                <a class="nav-link" href="/">Thời trang nam theo xu hướng</a>
-                                            </li>
-                                            
-                                            
-                                            
-                                            <li class="nav-item lv3 ">
-                                                <a class="nav-link" href="/">Thời trang trẻ em</a>
-                                            </li>
-                                            
-                                            
-                                        </ul>                      
-                                    </li>
-                                    
-                                    
-                                    
-                                    <li class="nav-item lv2 ">
-                                        <a class="nav-link" href="/">Sản phẩm mới 2</a>
-                                    </li>
-                                    
-                                    
-                                    
-                                    <li class="nav-item lv2 ">
-                                        <a class="nav-link" href="/">Sản phẩm mới 3</a>
-                                    </li>
-                                    
-                                    
-
-                                </ul>
-                            </li>
-                            
-                            
-                            
-
-                            <li class="nav-item  lv1">
-                                <a class="nav-link" href="/">Sản phẩm khuyến mãi
-
-                                </a>
-                            </li>
-                            
-                            
-                            
-
-                            <li class="nav-item  lv1">
-                                <a class="nav-link" href="/">Sản phẩm nổi bật
-
-                                </a>
-                            </li>
-                            
-                            
-                        </ul>
-                    </nav>
-                </div>
-            </aside>
             <div class="wol_product">
                 <div class="dear_title">
                     <h2 class="title_head_ border_content">
@@ -325,7 +49,7 @@
 <div class="hot_sale_product">
     <div class="item-img-horizontal">
         
-        <a href="/balo-laplop-solo-pro-arc-black" class="product-image" title="Balo laplop Solo Pro ARC Black">
+        <a href="" class="product-image" title="">
             <img src="//bizweb.dktcdn.net/thumb/compact/100/286/794/products/1-4-2.jpg?v=1517304826530" alt="Balo laplop Solo Pro ARC Black">
         </a>
         
@@ -461,17 +185,16 @@
                     <div class="product-detail-left product-images col-xs-12 col-sm-6 col-md-6 col-lg-6">
                         <div class="row">
                             <div class="col_large_default large-image">
-                                
+                            @if($chitietsanpham->phan_tram_giam>0)
                                 <span class="sale_count details__"><span class="bf_ sale___">
-                                     
-            38% 
-            
+                                - {{$chitietsanpham->phan_tram_giam}}%
                                     </span></span>
+                            @endif
 
 
-                                <a  href="//bizweb.dktcdn.net/thumb/1024x1024/100/286/794/products/1-3.jpg?v=1517327927920" class="large_image_url checkurl"  data-rel="prettyPhoto[product-gallery]" >
+                                <a href="assets/images/{{$chitietsanpham->hinh_anh}}" class="large_image_url checkurl"  data-rel="prettyPhoto[product-gallery]" >
                                     
-                                    <img id="img_01" class="img-responsive" alt="Balo Mikkor Irvin Charcoal/Orange" src="//bizweb.dktcdn.net/thumb/large/100/286/794/products/1-3.jpg?v=1517327927920" data-zoom-image="https://bizweb.dktcdn.net/100/286/794/products/1-3.jpg?v=1517327927920"/>
+                                    <img id="img_01" class="img-responsive" alt="{{$chitietsanpham->ten_sp}}" src="assets/images/{{$chitietsanpham->hinh_anh}}" data-zoom-image="assets/images/{{$chitietsanpham->hinh_anh}}"/>
                                 </a>
 
                                 <div class="hidden">
@@ -480,14 +203,14 @@
                                     
                                     
                                     <div class="item">
-                                        <a href="https://bizweb.dktcdn.net/100/286/794/products/1-3.jpg?v=1517327927920" data-image="https://bizweb.dktcdn.net/100/286/794/products/1-3.jpg?v=1517327927920" data-zoom-image="https://bizweb.dktcdn.net/100/286/794/products/1-3.jpg?v=1517327927920" data-rel="prettyPhoto[product-gallery]">										
+                                        <a href="assets/images/{{$chitietsanpham->hinh_anh}}" data-image="assets/images/{{$chitietsanpham->hinh_anh}}" data-zoom-image="assets/images/{{$chitietsanpham->hinh_anh}}" data-rel="prettyPhoto[product-gallery]">										
                                         </a>
                                     </div>	
                                     
                                     
                                     
                                     
-                                    <div class="item">
+                                    <!-- <div class="item">
                                         <a href="https://bizweb.dktcdn.net/100/286/794/products/2-3.jpg?v=1517327927920" data-image="https://bizweb.dktcdn.net/100/286/794/products/2-3.jpg?v=1517327927920" data-zoom-image="https://bizweb.dktcdn.net/100/286/794/products/2-3.jpg?v=1517327927920" data-rel="prettyPhoto[product-gallery]">										
                                         </a>
                                     </div>	
@@ -514,7 +237,7 @@
                                     <div class="item">
                                         <a href="https://bizweb.dktcdn.net/100/286/794/products/5.jpg?v=1517327927920" data-image="https://bizweb.dktcdn.net/100/286/794/products/5.jpg?v=1517327927920" data-zoom-image="https://bizweb.dktcdn.net/100/286/794/products/5.jpg?v=1517327927920" data-rel="prettyPhoto[product-gallery]">										
                                         </a>
-                                    </div>	
+                                    </div>	 -->
                                     
                                 </div>
                             </div>
@@ -522,12 +245,12 @@
                             <div id="gallery_02" class="col-sm-12 col-xs-12 col-lg-5 col-md-5 owl_width no-padding owl-carousel owl-theme thumbnail-product thumb_product_details not-dqowl" data-loop="false" data-lg-item="3" data-md-items="3" data-sm-items="3" data-xs-items="3" data-margin="10">
                                 
                                 <div class="item">
-                                    <a href="#" data-image="https://bizweb.dktcdn.net/100/286/794/products/1-3.jpg?v=1517327927920" data-zoom-image="//bizweb.dktcdn.net/thumb/1024x1024/100/286/794/products/1-3.jpg?v=1517327927920">
-                                        <img data-img="//bizweb.dktcdn.net/thumb/1024x1024/100/286/794/products/1-3.jpg?v=1517327927920" src="//bizweb.dktcdn.net/thumb/small/100/286/794/products/1-3.jpg?v=1517327927920" alt="Balo Mikkor Irvin Charcoal/Orange">
+                                    <a>
+                                        <img data-img="assets/images/{{$chitietsanpham->hinh_anh}}" src="assets/images/{{$chitietsanpham->hinh_anh}}" alt="{{$chitietsanpham->ten_sp}}">
                                     </a>
                                 </div>
                                 
-                                <div class="item">
+                                <!-- <div class="item">
                                     <a href="#" data-image="https://bizweb.dktcdn.net/100/286/794/products/2-3.jpg?v=1517327927920" data-zoom-image="//bizweb.dktcdn.net/thumb/1024x1024/100/286/794/products/2-3.jpg?v=1517327927920">
                                         <img data-img="//bizweb.dktcdn.net/thumb/1024x1024/100/286/794/products/2-3.jpg?v=1517327927920" src="//bizweb.dktcdn.net/thumb/small/100/286/794/products/2-3.jpg?v=1517327927920" alt="Balo Mikkor Irvin Charcoal/Orange">
                                     </a>
@@ -549,7 +272,7 @@
                                     <a href="#" data-image="https://bizweb.dktcdn.net/100/286/794/products/5.jpg?v=1517327927920" data-zoom-image="//bizweb.dktcdn.net/thumb/1024x1024/100/286/794/products/5.jpg?v=1517327927920">
                                         <img data-img="//bizweb.dktcdn.net/thumb/1024x1024/100/286/794/products/5.jpg?v=1517327927920" src="//bizweb.dktcdn.net/thumb/small/100/286/794/products/5.jpg?v=1517327927920" alt="Balo Mikkor Irvin Charcoal/Orange">
                                     </a>
-                                </div>
+                                </div> -->
                                 
                             </div>
                             
@@ -557,7 +280,7 @@
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 details-pro">
                         <div class="title_pr">
-                            <h1 class="title-product" itemprop="name">Balo Mikkor Irvin Charcoal/Orange</h1>
+                            <h1 class="title-product" itemprop="name">{{$chitietsanpham->ten_sp}}</h1>
                             
                             <div class="reviews_details_product">
                                 <div class="sapo-product-reviews-badge sapo-product-reviews-badge-detail" data-id="9724997"></div>
@@ -571,13 +294,13 @@
 
 
 <span class="special-price">
-    <span class="price product-price" itemprop="price">750.000₫</span>
+    <span class="price product-price" itemprop="price">{{number_format($chitietsanpham->giam_gia)}}đ</span>
     <meta itemprop="priceCurrency" content="VND">
 </span>
 <span class="old-price">
     <span class="price" itemprop="priceSpecification">
         
-        1.200.000₫
+    {{number_format($chitietsanpham->gia)}}đ
         
     </span>
     <meta itemprop="priceCurrency" content="VND">
@@ -696,13 +419,14 @@
                             <div id="tab-1" class="tab-content">
                                 <div class="rte">
                                     
-                                    <p><strong>Balo Mikkor Irvin Charcoal/Orange</strong><br />
-- Chất Liệu: &nbsp;Supertex 1000D Nylon Kodura<br />
-- Số Ngăn: 1 ngăn chính - 1 ngăn laptop - nhiều ngăn phụ<br />
-- Màu: &nbsp;Black / Navy / Charcoal / Dark Grey<br />
-- Khối Lượng: &nbsp;0.8 Kg<br />
-- Kích Thước (DàixRộngxCao): &nbsp;28 x 16 x 43 cm<br />
-- Tải Trọng: &nbsp;18 Kg</p>
+                                    <p><strong>{{$chitietsanpham->ten_sp}}</strong><br />
+- Chất Liệu: &nbsp;{{$chitietsanpham->chat_lieu}}<br />
+- Số Ngăn: &nbsp;{{$chitietsanpham->so_ngan}}<br />
+- Màu: &nbsp;{{$chitietsanpham->mau_sac}}<br />
+- Khối Lượng: &nbsp;{{$chitietsanpham->khoi_luong}}<br />
+- Kích Thước (DàixRộngxCao): &nbsp;{{$chitietsanpham->kich_thuoc}}<br />
+- Tải Trọng: &nbsp;{{$chitietsanpham->tai_trong}}<br>
+- Ngăn laptop: &nbsp;{{$chitietsanpham->ngan}}</p>
 <p style="text-align: center;">&nbsp;</p>
 <p style="text-align: center;">&nbsp;</p>
 <p style="text-align: center;"><img alt="Balo Mikkor Irvin Charcoal/Orange" data-thumb="original" original-height="800" original-width="800" src="//bizweb.dktcdn.net/100/286/794/files/1-a1b94400-ecb8-4da7-a2a1-e9668e2e0fd7.jpg?v=1517328190814" /><img alt="Balo Mikkor Irvin Charcoal/Orange" data-thumb="original" original-height="800" original-width="800" src="//bizweb.dktcdn.net/100/286/794/files/2-9165acfc-dc3a-4f22-a0db-4c128a630b0f.jpg?v=1517328204459" /><img alt="Balo Mikkor Irvin Charcoal/Orange" data-thumb="original" original-height="800" original-width="800" src="//bizweb.dktcdn.net/100/286/794/files/3-f70bd7a7-b900-4f18-8a48-ee6e5d47068b.jpg?v=1517328212123" /></p>

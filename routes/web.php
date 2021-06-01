@@ -38,7 +38,7 @@ Route::group(['namespace' => 'User'], function() {
     Route::get('/trangchu', 'TrangChuController@index')->name('trangchu');
     Route::get('/sanpham', 'SanPhamController@index')->name('sanpham');
     Route::get('/tintuc', 'TinTucController@index')->name('tintuc');
-    Route::get('/chitietsanpham', 'CTSPController@index')->name('chitietsanpham');
+    Route::get('/chitietsanpham/{id}', 'CTSPController@index')->name('chitietsanpham');
     Route::get('/chitiettintuc', 'TinTucController@chitiettintuc')->name('chitiettintuc');
     Route::get('/giohang', 'GioHangController@index')->name('giohang');
     Route::get('/thanhtoan', 'ThanhToanController@index')->name('thanhtoan');
