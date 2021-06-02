@@ -16,21 +16,23 @@ class KhachHangController extends Controller
         return view('user.page.NguoiDung',compact('user'));
     }
 
-    public function getedit_doipassword($id){
-        $user = khachhang::findOrFail($id);
-        return response()->json($user);
-    }
-    
-    public function doipassword(request $request) {
-        $user = khachhang::findOrFail($request->id);
-        $pass = Hash::make($request->password);
-        if(Auth::check($pass, $user->password))
-        {
-            $user->password = $pass;
-            $user->save();
-            return back()->with('message','Email hoặc mật khẩu chưa chính xác!');
-        }
-        return back()->with('message','Email hoặc mật khẩu chưa chính xác!');
+    public function doipassword($id,request $request) {
+        $user = khachhang::find($id);
+        $pass = $request->Password;
+        if(Hash::check($pass,$user->password))
+            { 
+                if($request->Repassword==$request->Newpassword)
+                {
+                    $user->password = Hash::make($request->Newpassword);
+                    $user->save();
+                    Session::flash('message', 'đổi mật khẩu thành công!');
+                }
+                else
+                Session::flash('message', 'nhập lại không trùng khớp!');
+           }
+        else
+            Session::flash('message', 'mật khẩu không trùng khớp!');
+        return back();
          
     }
     public function getedit_khachhang($id){
@@ -55,7 +57,8 @@ class KhachHangController extends Controller
         $user->sdt=$request->phone;
         $user->dia_chi=$request->lat;
         $user->gioi_tinh= $request->type;
-        $user->save();
+        if( $user->save())
+        Session::flash('message', 'đổi thông tin thành công!');
         return view('user.page.NguoiDung',compact('user'));
     }
 }

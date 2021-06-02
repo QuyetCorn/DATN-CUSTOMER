@@ -26,6 +26,4 @@
         .lightboxContain img{float:none;max-width:100%;height:auto;max-height:100%;margin:0 auto}
     </style>
     <script src='assets/js/module.js'></script>
-    
-    
 </head>

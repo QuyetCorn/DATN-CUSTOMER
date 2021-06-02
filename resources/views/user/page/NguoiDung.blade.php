@@ -28,7 +28,7 @@
     <!-- ADD DIV -->
 
 
-                                
+                          
          
             <div id="main_product" class="details-product col-lg-9 col-md-9 col-sm-12 col-xs-12">	
                 
@@ -42,6 +42,7 @@
                                 </div>
                                
                             </div>
+                            
                         </div>
                         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 details-pro">
                             <div class="title_pr">
@@ -97,7 +98,14 @@
                                         </span>
                                 
                                 </div>
-    </div>
+                                </div>
+                                <div class="results">
+                            `	@if(Session::get('message'))
+                                <div class="alert alert-danger">
+                                    {{ Session::get('message') }}
+                                </div>
+                                @endif   
+                            </div>
 
                             <div class="form-product col-sm-12 form-border margin-bottom-10">
                                
@@ -107,15 +115,11 @@
                                         
                                     </div>
                                     <div class="form-group form_button_details ">                           
-                                        <button type="submit" class="btn btn-lg button_cart_buy_enable add_to_cart" onclick= "edit_khachhang({{ $user->id }})">
+                                        <button type="submit" class="btn btn-lg button_cart_buy_enable add_to_cart" onclick="edit_khachhang({{ $user->id }})">
                                             <i class="fa fa-shopping-basket hidden"></i>&nbsp;&nbsp;<span>Cập nhật Thông Tin</span>
                                         </button>									
-                                        @if(Session::get('message'))
-                                        <div class="alert alert-danger">
-                                        {{ Session::get('message') }}
-                                        </div>
-                                        @endif
-                                        <button type="submit" class="btn btn-lg button_cart_buy_enable add_to_cart " onclick= "edit_doipassword({{ $user->id }})">
+                                   
+                                        <button type="submit" class="btn btn-lg button_cart_buy_enable add_to_cart " data-toggle="modal" data-target="#Doi-Password">
                                         Đổi Mật Khẩu
                                         </button>
 
@@ -155,23 +159,21 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="password">Đổi Mật Khẩu</h5>
-                    
+                 <h5 class="modal-title" id="password">Đổi Mật Khẩu</h5>   
                 </div>
                 <div class="modal-body">
-                <form id="form-password" >
+                <form id="form-password" action="{{ route('doipassword',$user->id)}}" method="post" >
 				{{ csrf_field() }}
-                    <input type="hidden" id="id_1" name="id">
 						<div class="form-sub-w3ls ">
-							<input placeholder="Mật Khẩu"  type="password" required="" id="Password">
+							<input placeholder="Mật Khẩu"  type="password" required="" name="Password">
 							
 						</div>
                         <div class="form-sub-w3ls">
-							<input placeholder="Mật Khẩu Mới"  type="password" required="" id="Newpassword">
+							<input placeholder="Mật Khẩu Mới"  type="password" required="" name="Newpassword">
 						
 						</div>
 						<div class="form-sub-w3ls">
-							<input placeholder="Nhập Lại Mật Khẩu"  type="password" required="" id="Repassword">
+							<input placeholder="Nhập Lại Mật Khẩu"  type="password" required="" name="Repassword">
 							
 						</div>
 					</div>
@@ -237,40 +239,6 @@
 <div class="sapo-product-reviews-module"></div>
 
 
-
-<script type="text/javascript">
-           
-        $("#form-password").submit(function(e){
-            e.preventDefault();
-            var id= $('#id_1').val();
-            var Password = $('#Password').val();
-            var Newpassword =  $('#Newpassword').val();
-            var repassword = $('#repassword').val();
-            var _token=$("input[name=_token]").val();
-            $.ajax({
-                url: "{{ route('doipassword')}}",
-                type:'PUT',
-                data: {
-                    id:id,
-                    Password:Password,
-                    Newpassword: Newpassword,
-                    repassword:repassword,
-                    _token:_token
-                },
-                success: function(response) {
-                    $('#id_1').text(response.id);
-                    Password = $('#Password').val();
-                    Newpassword =  $('#Newpassword').val();
-                    repassword = $('#repassword').val();
-                    $('#Doi-Password').modal('toggle');
-                    $("#form-password").reset();
-                  $("#form-password").modal("hide");
-                }
-               
-            });
-        });
-	</script>    
-
 <script type="text/javascript">
            
         function edit_khachhang(id)
@@ -314,7 +282,7 @@
                     $('#type').text(response.gioi_tinh);
                     $('#update-khachhang').modal('toggle');
                     $("#form-update").reset();
-                  $("#form-update").modal("hide");
+                    $("#form-update").modal("hide");
                     setTimeout(function() {
                     window.location.href="{{ route('nguoidung',$user->id) }}"                    
                   }, 500);
