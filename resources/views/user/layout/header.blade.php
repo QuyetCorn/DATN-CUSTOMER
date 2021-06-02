@@ -187,7 +187,7 @@
     
                                 <li class="menu_hover nav-item nav-items ">
                                     <a href="sanpham" class="nav-link ">
-                                        Loại Sản Phẩm <i class="fa fa-angle-down" data-toggle="dropdown"></i></a>
+                                        Sản Phẩm <i class="fa fa-angle-down" data-toggle="dropdown"></i></a>
                                     <ul class="dropdown-menu border-box">
     
                                     @foreach($loai_sp as $loaisp)

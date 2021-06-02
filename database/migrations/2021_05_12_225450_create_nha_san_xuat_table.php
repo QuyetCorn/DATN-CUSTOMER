@@ -15,11 +15,11 @@ class CreateNhaSanXuatTable extends Migration
     {
         Schema::create('nha_san_xuat', function (Blueprint $table) {
             $table->id();
-            $table->string('ten');
-            $table->string('diachi');
+            $table->string('ten', 100);
+            $table->string('diachi', 200);
             $table->timestamps();
             $table->softDeletes();
-        });
+        }); 
     }
 
     /**

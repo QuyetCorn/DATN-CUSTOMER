@@ -73,14 +73,14 @@
                             <span class="bf_">- {{$sp->phan_tram_giam}}% </span>
                         </span>
                         @endif
-                        <a href="#" class="image_link display_flex" data-images="assets/images/{{$sp->hinh_anh}}"  title="{{$sp->ten_sp}}">
+                        <a href="{{route('chitietsanpham',$sp->id)}}" class="image_link display_flex" data-images="assets/images/{{$sp->hinh_anh}}"  title="{{$sp->ten_sp}}">
                             <img class="img-responsive lazyload" src="assets/images/{{$sp->hinh_anh}}" data-src="assets/images/{{$sp->hinh_anh}}" alt="{{$sp->ten_sp}}"/>
                         </a>
 
                         <div class="product-action-grid clearfix">
                             <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9746938" enctype="multipart/form-data">
                                 <div>
-                                    <a title="xem nhanh" href="x" data-handle="giay-converse-star-collar-break" class="button_wh_40 btn_view right-to quick-view"><i class="fa fa-search"></i>
+                                    <a title="xem nhanh" href="{{route('chitietsanpham',$sp->id)}}" data-handle="giay-converse-star-collar-break" class="button_wh_40 btn_view right-to quick-view"><i class="fa fa-search"></i>
                                         <span class="tooltips qv"><span>Xem nhanh</span></span>
                                     </a>
                                 </div>
@@ -94,7 +94,7 @@
                             <div class="bizweb-product-reviews-badge" data-id="9746938"></div>
                         </div>
     
-                        <h3 class="product-name"><a class="text2line" href="/giay-converse-star-collar-break" title="{{$sp->ten_sp}}">{{$sp->ten_sp}}</a></h3>
+                        <h3 class="product-name"><a class="text2line" href="{{route('chitietsanpham',$sp->id)}}" title="{{$sp->ten_sp}}">{{$sp->ten_sp}}</a></h3>
 
                         @if($sp->giam_gia>0)
                         <div class="price-box clearfix">			

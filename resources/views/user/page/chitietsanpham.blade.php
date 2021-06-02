@@ -292,7 +292,7 @@
 <div class="price-box price-loop-style" itemscope itemtype="http://schema.org/Offer">
 
 
-
+@if($chitietsanpham->giam_gia>0)
 <span class="special-price">
     <span class="price product-price" itemprop="price">{{number_format($chitietsanpham->giam_gia)}}đ</span>
     <meta itemprop="priceCurrency" content="VND">
@@ -305,14 +305,19 @@
     </span>
     <meta itemprop="priceCurrency" content="VND">
 </span>
+@else
+<span class="special-price">
+    <span class="price product-price" itemprop="price">{{number_format($chitietsanpham->gia)}}đ</span>
+    <meta itemprop="priceCurrency" content="VND">
+</span>
+@endif
 
 
 
-
-
+@if($chitietsanpham->tinh_trang==1)
 <div class="taxable">
     <span class="valibled">Tình trạng:</span>
-    <span class="status_name availabel in-stock">
+    <span style="color:green;">
         <span>
             
             Còn hàng
@@ -320,6 +325,18 @@
         </span>
     </span>
 </div>
+@else
+<div class="taxable">
+    <span class="valibled">Tình trạng:</span>
+    <span style="color:red;">
+        <span>
+            
+            Hết hàng
+            
+        </span>
+    </span>
+</div>
+@endif
 
 </div>
 
@@ -328,14 +345,14 @@
                             <ul>
                                 <li>
                                     <span>Thương hiệu:</span> 
-                                    <span class="bold">Đang cập nhật</span>
-                                </li>
-                                <li>
-                                    <span>Dòng sản phẩm:</span> 
-                                    <span class="bold">Đang cập nhật</span>
+                                    <span class="bold" style="color:green;" >{{$chitietsanpham->thuong_hieu}}</span>
                                 </li>
                                 <li><span>Giảm giá 10% cho hoá đơn trên 500k</span></li>
                                 <li><span>Miễn phí giao hàng trong bán kính 5km</span></li>
+                                <li>
+                                    <span>Bảo hành:</span> 
+                                    <span class="bold" style="color:green;">Trọn đời</span>
+                                </li>
                             </ul>
                         </div>
                         
@@ -367,7 +384,7 @@
                         </div>
                         
                         
-                        <div class="social-sharing margin-bottom-10">
+                        <!-- <div class="social-sharing margin-bottom-10">
                             <span class="ttt">Tags: </span>
                             <div class="share_add tags_name">
                                 
@@ -376,7 +393,7 @@
                                 <a href="/collections/all/demnguoc-2018-5-31">demnguoc_2018/5/31</a>						
                                 
                             </div>
-                        </div>
+                        </div> -->
                         
                             
                         

@@ -15,8 +15,8 @@ class CreateSanPhamTable extends Migration
     {
         Schema::create('san_pham', function (Blueprint $table) {
             $table->id();
-            $table->string('ma_sp');
-            $table->string('hinh_anh')->nullable();
+            $table->string('ma_sp',10);
+            $table->string('hinh_anh',200)->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
