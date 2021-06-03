@@ -40,19 +40,18 @@ class KhachHangController extends Controller
         return response()->json($user);
     }
 
+    public function edit_IMG(Request $request, Khachhang $khachhang){
+        $data['image'] = Helper::imageUpload($request);
+        if($khachhang->update($data))
+            Session::flash('message', 'successfully!');
+        else
+            Session::flash('message', 'Failure!');
+        return back();
+    }
+
+
     public function edit_khachhang(request $request){
-
-        //$data=$request->validate([
-        //    'lat' => 'required',
-        //    'name' => 'required',
-        //    'phone' => 'required',
-        //    'type' => 'required',
-        //]);
-      
-        //$khachhang->update($data);
-
         $user = khachhang::find( $request->id);
-       // $user->hinh_dai_dien = Helper::imageUpload($request->image);
         $user->ho_ten=$request->name;
         $user->sdt=$request->phone;
         $user->dia_chi=$request->lat;

@@ -35,15 +35,18 @@
             
                 <div class="details">
                     <div class="rows">
-                        <div class="product-detail-left col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                            <div class="row">
-                                <div class="col_large_default large-image"  >
-                                        <img style=" border: 1px #d4d4d4 solid; padding: 10px;border-radius:50%;-moz-border-radius:50%; -webkit-border-radius:50%;" class="img-responsive col-sm-8" src="{!!asset('assets/images/'.$user->hinh_dai_dien)!!}" data-zoom-image="https://bizweb.dktcdn.net/100/286/794/products/1-3.jpg?v=1517327927920"/>
-                                </div>
-                               
+                        <div class="product-detail-left col-xs-10 col-sm-6 col-md-6 col-lg-6" >
+                            <div class="rows">
+                                <div class="col_large_default large-image" style="text-align: center;" >
+                                  <a href="" data-toggle="modal" data-target="#ImageModal"> 
+                                   <img style=" border: 1px #d4d4d4 solid; padding: 10px;border-radius:50%;-moz-border-radius:50%; -webkit-border-radius:50%;" class="img-responsive col-md-8" src="{!!asset('assets/images/'.$user->hinh_dai_dien)!!}" data-zoom-image="https://bizweb.dktcdn.net/100/286/794/products/1-3.jpg?v=1517327927920"/>
+                                  </a>
+                                  </div>
+                                
                             </div>
-                            
+                         
                         </div>
+                        <form>
                         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 details-pro">
                             <div class="title_pr">
                                 <h1 class="title-product" itemprop="name">{{$user->ho_ten}}</h1>
@@ -52,7 +55,7 @@
                                     <div class="sapo-product-reviews-badge sapo-product-reviews-badge-detail" data-id="9724997"></div>
                                 </div>
                                 
-                            </div>
+                     </div>
                             
 
     <div class="price-box price-loop-style" itemscope itemtype="http://schema.org/Offer">
@@ -106,7 +109,7 @@
                                 </div>
                                 @endif   
                             </div>
-
+                            </form>
                             <div class="form-product col-sm-12 form-border margin-bottom-10">
                                
                                     <div class="box-variant clearfix ">
@@ -196,8 +199,8 @@
                     <h5 class="modal-title" id="update">Đổi thông tin</h5>
                     
                 </div>
-                <div class="modal-body">
                 <form id="form-update" >
+                <div class="modal-body">
 				{{ csrf_field() }}
                         <input type="hidden" id="id" name="id">
                         
@@ -231,7 +234,29 @@
 
         </div>
 	<!-- //for register popup -->
-
+    <div class="modal fade" id="ImageModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Hình Đại Diện</h5>
+            </div>
+            <form id="form-image" action="{{ route('update_image',$user->id)}}" method="post" >
+                <div class="modal-body">
+                @csrf
+                @method('PUT')
+                    <div>
+                        <label for="file">chọn File hình.</label>
+                        <input type="file" class="form-control" onchange="previewFile(this)" name="image" value="">
+                        <img id="FileImg" src="{!!asset('assets/images/'.$user->hinh_dai_dien)!!}" alt="profile image"  style=" border: 1px #d4d4d4 solid; padding: 10px;border-radius:50%;-moz-border-radius:50%; -webkit-border-radius:50%; max-width: 200px; marign: top 20px; max-height: 200px;">
+                    </div>
+					</div>
+                    <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Save Avatar</button>
+                    </div>
+				</form>
+            </div>
+        </div>
+        </div>
 
 
     
@@ -291,8 +316,20 @@
             });
         });
         
-	</script>    
-
+</script>    
+    <script>
+        function previewFile(input){
+            var file=$("input[type=File]").get(0).files[0];
+            if(file)
+            {
+                var reader = new FileReader();
+                reader.onload=function(){
+                    $("#FileImg").attr("src",reader.result);
+                }
+                reader.readAsDataURL(file);
+            }
+        }
+    </script>
 @endsection	
 
     <script type='text/javascript'>
