@@ -166,40 +166,22 @@
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 dear_title">
                         <h2 class="title_head_ border_content">
-                            <a href="#" title="Balo thời trang">Balo thời trang</a>
+                            <a href="#" title="Balo thời trang">Sản Phẩm Mới</a>
                         </h2>
                         <!-- Nav tabs -->
                         <div class="loop_two_ctrl visible-xs">
                             <span id="loop_two_prev">&lt;</span>
                             <span id="loop_two_next">&gt;</span>
                         </div>
-                        <ul class="nav nav-tabs nav-tabs-slide-mb cycle-slideshow" role="tablist" data-cycle-fx=scrollHorz data-cycle-timeout=0 data-cycle-prev="#loop_two_prev" data-cycle-next="#loop_two_next">
-    
-    
-    
-    
-                            <li role="presentation" class="active"><a href="#tab21" aria-controls="tab21" role="tab" data-toggle="tab">Balo chống nước</a></li>
-    
-    
-    
-    
-    
-                            <li role="presentation"><a href="#tab22" aria-controls="tab22" role="tab" data-toggle="tab">Balo đa năng</a></li>
-    
-    
-    
-    
-    
-                        </ul>
     
                     </div>
                     <!-- Tab panes -->
                     <div class="tab-content">
-    
+                      
                         <div role="tabpanel" class="tab-pane active" id="tab21">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 wrap_owl_product_">
                                 <div class="owl_product_ owl-carousel" data-nav="true" data-lg-items="5" data-md-items="4" data-height="false" data-xs-items="2" data-sm-items="3" data-margin="0">
-    
+                                @foreach($sanpham as $sp)
 
     
                                     <div class="item saler_item first">
@@ -273,8 +255,8 @@
                                         </div>
                                     </div>
     
-    
-    
+                                    @endforeach
+
     
     
                                     <div class="item saler_item ">
@@ -425,7 +407,7 @@
     
     
     
-                            <div class="item saler_item ">
+                    <div class="item saler_item ">
                                 <div class="owl_item_product">
     
                                     <div class="product-box">
@@ -651,7 +633,7 @@
                             </div>
                         </div>
     
-    
+                 
     
     
     

@@ -33,7 +33,7 @@ Route::group(['namespace' => 'User'], function() {
     Route::post('/doipassword/{id}','khachhangController@doipassword')->name('doipassword');
     Route::get('/edits_khachhang/{id}','khachhangController@getedit_khachhang');
     Route::put('/edit_khachhang','khachhangController@edit_khachhang')->name('update_nguoidung');
-    Route::put('/editkhachhang','khachhangController@edit_IMG')->name('update_image');
+    Route::post('/edit_Image/{id}','khachhangController@edit_hinhanh')->name('update_image');
     
     //page
     Route::get('/trangchu', 'TrangChuController@index')->name('trangchu');
