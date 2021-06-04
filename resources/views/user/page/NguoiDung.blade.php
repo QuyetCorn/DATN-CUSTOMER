@@ -46,7 +46,7 @@
                             </div>
                          
                         </div>
-                        <form>
+                   
                         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 details-pro">
                             <div class="title_pr">
                                 <h1 class="title-product" itemprop="name">{{$user->ho_ten}}</h1>
@@ -55,10 +55,10 @@
                                     <div class="sapo-product-reviews-badge sapo-product-reviews-badge-detail" data-id="9724997"></div>
                                 </div>
                                 
-                     </div>
+                            </div>
                             
 
-    <div class="price-box price-loop-style" itemscope itemtype="http://schema.org/Offer">
+                        <div class="price-box price-loop-style" itemscope itemtype="http://schema.org/Offer">
 
 
                                 <div class="taxable">
@@ -103,13 +103,12 @@
                                 </div>
                                 </div>
                                 <div class="results">
-                            `	@if(Session::get('message'))
+                            	@if(Session::get('message'))
                                 <div class="alert alert-danger">
-                                    {{ Session::get('message') }}
+                                {{ Session::get('message') }}
                                 </div>
                                 @endif   
                             </div>
-                            </form>
                             <div class="form-product col-sm-12 form-border margin-bottom-10">
                                
                                     <div class="box-variant clearfix ">
@@ -240,20 +239,23 @@
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">Hình Đại Diện</h5>
             </div>
-            <form id="form-image" action="{{ route('update_image',$user->id)}}" method="post" >
+            <form action="{{ route('update_image',$user->id)}}" method="post" enctype="multipart/form-data">
                 <div class="modal-body">
-                @csrf
-                @method('PUT')
+                 @csrf
                     <div>
                         <label for="file">chọn File hình.</label>
-                        <input type="file" class="form-control" onchange="previewFile(this)" name="image" value="">
+                        
+                            <div class="custom-file">
+                            <input type="file" class="custom-file-input" onchange="previewFile(this)" aria-describedby="inputGroupFileAddon01" name="image" class="form-control">
+                        </div>
+                        
                         <img id="FileImg" src="{!!asset('assets/images/'.$user->hinh_dai_dien)!!}" alt="profile image"  style=" border: 1px #d4d4d4 solid; padding: 10px;border-radius:50%;-moz-border-radius:50%; -webkit-border-radius:50%; max-width: 200px; marign: top 20px; max-height: 200px;">
                     </div>
 					</div>
                     <div class="modal-footer">
                     <button type="submit" class="btn btn-primary">Save Avatar</button>
-                    </div>
-				</form>
+                </div>
+			</form>
             </div>
         </div>
         </div>
@@ -317,7 +319,7 @@
         });
         
 </script>    
-    <script>
+<script type="text/javascript">
         function previewFile(input){
             var file=$("input[type=File]").get(0).files[0];
             if(file)
@@ -327,9 +329,9 @@
                     $("#FileImg").attr("src",reader.result);
                 }
                 reader.readAsDataURL(file);
-            }
+            };
         }
-    </script>
+</script>
 @endsection	
 
     <script type='text/javascript'>
