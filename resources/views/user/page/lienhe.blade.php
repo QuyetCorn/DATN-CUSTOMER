@@ -30,11 +30,11 @@
                         </li>
 
                         <li>
-                            <span class="fa fa-phone"></span><span class="frist_"><span class="b_font"><a href="tel:0368003626">0368003626</a></span></span><br>
+                            <span class="fa fa-phone"></span><span class="frist_"><span class="b_font"><a href="tel:0368003626"> 0368003626</a></span></span><br>
                         </li>
 
                         <li>
-                        <span class="fa fa-paper-plane"></span><span class="frist_"><span class="b_font"><a href="mailto:nguynhuan123@gmail.com">nguynhuan123@gmail.com</a> </span><br></span>
+                        <span class="fa fa-paper-plane"></span><span class="frist_"><span class="b_font"><a href="mailto:nguynhuan123@gmail.com"> nguynhuan123@gmail.com</a> </span><br></span>
                         <li>
             
                         <li>                

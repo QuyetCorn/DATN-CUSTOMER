@@ -96,11 +96,10 @@
     
     
                                             <div class="price-box clearfix">
-    
                                                 <span class="price product-price-old">
                                                     {{number_format($sp->gia)}}đ
                                                 </span>
-                                                <span class="price product-price">{{number_format($sp->giam_gia)}}đ</span>
+                                                <span class="price product-price">{{number_format($sp->gia*((100-$sp->giam_gia)/100))}}đ</span>
                                             </div>
     
     

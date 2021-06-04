@@ -25,7 +25,7 @@
             <section class="main_container collection collection_container col-lg-9 col-md-9 col-sm-12 col-lg-push-3 col-md-push-3">
                 <div class="page_title margin-top-5">
                     <h1 class="title_page_h1">
-                    
+
                     <span>{{$loaisp->ten_loai}}</span>
                      </h1>
                 </div>
@@ -101,7 +101,7 @@
                             <span class="price product-price-old">
                             {{number_format($sp->gia)}}đ		
                             </span>		
-                            <span class="price product-price">{{number_format($sp->giam_gia)}}đ</span>
+                            <span class="price product-price">{{number_format($sp->gia*((100-$sp->giam_gia)/100))}}đ</span>
                         </div>
                         @else
                         <span class="price product-price">{{number_format($sp->gia)}}đ</span>
@@ -165,7 +165,7 @@
     </div>
 </div>
 <div class="aside-title-filter">
-    <h2><span>Tìm theo</span></h2>
+    <h2><span>Tìm Theo</span></h2>
 </div>
 
 

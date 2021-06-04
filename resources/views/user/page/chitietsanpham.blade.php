@@ -285,7 +285,7 @@
 
                                 @if($chitietsanpham->giam_gia>0)
                                     <span class="special-price">
-                                        <span class="price product-price" itemprop="price">{{number_format($chitietsanpham->giam_gia)}}đ</span>
+                                        <span class="price product-price">{{number_format($chitietsanpham->gia*((100-$chitietsanpham->giam_gia)/100))}}đ</span>
                                         <meta itemprop="priceCurrency" content="VND">
                                     </span>
                                     <span class="old-price">
@@ -309,7 +309,7 @@
                                     <div class="taxable">
                                         <span class="valibled">Tình trạng:</span>
                                         <span style="color:green;">
-                                            <span>
+                                            <span style="font-size: 17px; font-weight: bold;">
                                                 
                                                 Còn hàng
                                                 
@@ -336,13 +336,13 @@
                                 <ul>
                                     <li>
                                         <span>Thương hiệu:</span> 
-                                        <span class="bold" style="color:green;" >{{$chitietsanpham->thuong_hieu}}</span>
+                                        <span style="font-size: 16px; font-weight: bold;  color:green;" >{{$chitietsanpham->thuong_hieu}}</span>
                                     </li>
                                     <li><span>Giảm giá 10% cho hoá đơn trên 500k</span></li>
                                     <li><span>Miễn phí giao hàng trong bán kính 5km</span></li>
                                     <li>
                                         <span>Bảo hành:</span> 
-                                        <span class="bold" style="color:green;">Trọn đời</span>
+                                        <span class="bold" style="font-size: 16px; font-weight: bold;  color:green;">Trọn đời</span>
                                     </li>
                                 </ul>
                             </div>
@@ -363,7 +363,7 @@
                                         </div>
                                                                             
                                         <button type="submit" class="btn btn-lg  btn-cart button_cart_buy_enable add_to_cart btn_buy" title="Cho vào giỏ hàng">
-                                            <i class="fa fa-shopping-basket hidden"></i>&nbsp;&nbsp;<span>Cho vào giỏ hàng</span>
+                                            <i class="fa fa-shopping-basket hidden" ></i>&nbsp;&nbsp;<span style="font-size: 16px; font-weight: bold;" >THÊM VÀO GIỎ HÀNG</span>
                                         </button>									
                                     </div>
                                 </form>
@@ -517,7 +517,7 @@
                                                         <span class="price product-price-old">
                                                         {{number_format($sp->gia)}}đ		
                                                         </span>		
-                                                        <span class="price product-price">{{number_format($sp->giam_gia)}}đ</span>
+                                                        <span class="price product-price">{{number_format($sp->gia*((100-$sp->giam_gia)/100))}}đ</span>
                                                     </div>
                                                     @else
                                                     <span class="price product-price">{{number_format($sp->gia)}}đ</span>

@@ -147,7 +147,7 @@
                     <div class="menu_ lineheight55">
                         <div class="title_menu">
                             <span class="nav_button"><span class="fa fa-align-left"></span></span>
-                            <span class="title_">Danh mục sản phẩm</span>
+                            <span class="title_">DANH MỤC SẢN PHẨM</span>
                             <i class="fa fa-caret-down"></i>
     
                         </div>
@@ -156,7 +156,7 @@
     
                                 @foreach($loai_sp as $loaisp)
                                 <li class="nav_item lv1">
-                                    <a href="{{route('loai_sp',$loaisp->id)}}" title="{{$loaisp->ten_loai}}">{{$loaisp->ten_loai}}</a>
+                                    <a style="font-weight: bold;" href="{{route('loai_sp',$loaisp->id)}}" title="{{$loaisp->ten_loai}}">{{$loaisp->ten_loai}}</a>
                                 </li>
                                 @endforeach
                             </ul>
@@ -171,7 +171,7 @@
     
                                 <li class=" nav-item nav-items active ">
                                     <a href="trangchu" class="nav-link">
-                                        Trang Chủ </a>
+                                        TRANG CHỦ </a>
                                 </li>
     
     
@@ -180,14 +180,14 @@
 
                                     <a href="gioithieu" class="nav-link">
 
-                                        Giới Thiệu </a>
+                                        GIỚI THIỆU </a>
                                 </li>
     
     
     
                                 <li class="menu_hover nav-item nav-items ">
                                     <a href="sanpham" class="nav-link ">
-                                        Sản Phẩm <i class="fa fa-angle-down" data-toggle="dropdown"></i></a>
+                                        SẢN PHẨM <i class="fa fa-angle-down" data-toggle="dropdown"></i></a>
                                     <ul class="dropdown-menu border-box">
     
                                     @foreach($loai_sp as $loaisp)
@@ -205,7 +205,7 @@
     
                                 <li class=" nav-item nav-items ">
                                     <a href="tintuc" class="nav-link">
-                                        Tin Tức </a>
+                                        TIN TỨC </a>
                                 </li>
     
     
@@ -213,7 +213,7 @@
                                 <li class=" nav-item nav-items ">
 
                                 <a href="lienhe" class="nav-link">
-                                        Liên Hệ </a>
+                                        LIÊN HỆ </a>
                                 </li>
     
     

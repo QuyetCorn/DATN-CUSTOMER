@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-@include('user.layout.head');
+@include('user.layout.head')
 <body>
 
     @include('user.layout.header')
