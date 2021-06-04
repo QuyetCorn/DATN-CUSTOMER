@@ -3,851 +3,561 @@
     
 
 <section class="bread-crumb clearfix">
-<span class="crumb-border"></span>
-<div class="container">
-    <div class="row">
-        <div class="col-xs-12 a-left">
-            <ul class="breadcrumb">					
-                <li class="home">
-                    <a itemprop="url" href="trangchu" ><span >Trang chủ</span></a>						
-                    <span class="mr_lr"> <i class="fa fa-angle-right"></i> </span>
-                </li>
-                
-                
-                <li>
-                    <a itemprop="url" href="/san-pham-khuyen-mai"><span >Sản phẩm khuyến mãi</span></a>						
-                    <span class="mr_lr"> <i class="fa fa-angle-right"></i> </span>
-                </li>
-                
-                <li><strong><span >{{$chitietsanpham->ten_sp}}</span></strong><li>
-                
-            </ul>
-        </div>
-    </div>
-</div>
-</section>
-<section class="product margin-top-40" itemscope itemtype="http://schema.org/Product">	
-<meta itemprop="url" content="//zmarket.mysapo.net/balo-mikkor-irvin-charcoal-orange">
-<meta itemprop="image" content="//bizweb.dktcdn.net/thumb/grande/100/286/794/products/1-3.jpg?v=1517327927920">
-<div class="container bg_white">
-    <div class="row row_product">
-        <div id="sidebar_product" class="col-lg-3 col-md-3 col-sm-12 col-xs-12 sidebar_product_details">
-            <div class="wol_product">
-                <div class="dear_title">
-                    <h2 class="title_head_ border_content">
-                        <a href="frontpage" title="Sản phẩm bán chạy">
-                            Sản phẩm bán chạy</a>
-                    </h2>
-                </div>
-                <div class="clearfix"></div>
-                <div class="product_col_dets row">
-                    <div class="wrap_owl_topsale col-lg-12 col-md-12 col-xs-12">
-                        <div  class="owl_col_details owl-carousel owl-theme " data-nav="true" data-lg-items="1" data-md-items="1" data-height="false" data-xs-items="1" data-sm-items="1" data-margin="15">
-  
-<div class="item">
-
-<div class="hot_sale_product">
-    <div class="item-img-horizontal">
-        
-        <a href="" class="product-image" title="">
-            <img src="//bizweb.dktcdn.net/thumb/compact/100/286/794/products/1-4-2.jpg?v=1517304826530" alt="Balo laplop Solo Pro ARC Black">
-        </a>
-        
-    </div>
-    <div class="item-info-horizontal">
-        <h3 class="item-name text2line">
-            <a href="/balo-laplop-solo-pro-arc-black" title="Balo laplop Solo Pro ARC Black">
-                Balo laplop Solo Pro ARC Black
-            </a>
-        </h3>
-        
-        
-        <div class="price-box clearfix">			
-            
-            <span class="price product-price-old">
-                950.000₫			
-            </span>		
-                
-            <span class="price product-price">860.000₫</span>
-        </div>		
-        
-        
-    </div>
-</div>
-
-
-<div class="hot_sale_product">
-    <div class="item-img-horizontal">
-        
-        <a href="/balo-mikkor-irvin-charcoal-orange" class="product-image" title="Balo Mikkor Irvin Charcoal/Orange">
-            <img src="//bizweb.dktcdn.net/thumb/compact/100/286/794/products/1-3.jpg?v=1517327927920" alt="Balo Mikkor Irvin Charcoal/Orange">
-        </a>
-        
-    </div>
-    <div class="item-info-horizontal">
-        <h3 class="item-name text2line">
-            <a href="/balo-mikkor-irvin-charcoal-orange" title="Balo Mikkor Irvin Charcoal/Orange">
-                Balo Mikkor Irvin Charcoal/Orange
-            </a>
-        </h3>
-        
-        
-        <div class="price-box clearfix">			
-            
-            <span class="price product-price-old">
-                1.200.000₫			
-            </span>		
-                
-            <span class="price product-price">750.000₫</span>
-        </div>		
-        
-        
-    </div>
-</div>
-
-
-<div class="hot_sale_product">
-    <div class="item-img-horizontal">
-        
-        <a href="/vali-ricardo-spectrum-20-inch-5-tac-den" class="product-image" title="Vali Ricardo Spectrum 20 inch 5 tấc - Đen">
-            <img src="//bizweb.dktcdn.net/thumb/compact/100/286/794/products/1-d759a515-8ee4-447f-a51b-9be521c66a3a.jpg?v=1517328908890" alt="Vali Ricardo Spectrum 20 inch 5 tấc - Đen">
-        </a>
-        
-    </div>
-    <div class="item-info-horizontal">
-        <h3 class="item-name text2line">
-            <a href="/vali-ricardo-spectrum-20-inch-5-tac-den" title="Vali Ricardo Spectrum 20 inch 5 tấc - Đen">
-                Vali Ricardo Spectrum 20 inch 5 tấc - Đen
-            </a>
-        </h3>
-        
-        
-        <div class="price-box clearfix">			
-            
-            <span class="price product-price-old">
-                4.000.000₫			
-            </span>		
-                
-            <span class="price product-price">3.700.000₫</span>
-        </div>		
-        
-        
-    </div>
-</div>
-
-
-<div class="hot_sale_product">
-    <div class="item-img-horizontal">
-        
-        <a href="/giay-vai-converse-3" class="product-image" title="Giày converse One Star Leather + Tapestry">
-            <img src="//bizweb.dktcdn.net/thumb/compact/100/286/794/products/3min2aeb1bce236543fcad76752f82.jpg?v=1516862308167" alt="Giày converse One Star Leather + Tapestry">
-        </a>
-        
-    </div>
-    <div class="item-info-horizontal">
-        <h3 class="item-name text2line">
-            <a href="/giay-vai-converse-3" title="Giày converse One Star Leather + Tapestry">
-                Giày converse One Star Leather + Tapestry
-            </a>
-        </h3>
-        
-        
-        <div class="price-box clearfix">			
-            
-            <span class="price product-price-old">
-                800.000₫			
-            </span>		
-                
-            <span class="price product-price">700.000₫</span>
-        </div>		
-        
-        
-    </div>
-</div>
-
-</div>
-
-
-<!-- ADD DIV -->
-
-
-                            
-                        </div>
-                    </div>
+    <span class="crumb-border"></span>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 a-left">
+                    <ul class="breadcrumb">					
+                        <li class="home">
+                            <a itemprop="url" href="trangchu" ><span >Trang chủ</span></a>						
+                            <span class="mr_lr"> <i class="fa fa-angle-right"></i> </span>
+                        </li>
+                        
+                        
+                        <li>
+                            <a itemprop="url" href="/san-pham-khuyen-mai"><span >Sản phẩm khuyến mãi</span></a>						
+                            <span class="mr_lr"> <i class="fa fa-angle-right"></i> </span>
+                        </li>
+                        
+                        <li><strong><span >{{$chitietsanpham->ten_sp}}</span></strong><li>
+                        
+                    </ul>
                 </div>
             </div>
         </div>
-        <div id="main_product" class="details-product col-lg-9 col-md-9 col-sm-12 col-xs-12">	
+</section>
+
+<section class="product margin-top-40" itemscope itemtype="http://schema.org/Product">	
+    <meta itemprop="url" content="//zmarket.mysapo.net/balo-mikkor-irvin-charcoal-orange">
+    <meta itemprop="image" content="//bizweb.dktcdn.net/thumb/grande/100/286/794/products/1-3.jpg?v=1517327927920">
+    <div class="container bg_white">
+        <div class="row row_product">
+            <div id="sidebar_product" class="col-lg-3 col-md-3 col-sm-12 col-xs-12 sidebar_product_details">
+                <div class="wol_product">
+                    <div class="dear_title">
+                        <h2 class="title_head_ border_content">
+                            <a href="frontpage" title="Sản phẩm bán chạy">
+                                Sản phẩm bán chạy</a>
+                        </h2>
+                    </div>
+                    <div class="clearfix"></div>
+                        <div class="product_col_dets row">
+                            <div class="wrap_owl_topsale col-lg-12 col-md-12 col-xs-12">
+                                <div  class="owl_col_details owl-carousel owl-theme " data-nav="true" data-lg-items="1" data-md-items="1" data-height="false" data-xs-items="1" data-sm-items="1" data-margin="15">
+
+                                    <div class="item">
+                                        <div class="hot_sale_product">
+                                            <div class="item-img-horizontal">
+                                                
+                                                <a href="" class="product-image" title="">
+                                                    <img src="//bizweb.dktcdn.net/thumb/compact/100/286/794/products/1-4-2.jpg?v=1517304826530" alt="Balo laplop Solo Pro ARC Black">
+                                                </a>
+                                                
+                                            </div>
+                                            <div class="item-info-horizontal">
+                                                <h3 class="item-name text2line">
+                                                    <a href="/balo-laplop-solo-pro-arc-black" title="Balo laplop Solo Pro ARC Black">
+                                                        Balo laplop Solo Pro ARC Black
+                                                    </a>
+                                                </h3>
+                                                
+                                                
+                                                <div class="price-box clearfix">			
+                                                    
+                                                    <span class="price product-price-old">
+                                                        950.000₫			
+                                                    </span>		
+                                                        
+                                                    <span class="price product-price">860.000₫</span>
+                                                </div>		
+                                                
+                                                
+                                            </div>
+                                        </div>
+
+
+                                        <div class="hot_sale_product">
+                                            <div class="item-img-horizontal">
+                                                
+                                                <a href="/balo-mikkor-irvin-charcoal-orange" class="product-image" title="Balo Mikkor Irvin Charcoal/Orange">
+                                                    <img src="//bizweb.dktcdn.net/thumb/compact/100/286/794/products/1-3.jpg?v=1517327927920" alt="Balo Mikkor Irvin Charcoal/Orange">
+                                                </a>
+                                                
+                                            </div>
+                                            <div class="item-info-horizontal">
+                                                <h3 class="item-name text2line">
+                                                    <a href="/balo-mikkor-irvin-charcoal-orange" title="Balo Mikkor Irvin Charcoal/Orange">
+                                                        Balo Mikkor Irvin Charcoal/Orange
+                                                    </a>
+                                                </h3>
+                                                
+                                                
+                                                <div class="price-box clearfix">			
+                                                    
+                                                    <span class="price product-price-old">
+                                                        1.200.000₫			
+                                                    </span>		
+                                                        
+                                                    <span class="price product-price">750.000₫</span>
+                                                </div>		
+                                                
+                                                
+                                            </div>
+                                        </div>
+
+
+                                        <div class="hot_sale_product">
+                                            <div class="item-img-horizontal">
+                                                
+                                                <a href="/vali-ricardo-spectrum-20-inch-5-tac-den" class="product-image" title="Vali Ricardo Spectrum 20 inch 5 tấc - Đen">
+                                                    <img src="//bizweb.dktcdn.net/thumb/compact/100/286/794/products/1-d759a515-8ee4-447f-a51b-9be521c66a3a.jpg?v=1517328908890" alt="Vali Ricardo Spectrum 20 inch 5 tấc - Đen">
+                                                </a>
+                                                
+                                            </div>
+                                            <div class="item-info-horizontal">
+                                                <h3 class="item-name text2line">
+                                                    <a href="/vali-ricardo-spectrum-20-inch-5-tac-den" title="Vali Ricardo Spectrum 20 inch 5 tấc - Đen">
+                                                        Vali Ricardo Spectrum 20 inch 5 tấc - Đen
+                                                    </a>
+                                                </h3>
+                                                
+                                                
+                                                <div class="price-box clearfix">			
+                                                    
+                                                    <span class="price product-price-old">
+                                                        4.000.000₫			
+                                                    </span>		
+                                                        
+                                                    <span class="price product-price">3.700.000₫</span>
+                                                </div>		
+                                                
+                                                
+                                            </div>
+                                        </div>
+
+
+                                        <div class="hot_sale_product">
+                                            <div class="item-img-horizontal">
+                                                
+                                                <a href="/giay-vai-converse-3" class="product-image" title="Giày converse One Star Leather + Tapestry">
+                                                    <img src="//bizweb.dktcdn.net/thumb/compact/100/286/794/products/3min2aeb1bce236543fcad76752f82.jpg?v=1516862308167" alt="Giày converse One Star Leather + Tapestry">
+                                                </a>
+                                                
+                                            </div>
+                                            <div class="item-info-horizontal">
+                                                <h3 class="item-name text2line">
+                                                    <a href="/giay-vai-converse-3" title="Giày converse One Star Leather + Tapestry">
+                                                        Giày converse One Star Leather + Tapestry
+                                                    </a>
+                                                </h3>
+                                                
+                                                
+                                                <div class="price-box clearfix">			
+                                                    
+                                                    <span class="price product-price-old">
+                                                        800.000₫			
+                                                    </span>		
+                                                        
+                                                    <span class="price product-price">700.000₫</span>
+                                                </div>		 
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             
-         
-            <div class="details">
-                <div class="rows">
-                    <div class="product-detail-left product-images col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                        <div class="row">
-                            <div class="col_large_default large-image">
-                            @if($chitietsanpham->phan_tram_giam>0)
-                                <span class="sale_count details__"><span class="bf_ sale___">
-                                - {{$chitietsanpham->phan_tram_giam}}%
-                                    </span></span>
-                            @endif
+            <div id="main_product" class="details-product col-lg-9 col-md-9 col-sm-12 col-xs-12">	
+                <div class="details">
+                    <div class="rows">
+                        <div class="product-detail-left product-images col-xs-12 col-sm-6 col-md-6 col-lg-6">
+
+                            <div class="row">
+                                <div class="col_large_default large-image">
+                                    @if($chitietsanpham->phan_tram_giam>0)
+                                        <span class="sale_count details__"><span class="bf_ sale___">
+                                        - {{$chitietsanpham->phan_tram_giam}}%
+                                            </span></span>
+                                    @endif
 
 
-                                <a href="assets/images/{{$chitietsanpham->hinh_anh}}" class="large_image_url checkurl"  data-rel="prettyPhoto[product-gallery]" >
-                                    
-                                    <img id="img_01" class="img-responsive" alt="{{$chitietsanpham->ten_sp}}" src="assets/images/{{$chitietsanpham->hinh_anh}}" data-zoom-image="assets/images/{{$chitietsanpham->hinh_anh}}"/>
-                                </a>
+                                    <a href="assets/images/{{$chitietsanpham->hinh_anh}}" class="large_image_url checkurl"  data-rel="prettyPhoto[product-gallery]" >
+                                        
+                                        <img id="img_01" class="img-responsive" alt="{{$chitietsanpham->ten_sp}}" src="assets/images/{{$chitietsanpham->hinh_anh}}" data-zoom-image="assets/images/{{$chitietsanpham->hinh_anh}}"/>
+                                    </a>
 
-                                <div class="hidden">
-                                    
-                                    
-                                    
+                                    <div class="hidden">
+                                        
+                                        <div class="item">
+                                            <a href="assets/images/{{$chitietsanpham->hinh_anh}}" data-image="assets/images/{{$chitietsanpham->hinh_anh}}" data-zoom-image="assets/images/{{$chitietsanpham->hinh_anh}}" data-rel="prettyPhoto[product-gallery]">										
+                                            </a>
+                                        </div>	
+                                        
+                                        
+                                        
+                                        
+                                        <!-- <div class="item">
+                                            <a href="https://bizweb.dktcdn.net/100/286/794/products/2-3.jpg?v=1517327927920" data-image="https://bizweb.dktcdn.net/100/286/794/products/2-3.jpg?v=1517327927920" data-zoom-image="https://bizweb.dktcdn.net/100/286/794/products/2-3.jpg?v=1517327927920" data-rel="prettyPhoto[product-gallery]">										
+                                            </a>
+                                        </div>	
+                                        
+                                        
+                                        
+                                        
+                                        <div class="item">
+                                            <a href="https://bizweb.dktcdn.net/100/286/794/products/3-3.jpg?v=1517327927920" data-image="https://bizweb.dktcdn.net/100/286/794/products/3-3.jpg?v=1517327927920" data-zoom-image="https://bizweb.dktcdn.net/100/286/794/products/3-3.jpg?v=1517327927920" data-rel="prettyPhoto[product-gallery]">										
+                                            </a>
+                                        </div>	
+                                        
+                                        
+                                        
+                                        
+                                        <div class="item">
+                                            <a href="https://bizweb.dktcdn.net/100/286/794/products/4-2.jpg?v=1517327927920" data-image="https://bizweb.dktcdn.net/100/286/794/products/4-2.jpg?v=1517327927920" data-zoom-image="https://bizweb.dktcdn.net/100/286/794/products/4-2.jpg?v=1517327927920" data-rel="prettyPhoto[product-gallery]">										
+                                            </a>
+                                        </div>	
+                                        
+                                        
+                                        
+                                        
+                                        <div class="item">
+                                            <a href="https://bizweb.dktcdn.net/100/286/794/products/5.jpg?v=1517327927920" data-image="https://bizweb.dktcdn.net/100/286/794/products/5.jpg?v=1517327927920" data-zoom-image="https://bizweb.dktcdn.net/100/286/794/products/5.jpg?v=1517327927920" data-rel="prettyPhoto[product-gallery]">										
+                                            </a>
+                                        </div>	 -->
+                                        
+                                    </div>
+                                </div>
+                                
+                                <div id="gallery_02" class="col-sm-12 col-xs-12 col-lg-5 col-md-5 owl_width no-padding owl-carousel owl-theme thumbnail-product thumb_product_details not-dqowl" data-loop="false" data-lg-item="3" data-md-items="3" data-sm-items="3" data-xs-items="3" data-margin="10">
                                     
                                     <div class="item">
-                                        <a href="assets/images/{{$chitietsanpham->hinh_anh}}" data-image="assets/images/{{$chitietsanpham->hinh_anh}}" data-zoom-image="assets/images/{{$chitietsanpham->hinh_anh}}" data-rel="prettyPhoto[product-gallery]">										
+                                        <a>
+                                            <img data-img="assets/images/{{$chitietsanpham->hinh_anh}}" src="assets/images/{{$chitietsanpham->hinh_anh}}" alt="{{$chitietsanpham->ten_sp}}">
                                         </a>
-                                    </div>	
-                                    
-                                    
-                                    
+                                    </div>
                                     
                                     <!-- <div class="item">
-                                        <a href="https://bizweb.dktcdn.net/100/286/794/products/2-3.jpg?v=1517327927920" data-image="https://bizweb.dktcdn.net/100/286/794/products/2-3.jpg?v=1517327927920" data-zoom-image="https://bizweb.dktcdn.net/100/286/794/products/2-3.jpg?v=1517327927920" data-rel="prettyPhoto[product-gallery]">										
+                                        <a href="#" data-image="https://bizweb.dktcdn.net/100/286/794/products/2-3.jpg?v=1517327927920" data-zoom-image="//bizweb.dktcdn.net/thumb/1024x1024/100/286/794/products/2-3.jpg?v=1517327927920">
+                                            <img data-img="//bizweb.dktcdn.net/thumb/1024x1024/100/286/794/products/2-3.jpg?v=1517327927920" src="//bizweb.dktcdn.net/thumb/small/100/286/794/products/2-3.jpg?v=1517327927920" alt="Balo Mikkor Irvin Charcoal/Orange">
                                         </a>
-                                    </div>	
-                                    
-                                    
-                                    
-                                    
-                                    <div class="item">
-                                        <a href="https://bizweb.dktcdn.net/100/286/794/products/3-3.jpg?v=1517327927920" data-image="https://bizweb.dktcdn.net/100/286/794/products/3-3.jpg?v=1517327927920" data-zoom-image="https://bizweb.dktcdn.net/100/286/794/products/3-3.jpg?v=1517327927920" data-rel="prettyPhoto[product-gallery]">										
-                                        </a>
-                                    </div>	
-                                    
-                                    
-                                    
-                                    
-                                    <div class="item">
-                                        <a href="https://bizweb.dktcdn.net/100/286/794/products/4-2.jpg?v=1517327927920" data-image="https://bizweb.dktcdn.net/100/286/794/products/4-2.jpg?v=1517327927920" data-zoom-image="https://bizweb.dktcdn.net/100/286/794/products/4-2.jpg?v=1517327927920" data-rel="prettyPhoto[product-gallery]">										
-                                        </a>
-                                    </div>	
-                                    
-                                    
-                                    
-                                    
-                                    <div class="item">
-                                        <a href="https://bizweb.dktcdn.net/100/286/794/products/5.jpg?v=1517327927920" data-image="https://bizweb.dktcdn.net/100/286/794/products/5.jpg?v=1517327927920" data-zoom-image="https://bizweb.dktcdn.net/100/286/794/products/5.jpg?v=1517327927920" data-rel="prettyPhoto[product-gallery]">										
-                                        </a>
-                                    </div>	 -->
-                                    
-                                </div>
-                            </div>
-                            
-                            <div id="gallery_02" class="col-sm-12 col-xs-12 col-lg-5 col-md-5 owl_width no-padding owl-carousel owl-theme thumbnail-product thumb_product_details not-dqowl" data-loop="false" data-lg-item="3" data-md-items="3" data-sm-items="3" data-xs-items="3" data-margin="10">
-                                
-                                <div class="item">
-                                    <a>
-                                        <img data-img="assets/images/{{$chitietsanpham->hinh_anh}}" src="assets/images/{{$chitietsanpham->hinh_anh}}" alt="{{$chitietsanpham->ten_sp}}">
-                                    </a>
-                                </div>
-                                
-                                <!-- <div class="item">
-                                    <a href="#" data-image="https://bizweb.dktcdn.net/100/286/794/products/2-3.jpg?v=1517327927920" data-zoom-image="//bizweb.dktcdn.net/thumb/1024x1024/100/286/794/products/2-3.jpg?v=1517327927920">
-                                        <img data-img="//bizweb.dktcdn.net/thumb/1024x1024/100/286/794/products/2-3.jpg?v=1517327927920" src="//bizweb.dktcdn.net/thumb/small/100/286/794/products/2-3.jpg?v=1517327927920" alt="Balo Mikkor Irvin Charcoal/Orange">
-                                    </a>
-                                </div>
-                                
-                                <div class="item">
-                                    <a href="#" data-image="https://bizweb.dktcdn.net/100/286/794/products/3-3.jpg?v=1517327927920" data-zoom-image="//bizweb.dktcdn.net/thumb/1024x1024/100/286/794/products/3-3.jpg?v=1517327927920">
-                                        <img data-img="//bizweb.dktcdn.net/thumb/1024x1024/100/286/794/products/3-3.jpg?v=1517327927920" src="//bizweb.dktcdn.net/thumb/small/100/286/794/products/3-3.jpg?v=1517327927920" alt="Balo Mikkor Irvin Charcoal/Orange">
-                                    </a>
-                                </div>
-                                
-                                <div class="item">
-                                    <a href="#" data-image="https://bizweb.dktcdn.net/100/286/794/products/4-2.jpg?v=1517327927920" data-zoom-image="//bizweb.dktcdn.net/thumb/1024x1024/100/286/794/products/4-2.jpg?v=1517327927920">
-                                        <img data-img="//bizweb.dktcdn.net/thumb/1024x1024/100/286/794/products/4-2.jpg?v=1517327927920" src="//bizweb.dktcdn.net/thumb/small/100/286/794/products/4-2.jpg?v=1517327927920" alt="Balo Mikkor Irvin Charcoal/Orange">
-                                    </a>
-                                </div>
-                                
-                                <div class="item">
-                                    <a href="#" data-image="https://bizweb.dktcdn.net/100/286/794/products/5.jpg?v=1517327927920" data-zoom-image="//bizweb.dktcdn.net/thumb/1024x1024/100/286/794/products/5.jpg?v=1517327927920">
-                                        <img data-img="//bizweb.dktcdn.net/thumb/1024x1024/100/286/794/products/5.jpg?v=1517327927920" src="//bizweb.dktcdn.net/thumb/small/100/286/794/products/5.jpg?v=1517327927920" alt="Balo Mikkor Irvin Charcoal/Orange">
-                                    </a>
-                                </div> -->
-                                
-                            </div>
-                            
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 details-pro">
-                        <div class="title_pr">
-                            <h1 class="title-product" itemprop="name">{{$chitietsanpham->ten_sp}}</h1>
-                            
-                            <div class="reviews_details_product">
-                                <div class="sapo-product-reviews-badge sapo-product-reviews-badge-detail" data-id="9724997"></div>
-                            </div>
-                            
-                        </div>
-                        
-
-<div class="price-box price-loop-style" itemscope itemtype="http://schema.org/Offer">
-
-
-@if($chitietsanpham->giam_gia>0)
-<span class="special-price">
-    <span class="price product-price" itemprop="price">{{number_format($chitietsanpham->giam_gia)}}đ</span>
-    <meta itemprop="priceCurrency" content="VND">
-</span>
-<span class="old-price">
-    <span class="price" itemprop="priceSpecification">
-        
-    {{number_format($chitietsanpham->gia)}}đ
-        
-    </span>
-    <meta itemprop="priceCurrency" content="VND">
-</span>
-@else
-<span class="special-price">
-    <span class="price product-price" itemprop="price">{{number_format($chitietsanpham->gia)}}đ</span>
-    <meta itemprop="priceCurrency" content="VND">
-</span>
-@endif
-
-
-
-@if($chitietsanpham->tinh_trang==1)
-<div class="taxable">
-    <span class="valibled">Tình trạng:</span>
-    <span style="color:green;">
-        <span>
-            
-            Còn hàng
-            
-        </span>
-    </span>
-</div>
-@else
-<div class="taxable">
-    <span class="valibled">Tình trạng:</span>
-    <span style="color:red;">
-        <span>
-            
-            Hết hàng
-            
-        </span>
-    </span>
-</div>
-@endif
-
-</div>
-
-
-                        <div class="vender_">
-                            <ul>
-                                <li>
-                                    <span>Thương hiệu:</span> 
-                                    <span class="bold" style="color:green;" >{{$chitietsanpham->thuong_hieu}}</span>
-                                </li>
-                                <li><span>Giảm giá 10% cho hoá đơn trên 500k</span></li>
-                                <li><span>Miễn phí giao hàng trong bán kính 5km</span></li>
-                                <li>
-                                    <span>Bảo hành:</span> 
-                                    <span class="bold" style="color:green;">Trọn đời</span>
-                                </li>
-                            </ul>
-                        </div>
-                        
-                        <div class="form-product col-sm-12 form-border">
-                            <form enctype="multipart/form-data" id="add-to-cart-form" action="/cart/add" method="post" class="form-inline">
-                                
-                                <div class="box-variant clearfix ">
-                                    
-                                    <input type="hidden" name="variantId" value="15530094" />
-                                    
-                                </div>
-                                <div class="form-group form_button_details ">
-                                    <header class="not_bg hidden">Số lượng:</header>
-                                    <div class="custom input_number_product custom-btn-number form-control">									
-                                        <button class="btn_num num_1 button button_qty" onClick="var result = document.getElementById('qtym'); var qtypro = result.value; if( !isNaN( qtypro ) &amp;&amp; qtypro &gt; 1 ) result.value--;return false;" type="button">-</button>
-                                        <input type="text" id="qtym" name="quantity" value="1"  onkeyup="valid(this,'numbers')" onkeypress='validate(event)' class="form-control prd_quantity">
-                                        <button class="btn_num num_2 button button_qty" onClick="var result = document.getElementById('qtym'); var qtypro = result.value; if( !isNaN( qtypro )) result.value++;return false;" type="button">+</button>
                                     </div>
-                                                                        
-                                    <button type="submit" class="btn btn-lg  btn-cart button_cart_buy_enable add_to_cart btn_buy" title="Cho vào giỏ hàng">
-                                        <i class="fa fa-shopping-basket hidden"></i>&nbsp;&nbsp;<span>Cho vào giỏ hàng</span>
-                                    </button>									
                                     
+                                    <div class="item">
+                                        <a href="#" data-image="https://bizweb.dktcdn.net/100/286/794/products/3-3.jpg?v=1517327927920" data-zoom-image="//bizweb.dktcdn.net/thumb/1024x1024/100/286/794/products/3-3.jpg?v=1517327927920">
+                                            <img data-img="//bizweb.dktcdn.net/thumb/1024x1024/100/286/794/products/3-3.jpg?v=1517327927920" src="//bizweb.dktcdn.net/thumb/small/100/286/794/products/3-3.jpg?v=1517327927920" alt="Balo Mikkor Irvin Charcoal/Orange">
+                                        </a>
+                                    </div>
+                                    
+                                    <div class="item">
+                                        <a href="#" data-image="https://bizweb.dktcdn.net/100/286/794/products/4-2.jpg?v=1517327927920" data-zoom-image="//bizweb.dktcdn.net/thumb/1024x1024/100/286/794/products/4-2.jpg?v=1517327927920">
+                                            <img data-img="//bizweb.dktcdn.net/thumb/1024x1024/100/286/794/products/4-2.jpg?v=1517327927920" src="//bizweb.dktcdn.net/thumb/small/100/286/794/products/4-2.jpg?v=1517327927920" alt="Balo Mikkor Irvin Charcoal/Orange">
+                                        </a>
+                                    </div>
+                                    
+                                    <div class="item">
+                                        <a href="#" data-image="https://bizweb.dktcdn.net/100/286/794/products/5.jpg?v=1517327927920" data-zoom-image="//bizweb.dktcdn.net/thumb/1024x1024/100/286/794/products/5.jpg?v=1517327927920">
+                                            <img data-img="//bizweb.dktcdn.net/thumb/1024x1024/100/286/794/products/5.jpg?v=1517327927920" src="//bizweb.dktcdn.net/thumb/small/100/286/794/products/5.jpg?v=1517327927920" alt="Balo Mikkor Irvin Charcoal/Orange">
+                                        </a>
+                                    </div> -->
+                                    
+                                </div> 
+                            </div>
+                        </div>
 
-
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 details-pro">
+                            <div class="title_pr">
+                                <h1 class="title-product" itemprop="name">{{$chitietsanpham->ten_sp}}</h1>
+                                
+                                <div class="reviews_details_product">
+                                    <div class="sapo-product-reviews-badge sapo-product-reviews-badge-detail" data-id="9724997">
+                                    </div>
                                 </div>
                                 
-                            </form>
-                        </div>
-                        
-                        
-                        <!-- <div class="social-sharing margin-bottom-10">
-                            <span class="ttt">Tags: </span>
-                            <div class="share_add tags_name">
-                                
-                                <a href="/collections/all/balo">Balo</a>,						
-                                
-                                <a href="/collections/all/demnguoc-2018-5-31">demnguoc_2018/5/31</a>						
-                                
                             </div>
-                        </div> -->
-                        
                             
-                        
-                        <div class="social-sharing ">
-                            <span class="ttt">Chia sẻ: </span>
-                            <div class="addthis_inline_share_toolbox share_add">
-                                <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-58589c2252fc2da4"></script>
+
+                            <div class="price-box price-loop-style" itemscope itemtype="http://schema.org/Offer">
+
+
+                                @if($chitietsanpham->giam_gia>0)
+                                    <span class="special-price">
+                                        <span class="price product-price" itemprop="price">{{number_format($chitietsanpham->giam_gia)}}đ</span>
+                                        <meta itemprop="priceCurrency" content="VND">
+                                    </span>
+                                    <span class="old-price">
+                                        <span class="price" itemprop="priceSpecification">
+                                            
+                                        {{number_format($chitietsanpham->gia)}}đ
+                                            
+                                        </span>
+                                        <meta itemprop="priceCurrency" content="VND">
+                                    </span>
+                                @else
+                                    <span class="special-price">
+                                        <span class="price product-price" itemprop="price">{{number_format($chitietsanpham->gia)}}đ</span>
+                                        <meta itemprop="priceCurrency" content="VND">
+                                    </span>
+                                @endif
+
+
+
+                                @if($chitietsanpham->tinh_trang==1)
+                                    <div class="taxable">
+                                        <span class="valibled">Tình trạng:</span>
+                                        <span style="color:green;">
+                                            <span>
+                                                
+                                                Còn hàng
+                                                
+                                            </span>
+                                        </span>
+                                    </div>
+                                @else
+                                    <div class="taxable">
+                                        <span class="valibled">Tình trạng:</span>
+                                        <span style="color:red;">
+                                            <span>
+                                                
+                                                Hết hàng
+                                                
+                                            </span>
+                                        </span>
+                                    </div>
+                                @endif
+
                             </div>
+
+
+                            <div class="vender_">
+                                <ul>
+                                    <li>
+                                        <span>Thương hiệu:</span> 
+                                        <span class="bold" style="color:green;" >{{$chitietsanpham->thuong_hieu}}</span>
+                                    </li>
+                                    <li><span>Giảm giá 10% cho hoá đơn trên 500k</span></li>
+                                    <li><span>Miễn phí giao hàng trong bán kính 5km</span></li>
+                                    <li>
+                                        <span>Bảo hành:</span> 
+                                        <span class="bold" style="color:green;">Trọn đời</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="form-product col-sm-12 form-border">
+                                <form enctype="multipart/form-data" id="add-to-cart-form" action="/cart/add" method="post" class="form-inline">
+                                    
+                                    <div class="box-variant clearfix ">
+                                        <input type="hidden" name="variantId" value="15530094" />
+                                    </div>
+
+                                    <div class="form-group form_button_details ">
+                                        <header class="not_bg hidden">Số lượng:</header>
+                                        <div class="custom input_number_product custom-btn-number form-control">									
+                                            <button class="btn_num num_1 button button_qty" onClick="var result = document.getElementById('qtym'); var qtypro = result.value; if( !isNaN( qtypro ) &amp;&amp; qtypro &gt; 1 ) result.value--;return false;" type="button">-</button>
+                                            <input type="text" id="qtym" name="quantity" value="1"  onkeyup="valid(this,'numbers')" onkeypress='validate(event)' class="form-control prd_quantity">
+                                            <button class="btn_num num_2 button button_qty" onClick="var result = document.getElementById('qtym'); var qtypro = result.value; if( !isNaN( qtypro )) result.value++;return false;" type="button">+</button>
+                                        </div>
+                                                                            
+                                        <button type="submit" class="btn btn-lg  btn-cart button_cart_buy_enable add_to_cart btn_buy" title="Cho vào giỏ hàng">
+                                            <i class="fa fa-shopping-basket hidden"></i>&nbsp;&nbsp;<span>Cho vào giỏ hàng</span>
+                                        </button>									
+                                    </div>
+                                </form>
+                            </div>
+                            
+                            
+                            <!-- <div class="social-sharing margin-bottom-10">
+                                <span class="ttt">Tags: </span>
+                                <div class="share_add tags_name">
+                                    
+                                    <a href="/collections/all/balo">Balo</a>,						
+                                    
+                                    <a href="/collections/all/demnguoc-2018-5-31">demnguoc_2018/5/31</a>						
+                                    
+                                </div>
+                            </div> -->
+                            
+                            
+                            <div class="social-sharing ">
+                                <span class="ttt">Chia sẻ: </span>
+                                <div class="addthis_inline_share_toolbox share_add">
+                                    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-58589c2252fc2da4"></script>
+                                </div>
+                            </div>
+                                                        
                         </div>
-                                                    
                     </div>
                 </div>
-            </div>
-            <!-- Tab -->
-            <div class="tabss">
-                <div class="row margin-top-30 xs-margin-top-15 margin-bottom-40">
-                    
-                    <div class="col-xs-12 col-lg-12 col-sm-12 col-md-12">
-                        <!-- Nav tabs -->
-                        <div class="product-tab e-tabs">
-                            <ul class="tabs tabs-title clearfix">	
-                                
-                                <li class="tab-link" data-tab="tab-1">
-                                    <h3><span>Thông tin sản phẩm</span></h3>
-                                </li>																	
-                                
-                                
-                                <li class="tab-link" data-tab="tab-2">
-                                    <h3><span>Tab tùy chỉnh</span></h3>
-                                </li>																	
-                                
-                                
-                                <li class="tab-link" data-tab="tab-3">
-                                    <h3><span>Đánh giá(APP)</span></h3>
-                                </li>																	
-                                
-                            </ul>																									
-
-                            
-                            <div id="tab-1" class="tab-content">
-                                <div class="rte">
+                <!-- Tab -->
+                <div class="tabss">
+                    <div class="row margin-top-30 xs-margin-top-15 margin-bottom-40">
+                        
+                        <div class="col-xs-12 col-lg-12 col-sm-12 col-md-12">
+                            <!-- Nav tabs -->
+                            <div class="product-tab e-tabs">
+                                <ul class="tabs tabs-title clearfix">	
                                     
-                                    <p><strong>{{$chitietsanpham->ten_sp}}</strong><br />
-- Chất Liệu: &nbsp;{{$chitietsanpham->chat_lieu}}<br />
-- Số Ngăn: &nbsp;{{$chitietsanpham->so_ngan}}<br />
-- Màu: &nbsp;{{$chitietsanpham->mau_sac}}<br />
-- Khối Lượng: &nbsp;{{$chitietsanpham->khoi_luong}}<br />
-- Kích Thước (DàixRộngxCao): &nbsp;{{$chitietsanpham->kich_thuoc}}<br />
-- Tải Trọng: &nbsp;{{$chitietsanpham->tai_trong}}<br>
-- Ngăn laptop: &nbsp;{{$chitietsanpham->ngan}}</p>
-<p style="text-align: center;">&nbsp;</p>
-<p style="text-align: center;">&nbsp;</p>
-<p style="text-align: center;"><img alt="Balo Mikkor Irvin Charcoal/Orange" data-thumb="original" original-height="800" original-width="800" src="//bizweb.dktcdn.net/100/286/794/files/1-a1b94400-ecb8-4da7-a2a1-e9668e2e0fd7.jpg?v=1517328190814" /><img alt="Balo Mikkor Irvin Charcoal/Orange" data-thumb="original" original-height="800" original-width="800" src="//bizweb.dktcdn.net/100/286/794/files/2-9165acfc-dc3a-4f22-a0db-4c128a630b0f.jpg?v=1517328204459" /><img alt="Balo Mikkor Irvin Charcoal/Orange" data-thumb="original" original-height="800" original-width="800" src="//bizweb.dktcdn.net/100/286/794/files/3-f70bd7a7-b900-4f18-8a48-ee6e5d47068b.jpg?v=1517328212123" /></p>
-                                                                    
+                                    <li class="tab-link" data-tab="tab-1">
+                                        <h3><span>Thông tin sản phẩm</span></h3>
+                                    </li>																	
+                                    
+                                    
+                                    <li class="tab-link" data-tab="tab-2">
+                                        <h3><span>Tab tùy chỉnh</span></h3>
+                                    </li>																	
+                                    
+                                    
+                                    <li class="tab-link" data-tab="tab-3">
+                                        <h3><span>Đánh giá(APP)</span></h3>
+                                    </li>																	
+                                    
+                                </ul>																									
+
+                                
+                                <div id="tab-1" class="tab-content">
+                                    <div class="rte">
+                                        <p><strong>{{$chitietsanpham->ten_sp}}</strong><br />
+                                            - Chất Liệu: &nbsp;{{$chitietsanpham->chat_lieu}}<br />
+                                            - Số Ngăn: &nbsp;{{$chitietsanpham->so_ngan}}<br />
+                                            - Màu: &nbsp;{{$chitietsanpham->mau_sac}}<br />
+                                            - Khối Lượng: &nbsp;{{$chitietsanpham->khoi_luong}}<br />
+                                            - Kích Thước (DàixRộngxCao): &nbsp;{{$chitietsanpham->kich_thuoc}}<br />
+                                            - Tải Trọng: &nbsp;{{$chitietsanpham->tai_trong}}<br>
+                                            - Ngăn laptop: &nbsp;{{$chitietsanpham->ngan}}</p>
+                                        <p style="text-align: center;">&nbsp;</p>
+                                        <p style="text-align: center;">&nbsp;</p>
+                                        <p style="text-align: center;"><img alt="{{$chitietsanpham->ten_sp}}" data-thumb="original" original-height="800" original-width="800" src="assets/images/{{$chitietsanpham->hinh_anh}}" /></p>                                 
+                                    </div>	
                                 </div>	
-                            </div>	
-                            
-                            
-                            <div id="tab-2" class="tab-content">
-                                <div class="rte">
-                                    Các nội dung Hướng dẫn mua hàng viết ở đây	
+                                
+                                
+                                <div id="tab-2" class="tab-content">
+                                    <div class="rte">
+                                        Các nội dung Hướng dẫn mua hàng viết ở đây	
+                                    </div>
+                                </div>	
+                                
+                                
+                                <div id="tab-3" class="tab-content">
+                                    <div class="rte">
+                                        <div id="sapo-product-reviews" class="sapo-product-reviews" data-id="9724997">
+                                            <div id="sapo-product-reviews-noitem" style="display: none;">
+                                                <div class="content">
+                                                    <p data-content-text="language.suggest_noitem"></p>
+                                                    <div class="product-reviews-summary-actions">
+                                                        <button type="button" class="btn-new-review" onclick="BPR.newReview(this); return false;" data-content-str="language.newreview"></button>
+                                                    </div>
+                                                    <div id="noitem-bpr-form_" data-id="formId" class="noitem-bpr-form" style="display:none;"><div class="sapo-product-reviews-form"></div></div>
+                                                </div>
+                                            </div>
+
+                                    </div>
+
                                 </div>
                             </div>	
-                            
-                            
-                            <div id="tab-3" class="tab-content">
-                                <div class="rte">
-                                    <div id="sapo-product-reviews" class="sapo-product-reviews" data-id="9724997">
-<div id="sapo-product-reviews-noitem" style="display: none;">
-    <div class="content">
-        <p data-content-text="language.suggest_noitem"></p>
-        <div class="product-reviews-summary-actions">
-            <button type="button" class="btn-new-review" onclick="BPR.newReview(this); return false;" data-content-str="language.newreview"></button>
-        </div>
-        <div id="noitem-bpr-form_" data-id="formId" class="noitem-bpr-form" style="display:none;"><div class="sapo-product-reviews-form"></div></div>
-    </div>
-</div>
-
-</div>
-
-                                </div>
-                            </div>	
-                            
+                                
                         </div>
                     </div>
-                    
+                        
 
                 </div>
             </div>
+                
+
+
+                    <section class="section_product_loopp">
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 dear_title">
+                                <h2 class="title_head_ border_content">
+                                    <a href="san-pham-khuyen-mai" title="Sản phẩm liên quan">Sản phẩm tương tự</a>
+                                </h2>
+                            </div>
+
+                            <section class="products-view products-view-grid collection_reponsive">        
+                                @foreach($sanphamtuongtu as $sp)
+                                    <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 product-col">
+                                        <div class="item saler_item">
+                                                            
+                                            <div class="product-box">															
+                                                <div class="product-thumbnail">
+                                                    @if($sp->phan_tram_giam>0)
+                                                    <span class="sale_count">
+                                                        <span class="bf_">- {{$sp->phan_tram_giam}}% </span>
+                                                    </span>
+                                                    @endif
+                                                    <a href="{{route('chitietsanpham',$sp->id)}}" class="image_link display_flex" data-images="assets/images/{{$sp->hinh_anh}}"  title="{{$sp->ten_sp}}">
+                                                        <img class="img-responsive lazyload" src="assets/images/{{$sp->hinh_anh}}" data-src="assets/images/{{$sp->hinh_anh}}" alt="{{$sp->ten_sp}}"/>
+                                                    </a>
+
+                                                    <div class="product-action-grid clearfix">
+                                                        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9746938" enctype="multipart/form-data">
+                                                            <div>
+                                                                <a title="xem nhanh" href="{{route('chitietsanpham',$sp->id)}}" data-handle="giay-converse-star-collar-break" class="button_wh_40 btn_view right-to quick-view"><i class="fa fa-search"></i>
+                                                                    <span class="tooltips qv"><span>Xem nhanh</span></span>
+                                                                </a>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+
+                                                <div class="product-info">
+                                
+                                                    <div class="reviews-product-list grid_reviews">
+                                                        <div class="bizweb-product-reviews-badge" data-id="9746938"></div>
+                                                    </div>
+                                
+                                                    <h3 class="product-name"><a class="text2line" href="{{route('chitietsanpham',$sp->id)}}" title="{{$sp->ten_sp}}">{{$sp->ten_sp}}</a></h3>
+
+                                                    @if($sp->giam_gia>0)
+                                                    <div class="price-box clearfix">			
+                                                        <span class="price product-price-old">
+                                                        {{number_format($sp->gia)}}đ		
+                                                        </span>		
+                                                        <span class="price product-price">{{number_format($sp->giam_gia)}}đ</span>
+                                                    </div>
+                                                    @else
+                                                    <span class="price product-price">{{number_format($sp->gia)}}đ</span>
+                                                    @endif
+
+                                
+                                
+                                                    <div class="action__">
+                                                        
+                                                        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9746938" enctype="multipart/form-data">
+                                                            <div>
+                                                                
+                                                                <input class="hidden" type="hidden" name="variantId" value="15567640" />
+                                                                <button class="btn-cart cart_button_style  left-to" title="Chọn sản phẩm"  type="button" onclick="window.location.href='/giay-converse-star-collar-break'" >
+                                                                    <span class="ti-settings"></span>
+                                                                    Tuỳ chọn
+                                                                </button>
+                                                                
+                                                            </div>
+                                                        </form>
+                                                        
+                                                    </div>
+
+                                                </div>
+                                            </div>			
+                                        </div>  
+                                    </div>
+                                    @endforeach
+                            </section>
+                        </div>
+                    </section>
+
+
+
             
-
-
-<section class="section_product_loopp">
-<div class="row">
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 dear_title">
-        <h2 class="title_head_ border_content">
-            <a href="san-pham-khuyen-mai" title="Sản phẩm liên quan">Sản phẩm liên quan</a>
-        </h2>
-    </div>
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 wrap_owl_product_">
-        <div class="owl_product_ owl-carousel" data-nav="true" data-lg-items="3" data-md-items="3" data-height="false" data-xs-items="2" data-sm-items="3" data-margin="0">
-            
-
-
-<div class="product-box">															
-<div class="product-thumbnail">
-    
-    <span class="sale_count"><span class="bf_">- 
-4% 
-</span></span>
-    
-    
-
-    <a href="/giay-converse-star-collar-break" class="image_link display_flex" data-images="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/13min9a0b67fc1d89427789067b4b5.jpg?v=1516862290637"  title="Giày Converse Star Collar Break">
-        
-        
-        <img class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/13min9a0b67fc1d89427789067b4b5.jpg?v=1516862290637" alt="giay-converse-star-collar-break"/>
-        
-        
-    </a>
-    <div class="product-action-grid clearfix">
-        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9746938" enctype="multipart/form-data">
-            <div>
-                <a title="xem nhanh" href="/giay-converse-star-collar-break" data-handle="giay-converse-star-collar-break" class="button_wh_40 btn_view right-to quick-view"><i class="fa fa-search"></i>
-                    <span class="tooltips qv"><span>Xem nhanh</span></span>
-                </a>
-            </div>
-        </form>
-    </div>
-</div>
-<div class="product-info">
-    
-    <div class="reviews-product-list grid_reviews">
-        <div class="bizweb-product-reviews-badge" data-id="9746938"></div>
-    </div>
-    
-    <h3 class="product-name"><a class="text2line" href="/giay-converse-star-collar-break" title="Giày Converse Star Collar Break">Giày Converse Star Collar Break</a></h3>
-
-    
-    
-    <div class="price-box clearfix">			
-        
-        <span class="price product-price-old">
-            500.000₫			
-        </span>		
-            
-        <span class="price product-price">480.000₫</span>
-    </div>		
-    
-    
-    <div class="action__">
-        
-        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9746938" enctype="multipart/form-data">
-            <div>
-                
-                <input class="hidden" type="hidden" name="variantId" value="15567640" />
-                <button class="btn-cart cart_button_style  left-to" title="Chọn sản phẩm"  type="button" onclick="window.location.href='/giay-converse-star-collar-break'" >
-                    <span class="ti-settings"></span>
-                    Tuỳ chọn
-                </button>
-                
-            </div>
-        </form>
-        
-    </div>
-
-</div>
-</div>
-                </div>
-            </div>
-  
-            <div class="item saler_item ">
-                <div class="owl_item_product">
-                    
-
-
-<div class="product-box">															
-<div class="product-thumbnail">
-    
-    <span class="sale_count"><span class="bf_">- 
-9% 
-</span></span>
-    
-    
-
-    <a href="/balo-laplop-solo-pro-arc-black" class="image_link display_flex" data-images="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/1-4-2.jpg?v=1517304826530"  title="Balo laplop Solo Pro ARC Black">
-        
-        
-        <img class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/1-4-2.jpg?v=1517304826530" alt="balo-laplop-solo-pro-arc-black"/>
-        
-        
-    </a>
-    <div class="product-action-grid clearfix">
-        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9725087" enctype="multipart/form-data">
-            <div>
-                <a title="xem nhanh" href="/balo-laplop-solo-pro-arc-black" data-handle="balo-laplop-solo-pro-arc-black" class="button_wh_40 btn_view right-to quick-view"><i class="fa fa-search"></i>
-                    <span class="tooltips qv"><span>Xem nhanh</span></span>
-                </a>
-            </div>
-        </form>
-    </div>
-</div>
-<div class="product-info">
-    
-    <div class="reviews-product-list grid_reviews">
-        <div class="bizweb-product-reviews-badge" data-id="9725087"></div>
-    </div>
-    
-    <h3 class="product-name"><a class="text2line" href="/balo-laplop-solo-pro-arc-black" title="Balo laplop Solo Pro ARC Black">Balo laplop Solo Pro ARC Black</a></h3>
-
-    
-    
-    <div class="price-box clearfix">			
-        
-        <span class="price product-price-old">
-            950.000₫			
-        </span>		
-            
-        <span class="price product-price">860.000₫</span>
-    </div>		
-    
-    
-    <div class="action__">
-        
-        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9725087" enctype="multipart/form-data">
-            <div>
-                
-                <input type="hidden" name="variantId" value="15530193" />
-                <button class=" cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng">
-                    <span><span class="fa fa-shopping-basket"></span></span>
-                    Giỏ hàng
-                </button>
-                
-            </div>
-        </form>
-        
-    </div>
-
-</div>
-</div>
-                </div>
-            </div>
-
-
-            <div class="item saler_item ">
-                <div class="owl_item_product">
-                    
-<div class="product-box">															
-<div class="product-thumbnail">
-    
-    <span class="sale_count"><span class="bf_">- 
-20% 
-</span></span>
-    
-    
-
-    <a href="/balo-thoi-trang-easyopen-black" class="image_link display_flex" data-images="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/1-2.jpg?v=1516616201157"  title="Balo Thời Trang EasyOpen Black">
-        
-        
-        <img class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/1-2.jpg?v=1516616201157" alt="balo-thoi-trang-easyopen-black"/>
-        
-        
-    </a>
-    <div class="product-action-grid clearfix">
-        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9724957" enctype="multipart/form-data">
-            <div>
-                <a title="xem nhanh" href="/balo-thoi-trang-easyopen-black" data-handle="balo-thoi-trang-easyopen-black" class="button_wh_40 btn_view right-to quick-view"><i class="fa fa-search"></i>
-                    <span class="tooltips qv"><span>Xem nhanh</span></span>
-                </a>
-            </div>
-        </form>
-    </div>
-</div>
-<div class="product-info">
-    
-    <div class="reviews-product-list grid_reviews">
-        <div class="bizweb-product-reviews-badge" data-id="9724957"></div>
-    </div>
-    
-    <h3 class="product-name"><a class="text2line" href="/balo-thoi-trang-easyopen-black" title="Balo Thời Trang EasyOpen Black">Balo Thời Trang EasyOpen Black</a></h3>
-
-    
-    
-    <div class="price-box clearfix">			
-        
-        <span class="price product-price-old">
-            560.000₫			
-        </span>		
-            
-        <span class="price product-price">449.000₫</span>
-    </div>		
-    
-    
-    <div class="action__">
-        
-        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9724957" enctype="multipart/form-data">
-            <div>
-                
-                <input type="hidden" name="variantId" value="15530038" />
-                <button class=" cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng">
-                    <span><span class="fa fa-shopping-basket"></span></span>
-                    Giỏ hàng
-                </button>
-                
-            </div>
-        </form>
-        
-    </div>
-
-</div>
-</div>
-                </div>
-            </div>
-
-
-            <div class="item saler_item ">
-                <div class="owl_item_product">
-
-<div class="product-box">															
-<div class="product-thumbnail">
-    
-    <span class="sale_count"><span class="bf_">- 
-45% 
-</span></span>
-    
-    
-
-    <a href="/balo-targus-groove-x-compact-orange" class="image_link display_flex" data-images="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/1-1.jpg?v=1517329871667"  title="Balo Targus Groove X Compact Orange">
-        
-        
-        <img class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/1-1.jpg?v=1517329871667" alt="balo-targus-groove-x-compact-orange"/>
-        
-        
-    </a>
-    <div class="product-action-grid clearfix">
-        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9724851" enctype="multipart/form-data">
-            <div>
-                <a title="xem nhanh" href="/balo-targus-groove-x-compact-orange" data-handle="balo-targus-groove-x-compact-orange" class="button_wh_40 btn_view right-to quick-view"><i class="fa fa-search"></i>
-                    <span class="tooltips qv"><span>Xem nhanh</span></span>
-                </a>
-            </div>
-        </form>
-    </div>
-</div>
-<div class="product-info">
-    
-    <div class="reviews-product-list grid_reviews">
-        <div class="bizweb-product-reviews-badge" data-id="9724851"></div>
-    </div>
-    
-    <h3 class="product-name"><a class="text2line" href="/balo-targus-groove-x-compact-orange" title="Balo Targus Groove X Compact Orange">Balo Targus Groove X Compact Orange</a></h3>
-
-    
-    
-    <div class="price-box clearfix">			
-        
-        <span class="price product-price-old">
-            1.139.000₫			
-        </span>		
-            
-        <span class="price product-price">625.000₫</span>
-    </div>		
-    
-    
-    <div class="action__">
-        
-        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9724851" enctype="multipart/form-data">
-            <div>
-                
-                <input type="hidden" name="variantId" value="15529910" />
-                <button class=" cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng">
-                    <span><span class="fa fa-shopping-basket"></span></span>
-                    Giỏ hàng
-                </button>
-                
-            </div>
-        </form>
-        
-    </div>
-
-</div>
-</div>
-                </div>
-            </div>
-
-            <div class="item saler_item ">
-                <div class="owl_item_product">
-                    
-<div class="product-box">															
-<div class="product-thumbnail">
-    
-    
-
-    <a href="/balo-cong-so-simplecarry-schuler-d-grey" class="image_link display_flex" data-images="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/1.jpg?v=1516614838040"  title="Balo Công Sở SimpleCarry Schuler D.grey">
-        
-        
-        <img class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/1.jpg?v=1516614838040" alt="balo-cong-so-simplecarry-schuler-d-grey"/>
-        
-        
-    </a>
-    <div class="product-action-grid clearfix">
-        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9724376" enctype="multipart/form-data">
-            <div>
-                <a title="xem nhanh" href="/balo-cong-so-simplecarry-schuler-d-grey" data-handle="balo-cong-so-simplecarry-schuler-d-grey" class="button_wh_40 btn_view right-to quick-view"><i class="fa fa-search"></i>
-                    <span class="tooltips qv"><span>Xem nhanh</span></span>
-                </a>
-            </div>
-        </form>
-    </div>
-</div>
-<div class="product-info">
-    
-    <div class="reviews-product-list grid_reviews">
-        <div class="bizweb-product-reviews-badge" data-id="9724376"></div>
-    </div>
-    
-    <h3 class="product-name"><a class="text2line" href="/balo-cong-so-simplecarry-schuler-d-grey" title="Balo Công Sở SimpleCarry Schuler D.grey">Balo Công Sở SimpleCarry Schuler D.grey</a></h3>
-
-    
-    
-    <div class="price-box clearfix">
-        <span class="price product-price">395.000₫</span>
-    </div>
-    
-    
-    <div class="action__">
-        
-        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9724376" enctype="multipart/form-data">
-            <div>
-                
-                <input type="hidden" name="variantId" value="15529457" />
-                <button class=" cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng">
-                    <span><span class="fa fa-shopping-basket"></span></span>
-                    Giỏ hàng
-                </button>
-                
-            </div>
-        </form>
-        
-    </div>
-
-
-</section>
-
-
-
-
-            <!-- Endtab -->
+                <!-- Endtab -->
             </div>
         </div>
     </div>	
-    </section>
-
-    
+</section>
 
 
 <script>
@@ -870,7 +580,7 @@
             nav: true,
             navigationPage: false,
             navigationText : false,
-            slideSpeed : 1000,
+            slideSpeed : 10,
             pagination : true,
             dots: false,
             margin: 4,

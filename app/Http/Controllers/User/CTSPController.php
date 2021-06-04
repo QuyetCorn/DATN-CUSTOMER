@@ -10,6 +10,7 @@ class CTSPController extends Controller
 {
     public function index(Request $req) {
         $chitietsanpham = ChiTietSanPham::where('id',$req->id)->first();
-        return view('user.page.chitietsanpham',compact('chitietsanpham'));
+        $sanphamtuongtu = ChiTietSanPham::where('loai_sp_id',$chitietsanpham->loai_sp_id)->get();
+        return view('user.page.chitietsanpham',compact('chitietsanpham','sanphamtuongtu'));
     }
 }
