@@ -15,8 +15,9 @@ class TrangChuController extends Controller
         $slide = Slide::all();
         $sup_slide = SupSlide::paginate(2);
         $sanpham = ChiTietSanPham::All();
-        $sanpham = SanPham::All();
+
+        $sp_moi = ChiTietSanPham::orderBy('id', 'desc')->limit(8)->get();
         $sanphamsale = ChiTietSanPham::where('giam_gia','<>',0)->paginate(6);
-        return view('user.page.trangchu',compact('slide'),compact('sup_slide','sanpham','sanphamsale'));
+        return view('user.page.trangchu',compact('slide'),compact('sup_slide','sanpham','sanphamsale','sp_moi'));
     }
 }

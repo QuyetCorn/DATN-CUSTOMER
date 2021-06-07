@@ -30,7 +30,7 @@ class DangNhapDangKyController extends Controller
             $user->ho_ten = $request->txtname;
             $user->email = $request->txtemail;
             $user->password = Hash::make($request->txtpassword);
-            $user->vaitro = 0;
+            $user->vaitro = 1;
             $user->save();
             return back()->with('message','Đăng ký thành công !');;
             }

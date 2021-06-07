@@ -2,7 +2,7 @@
 @section('content')
 
 
-<section class="awe-section-1">
+    <section class="awe-section-1">
         
         <section class="section_slider_banner">
             
@@ -40,6 +40,24 @@
             </div>
         </section>
     </section>
+
+    <section class="awe-section-3">
+        <h3 class="hidden">&nbsp;</h3>
+        <section class="section_banner_full">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 dear_title">
+                        <div>
+                            <a class="banner" href="#">
+                                <img class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/100/286/794/themes/637857/assets/banner_full_width.png?1618737291739" alt="banner rộng">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    
     
     <section class="awe-section-2">
         <h3 class="hidden">&nbsp;</h3>
@@ -125,7 +143,7 @@
                                     <div class="clockdiv" data-countdown="2018/09/20 15:00"></div>
                                 </div>
                             </div>
-                            @endforeach 
+                         @endforeach 
                         </div>
                     </div>
     
@@ -135,26 +153,7 @@
     </section>
     
     
-    
-    
-    <section class="awe-section-3">
-        <h3 class="hidden">&nbsp;</h3>
-        <section class="section_banner_full">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 dear_title">
-                        <div>
-                            <a class="banner" href="#">
-                                <img class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/100/286/794/themes/637857/assets/banner_full_width.png?1618737291739" alt="banner rộng">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </section>
-    
-    
+   
     
     
     <section class="awe-section-4">
@@ -166,7 +165,7 @@
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 dear_title">
                         <h2 class="title_head_ border_content">
-                            <a href="#" title="Balo thời trang">Sản Phẩm Mới</a>
+                            <a href="{{route('sanphamnew')}}" title="Balo thời trang">Sản Phẩm Mới</a>
                         </h2>
                         <!-- Nav tabs -->
                         <div class="loop_two_ctrl visible-xs">
@@ -181,276 +180,49 @@
                         <div role="tabpanel" class="tab-pane active" id="tab21">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 wrap_owl_product_">
                                 <div class="owl_product_ owl-carousel" data-nav="true" data-lg-items="5" data-md-items="4" data-height="false" data-xs-items="2" data-sm-items="3" data-margin="0">
-                                @foreach($sanpham as $sp)
-
-    
-                                    <div class="item saler_item first">
-                                        <div class="owl_item_product">
-    
-
-                                            <div class="product-box">
-                                                <div class="product-thumbnail">
-    
-                                                    <span class="sale_count"><span class="bf_">-
-                                                            9%
-                                                        </span></span>
-    
-    
-    
-                                                    <a href="/balo-laplop-solo-pro-arc-black" class="image_link display_flex" data-images="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/1-4-2.jpg?v=1517304826530" title="Balo laplop Solo Pro ARC Black">
-    
-    
-                                                        <img class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/1-4-2.jpg?v=1517304826530" alt="balo-laplop-solo-pro-arc-black" />
-    
-    
-                                                    </a>
-                                                    <div class="product-action-grid clearfix">
-                                                        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9725087" enctype="multipart/form-data">
-                                                            <div>
-                                                                <a title="xem nhanh" href="/balo-laplop-solo-pro-arc-black" data-handle="balo-laplop-solo-pro-arc-black" class="button_wh_40 btn_view right-to quick-view"><i class="fa fa-search"></i>
-                                                                    <span class="tooltips qv"><span>Xem nhanh</span></span>
-                                                                </a>
-                                                            </div>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                                <div class="product-info">
-    
-                                                    <div class="reviews-product-list grid_reviews">
-                                                        <div class="bizweb-product-reviews-badge" data-id="9725087"></div>
-                                                    </div>
-    
-                                                    <h3 class="product-name"><a class="text2line" href="/balo-laplop-solo-pro-arc-black" title="Balo laplop Solo Pro ARC Black">Balo laplop Solo Pro ARC Black</a></h3>
-    
-    
-    
-                                                    <div class="price-box clearfix">
-    
-                                                        <span class="price product-price-old">
-                                                            950.000₫
-                                                        </span>
-    
-                                                        <span class="price product-price">860.000₫</span>
-                                                    </div>
-    
-    
-                                                    <div class="action__">
-    
-                                                        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9725087" enctype="multipart/form-data">
-                                                            <div>
-    
-                                                                <input type="hidden" name="variantId" value="15530193" />
-                                                                <button class=" cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng">
-                                                                    <span><span class="fa fa-shopping-basket"></span></span>
-                                                                    Giỏ hàng
-                                                                </button>
-    
-                                                            </div>
-                                                        </form>
-    
-                                                    </div>
-    
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-    
-                                    @endforeach
-
-    
-    
-                                    <div class="item saler_item ">
-                                        <div class="owl_item_product">
-
-                                            <div class="product-box">
-                                                <div class="product-thumbnail">
-    
-                                                    <span class="sale_count"><span class="bf_">-
-                                                            38%
-                                                        </span></span>
-    
-    
-    
-                                                    <a href="/balo-mikkor-irvin-charcoal-orange" class="image_link display_flex" data-images="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/1-3.jpg?v=1517327927920" title="Balo Mikkor Irvin Charcoal/Orange">
-    
-    
-                                                        <img class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/1-3.jpg?v=1517327927920" alt="balo-mikkor-irvin-charcoal-orange" />
-    
-    
-                                                    </a>
-                                                    <div class="product-action-grid clearfix">
-                                                        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9724997" enctype="multipart/form-data">
-                                                            <div>
-                                                                <a title="xem nhanh" href="/balo-mikkor-irvin-charcoal-orange" data-handle="balo-mikkor-irvin-charcoal-orange" class="button_wh_40 btn_view right-to quick-view"><i class="fa fa-search"></i>
-                                                                    <span class="tooltips qv"><span>Xem nhanh</span></span>
-                                                                </a>
-                                                            </div>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                                <div class="product-info">
-    
-                                                    <div class="reviews-product-list grid_reviews">
-                                                        <div class="bizweb-product-reviews-badge" data-id="9724997"></div>
-                                                    </div>
-    
-                                                    <h3 class="product-name"><a class="text2line" href="/balo-mikkor-irvin-charcoal-orange" title="Balo Mikkor Irvin Charcoal/Orange">Balo Mikkor Irvin Charcoal/Orange</a></h3>
-    
-    
-    
-                                                    <div class="price-box clearfix">
-    
-                                                        <span class="price product-price-old">
-                                                            1.200.000₫
-                                                        </span>
-    
-                                                        <span class="price product-price">750.000₫</span>
-                                                    </div>
-    
-    
-                                                    <div class="action__">
-    
-                                                        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9724997" enctype="multipart/form-data">
-                                                            <div>
-    
-                                                                <input type="hidden" name="variantId" value="15530094" />
-                                                                <button class=" cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng">
-                                                                    <span><span class="fa fa-shopping-basket"></span></span>
-                                                                    Giỏ hàng
-                                                                </button>
-    
-                                                            </div>
-                                                        </form>
-    
-                                                    </div>
-    
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-    
-    
-    
-    
-    
-                                    <div class="item saler_item ">
-                                        <div class="owl_item_product">
-    
-                                            <div class="product-box">
-                                                <div class="product-thumbnail">
-    
-                                                    <span class="sale_count"><span class="bf_">-
-                                                            8%
-                                                        </span></span>
-    
-    
-    
-                                                    <a href="/vali-ricardo-spectrum-20-inch-5-tac-den" class="image_link display_flex" data-images="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/1-d759a515-8ee4-447f-a51b-9be521c66a3a.jpg?v=1517328908890" title="Vali Ricardo Spectrum 20 inch 5 tấc - Đen">
-    
-    
-                                                        <img class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/1-d759a515-8ee4-447f-a51b-9be521c66a3a.jpg?v=1517328908890" alt="vali-ricardo-spectrum-20-inch-5-tac-den" />
-    
-    
-                                                    </a>
-                                                    <div class="product-action-grid clearfix">
-                                                        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9723975" enctype="multipart/form-data">
-                                                            <div>
-                                                                <a title="xem nhanh" href="/vali-ricardo-spectrum-20-inch-5-tac-den" data-handle="vali-ricardo-spectrum-20-inch-5-tac-den" class="button_wh_40 btn_view right-to quick-view"><i class="fa fa-search"></i>
-                                                                    <span class="tooltips qv"><span>Xem nhanh</span></span>
-                                                                </a>
-                                                            </div>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                                <div class="product-info">
-    
-                                                    <div class="reviews-product-list grid_reviews">
-                                                        <div class="bizweb-product-reviews-badge" data-id="9723975"></div>
-                                                    </div>
-    
-                                                    <h3 class="product-name"><a class="text2line" href="/vali-ricardo-spectrum-20-inch-5-tac-den" title="Vali Ricardo Spectrum 20 inch 5 tấc - Đen">Vali Ricardo Spectrum 20 inch 5 tấc - Đen</a></h3>
-    
-    
-    
-                                                    <div class="price-box clearfix">
-    
-                                                        <span class="price product-price-old">
-                                                            4.000.000₫
-                                                        </span>
-    
-                                                        <span class="price product-price">3.700.000₫</span>
-                                                    </div>
-    
-    
-                                                    <div class="action__">
-    
-                                                        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9723975" enctype="multipart/form-data">
-                                                            <div>
-    
-                                                                <input class="hidden" type="hidden" name="variantId" value="15529037" />
-                                                                <button class="btn-cart cart_button_style  left-to" title="Chọn sản phẩm" type="button" onclick="window.location.href='/vali-ricardo-spectrum-20-inch-5-tac-den'">
-                                                                    <span class="ti-settings"></span>
-                                                                    Tuỳ chọn
-                                                                </button>
-    
-                                                            </div>
-                                                        </form>
-    
-                                                    </div>
-    
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-    
-    
-    
-    
-    
-                    <div class="item saler_item ">
+                        @foreach($sp_moi as $sp)
+                            <div class="item saler_item first">
                                 <div class="owl_item_product">
-    
+
                                     <div class="product-box">
                                         <div class="product-thumbnail">
-    
+                                            @if($sp->phan_tram_giam>0)
                                             <span class="sale_count"><span class="bf_">-
-                                                    12%
-                                                </span></span>
+                                            {{$sp->phan_tram_giam}}%
+                                            </span></span>
+                                            @endif
+   
+                                            <a href="{{route('chitietsanpham',$sp->id)}}" class="image_link display_flex" data-images="assets/images/{{$sp->hinh_anh}}" title="{{$sp->ten_sp}}">
     
-                                            <a href="/balo-laplop-solo-pro-arc-black" class="image_link display_flex" data-images="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/1-4-2.jpg?v=1517304826530" title="Balo laplop Solo Pro ARC Black">
     
-    
-                                                <img class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/1-4-2.jpg?v=1517304826530" alt="balo-laplop-solo-pro-arc-black" />
+                                                <img class="img-responsive lazyload" src="assets/images/{{$sp->hinh_anh}}" data-src="assets/images/{{$sp->hinh_anh}}" alt="{{$sp->ten_sp}}"/>
 
                                             </a>
                                             <div class="product-action-grid clearfix">
                                                 <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9725087" enctype="multipart/form-data">
                                                     <div>
-                                                        <a title="xem nhanh" href="/balo-laplop-solo-pro-arc-black" data-handle="balo-laplop-solo-pro-arc-black" class="button_wh_40 btn_view right-to quick-view"><i class="fa fa-search"></i>
-                                                            <span class="tooltips qv"><span>Xem nhanh</span></span>
+                                                        <a title="xem nhanh" href="{{route('chitietsanpham',$sp->id)}}" data-handle="{{$sp->ten_sp}}" class="button_wh_40 btn_view right-to quick-view"><i class="fa fa-search"></i>
+                                                            <span class="tooltips qv"><span>Xem chi tiết</span></span>
                                                         </a>
                                                     </div>
                                                 </form>
                                             </div>
                                         </div>
-                                        
                                         <div class="product-info">
     
                                             <div class="reviews-product-list grid_reviews">
                                                 <div class="bizweb-product-reviews-badge" data-id="9725087"></div>
                                             </div>
     
-                                            <h3 class="product-name"><a class="text2line" href="/balo-laplop-solo-pro-arc-black" title="Balo laplop Solo Pro ARC Black">Balo laplop Solo Pro ARC Black</a></h3>
+                                            <h3 class="product-name"><a class="text2line" href="{{route('chitietsanpham',$sp->id)}}" title="{{$sp->ten_sp}}">{{$sp->ten_sp}}</a></h3>
     
     
     
                                             <div class="price-box clearfix">
-    
                                                 <span class="price product-price-old">
-                                                    950.000₫
+                                                    {{number_format($sp->gia)}}đ
                                                 </span>
-    
-                                                <span class="price product-price">860.000₫</span>
+                                                <span class="price product-price">{{number_format($sp->gia*((100-$sp->giam_gia)/100))}}đ</span>
                                             </div>
     
     
@@ -472,663 +244,21 @@
     
                                         </div>
                                     </div>
-                                    
-                                    <div class="clockdiv" data-countdown="2018/12/31"></div>
+   
+                                    <div class="clockdiv" data-countdown="2018/09/20 15:00"></div>
                                 </div>
                             </div>
-    
-    
-    
-    
-    
-                                    <div class="item saler_item ">
-                                        <div class="owl_item_product">
-    
-                                            <div class="product-box">
-                                                <div class="product-thumbnail">
-    
-                                                    <span class="sale_count"><span class="bf_">-
-                                                            6%
-                                                        </span></span>
-    
-    
-    
-                                                    <a href="/tui-xach-nho-nap-gap-cach-dieu-txn132" class="image_link display_flex" data-images="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/1-a7468d12-4e75-4e93-bac7-4681a10cd875.jpg?v=1517329330057" title="Túi xách nhỏ nắp gập cách điệu TXN132">
-    
-    
-                                                        <img class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/1-a7468d12-4e75-4e93-bac7-4681a10cd875.jpg?v=1517329330057" alt="tui-xach-nho-nap-gap-cach-dieu-txn132" />
-    
-    
-                                                    </a>
-                                                    <div class="product-action-grid clearfix">
-                                                        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9746605" enctype="multipart/form-data">
-                                                            <div>
-                                                                <a title="xem nhanh" href="/tui-xach-nho-nap-gap-cach-dieu-txn132" data-handle="tui-xach-nho-nap-gap-cach-dieu-txn132" class="button_wh_40 btn_view right-to quick-view"><i class="fa fa-search"></i>
-                                                                    <span class="tooltips qv"><span>Xem nhanh</span></span>
-                                                                </a>
-                                                            </div>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                                <div class="product-info">
-    
-                                                    <div class="reviews-product-list grid_reviews">
-                                                        <div class="bizweb-product-reviews-badge" data-id="9746605"></div>
-                                                    </div>
-    
-                                                    <h3 class="product-name"><a class="text2line" href="/tui-xach-nho-nap-gap-cach-dieu-txn132" title="Túi xách nhỏ nắp gập cách điệu TXN132">Túi xách nhỏ nắp gập cách điệu TXN132</a></h3>
-    
-    
-    
-                                                    <div class="price-box clearfix">
-    
-                                                        <span class="price product-price-old">
-                                                            800.000₫
-                                                        </span>
-    
-                                                        <span class="price product-price">750.000₫</span>
-                                                    </div>
-    
-    
-                                                    <div class="action__">
-    
-                                                        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9746605" enctype="multipart/form-data">
-                                                            <div>
-    
-                                                                <input class="hidden" type="hidden" name="variantId" value="15567157" />
-                                                                <button class="btn-cart cart_button_style  left-to" title="Chọn sản phẩm" type="button" onclick="window.location.href='/tui-xach-nho-nap-gap-cach-dieu-txn132'">
-                                                                    <span class="ti-settings"></span>
-                                                                    Tuỳ chọn
-                                                                </button>
-    
-                                                            </div>
-                                                        </form>
-    
-                                                    </div>
-    
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-    
-    
-    
-    
-    
-                                    <div class="item saler_item ">
-                                        <div class="owl_item_product">
-    
-    
-    
-    
-    
-                                            <div class="product-box">
-                                                <div class="product-thumbnail">
-    
-                                                    <span class="sale_count"><span class="bf_">-
-                                                            20%
-                                                        </span></span>
-    
-    
-    
-                                                    <a href="/balo-thoi-trang-easyopen-black" class="image_link display_flex" data-images="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/1-2.jpg?v=1516616201157" title="Balo Thời Trang EasyOpen Black">
-    
-    
-                                                        <img class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/1-2.jpg?v=1516616201157" alt="balo-thoi-trang-easyopen-black" />
-    
-    
-                                                    </a>
-                                                    <div class="product-action-grid clearfix">
-                                                        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9724957" enctype="multipart/form-data">
-                                                            <div>
-                                                                <a title="xem nhanh" href="/balo-thoi-trang-easyopen-black" data-handle="balo-thoi-trang-easyopen-black" class="button_wh_40 btn_view right-to quick-view"><i class="fa fa-search"></i>
-                                                                    <span class="tooltips qv"><span>Xem nhanh</span></span>
-                                                                </a>
-                                                            </div>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                                <div class="product-info">
-    
-                                                    <div class="reviews-product-list grid_reviews">
-                                                        <div class="bizweb-product-reviews-badge" data-id="9724957"></div>
-                                                    </div>
-    
-                                                    <h3 class="product-name"><a class="text2line" href="/balo-thoi-trang-easyopen-black" title="Balo Thời Trang EasyOpen Black">Balo Thời Trang EasyOpen Black</a></h3>
-    
-    
-    
-                                                    <div class="price-box clearfix">
-    
-                                                        <span class="price product-price-old">
-                                                            560.000₫
-                                                        </span>
-    
-                                                        <span class="price product-price">449.000₫</span>
-                                                    </div>
-    
-    
-                                                    <div class="action__">
-    
-                                                        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9724957" enctype="multipart/form-data">
-                                                            <div>
-    
-                                                                <input type="hidden" name="variantId" value="15530038" />
-                                                                <button class=" cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng">
-                                                                    <span><span class="fa fa-shopping-basket"></span></span>
-                                                                    Giỏ hàng
-                                                                </button>
-    
-                                                            </div>
-                                                        </form>
-    
-                                                    </div>
-    
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                        @endforeach 
     
                                 </div>
                             </div>
                         </div>
-    
-                 
-    
-    
-    
-                        <div role="tabpanel" class="tab-pane " id="tab22">
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 wrap_owl_product_">
-                                <div class="owl_product_ owl-carousel" data-nav="true" data-lg-items="5" data-md-items="4" data-height="false" data-xs-items="2" data-sm-items="3" data-margin="0">
-
-                                <div class="item saler_item first">
-                                        <div class="owl_item_product">
-    
-
-                                            <div class="product-box">
-                                                <div class="product-thumbnail">
-    
-                                                    <span class="sale_count"><span class="bf_">-
-                                                            9%
-                                                        </span></span>
-    
-    
-    
-                                                    <a href="/balo-laplop-solo-pro-arc-black" class="image_link display_flex" data-images="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/1-4-2.jpg?v=1517304826530" title="Balo laplop Solo Pro ARC Black">
-    
-    
-                                                        <img class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/1-4-2.jpg?v=1517304826530" alt="balo-laplop-solo-pro-arc-black" />
-    
-    
-                                                    </a>
-                                                    <div class="product-action-grid clearfix">
-                                                        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9725087" enctype="multipart/form-data">
-                                                            <div>
-                                                                <a title="xem nhanh" href="/balo-laplop-solo-pro-arc-black" data-handle="balo-laplop-solo-pro-arc-black" class="button_wh_40 btn_view right-to quick-view"><i class="fa fa-search"></i>
-                                                                    <span class="tooltips qv"><span>Xem nhanh</span></span>
-                                                                </a>
-                                                            </div>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                                <div class="product-info">
-    
-                                                    <div class="reviews-product-list grid_reviews">
-                                                        <div class="bizweb-product-reviews-badge" data-id="9725087"></div>
-                                                    </div>
-    
-                                                    <h3 class="product-name"><a class="text2line" href="/balo-laplop-solo-pro-arc-black" title="Balo laplop Solo Pro ARC Black">Balo laplop Solo Pro ARC Black</a></h3>
-    
-    
-    
-                                                    <div class="price-box clearfix">
-    
-                                                        <span class="price product-price-old">
-                                                            950.000₫
-                                                        </span>
-    
-                                                        <span class="price product-price">860.000₫</span>
-                                                    </div>
-    
-    
-                                                    <div class="action__">
-    
-                                                        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9725087" enctype="multipart/form-data">
-                                                            <div>
-    
-                                                                <input type="hidden" name="variantId" value="15530193" />
-                                                                <button class=" cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng">
-                                                                    <span><span class="fa fa-shopping-basket"></span></span>
-                                                                    Giỏ hàng
-                                                                </button>
-    
-                                                            </div>
-                                                        </form>
-    
-                                                    </div>
-    
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-    
-    
-    
-    
-    
-                                    <div class="item saler_item ">
-                                        <div class="owl_item_product">
-
-                                            <div class="product-box">
-                                                <div class="product-thumbnail">
-    
-                                                    <span class="sale_count"><span class="bf_">-
-                                                            38%
-                                                        </span></span>
-    
-    
-    
-                                                    <a href="/balo-mikkor-irvin-charcoal-orange" class="image_link display_flex" data-images="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/1-3.jpg?v=1517327927920" title="Balo Mikkor Irvin Charcoal/Orange">
-    
-    
-                                                        <img class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/1-3.jpg?v=1517327927920" alt="balo-mikkor-irvin-charcoal-orange" />
-    
-    
-                                                    </a>
-                                                    <div class="product-action-grid clearfix">
-                                                        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9724997" enctype="multipart/form-data">
-                                                            <div>
-                                                                <a title="xem nhanh" href="/balo-mikkor-irvin-charcoal-orange" data-handle="balo-mikkor-irvin-charcoal-orange" class="button_wh_40 btn_view right-to quick-view"><i class="fa fa-search"></i>
-                                                                    <span class="tooltips qv"><span>Xem nhanh</span></span>
-                                                                </a>
-                                                            </div>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                                <div class="product-info">
-    
-                                                    <div class="reviews-product-list grid_reviews">
-                                                        <div class="bizweb-product-reviews-badge" data-id="9724997"></div>
-                                                    </div>
-    
-                                                    <h3 class="product-name"><a class="text2line" href="/balo-mikkor-irvin-charcoal-orange" title="Balo Mikkor Irvin Charcoal/Orange">Balo Mikkor Irvin Charcoal/Orange</a></h3>
-    
-    
-    
-                                                    <div class="price-box clearfix">
-    
-                                                        <span class="price product-price-old">
-                                                            1.200.000₫
-                                                        </span>
-    
-                                                        <span class="price product-price">750.000₫</span>
-                                                    </div>
-    
-    
-                                                    <div class="action__">
-    
-                                                        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9724997" enctype="multipart/form-data">
-                                                            <div>
-    
-                                                                <input type="hidden" name="variantId" value="15530094" />
-                                                                <button class=" cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng">
-                                                                    <span><span class="fa fa-shopping-basket"></span></span>
-                                                                    Giỏ hàng
-                                                                </button>
-    
-                                                            </div>
-                                                        </form>
-    
-                                                    </div>
-    
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-    
-    
-    
-    
-    
-                                    <div class="item saler_item ">
-                                        <div class="owl_item_product">
-    
-                                            <div class="product-box">
-                                                <div class="product-thumbnail">
-    
-                                                    <span class="sale_count"><span class="bf_">-
-                                                            8%
-                                                        </span></span>
-    
-    
-    
-                                                    <a href="/vali-ricardo-spectrum-20-inch-5-tac-den" class="image_link display_flex" data-images="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/1-d759a515-8ee4-447f-a51b-9be521c66a3a.jpg?v=1517328908890" title="Vali Ricardo Spectrum 20 inch 5 tấc - Đen">
-    
-    
-                                                        <img class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/1-d759a515-8ee4-447f-a51b-9be521c66a3a.jpg?v=1517328908890" alt="vali-ricardo-spectrum-20-inch-5-tac-den" />
-    
-    
-                                                    </a>
-                                                    <div class="product-action-grid clearfix">
-                                                        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9723975" enctype="multipart/form-data">
-                                                            <div>
-                                                                <a title="xem nhanh" href="/vali-ricardo-spectrum-20-inch-5-tac-den" data-handle="vali-ricardo-spectrum-20-inch-5-tac-den" class="button_wh_40 btn_view right-to quick-view"><i class="fa fa-search"></i>
-                                                                    <span class="tooltips qv"><span>Xem nhanh</span></span>
-                                                                </a>
-                                                            </div>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                                <div class="product-info">
-    
-                                                    <div class="reviews-product-list grid_reviews">
-                                                        <div class="bizweb-product-reviews-badge" data-id="9723975"></div>
-                                                    </div>
-    
-                                                    <h3 class="product-name"><a class="text2line" href="/vali-ricardo-spectrum-20-inch-5-tac-den" title="Vali Ricardo Spectrum 20 inch 5 tấc - Đen">Vali Ricardo Spectrum 20 inch 5 tấc - Đen</a></h3>
-    
-    
-    
-                                                    <div class="price-box clearfix">
-    
-                                                        <span class="price product-price-old">
-                                                            4.000.000₫
-                                                        </span>
-    
-                                                        <span class="price product-price">3.700.000₫</span>
-                                                    </div>
-    
-    
-                                                    <div class="action__">
-    
-                                                        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9723975" enctype="multipart/form-data">
-                                                            <div>
-    
-                                                                <input class="hidden" type="hidden" name="variantId" value="15529037" />
-                                                                <button class="btn-cart cart_button_style  left-to" title="Chọn sản phẩm" type="button" onclick="window.location.href='/vali-ricardo-spectrum-20-inch-5-tac-den'">
-                                                                    <span class="ti-settings"></span>
-                                                                    Tuỳ chọn
-                                                                </button>
-    
-                                                            </div>
-                                                        </form>
-    
-                                                    </div>
-    
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-    
-    
-    
-    
-    
-                            <div class="item saler_item ">
-                                <div class="owl_item_product">
-    
-                                    <div class="product-box">
-                                        <div class="product-thumbnail">
-    
-                                            <span class="sale_count"><span class="bf_">-
-                                                    12%
-                                                </span></span>
-    
-                                            <a href="/balo-laplop-solo-pro-arc-black" class="image_link display_flex" data-images="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/1-4-2.jpg?v=1517304826530" title="Balo laplop Solo Pro ARC Black">
-    
-    
-                                                <img class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/1-4-2.jpg?v=1517304826530" alt="balo-laplop-solo-pro-arc-black" />
-
-                                            </a>
-                                            <div class="product-action-grid clearfix">
-                                                <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9725087" enctype="multipart/form-data">
-                                                    <div>
-                                                        <a title="xem nhanh" href="/balo-laplop-solo-pro-arc-black" data-handle="balo-laplop-solo-pro-arc-black" class="button_wh_40 btn_view right-to quick-view"><i class="fa fa-search"></i>
-                                                            <span class="tooltips qv"><span>Xem nhanh</span></span>
-                                                        </a>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                        
-                                        <div class="product-info">
-    
-                                            <div class="reviews-product-list grid_reviews">
-                                                <div class="bizweb-product-reviews-badge" data-id="9725087"></div>
-                                            </div>
-    
-                                            <h3 class="product-name"><a class="text2line" href="/balo-laplop-solo-pro-arc-black" title="Balo laplop Solo Pro ARC Black">Balo laplop Solo Pro ARC Black</a></h3>
-    
-    
-    
-                                            <div class="price-box clearfix">
-    
-                                                <span class="price product-price-old">
-                                                    950.000₫
-                                                </span>
-    
-                                                <span class="price product-price">860.000₫</span>
-                                            </div>
-    
-    
-                                            <div class="action__">
-    
-                                                <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9725087" enctype="multipart/form-data">
-                                                    <div>
-    
-                                                        <input type="hidden" name="variantId" value="15530193" />
-                                                        <button class=" cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng">
-                                                            <span><span class="fa fa-shopping-basket"></span></span>
-                                                            Giỏ hàng
-                                                        </button>
-    
-                                                    </div>
-                                                </form>
-    
-                                            </div>
-    
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="clockdiv" data-countdown="2018/12/31"></div>
-                                </div>
-                            </div>
-    
-    
-    
-    
-    
-                                    <div class="item saler_item ">
-                                        <div class="owl_item_product">
-    
-                                            <div class="product-box">
-                                                <div class="product-thumbnail">
-    
-                                                    <span class="sale_count"><span class="bf_">-
-                                                            6%
-                                                        </span></span>
-    
-    
-    
-                                                    <a href="/tui-xach-nho-nap-gap-cach-dieu-txn132" class="image_link display_flex" data-images="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/1-a7468d12-4e75-4e93-bac7-4681a10cd875.jpg?v=1517329330057" title="Túi xách nhỏ nắp gập cách điệu TXN132">
-    
-    
-                                                        <img class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/1-a7468d12-4e75-4e93-bac7-4681a10cd875.jpg?v=1517329330057" alt="tui-xach-nho-nap-gap-cach-dieu-txn132" />
-    
-    
-                                                    </a>
-                                                    <div class="product-action-grid clearfix">
-                                                        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9746605" enctype="multipart/form-data">
-                                                            <div>
-                                                                <a title="xem nhanh" href="/tui-xach-nho-nap-gap-cach-dieu-txn132" data-handle="tui-xach-nho-nap-gap-cach-dieu-txn132" class="button_wh_40 btn_view right-to quick-view"><i class="fa fa-search"></i>
-                                                                    <span class="tooltips qv"><span>Xem nhanh</span></span>
-                                                                </a>
-                                                            </div>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                                <div class="product-info">
-    
-                                                    <div class="reviews-product-list grid_reviews">
-                                                        <div class="bizweb-product-reviews-badge" data-id="9746605"></div>
-                                                    </div>
-    
-                                                    <h3 class="product-name"><a class="text2line" href="/tui-xach-nho-nap-gap-cach-dieu-txn132" title="Túi xách nhỏ nắp gập cách điệu TXN132">Túi xách nhỏ nắp gập cách điệu TXN132</a></h3>
-    
-    
-    
-                                                    <div class="price-box clearfix">
-    
-                                                        <span class="price product-price-old">
-                                                            800.000₫
-                                                        </span>
-    
-                                                        <span class="price product-price">750.000₫</span>
-                                                    </div>
-    
-    
-                                                    <div class="action__">
-    
-                                                        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9746605" enctype="multipart/form-data">
-                                                            <div>
-    
-                                                                <input class="hidden" type="hidden" name="variantId" value="15567157" />
-                                                                <button class="btn-cart cart_button_style  left-to" title="Chọn sản phẩm" type="button" onclick="window.location.href='/tui-xach-nho-nap-gap-cach-dieu-txn132'">
-                                                                    <span class="ti-settings"></span>
-                                                                    Tuỳ chọn
-                                                                </button>
-    
-                                                            </div>
-                                                        </form>
-    
-                                                    </div>
-    
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-    
-    
-    
-    
-    
-                                    <div class="item saler_item ">
-                                        <div class="owl_item_product">
-    
-    
-    
-    
-    
-                                            <div class="product-box">
-                                                <div class="product-thumbnail">
-    
-                                                    <span class="sale_count"><span class="bf_">-
-                                                            20%
-                                                        </span></span>
-    
-    
-    
-                                                    <a href="/balo-thoi-trang-easyopen-black" class="image_link display_flex" data-images="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/1-2.jpg?v=1516616201157" title="Balo Thời Trang EasyOpen Black">
-    
-    
-                                                        <img class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/1-2.jpg?v=1516616201157" alt="balo-thoi-trang-easyopen-black" />
-    
-    
-                                                    </a>
-                                                    <div class="product-action-grid clearfix">
-                                                        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9724957" enctype="multipart/form-data">
-                                                            <div>
-                                                                <a title="xem nhanh" href="/balo-thoi-trang-easyopen-black" data-handle="balo-thoi-trang-easyopen-black" class="button_wh_40 btn_view right-to quick-view"><i class="fa fa-search"></i>
-                                                                    <span class="tooltips qv"><span>Xem nhanh</span></span>
-                                                                </a>
-                                                            </div>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                                <div class="product-info">
-    
-                                                    <div class="reviews-product-list grid_reviews">
-                                                        <div class="bizweb-product-reviews-badge" data-id="9724957"></div>
-                                                    </div>
-    
-                                                    <h3 class="product-name"><a class="text2line" href="/balo-thoi-trang-easyopen-black" title="Balo Thời Trang EasyOpen Black">Balo Thời Trang EasyOpen Black</a></h3>
-    
-    
-    
-                                                    <div class="price-box clearfix">
-    
-                                                        <span class="price product-price-old">
-                                                            560.000₫
-                                                        </span>
-    
-                                                        <span class="price product-price">449.000₫</span>
-                                                    </div>
-    
-    
-                                                    <div class="action__">
-    
-                                                        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9724957" enctype="multipart/form-data">
-                                                            <div>
-    
-                                                                <input type="hidden" name="variantId" value="15530038" />
-                                                                <button class=" cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng">
-                                                                    <span><span class="fa fa-shopping-basket"></span></span>
-                                                                    Giỏ hàng
-                                                                </button>
-    
-                                                            </div>
-                                                        </form>
-    
-                                                    </div>
-    
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-    
-                                </div>
-                            </div>     
-                    </div>
-    
 
                 </div>
             </div>
         </section>
     </section>
     
-    
-    
-    
-    <section class="awe-section-5">
-        <h3 class="hidden">&nbsp;</h3>
-        <section class="section_two_banner">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 dear_title">
-                        <div class="">
-                            <a href="#" class="banner">
-                                <img class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/100/286/794/themes/637857/assets/banner_three_1.png?1618737291739" alt="banner 01">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 dear_title">
-                        <div class="">
-                            <a href="#" class="banner">
-                                <img class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/100/286/794/themes/637857/assets/banner_three_2.png?1618737291739" alt="banner 02">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 dear_title">
-                        <div class="">
-                            <a href="#" class="banner">
-                                <img class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/100/286/794/themes/637857/assets/banner_three_3.png?1618737291739" alt="banner 03">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </section>
     
     
     
@@ -1140,34 +270,9 @@
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 dear_title">
                         <h2 class="title_head_ border_content">
-                            <a href="#" title="Thời trang">Thời trang</a>
+                            <a href="sanphamnew" title="Thời trang">Thời trang</a>
                         </h2>
-                        <!-- Nav tabs -->
-
-                        <div class="loop_two_ctrl visible-xs">
-                            <span id="loop_three_prev">&lt;</span>
-                            <span id="loop_three_next">&gt;</span>
-                        </div>
-                        <ul class="nav nav-tabs nav-tabs-slide-mb cycle-slideshow" role="tablist" data-cycle-fx=scrollHorz data-cycle-timeout=0 data-cycle-prev="#loop_three_prev" data-cycle-next="#loop_three_next">
-    
-    
-    
-    
-                            <li role="presentation" class="active"><a href="#tab31" aria-controls="tab31" role="tab" data-toggle="tab">Túi xách nữ</a></li>
-    
-    
-    
-    
-    
-                            <li role="presentation"><a href="#tab32" aria-controls="tab32" role="tab" data-toggle="tab">Giày nam</a></li>
-    
-    
-    
-    
-    
-                        </ul>
-    
-    
+                        
     
                     </div>
                     <!-- Tab panes -->
@@ -1176,281 +281,50 @@
     
                         <div role="tabpanel" class="tab-pane active" id="tab31">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 wrap_owl_product_">
-                                <div class="owl_product_ owl-carousel" data-nav="true" data-lg-items="5" data-md-items="4" data-height="false" data-xs-items="2" data-sm-items="3" data-margin="0">
+                            <div class="owl_product_ owl-carousel" data-nav="true" data-lg-items="5" data-md-items="4" data-height="false" data-xs-items="2" data-sm-items="3" data-margin="0">
+                        @foreach($sp_moi as $sp)
+                            <div class="item saler_item first">
+                                <div class="owl_item_product">
+
+                                    <div class="product-box">
+                                        <div class="product-thumbnail">
+                                            @if($sp->phan_tram_giam>0)
+                                            <span class="sale_count"><span class="bf_">-
+                                            {{$sp->phan_tram_giam}}%
+                                            </span></span>
+                                            @endif
+   
+                                            <a href="{{route('chitietsanpham',$sp->id)}}" class="image_link display_flex" data-images="assets/images/{{$sp->hinh_anh}}" title="{{$sp->ten_sp}}">
     
     
-    
-    
-    
-                                    <div class="item saler_item first">
-                                        <div class="owl_item_product">
-  
-                                            <div class="product-box">
-                                                <div class="product-thumbnail">
-    
-                                                    <span class="sale_count"><span class="bf_">-
-                                                            9%
-                                                        </span></span>
-    
-    
-    
-                                                    <a href="/balo-laplop-solo-pro-arc-black" class="image_link display_flex" data-images="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/1-4-2.jpg?v=1517304826530" title="Balo laplop Solo Pro ARC Black">
-    
-    
-                                                        <img class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/1-4-2.jpg?v=1517304826530" alt="balo-laplop-solo-pro-arc-black" />
-    
-    
-                                                    </a>
-                                                    <div class="product-action-grid clearfix">
-                                                        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9725087" enctype="multipart/form-data">
-                                                            <div>
-                                                                <a title="xem nhanh" href="/balo-laplop-solo-pro-arc-black" data-handle="balo-laplop-solo-pro-arc-black" class="button_wh_40 btn_view right-to quick-view"><i class="fa fa-search"></i>
-                                                                    <span class="tooltips qv"><span>Xem nhanh</span></span>
-                                                                </a>
-                                                            </div>
-                                                        </form>
+                                                <img class="img-responsive lazyload" src="assets/images/{{$sp->hinh_anh}}" data-src="assets/images/{{$sp->hinh_anh}}" alt="{{$sp->ten_sp}}"/>
+
+                                            </a>
+                                            <div class="product-action-grid clearfix">
+                                                <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9725087" enctype="multipart/form-data">
+                                                    <div>
+                                                        <a title="xem nhanh" href="{{route('chitietsanpham',$sp->id)}}" data-handle="{{$sp->ten_sp}}" class="button_wh_40 btn_view right-to quick-view"><i class="fa fa-search"></i>
+                                                            <span class="tooltips qv"><span>Xem chi tiết</span></span>
+                                                        </a>
                                                     </div>
-                                                </div>
-                                                <div class="product-info">
-    
-                                                    <div class="reviews-product-list grid_reviews">
-                                                        <div class="bizweb-product-reviews-badge" data-id="9725087"></div>
-                                                    </div>
-    
-                                                    <h3 class="product-name"><a class="text2line" href="/balo-laplop-solo-pro-arc-black" title="Balo laplop Solo Pro ARC Black">Balo laplop Solo Pro ARC Black</a></h3>
-    
-    
-    
-                                                    <div class="price-box clearfix">
-    
-                                                        <span class="price product-price-old">
-                                                            950.000₫
-                                                        </span>
-    
-                                                        <span class="price product-price">860.000₫</span>
-                                                    </div>
-    
-    
-                                                    <div class="action__">
-    
-                                                        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9725087" enctype="multipart/form-data">
-                                                            <div>
-    
-                                                                <input type="hidden" name="variantId" value="15530193" />
-                                                                <button class=" cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng">
-                                                                    <span><span class="fa fa-shopping-basket"></span></span>
-                                                                    Giỏ hàng
-                                                                </button>
-    
-                                                            </div>
-                                                        </form>
-    
-                                                    </div>
-    
-                                                </div>
+                                                </form>
                                             </div>
                                         </div>
-                                    </div>
-    
-    
-    
-    
-    
-                                    <div class="item saler_item ">
-                                        <div class="owl_item_product">
-
-                                            <div class="product-box">
-                                                <div class="product-thumbnail">
-    
-                                                    <span class="sale_count"><span class="bf_">-
-                                                            38%
-                                                        </span></span>
-    
-    
-    
-                                                    <a href="/balo-mikkor-irvin-charcoal-orange" class="image_link display_flex" data-images="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/1-3.jpg?v=1517327927920" title="Balo Mikkor Irvin Charcoal/Orange">
-    
-    
-                                                        <img class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/1-3.jpg?v=1517327927920" alt="balo-mikkor-irvin-charcoal-orange" />
-    
-    
-                                                    </a>
-                                                    <div class="product-action-grid clearfix">
-                                                        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9724997" enctype="multipart/form-data">
-                                                            <div>
-                                                                <a title="xem nhanh" href="/balo-mikkor-irvin-charcoal-orange" data-handle="balo-mikkor-irvin-charcoal-orange" class="button_wh_40 btn_view right-to quick-view"><i class="fa fa-search"></i>
-                                                                    <span class="tooltips qv"><span>Xem nhanh</span></span>
-                                                                </a>
-                                                            </div>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                                <div class="product-info">
-    
-                                                    <div class="reviews-product-list grid_reviews">
-                                                        <div class="bizweb-product-reviews-badge" data-id="9724997"></div>
-                                                    </div>
-    
-                                                    <h3 class="product-name"><a class="text2line" href="/balo-mikkor-irvin-charcoal-orange" title="Balo Mikkor Irvin Charcoal/Orange">Balo Mikkor Irvin Charcoal/Orange</a></h3>
-    
-    
-    
-                                                    <div class="price-box clearfix">
-    
-                                                        <span class="price product-price-old">
-                                                            1.200.000₫
-                                                        </span>
-    
-                                                        <span class="price product-price">750.000₫</span>
-                                                    </div>
-    
-    
-                                                    <div class="action__">
-    
-                                                        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9724997" enctype="multipart/form-data">
-                                                            <div>
-    
-                                                                <input type="hidden" name="variantId" value="15530094" />
-                                                                <button class=" cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng">
-                                                                    <span><span class="fa fa-shopping-basket"></span></span>
-                                                                    Giỏ hàng
-                                                                </button>
-    
-                                                            </div>
-                                                        </form>
-    
-                                                    </div>
-    
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-    
-    
-    
-    
-    
-                                    <div class="item saler_item ">
-                                        <div class="owl_item_product">
-
-                                            <div class="product-box">
-                                                <div class="product-thumbnail">
-    
-                                                    <span class="sale_count"><span class="bf_">-
-                                                            8%
-                                                        </span></span>
-    
-    
-    
-                                                    <a href="/vali-ricardo-spectrum-20-inch-5-tac-den" class="image_link display_flex" data-images="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/1-d759a515-8ee4-447f-a51b-9be521c66a3a.jpg?v=1517328908890" title="Vali Ricardo Spectrum 20 inch 5 tấc - Đen">
-    
-    
-                                                        <img class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/1-d759a515-8ee4-447f-a51b-9be521c66a3a.jpg?v=1517328908890" alt="vali-ricardo-spectrum-20-inch-5-tac-den" />
-    
-    
-                                                    </a>
-                                                    <div class="product-action-grid clearfix">
-                                                        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9723975" enctype="multipart/form-data">
-                                                            <div>
-                                                                <a title="xem nhanh" href="/vali-ricardo-spectrum-20-inch-5-tac-den" data-handle="vali-ricardo-spectrum-20-inch-5-tac-den" class="button_wh_40 btn_view right-to quick-view"><i class="fa fa-search"></i>
-                                                                    <span class="tooltips qv"><span>Xem nhanh</span></span>
-                                                                </a>
-                                                            </div>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                                <div class="product-info">
-    
-                                                    <div class="reviews-product-list grid_reviews">
-                                                        <div class="bizweb-product-reviews-badge" data-id="9723975"></div>
-                                                    </div>
-    
-                                                    <h3 class="product-name"><a class="text2line" href="/vali-ricardo-spectrum-20-inch-5-tac-den" title="Vali Ricardo Spectrum 20 inch 5 tấc - Đen">Vali Ricardo Spectrum 20 inch 5 tấc - Đen</a></h3>
-    
-    
-    
-                                                    <div class="price-box clearfix">
-    
-                                                        <span class="price product-price-old">
-                                                            4.000.000₫
-                                                        </span>
-    
-                                                        <span class="price product-price">3.700.000₫</span>
-                                                    </div>
-    
-    
-                                                    <div class="action__">
-    
-                                                        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9723975" enctype="multipart/form-data">
-                                                            <div>
-    
-                                                                <input class="hidden" type="hidden" name="variantId" value="15529037" />
-                                                                <button class="btn-cart cart_button_style  left-to" title="Chọn sản phẩm" type="button" onclick="window.location.href='/vali-ricardo-spectrum-20-inch-5-tac-den'">
-                                                                    <span class="ti-settings"></span>
-                                                                    Tuỳ chọn
-                                                                </button>
-    
-                                                            </div>
-                                                        </form>
-    
-                                                    </div>
-    
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-    
-    
-    
-    
-    
-                                    <div class="item saler_item ">
-                                        <div class="owl_item_product">
-
-                                            <div class="product-box">
-                                                <div class="product-thumbnail">
-    
-                                                    <span class="sale_count"><span class="bf_">-
-                                                            12%
-                                                        </span></span>
-    
-    
-    
-                                                    <a href="/giay-vai-converse-3" class="image_link display_flex" data-images="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/3min2aeb1bce236543fcad76752f82.jpg?v=1516862308167" title="Giày converse One Star Leather + Tapestry">
-    
-    
-                                                        <img class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/3min2aeb1bce236543fcad76752f82.jpg?v=1516862308167" alt="giay-converse-one-star-leather-tapestry" />
-    
-    
-                                                    </a>
-                                                    <div class="product-action-grid clearfix">
-                                                        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9746949" enctype="multipart/form-data">
-                                                            <div>
-                                                                <a title="xem nhanh" href="/giay-vai-converse-3" data-handle="giay-vai-converse-3" class="button_wh_40 btn_view right-to quick-view"><i class="fa fa-search"></i>
-                                                                    <span class="tooltips qv"><span>Xem nhanh</span></span>
-                                                                </a>
-                                                            </div>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                                
                                         <div class="product-info">
     
                                             <div class="reviews-product-list grid_reviews">
                                                 <div class="bizweb-product-reviews-badge" data-id="9725087"></div>
                                             </div>
     
-                                            <h3 class="product-name"><a class="text2line" href="/balo-laplop-solo-pro-arc-black" title="Balo laplop Solo Pro ARC Black">Balo laplop Solo Pro ARC Black</a></h3>
+                                            <h3 class="product-name"><a class="text2line" href="{{route('chitietsanpham',$sp->id)}}" title="{{$sp->ten_sp}}">{{$sp->ten_sp}}</a></h3>
     
     
     
                                             <div class="price-box clearfix">
-    
                                                 <span class="price product-price-old">
-                                                    950.000₫
+                                                    {{number_format($sp->gia)}}đ
                                                 </span>
-    
-                                                <span class="price product-price">860.000₫</span>
+                                                <span class="price product-price">{{number_format($sp->gia*((100-$sp->giam_gia)/100))}}đ</span>
                                             </div>
     
     
@@ -1472,587 +346,26 @@
     
                                         </div>
                                     </div>
-                                            </div>
-                                    </div>
-                                    
-    
-    
-    
-    
-    
-                                    <div class="item saler_item ">
-                                        <div class="owl_item_product">
-    
-                                            <div class="product-box">
-                                                <div class="product-thumbnail">
-    
-                                                    <span class="sale_count"><span class="bf_">-
-                                                            6%
-                                                        </span></span>
-    
-    
-    
-                                                    <a href="/tui-xach-nho-nap-gap-cach-dieu-txn132" class="image_link display_flex" data-images="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/1-a7468d12-4e75-4e93-bac7-4681a10cd875.jpg?v=1517329330057" title="Túi xách nhỏ nắp gập cách điệu TXN132">
-    
-    
-                                                        <img class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/1-a7468d12-4e75-4e93-bac7-4681a10cd875.jpg?v=1517329330057" alt="tui-xach-nho-nap-gap-cach-dieu-txn132" />
-    
-    
-                                                    </a>
-                                                    <div class="product-action-grid clearfix">
-                                                        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9746605" enctype="multipart/form-data">
-                                                            <div>
-                                                                <a title="xem nhanh" href="/tui-xach-nho-nap-gap-cach-dieu-txn132" data-handle="tui-xach-nho-nap-gap-cach-dieu-txn132" class="button_wh_40 btn_view right-to quick-view"><i class="fa fa-search"></i>
-                                                                    <span class="tooltips qv"><span>Xem nhanh</span></span>
-                                                                </a>
-                                                            </div>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                                <div class="product-info">
-    
-                                                    <div class="reviews-product-list grid_reviews">
-                                                        <div class="bizweb-product-reviews-badge" data-id="9746605"></div>
-                                                    </div>
-    
-                                                    <h3 class="product-name"><a class="text2line" href="/tui-xach-nho-nap-gap-cach-dieu-txn132" title="Túi xách nhỏ nắp gập cách điệu TXN132">Túi xách nhỏ nắp gập cách điệu TXN132</a></h3>
-    
-    
-    
-                                                    <div class="price-box clearfix">
-    
-                                                        <span class="price product-price-old">
-                                                            800.000₫
-                                                        </span>
-    
-                                                        <span class="price product-price">750.000₫</span>
-                                                    </div>
-    
-    
-                                                    <div class="action__">
-    
-                                                        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9746605" enctype="multipart/form-data">
-                                                            <div>
-    
-                                                                <input class="hidden" type="hidden" name="variantId" value="15567157" />
-                                                                <button class="btn-cart cart_button_style  left-to" title="Chọn sản phẩm" type="button" onclick="window.location.href='/tui-xach-nho-nap-gap-cach-dieu-txn132'">
-                                                                    <span class="ti-settings"></span>
-                                                                    Tuỳ chọn
-                                                                </button>
-    
-                                                            </div>
-                                                        </form>
-    
-                                                    </div>
-    
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-    
-    
-    
-    
-    
-                                    <div class="item saler_item ">
-                                        <div class="owl_item_product">
-    
-                                            <div class="product-box">
-                                                <div class="product-thumbnail">
-    
-                                                    <span class="sale_count"><span class="bf_">-
-                                                            20%
-                                                        </span></span>
-    
-    
-    
-                                                    <a href="/balo-thoi-trang-easyopen-black" class="image_link display_flex" data-images="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/1-2.jpg?v=1516616201157" title="Balo Thời Trang EasyOpen Black">
-    
-    
-                                                        <img class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/1-2.jpg?v=1516616201157" alt="balo-thoi-trang-easyopen-black" />
-    
-    
-                                                    </a>
-                                                    <div class="product-action-grid clearfix">
-                                                        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9724957" enctype="multipart/form-data">
-                                                            <div>
-                                                                <a title="xem nhanh" href="/balo-thoi-trang-easyopen-black" data-handle="balo-thoi-trang-easyopen-black" class="button_wh_40 btn_view right-to quick-view"><i class="fa fa-search"></i>
-                                                                    <span class="tooltips qv"><span>Xem nhanh</span></span>
-                                                                </a>
-                                                            </div>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                                <div class="product-info">
-    
-                                                    <div class="reviews-product-list grid_reviews">
-                                                        <div class="bizweb-product-reviews-badge" data-id="9724957"></div>
-                                                    </div>
-    
-                                                    <h3 class="product-name"><a class="text2line" href="/balo-thoi-trang-easyopen-black" title="Balo Thời Trang EasyOpen Black">Balo Thời Trang EasyOpen Black</a></h3>
-    
-    
-    
-                                                    <div class="price-box clearfix">
-    
-                                                        <span class="price product-price-old">
-                                                            560.000₫
-                                                        </span>
-    
-                                                        <span class="price product-price">449.000₫</span>
-                                                    </div>
-    
-    
-                                                    <div class="action__">
-    
-                                                        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9724957" enctype="multipart/form-data">
-                                                            <div>
-    
-                                                                <input type="hidden" name="variantId" value="15530038" />
-                                                                <button class=" cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng">
-                                                                    <span><span class="fa fa-shopping-basket"></span></span>
-                                                                    Giỏ hàng
-                                                                </button>
-    
-                                                            </div>
-                                                        </form>
-    
-                                                    </div>
-    
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-    
+   
+                                    <div class="clockdiv" data-countdown="2018/09/20 15:00"></div>
                                 </div>
                             </div>
+                        @endforeach 
+    
+                        </div>   
+                        </div>
                         </div>
     
-    
-    
-    
-                        <div role="tabpanel" class="tab-pane " id="tab32">
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 wrap_owl_product_">
-                                <div class="owl_product_ owl-carousel" data-nav="true" data-lg-items="5" data-md-items="4" data-height="false" data-xs-items="2" data-sm-items="3" data-margin="0">
-    
-    
-    
-    
-    
-                                    <div class="item saler_item first">
-                                        <div class="owl_item_product">
-
-                                            <div class="product-box">
-                                                <div class="product-thumbnail">
-    
-                                                    <span class="sale_count"><span class="bf_">-
-                                                            9%
-                                                        </span></span>
-    
-    
-    
-                                                    <a href="/balo-laplop-solo-pro-arc-black" class="image_link display_flex" data-images="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/1-4-2.jpg?v=1517304826530" title="Balo laplop Solo Pro ARC Black">
-    
-    
-                                                        <img class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/1-4-2.jpg?v=1517304826530" alt="balo-laplop-solo-pro-arc-black" />
-    
-    
-                                                    </a>
-                                                    <div class="product-action-grid clearfix">
-                                                        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9725087" enctype="multipart/form-data">
-                                                            <div>
-                                                                <a title="xem nhanh" href="/balo-laplop-solo-pro-arc-black" data-handle="balo-laplop-solo-pro-arc-black" class="button_wh_40 btn_view right-to quick-view"><i class="fa fa-search"></i>
-                                                                    <span class="tooltips qv"><span>Xem nhanh</span></span>
-                                                                </a>
-                                                            </div>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                                <div class="product-info">
-    
-                                                    <div class="reviews-product-list grid_reviews">
-                                                        <div class="bizweb-product-reviews-badge" data-id="9725087"></div>
-                                                    </div>
-    
-                                                    <h3 class="product-name"><a class="text2line" href="/balo-laplop-solo-pro-arc-black" title="Balo laplop Solo Pro ARC Black">Balo laplop Solo Pro ARC Black</a></h3>
-    
-    
-    
-                                                    <div class="price-box clearfix">
-    
-                                                        <span class="price product-price-old">
-                                                            950.000₫
-                                                        </span>
-    
-                                                        <span class="price product-price">860.000₫</span>
-                                                    </div>
-    
-    
-                                                    <div class="action__">
-    
-                                                        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9725087" enctype="multipart/form-data">
-                                                            <div>
-    
-                                                                <input type="hidden" name="variantId" value="15530193" />
-                                                                <button class=" cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng">
-                                                                    <span><span class="fa fa-shopping-basket"></span></span>
-                                                                    Giỏ hàng
-                                                                </button>
-    
-                                                            </div>
-                                                        </form>
-    
-                                                    </div>
-    
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-    
-    
-    
-    
-    
-                                    <div class="item saler_item ">
-                                        <div class="owl_item_product">
-    
-                                            <div class="product-box">
-                                                <div class="product-thumbnail">
-    
-                                                    <span class="sale_count"><span class="bf_">-
-                                                            38%
-                                                        </span></span>
-    
-    
-    
-                                                    <a href="/balo-mikkor-irvin-charcoal-orange" class="image_link display_flex" data-images="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/1-3.jpg?v=1517327927920" title="Balo Mikkor Irvin Charcoal/Orange">
-    
-    
-                                                        <img class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/1-3.jpg?v=1517327927920" alt="balo-mikkor-irvin-charcoal-orange" />
-    
-    
-                                                    </a>
-                                                    <div class="product-action-grid clearfix">
-                                                        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9724997" enctype="multipart/form-data">
-                                                            <div>
-                                                                <a title="xem nhanh" href="/balo-mikkor-irvin-charcoal-orange" data-handle="balo-mikkor-irvin-charcoal-orange" class="button_wh_40 btn_view right-to quick-view"><i class="fa fa-search"></i>
-                                                                    <span class="tooltips qv"><span>Xem nhanh</span></span>
-                                                                </a>
-                                                            </div>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                                <div class="product-info">
-    
-                                                    <div class="reviews-product-list grid_reviews">
-                                                        <div class="bizweb-product-reviews-badge" data-id="9724997"></div>
-                                                    </div>
-    
-                                                    <h3 class="product-name"><a class="text2line" href="/balo-mikkor-irvin-charcoal-orange" title="Balo Mikkor Irvin Charcoal/Orange">Balo Mikkor Irvin Charcoal/Orange</a></h3>
-    
-    
-    
-                                                    <div class="price-box clearfix">
-    
-                                                        <span class="price product-price-old">
-                                                            1.200.000₫
-                                                        </span>
-    
-                                                        <span class="price product-price">750.000₫</span>
-                                                    </div>
-    
-    
-                                                    <div class="action__">
-    
-                                                        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9724997" enctype="multipart/form-data">
-                                                            <div>
-    
-                                                                <input type="hidden" name="variantId" value="15530094" />
-                                                                <button class=" cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng">
-                                                                    <span><span class="fa fa-shopping-basket"></span></span>
-                                                                    Giỏ hàng
-                                                                </button>
-    
-                                                            </div>
-                                                        </form>
-    
-                                                    </div>
-    
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-    
-    
-    
-    
-    
-                                    <div class="item saler_item ">
-                                        <div class="owl_item_product">
-    
-    
-    
-    
-    
-                                            <div class="product-box">
-                                                <div class="product-thumbnail">
-    
-                                                    <span class="sale_count"><span class="bf_">-
-                                                            8%
-                                                        </span></span>
-    
-    
-    
-                                                    <a href="/vali-ricardo-spectrum-20-inch-5-tac-den" class="image_link display_flex" data-images="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/1-d759a515-8ee4-447f-a51b-9be521c66a3a.jpg?v=1517328908890" title="Vali Ricardo Spectrum 20 inch 5 tấc - Đen">
-    
-    
-                                                        <img class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/1-d759a515-8ee4-447f-a51b-9be521c66a3a.jpg?v=1517328908890" alt="vali-ricardo-spectrum-20-inch-5-tac-den" />
-    
-    
-                                                    </a>
-                                                    <div class="product-action-grid clearfix">
-                                                        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9723975" enctype="multipart/form-data">
-                                                            <div>
-                                                                <a title="xem nhanh" href="/vali-ricardo-spectrum-20-inch-5-tac-den" data-handle="vali-ricardo-spectrum-20-inch-5-tac-den" class="button_wh_40 btn_view right-to quick-view"><i class="fa fa-search"></i>
-                                                                    <span class="tooltips qv"><span>Xem nhanh</span></span>
-                                                                </a>
-                                                            </div>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                                <div class="product-info">
-    
-                                                    <div class="reviews-product-list grid_reviews">
-                                                        <div class="bizweb-product-reviews-badge" data-id="9723975"></div>
-                                                    </div>
-    
-                                                    <h3 class="product-name"><a class="text2line" href="/vali-ricardo-spectrum-20-inch-5-tac-den" title="Vali Ricardo Spectrum 20 inch 5 tấc - Đen">Vali Ricardo Spectrum 20 inch 5 tấc - Đen</a></h3>
-    
-    
-    
-                                                    <div class="price-box clearfix">
-    
-                                                        <span class="price product-price-old">
-                                                            4.000.000₫
-                                                        </span>
-    
-                                                        <span class="price product-price">3.700.000₫</span>
-                                                    </div>
-    
-    
-                                                    <div class="action__">
-    
-                                                        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9723975" enctype="multipart/form-data">
-                                                            <div>
-    
-                                                                <input class="hidden" type="hidden" name="variantId" value="15529037" />
-                                                                <button class="btn-cart cart_button_style  left-to" title="Chọn sản phẩm" type="button" onclick="window.location.href='/vali-ricardo-spectrum-20-inch-5-tac-den'">
-                                                                    <span class="ti-settings"></span>
-                                                                    Tuỳ chọn
-                                                                </button>
-    
-                                                            </div>
-                                                        </form>
-    
-                                                    </div>
-    
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-    
-    
-    
-    
-    
-                                    <div class="item saler_item ">
-                                        <div class="owl_item_product">
-    
-    
-    
-    
-    
-                                            <div class="product-box">
-                                                <div class="product-thumbnail">
-    
-                                                    <span class="sale_count"><span class="bf_">-
-                                                            12%
-                                                        </span></span>
-    
-    
-    
-                                                    <a href="/giay-vai-converse-3" class="image_link display_flex" data-images="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/3min2aeb1bce236543fcad76752f82.jpg?v=1516862308167" title="Giày converse One Star Leather + Tapestry">
-    
-    
-                                                        <img class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/3min2aeb1bce236543fcad76752f82.jpg?v=1516862308167" alt="giay-converse-one-star-leather-tapestry" />
-    
-    
-                                                    </a>
-                                                    <div class="product-action-grid clearfix">
-                                                        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9746949" enctype="multipart/form-data">
-                                                            <div>
-                                                                <a title="xem nhanh" href="/giay-vai-converse-3" data-handle="giay-vai-converse-3" class="button_wh_40 btn_view right-to quick-view"><i class="fa fa-search"></i>
-                                                                    <span class="tooltips qv"><span>Xem nhanh</span></span>
-                                                                </a>
-                                                            </div>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                                <div class="product-info">
-    
-                                                    <div class="reviews-product-list grid_reviews">
-                                                        <div class="bizweb-product-reviews-badge" data-id="9746949"></div>
-                                                    </div>
-    
-                                                    <h3 class="product-name"><a class="text2line" href="/giay-vai-converse-3" title="Giày converse One Star Leather + Tapestry">Giày converse One Star Leather + Tapestry</a></h3>
-    
-    
-    
-                                                    <div class="price-box clearfix">
-    
-                                                        <span class="price product-price-old">
-                                                            800.000₫
-                                                        </span>
-    
-                                                        <span class="price product-price">700.000₫</span>
-                                                    </div>
-    
-    
-                                                    <div class="action__">
-    
-                                                        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9746949" enctype="multipart/form-data">
-                                                            <div>
-    
-                                                                <input class="hidden" type="hidden" name="variantId" value="15567667" />
-                                                                <button class="btn-cart cart_button_style  left-to" title="Chọn sản phẩm" type="button" onclick="window.location.href='/giay-vai-converse-3'">
-                                                                    <span class="ti-settings"></span>
-                                                                    Tuỳ chọn
-                                                                </button>
-    
-                                                            </div>
-                                                        </form>
-    
-                                                    </div>
-    
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-    
-    
-    
-    
-    
-                                    <div class="item saler_item ">
-                                        <div class="owl_item_product">
-    
-    
-    
-    
-    
-                                            <div class="product-box">
-                                                <div class="product-thumbnail">
-    
-                                                    <span class="sale_count"><span class="bf_">-
-                                                            6%
-                                                        </span></span>
-    
-    
-    
-                                                    <a href="/tui-xach-nho-nap-gap-cach-dieu-txn132" class="image_link display_flex" data-images="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/1-a7468d12-4e75-4e93-bac7-4681a10cd875.jpg?v=1517329330057" title="Túi xách nhỏ nắp gập cách điệu TXN132">
-    
-    
-                                                        <img class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/1-a7468d12-4e75-4e93-bac7-4681a10cd875.jpg?v=1517329330057" alt="tui-xach-nho-nap-gap-cach-dieu-txn132" />
-    
-    
-                                                    </a>
-                                                    <div class="product-action-grid clearfix">
-                                                        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9746605" enctype="multipart/form-data">
-                                                            <div>
-                                                                <a title="xem nhanh" href="/tui-xach-nho-nap-gap-cach-dieu-txn132" data-handle="tui-xach-nho-nap-gap-cach-dieu-txn132" class="button_wh_40 btn_view right-to quick-view"><i class="fa fa-search"></i>
-                                                                    <span class="tooltips qv"><span>Xem nhanh</span></span>
-                                                                </a>
-                                                            </div>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                                <div class="product-info">
-    
-                                                    <div class="reviews-product-list grid_reviews">
-                                                        <div class="bizweb-product-reviews-badge" data-id="9746605"></div>
-                                                    </div>
-    
-                                                    <h3 class="product-name"><a class="text2line" href="/tui-xach-nho-nap-gap-cach-dieu-txn132" title="Túi xách nhỏ nắp gập cách điệu TXN132">Túi xách nhỏ nắp gập cách điệu TXN132</a></h3>
-    
-    
-    
-                                                    <div class="price-box clearfix">
-    
-                                                        <span class="price product-price-old">
-                                                            800.000₫
-                                                        </span>
-    
-                                                        <span class="price product-price">750.000₫</span>
-                                                    </div>
-    
-    
-                                                    <div class="action__">
-    
-                                                        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9746605" enctype="multipart/form-data">
-                                                            <div>
-    
-                                                                <input class="hidden" type="hidden" name="variantId" value="15567157" />
-                                                                <button class="btn-cart cart_button_style  left-to" title="Chọn sản phẩm" type="button" onclick="window.location.href='/tui-xach-nho-nap-gap-cach-dieu-txn132'">
-                                                                    <span class="ti-settings"></span>
-                                                                    Tuỳ chọn
-                                                                </button>
-    
-                                                            </div>
-                                                        </form>
-    
-                                                    </div>
-    
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-    
-                                </div>
-                            </div>
                         </div>
 
-                    </div>
+                   
+                   
+                </div>
                 </div>
             </div>
         </section>
     </section>
     
-    
-    
-    
-    <section class="awe-section-7">
-        <h3 class="hidden">&nbsp;</h3>
-        <section class="section_two_banner">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 dear_title">
-                        <div class="">
-                            <a href="#" class="banner">
-                                <img class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/100/286/794/themes/637857/assets/banner_two_1.png?1618737291739" alt="banner 01">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 dear_title">
-                        <div class="">
-                            <a href="#" class="banner">
-                                <img class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/100/286/794/themes/637857/assets/banner_two_2.png?1618737291739" alt="Banner 02">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </section>
     
     
     
@@ -2064,32 +377,9 @@
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 dear_title">
                         <h2 class="title_head_ border_content">
-                            <a href="#" title="giày converse">giày converse</a>
+                            <a href="sanphamnew" title="giày converse">giày converse</a>
                         </h2>
-                        <!-- Nav tabs -->
-                        <div class="loop_two_ctrl visible-xs">
-                            <span id="loop_four_prev">&lt;</span>
-                            <span id="loop_four_next">&gt;</span>
-                        </div>
-                        <ul class="nav nav-tabs nav-tabs-slide-mb cycle-slideshow" role="tablist" data-cycle-fx=scrollHorz data-cycle-timeout=0 data-cycle-prev="#loop_four_prev" data-cycle-next="#loop_four_next">
-    
-    
-    
-    
-                            <li role="presentation" class="active"><a href="#tab41" aria-controls="tab31" role="tab" data-toggle="tab">Mới</a></li>
-    
-    
-    
-    
-    
-                            <li role="presentation"><a href="#tab42" aria-controls="tab32" role="tab" data-toggle="tab">Nổi bật</a></li>
-    
-    
-    
-    
-    
-                        </ul>
-    
+                        
     
     
                     </div>
@@ -2102,793 +392,81 @@
     
                         <div role="tabpanel" class="tab-pane active" id="tab41">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 wrap_owl_product_">
-                                <div class="owl_product_ owl-carousel" data-nav="true" data-lg-items="5" data-md-items="4" data-height="false" data-xs-items="2" data-sm-items="3" data-margin="0">
-    
-    
-    
-    
-    
-                                    <div class="item saler_item first">
-                                        <div class="owl_item_product">
-    
-    
-    
-    
-    
-                                            <div class="product-box">
-                                                <div class="product-thumbnail">
-    
-                                                    <span class="sale_count"><span class="bf_">-
-                                                            38%
-                                                        </span></span>
-    
-    
-    
-                                                    <a href="/giay-converse-one-star-74-camo" class="image_link display_flex" data-images="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/20min833641c2cb07436482b58a095.jpg?v=1516862319513" title="Giày Converse Star 70 Wordmark Wool One Star '74 Camo">
-    
-    
-                                                        <img class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/20min833641c2cb07436482b58a095.jpg?v=1516862319513" alt="giay-converse-star-70-wordmark-wool-one-star-74-camo" />
-    
-    
-                                                    </a>
-                                                    <div class="product-action-grid clearfix">
-                                                        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9746957" enctype="multipart/form-data">
-                                                            <div>
-                                                                <a title="xem nhanh" href="/giay-converse-one-star-74-camo" data-handle="giay-converse-one-star-74-camo" class="button_wh_40 btn_view right-to quick-view"><i class="fa fa-search"></i>
-                                                                    <span class="tooltips qv"><span>Xem nhanh</span></span>
-                                                                </a>
-                                                            </div>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                                <div class="product-info">
-    
-                                                    <div class="reviews-product-list grid_reviews">
-                                                        <div class="bizweb-product-reviews-badge" data-id="9746957"></div>
-                                                    </div>
-    
-                                                    <h3 class="product-name"><a class="text2line" href="/giay-converse-one-star-74-camo" title="Giày Converse Star 70 Wordmark Wool One Star '74 Camo">Giày Converse Star 70 Wordmark Wool One Star '74 Camo</a></h3>
-    
-    
-    
-                                                    <div class="price-box clearfix">
-    
-                                                        <span class="price product-price-old">
-                                                            800.000₫
-                                                        </span>
-    
-                                                        <span class="price product-price">500.000₫</span>
-                                                    </div>
-    
-    
-                                                    <div class="action__">
-    
-                                                        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9746957" enctype="multipart/form-data">
-                                                            <div>
-    
-                                                                <input class="hidden" type="hidden" name="variantId" value="15567687" />
-                                                                <button class="btn-cart cart_button_style  left-to" title="Chọn sản phẩm" type="button" onclick="window.location.href='/giay-converse-one-star-74-camo'">
-                                                                    <span class="ti-settings"></span>
-                                                                    Tuỳ chọn
-                                                                </button>
-    
-                                                            </div>
-                                                        </form>
-    
-                                                    </div>
-    
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-    
-    
-    
-    
-    
-                                    <div class="item saler_item">
-                                        <div class="owl_item_product">
-  
-                                            <div class="product-box">
-                                                <div class="product-thumbnail">
-    
-                                                    <span class="sale_count"><span class="bf_">-
-                                                            9%
-                                                        </span></span>
-    
-    
-    
-                                                    <a href="/balo-laplop-solo-pro-arc-black" class="image_link display_flex" data-images="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/1-4-2.jpg?v=1517304826530" title="Balo laplop Solo Pro ARC Black">
-    
-    
-                                                        <img class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/1-4-2.jpg?v=1517304826530" alt="balo-laplop-solo-pro-arc-black" />
-    
-    
-                                                    </a>
-                                                    <div class="product-action-grid clearfix">
-                                                        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9725087" enctype="multipart/form-data">
-                                                            <div>
-                                                                <a title="xem nhanh" href="/balo-laplop-solo-pro-arc-black" data-handle="balo-laplop-solo-pro-arc-black" class="button_wh_40 btn_view right-to quick-view"><i class="fa fa-search"></i>
-                                                                    <span class="tooltips qv"><span>Xem nhanh</span></span>
-                                                                </a>
-                                                            </div>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                                <div class="product-info">
-    
-                                                    <div class="reviews-product-list grid_reviews">
-                                                        <div class="bizweb-product-reviews-badge" data-id="9725087"></div>
-                                                    </div>
-    
-                                                    <h3 class="product-name"><a class="text2line" href="/balo-laplop-solo-pro-arc-black" title="Balo laplop Solo Pro ARC Black">Balo laplop Solo Pro ARC Black</a></h3>
-    
-    
-    
-                                                    <div class="price-box clearfix">
-    
-                                                        <span class="price product-price-old">
-                                                            950.000₫
-                                                        </span>
-    
-                                                        <span class="price product-price">860.000₫</span>
-                                                    </div>
-    
-    
-                                                    <div class="action__">
-    
-                                                        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9725087" enctype="multipart/form-data">
-                                                            <div>
-    
-                                                                <input type="hidden" name="variantId" value="15530193" />
-                                                                <button class=" cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng">
-                                                                    <span><span class="fa fa-shopping-basket"></span></span>
-                                                                    Giỏ hàng
-                                                                </button>
-    
-                                                            </div>
-                                                        </form>
-    
-                                                    </div>
-    
-                                                </div>
-                                            </div>
-                                        </div>    
-                                    </div>
-    
-    
-    
-    
-    
-                                    <div class="item saler_item ">
-                                        <div class="owl_item_product">
-    
-                                            <div class="product-box">
-                                                <div class="product-thumbnail">
-    
-                                                    <span class="sale_count"><span class="bf_">-
-                                                            16%
-                                                        </span></span>
-    
-    
-    
-                                                    <a href="/giay-the-thao-converse-2" class="image_link display_flex" data-images="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/2min0fcef0656c134f03bf7bb24e59.jpg?v=1516862310137" title="Giày converse Chuck Taylor All Star Stone Wash">
-    
-    
-                                                        <img class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/2min0fcef0656c134f03bf7bb24e59.jpg?v=1516862310137" alt="giay-converse-chuck-taylor-all-star-stone-wash" />
-    
-    
-                                                    </a>
-                                                    <div class="product-action-grid clearfix">
-                                                        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9746950" enctype="multipart/form-data">
-                                                            <div>
-                                                                <a title="xem nhanh" href="/giay-the-thao-converse-2" data-handle="giay-the-thao-converse-2" class="button_wh_40 btn_view right-to quick-view"><i class="fa fa-search"></i>
-                                                                    <span class="tooltips qv"><span>Xem nhanh</span></span>
-                                                                </a>
-                                                            </div>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                                <div class="product-info">
-    
-                                                    <div class="reviews-product-list grid_reviews">
-                                                        <div class="bizweb-product-reviews-badge" data-id="9746950"></div>
-                                                    </div>
-    
-                                                    <h3 class="product-name"><a class="text2line" href="/giay-the-thao-converse-2" title="Giày converse Chuck Taylor All Star Stone Wash">Giày converse Chuck Taylor All Star Stone Wash</a></h3>
-    
-    
-    
-                                                    <div class="price-box clearfix">
-    
-                                                        <span class="price product-price-old">
-                                                            800.000₫
-                                                        </span>
-    
-                                                        <span class="price product-price">670.000₫</span>
-                                                    </div>
-    
-    
-                                                    <div class="action__">
-    
-                                                        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9746950" enctype="multipart/form-data">
-                                                            <div>
-    
-                                                                <input class="hidden" type="hidden" name="variantId" value="15567670" />
-                                                                <button class="btn-cart cart_button_style  left-to" title="Chọn sản phẩm" type="button" onclick="window.location.href='/giay-the-thao-converse-2'">
-                                                                    <span class="ti-settings"></span>
-                                                                    Tuỳ chọn
-                                                                </button>
-    
-                                                            </div>
-                                                        </form>
-    
-                                                    </div>
-    
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-    
-    
-    
-    
-    
-                                    <div class="item saler_item ">
-                                        <div class="owl_item_product">
-    
-    
-    
-    
-    
-                                            <div class="product-box">
-                                                <div class="product-thumbnail">
-    
-                                                    <span class="sale_count"><span class="bf_">-
-                                                            12%
-                                                        </span></span>
-    
-    
-    
-                                                    <a href="/giay-vai-converse-3" class="image_link display_flex" data-images="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/3min2aeb1bce236543fcad76752f82.jpg?v=1516862308167" title="Giày converse One Star Leather + Tapestry">
-    
-    
-                                                        <img class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/3min2aeb1bce236543fcad76752f82.jpg?v=1516862308167" alt="giay-converse-one-star-leather-tapestry" />
-    
-    
-                                                    </a>
-                                                    <div class="product-action-grid clearfix">
-                                                        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9746949" enctype="multipart/form-data">
-                                                            <div>
-                                                                <a title="xem nhanh" href="/giay-vai-converse-3" data-handle="giay-vai-converse-3" class="button_wh_40 btn_view right-to quick-view"><i class="fa fa-search"></i>
-                                                                    <span class="tooltips qv"><span>Xem nhanh</span></span>
-                                                                </a>
-                                                            </div>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                                <div class="product-info">
-    
-                                                    <div class="reviews-product-list grid_reviews">
-                                                        <div class="bizweb-product-reviews-badge" data-id="9746949"></div>
-                                                    </div>
-    
-                                                    <h3 class="product-name"><a class="text2line" href="/giay-vai-converse-3" title="Giày converse One Star Leather + Tapestry">Giày converse One Star Leather + Tapestry</a></h3>
-    
-    
-    
-                                                    <div class="price-box clearfix">
-    
-                                                        <span class="price product-price-old">
-                                                            800.000₫
-                                                        </span>
-    
-                                                        <span class="price product-price">700.000₫</span>
-                                                    </div>
-    
-    
-                                                    <div class="action__">
-    
-                                                        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9746949" enctype="multipart/form-data">
-                                                            <div>
-    
-                                                                <input class="hidden" type="hidden" name="variantId" value="15567667" />
-                                                                <button class="btn-cart cart_button_style  left-to" title="Chọn sản phẩm" type="button" onclick="window.location.href='/giay-vai-converse-3'">
-                                                                    <span class="ti-settings"></span>
-                                                                    Tuỳ chọn
-                                                                </button>
-    
-                                                            </div>
-                                                        </form>
-    
-                                                    </div>
-    
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-    
-    
-    
-    
-    
-                                    <div class="item saler_item ">
-                                        <div class="owl_item_product">
+                            <div class="owl_product_ owl-carousel" data-nav="true" data-lg-items="5" data-md-items="4" data-height="false" data-xs-items="2" data-sm-items="3" data-margin="0">
+                        @foreach($sp_moi as $sp)
+                            <div class="item saler_item first">
+                                <div class="owl_item_product">
 
-                                            <div class="product-box">
-                                                <div class="product-thumbnail">
-    
-                                                    <span class="sale_count"><span class="bf_">-
-                                                            43%
-                                                        </span></span>
-    
-                                                    <a href="/giay-vai-converse-6" class="image_link display_flex" data-images="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/6min.jpg?v=1516862302817" title="Giày Converse Star Vintage Leather Converse Pinstripe">
-    
-    
-                                                        <img class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/6min.jpg?v=1516862302817" alt="giay-converse-star-vintage-leather-converse-pinstripe" />
+                                    <div class="product-box">
+                                        <div class="product-thumbnail">
+                                            @if($sp->phan_tram_giam>0)
+                                            <span class="sale_count"><span class="bf_">-
+                                            {{$sp->phan_tram_giam}}%
+                                            </span></span>
+                                            @endif
+   
+                                            <a href="{{route('chitietsanpham',$sp->id)}}" class="image_link display_flex" data-images="assets/images/{{$sp->hinh_anh}}" title="{{$sp->ten_sp}}">
     
     
-                                                    </a>
-                                                    <div class="product-action-grid clearfix">
-                                                        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9746945" enctype="multipart/form-data">
-                                                            <div>
-                                                                <a title="xem nhanh" href="/giay-vai-converse-6" data-handle="giay-vai-converse-6" class="button_wh_40 btn_view right-to quick-view"><i class="fa fa-search"></i>
-                                                                    <span class="tooltips qv"><span>Xem nhanh</span></span>
-                                                                </a>
-                                                            </div>
-                                                        </form>
+                                                <img class="img-responsive lazyload" src="assets/images/{{$sp->hinh_anh}}" data-src="assets/images/{{$sp->hinh_anh}}" alt="{{$sp->ten_sp}}"/>
+
+                                            </a>
+                                            <div class="product-action-grid clearfix">
+                                                <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9725087" enctype="multipart/form-data">
+                                                    <div>
+                                                        <a title="xem nhanh" href="{{route('chitietsanpham',$sp->id)}}" data-handle="{{$sp->ten_sp}}" class="button_wh_40 btn_view right-to quick-view"><i class="fa fa-search"></i>
+                                                            <span class="tooltips qv"><span>Xem chi tiết</span></span>
+                                                        </a>
                                                     </div>
-                                                </div>
-                                                <div class="product-info">
-    
-                                                    <div class="reviews-product-list grid_reviews">
-                                                        <div class="bizweb-product-reviews-badge" data-id="9746945"></div>
-                                                    </div>
-    
-                                                    <h3 class="product-name"><a class="text2line" href="/giay-vai-converse-6" title="Giày Converse Star Vintage Leather Converse Pinstripe">Giày Converse Star Vintage Leather Converse Pinstripe</a></h3>
-    
-    
-    
-                                                    <div class="price-box clearfix">
-    
-                                                        <span class="price product-price-old">
-                                                            700.000₫
-                                                        </span>
-    
-                                                        <span class="price product-price">400.000₫</span>
-                                                    </div>
-    
-    
-                                                    <div class="action__">
-    
-                                                        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9746945" enctype="multipart/form-data">
-                                                            <div>
-    
-                                                                <input type="hidden" name="variantId" value="15567659" />
-                                                                <button class=" cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng">
-                                                                    <span><span class="fa fa-shopping-basket"></span></span>
-                                                                    Giỏ hàng
-                                                                </button>
-    
-                                                            </div>
-                                                        </form>
-    
-                                                    </div>
-    
-                                                </div>
+                                                </form>
                                             </div>
                                         </div>
+                                        <div class="product-info">
+    
+                                            <div class="reviews-product-list grid_reviews">
+                                                <div class="bizweb-product-reviews-badge" data-id="9725087"></div>
+                                            </div>
+    
+                                            <h3 class="product-name"><a class="text2line" href="{{route('chitietsanpham',$sp->id)}}" title="{{$sp->ten_sp}}">{{$sp->ten_sp}}</a></h3>
+    
+    
+    
+                                            <div class="price-box clearfix">
+                                                <span class="price product-price-old">
+                                                    {{number_format($sp->gia)}}đ
+                                                </span>
+                                                <span class="price product-price">{{number_format($sp->gia*((100-$sp->giam_gia)/100))}}đ</span>
+                                            </div>
+    
+    
+                                            <div class="action__">
+    
+                                                <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9725087" enctype="multipart/form-data">
+                                                    <div>
+    
+                                                        <input type="hidden" name="variantId" value="15530193" />
+                                                        <button class=" cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng">
+                                                            <span><span class="fa fa-shopping-basket"></span></span>
+                                                            Giỏ hàng
+                                                        </button>
+    
+                                                    </div>
+                                                </form>
+    
+                                            </div>
+    
+                                        </div>
                                     </div>
+   
+                                    <div class="clockdiv" data-countdown="2018/09/20 15:00"></div>
+                                </div>
+                            </div>
+                        @endforeach 
     
                                 </div>
                             </div>
                         </div>
-    
-    
-    
-    
-    
-                        <div role="tabpanel" class="tab-pane " id="tab42">
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 wrap_owl_product_">
-                                <div class="owl_product_ owl-carousel" data-nav="true" data-lg-items="5" data-md-items="4" data-height="false" data-xs-items="2" data-sm-items="3" data-margin="0">
-    
-    
-    
-    
-    
-                                    <div class="item saler_item first">
-                                        <div class="owl_item_product">
-    
-    
-    
-    
-    
-                                            <div class="product-box">
-                                                <div class="product-thumbnail">
-    
-                                                    <span class="sale_count"><span class="bf_">-
-                                                            9%
-                                                        </span></span>
-    
-    
-    
-                                                    <a href="/balo-laplop-solo-pro-arc-black" class="image_link display_flex" data-images="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/1-4-2.jpg?v=1517304826530" title="Balo laplop Solo Pro ARC Black">
-    
-    
-                                                        <img class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/1-4-2.jpg?v=1517304826530" alt="balo-laplop-solo-pro-arc-black" />
-    
-    
-                                                    </a>
-                                                    <div class="product-action-grid clearfix">
-                                                        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9725087" enctype="multipart/form-data">
-                                                            <div>
-                                                                <a title="xem nhanh" href="/balo-laplop-solo-pro-arc-black" data-handle="balo-laplop-solo-pro-arc-black" class="button_wh_40 btn_view right-to quick-view"><i class="fa fa-search"></i>
-                                                                    <span class="tooltips qv"><span>Xem nhanh</span></span>
-                                                                </a>
-                                                            </div>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                                <div class="product-info">
-    
-                                                    <div class="reviews-product-list grid_reviews">
-                                                        <div class="bizweb-product-reviews-badge" data-id="9725087"></div>
-                                                    </div>
-    
-                                                    <h3 class="product-name"><a class="text2line" href="/balo-laplop-solo-pro-arc-black" title="Balo laplop Solo Pro ARC Black">Balo laplop Solo Pro ARC Black</a></h3>
-    
-    
-    
-                                                    <div class="price-box clearfix">
-    
-                                                        <span class="price product-price-old">
-                                                            950.000₫
-                                                        </span>
-    
-                                                        <span class="price product-price">860.000₫</span>
-                                                    </div>
-    
-    
-                                                    <div class="action__">
-    
-                                                        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9725087" enctype="multipart/form-data">
-                                                            <div>
-    
-                                                                <input type="hidden" name="variantId" value="15530193" />
-                                                                <button class=" cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng">
-                                                                    <span><span class="fa fa-shopping-basket"></span></span>
-                                                                    Giỏ hàng
-                                                                </button>
-    
-                                                            </div>
-                                                        </form>
-    
-                                                    </div>
-    
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-    
-    
-    
-    
-    
-                                    <div class="item saler_item ">
-                                        <div class="owl_item_product">
-    
-    
-    
-    
-    
-                                            <div class="product-box">
-                                                <div class="product-thumbnail">
-    
-                                                    <span class="sale_count"><span class="bf_">-
-                                                            38%
-                                                        </span></span>
-    
-    
-    
-                                                    <a href="/balo-mikkor-irvin-charcoal-orange" class="image_link display_flex" data-images="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/1-3.jpg?v=1517327927920" title="Balo Mikkor Irvin Charcoal/Orange">
-    
-    
-                                                        <img class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/1-3.jpg?v=1517327927920" alt="balo-mikkor-irvin-charcoal-orange" />
-    
-    
-                                                    </a>
-                                                    <div class="product-action-grid clearfix">
-                                                        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9724997" enctype="multipart/form-data">
-                                                            <div>
-                                                                <a title="xem nhanh" href="/balo-mikkor-irvin-charcoal-orange" data-handle="balo-mikkor-irvin-charcoal-orange" class="button_wh_40 btn_view right-to quick-view"><i class="fa fa-search"></i>
-                                                                    <span class="tooltips qv"><span>Xem nhanh</span></span>
-                                                                </a>
-                                                            </div>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                                <div class="product-info">
-    
-                                                    <div class="reviews-product-list grid_reviews">
-                                                        <div class="bizweb-product-reviews-badge" data-id="9724997"></div>
-                                                    </div>
-    
-                                                    <h3 class="product-name"><a class="text2line" href="/balo-mikkor-irvin-charcoal-orange" title="Balo Mikkor Irvin Charcoal/Orange">Balo Mikkor Irvin Charcoal/Orange</a></h3>
-    
-    
-    
-                                                    <div class="price-box clearfix">
-    
-                                                        <span class="price product-price-old">
-                                                            1.200.000₫
-                                                        </span>
-    
-                                                        <span class="price product-price">750.000₫</span>
-                                                    </div>
-    
-    
-                                                    <div class="action__">
-    
-                                                        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9724997" enctype="multipart/form-data">
-                                                            <div>
-    
-                                                                <input type="hidden" name="variantId" value="15530094" />
-                                                                <button class=" cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng">
-                                                                    <span><span class="fa fa-shopping-basket"></span></span>
-                                                                    Giỏ hàng
-                                                                </button>
-    
-                                                            </div>
-                                                        </form>
-    
-                                                    </div>
-    
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-    
-    
-    
-    
-    
-                                    <div class="item saler_item ">
-                                        <div class="owl_item_product">
-    
-    
-    
-    
-    
-                                            <div class="product-box">
-                                                <div class="product-thumbnail">
-    
-                                                    <span class="sale_count"><span class="bf_">-
-                                                            8%
-                                                        </span></span>
-    
-    
-    
-                                                    <a href="/vali-ricardo-spectrum-20-inch-5-tac-den" class="image_link display_flex" data-images="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/1-d759a515-8ee4-447f-a51b-9be521c66a3a.jpg?v=1517328908890" title="Vali Ricardo Spectrum 20 inch 5 tấc - Đen">
-    
-    
-                                                        <img class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/1-d759a515-8ee4-447f-a51b-9be521c66a3a.jpg?v=1517328908890" alt="vali-ricardo-spectrum-20-inch-5-tac-den" />
-    
-    
-                                                    </a>
-                                                    <div class="product-action-grid clearfix">
-                                                        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9723975" enctype="multipart/form-data">
-                                                            <div>
-                                                                <a title="xem nhanh" href="/vali-ricardo-spectrum-20-inch-5-tac-den" data-handle="vali-ricardo-spectrum-20-inch-5-tac-den" class="button_wh_40 btn_view right-to quick-view"><i class="fa fa-search"></i>
-                                                                    <span class="tooltips qv"><span>Xem nhanh</span></span>
-                                                                </a>
-                                                            </div>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                                <div class="product-info">
-    
-                                                    <div class="reviews-product-list grid_reviews">
-                                                        <div class="bizweb-product-reviews-badge" data-id="9723975"></div>
-                                                    </div>
-    
-                                                    <h3 class="product-name"><a class="text2line" href="/vali-ricardo-spectrum-20-inch-5-tac-den" title="Vali Ricardo Spectrum 20 inch 5 tấc - Đen">Vali Ricardo Spectrum 20 inch 5 tấc - Đen</a></h3>
-    
-    
-    
-                                                    <div class="price-box clearfix">
-    
-                                                        <span class="price product-price-old">
-                                                            4.000.000₫
-                                                        </span>
-    
-                                                        <span class="price product-price">3.700.000₫</span>
-                                                    </div>
-    
-    
-                                                    <div class="action__">
-    
-                                                        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9723975" enctype="multipart/form-data">
-                                                            <div>
-    
-                                                                <input class="hidden" type="hidden" name="variantId" value="15529037" />
-                                                                <button class="btn-cart cart_button_style  left-to" title="Chọn sản phẩm" type="button" onclick="window.location.href='/vali-ricardo-spectrum-20-inch-5-tac-den'">
-                                                                    <span class="ti-settings"></span>
-                                                                    Tuỳ chọn
-                                                                </button>
-    
-                                                            </div>
-                                                        </form>
-    
-                                                    </div>
-    
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-    
-    
-    
-    
-    
-                                    <div class="item saler_item ">
-                                        <div class="owl_item_product">
-    
-    
-    
-    
-    
-                                            <div class="product-box">
-                                                <div class="product-thumbnail">
-    
-                                                    <span class="sale_count"><span class="bf_">-
-                                                            12%
-                                                        </span></span>
-    
-    
-    
-                                                    <a href="/giay-vai-converse-3" class="image_link display_flex" data-images="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/3min2aeb1bce236543fcad76752f82.jpg?v=1516862308167" title="Giày converse One Star Leather + Tapestry">
-    
-    
-                                                        <img class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/3min2aeb1bce236543fcad76752f82.jpg?v=1516862308167" alt="giay-converse-one-star-leather-tapestry" />
-    
-    
-                                                    </a>
-                                                    <div class="product-action-grid clearfix">
-                                                        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9746949" enctype="multipart/form-data">
-                                                            <div>
-                                                                <a title="xem nhanh" href="/giay-vai-converse-3" data-handle="giay-vai-converse-3" class="button_wh_40 btn_view right-to quick-view"><i class="fa fa-search"></i>
-                                                                    <span class="tooltips qv"><span>Xem nhanh</span></span>
-                                                                </a>
-                                                            </div>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                                <div class="product-info">
-    
-                                                    <div class="reviews-product-list grid_reviews">
-                                                        <div class="bizweb-product-reviews-badge" data-id="9746949"></div>
-                                                    </div>
-    
-                                                    <h3 class="product-name"><a class="text2line" href="/giay-vai-converse-3" title="Giày converse One Star Leather + Tapestry">Giày converse One Star Leather + Tapestry</a></h3>
-    
-    
-    
-                                                    <div class="price-box clearfix">
-    
-                                                        <span class="price product-price-old">
-                                                            800.000₫
-                                                        </span>
-    
-                                                        <span class="price product-price">700.000₫</span>
-                                                    </div>
-    
-    
-                                                    <div class="action__">
-    
-                                                        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9746949" enctype="multipart/form-data">
-                                                            <div>
-    
-                                                                <input class="hidden" type="hidden" name="variantId" value="15567667" />
-                                                                <button class="btn-cart cart_button_style  left-to" title="Chọn sản phẩm" type="button" onclick="window.location.href='/giay-vai-converse-3'">
-                                                                    <span class="ti-settings"></span>
-                                                                    Tuỳ chọn
-                                                                </button>
-    
-                                                            </div>
-                                                        </form>
-    
-                                                    </div>
-    
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-    
-    
-    
-    
-    
-                                    <div class="item saler_item ">
-                                        <div class="owl_item_product">
-    
-    
-    
-    
-    
-                                            <div class="product-box">
-                                                <div class="product-thumbnail">
-    
-                                                    <span class="sale_count"><span class="bf_">-
-                                                            6%
-                                                        </span></span>
-    
-    
-    
-                                                    <a href="/tui-xach-nho-nap-gap-cach-dieu-txn132" class="image_link display_flex" data-images="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/1-a7468d12-4e75-4e93-bac7-4681a10cd875.jpg?v=1517329330057" title="Túi xách nhỏ nắp gập cách điệu TXN132">
-    
-    
-                                                        <img class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/thumb/medium/100/286/794/products/1-a7468d12-4e75-4e93-bac7-4681a10cd875.jpg?v=1517329330057" alt="tui-xach-nho-nap-gap-cach-dieu-txn132" />
-    
-    
-                                                    </a>
-                                                    <div class="product-action-grid clearfix">
-                                                        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9746605" enctype="multipart/form-data">
-                                                            <div>
-                                                                <a title="xem nhanh" href="/tui-xach-nho-nap-gap-cach-dieu-txn132" data-handle="tui-xach-nho-nap-gap-cach-dieu-txn132" class="button_wh_40 btn_view right-to quick-view"><i class="fa fa-search"></i>
-                                                                    <span class="tooltips qv"><span>Xem nhanh</span></span>
-                                                                </a>
-                                                            </div>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                                <div class="product-info">
-    
-                                                    <div class="reviews-product-list grid_reviews">
-                                                        <div class="bizweb-product-reviews-badge" data-id="9746605"></div>
-                                                    </div>
-    
-                                                    <h3 class="product-name"><a class="text2line" href="/tui-xach-nho-nap-gap-cach-dieu-txn132" title="Túi xách nhỏ nắp gập cách điệu TXN132">Túi xách nhỏ nắp gập cách điệu TXN132</a></h3>
-    
-    
-    
-                                                    <div class="price-box clearfix">
-    
-                                                        <span class="price product-price-old">
-                                                            800.000₫
-                                                        </span>
-    
-                                                        <span class="price product-price">750.000₫</span>
-                                                    </div>
-    
-    
-                                                    <div class="action__">
-    
-                                                        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9746605" enctype="multipart/form-data">
-                                                            <div>
-    
-                                                                <input class="hidden" type="hidden" name="variantId" value="15567157" />
-                                                                <button class="btn-cart cart_button_style  left-to" title="Chọn sản phẩm" type="button" onclick="window.location.href='/tui-xach-nho-nap-gap-cach-dieu-txn132'">
-                                                                    <span class="ti-settings"></span>
-                                                                    Tuỳ chọn
-                                                                </button>
-    
-                                                            </div>
-                                                        </form>
-    
-                                                    </div>
-    
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-    
-                                </div>
-                            </div>
-                        </div>
-    
-    
-    
-    
+
     
                     </div>
                 </div>
@@ -2899,127 +477,7 @@
     
     
     
-    <section class="awe-section-9">
-        <h3 class="hidden">&nbsp;</h3>
-        <section class="section_brand">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 dear_title">
-                        <h2 class="title_head_ border_content">
-                            <a href="#" title="Đối tác">Đối tác</a>
-                        </h2>
-                    </div>
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 wrap_owl_product_">
-                        <div class="owl_product_ owl-carousel" data-nav="true" data-lg-items="6" data-md-items="5" data-height="false" data-xs-items="2" data-sm-items="3" data-margin="0">
-    
-    
-    
-    
-    
-                            <div class="item  ">
-    
-                                <a href="#"><img class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/100/286/794/themes/637857/assets/image_brand_1.png?1618737291739" alt="đối tác 1" /></a>
-    
-    
-    
-    
-    
-                                <a href="#"><img class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/100/286/794/themes/637857/assets/image_brand_2.png?1618737291739" alt="đối tác 2" /></a>
-    
-                            </div>
-    
-    
-    
-    
-    
-                            <div class="item  ">
-    
-                                <a href="#"><img class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/100/286/794/themes/637857/assets/image_brand_3.png?1618737291739" alt="đối tác 3" /></a>
-    
-    
-    
-    
-    
-                                <a href="#"><img class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/100/286/794/themes/637857/assets/image_brand_4.png?1618737291739" alt="đối tác 4" /></a>
-    
-                            </div>
-    
-    
-    
-    
-    
-                            <div class="item  ">
-    
-                                <a href="#"><img class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/100/286/794/themes/637857/assets/image_brand_5.png?1618737291739" alt="đối tác 5" /></a>
-    
-    
-    
-    
-    
-                                <a href="#"><img class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/100/286/794/themes/637857/assets/image_brand_6.png?1618737291739" alt="đối tác 6" /></a>
-    
-                            </div>
-    
-    
-    
-    
-    
-                            <div class="item  ">
-    
-                                <a href="#"><img class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/100/286/794/themes/637857/assets/image_brand_7.png?1618737291739" alt="đối tác 7" /></a>
-    
-    
-    
-    
-    
-                                <a href="#"><img class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/100/286/794/themes/637857/assets/image_brand_8.png?1618737291739" alt="đối tác 8" /></a>
-    
-                            </div>
-    
-    
-    
-    
-    
-                            <div class="item  ">
-    
-                                <a href="#"><img class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/100/286/794/themes/637857/assets/image_brand_9.png?1618737291739" alt="đối tác 9" /></a>
-    
-    
-    
-    
-    
-                                <a href="#"><img class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/100/286/794/themes/637857/assets/image_brand_10.png?1618737291739" alt="đối tác 10" /></a>
-    
-                            </div>
-    
-    
-    
-    
-    
-                            <div class="item  ">
-    
-                                <a href="#"><img class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/100/286/794/themes/637857/assets/image_brand_11.png?1618737291739" alt="đối tác 11" /></a>
-    
-    
-    
-    
-    
-                                <a href="#"><img class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/100/286/794/themes/637857/assets/image_brand_12.png?1618737291739" alt="đối tác 12" /></a>
-    
-                            </div>
-    
-    
-    
-    
-    
-                        </div>
-                    </div>
-    
-                </div>
-            </div>
-        </section>
-    </section>
-    
+   
     
     
     
@@ -3147,6 +605,127 @@
     
     
     
+  
+    <section class="awe-section-9">
+        <h3 class="hidden">&nbsp;</h3>
+        <section class="section_brand">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 dear_title">
+                        <h2 class="title_head_ border_content">
+                            <a href="#" title="Đối tác">Đối tác</a>
+                        </h2>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 wrap_owl_product_">
+                        <div class="owl_product_ owl-carousel" data-nav="true" data-lg-items="6" data-md-items="5" data-height="false" data-xs-items="2" data-sm-items="3" data-margin="0">
+    
+    
+    
+    
+    
+                            <div class="item  ">
+    
+                                <a href="#"><img class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/100/286/794/themes/637857/assets/image_brand_1.png?1618737291739" alt="đối tác 1" /></a>
+    
+    
+    
+    
+    
+                                <a href="#"><img class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/100/286/794/themes/637857/assets/image_brand_2.png?1618737291739" alt="đối tác 2" /></a>
+    
+                            </div>
+    
+    
+    
+    
+    
+                            <div class="item  ">
+    
+                                <a href="#"><img class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/100/286/794/themes/637857/assets/image_brand_3.png?1618737291739" alt="đối tác 3" /></a>
+    
+    
+    
+    
+    
+                                <a href="#"><img class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/100/286/794/themes/637857/assets/image_brand_4.png?1618737291739" alt="đối tác 4" /></a>
+    
+                            </div>
+    
+    
+    
+    
+    
+                            <div class="item  ">
+    
+                                <a href="#"><img class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/100/286/794/themes/637857/assets/image_brand_5.png?1618737291739" alt="đối tác 5" /></a>
+    
+    
+    
+    
+    
+                                <a href="#"><img class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/100/286/794/themes/637857/assets/image_brand_6.png?1618737291739" alt="đối tác 6" /></a>
+    
+                            </div>
+    
+    
+    
+    
+    
+                            <div class="item  ">
+    
+                                <a href="#"><img class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/100/286/794/themes/637857/assets/image_brand_7.png?1618737291739" alt="đối tác 7" /></a>
+    
+    
+    
+    
+    
+                                <a href="#"><img class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/100/286/794/themes/637857/assets/image_brand_8.png?1618737291739" alt="đối tác 8" /></a>
+    
+                            </div>
+    
+    
+    
+    
+    
+                            <div class="item  ">
+    
+                                <a href="#"><img class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/100/286/794/themes/637857/assets/image_brand_9.png?1618737291739" alt="đối tác 9" /></a>
+    
+    
+    
+    
+    
+                                <a href="#"><img class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/100/286/794/themes/637857/assets/image_brand_10.png?1618737291739" alt="đối tác 10" /></a>
+    
+                            </div>
+    
+    
+    
+    
+    
+                            <div class="item  ">
+    
+                                <a href="#"><img class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/100/286/794/themes/637857/assets/image_brand_11.png?1618737291739" alt="đối tác 11" /></a>
+    
+    
+    
+    
+    
+                                <a href="#"><img class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/100/286/794/themes/637857/assets/image_brand_12.png?1618737291739" alt="đối tác 12" /></a>
+    
+                            </div>
+    
+    
+    
+    
+    
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+        </section>
+    </section>
     <section class="awe-section-11">
         <h3 class="hidden">&nbsp;</h3>
         <section class="section_service_index_end no_loop">

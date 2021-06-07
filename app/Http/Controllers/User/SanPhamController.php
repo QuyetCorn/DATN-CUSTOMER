@@ -12,4 +12,8 @@ class SanPhamController extends Controller
         $sanpham = ChiTietSanPham::All();
         return view('user.page.sanpham',compact('sanpham'));
     }
+    public function new() {
+        $sanpham = ChiTietSanPham::orderBy('id', 'desc')->get();
+        return view('user.page.sanpham',compact('sanpham'));
+    }
 }

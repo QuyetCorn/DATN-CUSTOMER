@@ -46,7 +46,7 @@ Route::group(['namespace' => 'User'], function() {
     Route::get('/gioithieu', 'GioiThieuController@index')->name('gioithieu');
     Route::get('/lienhe', 'LienHeController@index')->name('lienhe');
     Route::get('/loai_sp/{type}', 'LoaiSPController@index')->name('loai_sp');
-
+    Route::get('/sanpham/new', 'SanPhamController@new')->name('sanphamnew');
     // Danh muc
     Route::get('/balo', 'DanhMucController@baloIndex')->name('balo');
     Route::get('/tuixach', 'DanhMucController@tuixachIndex')->name('balo');

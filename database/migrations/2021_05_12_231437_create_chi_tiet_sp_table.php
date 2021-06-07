@@ -30,7 +30,7 @@ class CreateChiTietSPTable extends Migration
             $table->string('ngan', 100)->nullable();
             $table->integer('so_luong')->default(0);
             $table->string('phan_tram_giam',10)->default(0);
-            $table->string('giam_gia', 5, 2)->nullable();
+            $table->string('giam_gia', 50,2)->nullable();
             $table->longText('hinh_anh')->nullable();
             $table->longText('mo_ta')->nullable();
             $table->boolean('tinh_trang')->nullable();
