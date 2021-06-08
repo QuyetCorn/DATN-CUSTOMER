@@ -104,26 +104,26 @@
                             <span class="price product-price">{{number_format($sp->gia*((100-$sp->giam_gia)/100))}}đ</span>
                         </div>
                         @else
-                        <span class="price product-price">{{number_format($sp->gia)}}đ</span>
+                            <span class="price product-price">{{number_format($sp->gia)}}đ</span>
                         @endif
 
     
     
-                    <div class="action__">
-                        
-                        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9746938" enctype="multipart/form-data">
-                            <div>
-                                
-                                <input class="hidden" type="hidden" name="variantId" value="15567640" />
-                                <button class="btn-cart cart_button_style  left-to" title="Chọn sản phẩm"  type="button" onclick="window.location.href='/giay-converse-star-collar-break'" >
-                                    <span class="ti-settings"></span>
-                                    Tuỳ chọn
-                                </button>
-                                
-                            </div>
-                        </form>
-                        
-                    </div>
+                        <div class="action__">
+    
+                            <form action="{{route('cart-add',$sp->id)}}" method="GET">
+                                <div>
+                                    <input type="hidden"/>
+                                    <button class=" cart_button_style btn-cart left-to add_to_cart" title="Thêm vào giỏ hàng">
+                                        <span>
+                                            <span class="fa fa-shopping-basket"></span>
+                                        </span>
+                                            Giỏ hàng
+                                    </button>
+                                </div>
+                            </form>
+
+</div>
 
                 </div>
             </div>			

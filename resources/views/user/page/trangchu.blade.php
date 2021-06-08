@@ -1,6 +1,12 @@
 @extends('user.master')
 @section('content')
 
+@if(Session::get('message'))
+	<div class="alert alert-success" style='text-align: center;'>
+ 		{{ Session::get('message') }}
+	</div>
+@endif
+
 
     <section class="awe-section-1">
         
@@ -94,10 +100,13 @@
 
                                             </a>
                                             <div class="product-action-grid clearfix">
-                                                <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9725087" enctype="multipart/form-data">
+                                                <form action="{{route('cart-add',$sp->id)}}" method="GET" class="variants form-nut-grid" enctype="multipart/form-data">
                                                     <div>
-                                                        <a title="xem nhanh" href="{{route('chitietsanpham',$sp->id)}}" data-handle="{{$sp->ten_sp}}" class="button_wh_40 btn_view right-to quick-view"><i class="fa fa-search"></i>
-                                                            <span class="tooltips qv"><span>Xem chi tiết</span></span>
+                                                        <a title="xem nhanh" href="{{route('chitietsanpham',$sp->id)}}" data-handle="{{$sp->ten_sp}}" class="button_wh_40 btn_view right-to quick-view">
+                                                            <i class="fa fa-search"></i>
+                                                            <span class="tooltips qv">
+                                                                <span>Xem chi tiết</span>
+                                                            </span>
                                                         </a>
                                                     </div>
                                                 </form>
@@ -106,10 +115,12 @@
                                         <div class="product-info">
     
                                             <div class="reviews-product-list grid_reviews">
-                                                <div class="bizweb-product-reviews-badge" data-id="9725087"></div>
+                                                <div class="bizweb-product-reviews-badge"></div>
                                             </div>
     
-                                            <h3 class="product-name"><a class="text2line" href="{{route('chitietsanpham',$sp->id)}}" title="{{$sp->ten_sp}}">{{$sp->ten_sp}}</a></h3>
+                                            <h3 class="product-name">
+                                                <a class="text2line" href="{{route('chitietsanpham',$sp->id)}}" title="{{$sp->ten_sp}}">{{$sp->ten_sp}}</a>
+                                            </h3>
     
     
     
@@ -123,19 +134,20 @@
     
                                             <div class="action__">
     
-                                                <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9725087" enctype="multipart/form-data">
+                                                <form action="{{route('cart-add',$sp->id)}}" method="GET">
                                                     <div>
-    
-                                                        <input type="hidden" name="variantId" value="15530193" />
-                                                        <button class=" cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng">
-                                                            <span><span class="fa fa-shopping-basket"></span></span>
+                                                        <input type="hidden"/>
+                                                        <button class=" cart_button_style btn-cart left-to add_to_cart" title="Thêm vào giỏ hàng">
+                                                            <span>
+                                                                <span class="fa fa-shopping-basket"></span>
+                                                            </span>
                                                             Giỏ hàng
                                                         </button>
-    
                                                     </div>
                                                 </form>
     
                                             </div>
+                                            
     
                                         </div>
                                     </div>

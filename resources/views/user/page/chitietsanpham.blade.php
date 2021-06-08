@@ -348,22 +348,20 @@
                             </div>
                             
                             <div class="form-product col-sm-12 form-border">
-                                <form enctype="multipart/form-data" id="add-to-cart-form" action="/cart/add" method="post" class="form-inline">
+                                <form action="{{route('cart-add',$chitietsanpham->id)}}" method="GET">
                                     
-                                    <div class="box-variant clearfix ">
-                                        <input type="hidden" name="variantId" value="15530094" />
-                                    </div>
-
                                     <div class="form-group form_button_details ">
                                         <header class="not_bg hidden">Số lượng:</header>
                                         <div class="custom input_number_product custom-btn-number form-control">									
                                             <button class="btn_num num_1 button button_qty" onClick="var result = document.getElementById('qtym'); var qtypro = result.value; if( !isNaN( qtypro ) &amp;&amp; qtypro &gt; 1 ) result.value--;return false;" type="button">-</button>
-                                            <input type="text" id="qtym" name="quantity" value="1"  onkeyup="valid(this,'numbers')" onkeypress='validate(event)' class="form-control prd_quantity">
+                                                <input type="text" id="qtym" name="soluong" value="1"  onkeyup="valid(this,'numbers')" onkeypress='validate(event)' class="form-control prd_quantity">
+                                                <input name="sanphamId_hidden" type="hidden" value="{{$chitietsanpham->id}}"/>
                                             <button class="btn_num num_2 button button_qty" onClick="var result = document.getElementById('qtym'); var qtypro = result.value; if( !isNaN( qtypro )) result.value++;return false;" type="button">+</button>
                                         </div>
                                                                             
                                         <button type="submit" class="btn btn-lg  btn-cart button_cart_buy_enable add_to_cart btn_buy" title="Cho vào giỏ hàng">
-                                            <i class="fa fa-shopping-basket hidden" ></i>&nbsp;&nbsp;<span style="font-size: 16px; font-weight: bold;" >THÊM VÀO GIỎ HÀNG</span>
+                                            <i class="fa fa-shopping-basket hidden" ></i>&nbsp;&nbsp;
+                                            <span style="font-size: 16px; font-weight: bold;"  >THÊM VÀO GIỎ HÀNG</span>
                                         </button>									
                                     </div>
                                 </form>
@@ -403,13 +401,7 @@
                                     
                                     <li class="tab-link" data-tab="tab-1">
                                         <h3><span>Thông tin sản phẩm</span></h3>
-                                    </li>																	
-                                    
-                                    
-                                    <li class="tab-link" data-tab="tab-2">
-                                        <h3><span>Tab tùy chỉnh</span></h3>
-                                    </li>																	
-                                    
+                                    </li>																	 
                                     
                                     <li class="tab-link" data-tab="tab-3">
                                         <h3><span>Đánh giá(APP)</span></h3>
@@ -430,7 +422,8 @@
                                             - Ngăn laptop: &nbsp;{{$chitietsanpham->ngan}}</p>
                                         <p style="text-align: center;">&nbsp;</p>
                                         <p style="text-align: center;">&nbsp;</p>
-                                        <p style="text-align: center;"><img alt="{{$chitietsanpham->ten_sp}}" data-thumb="original" original-height="800" original-width="800" src="assets/images/{{$chitietsanpham->hinh_anh}}" /></p>                                 
+                                        <p style="text-align: center;">
+                                        <img alt="{{$chitietsanpham->ten_sp}}" data-thumb="original" original-height="800" original-width="800" src="assets/images/{{$chitietsanpham->hinh_anh}}" /></p>                                 
                                     </div>	
                                 </div>	
                                 
@@ -526,19 +519,19 @@
                                 
                                 
                                                     <div class="action__">
-                                                        
-                                                        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9746938" enctype="multipart/form-data">
+    
+                                                        <form action="{{route('cart-add',$sp->id)}}" method="GET">
                                                             <div>
-                                                                
-                                                                <input class="hidden" type="hidden" name="variantId" value="15567640" />
-                                                                <button class="btn-cart cart_button_style  left-to" title="Chọn sản phẩm"  type="button" onclick="window.location.href='/giay-converse-star-collar-break'" >
-                                                                    <span class="ti-settings"></span>
-                                                                    Tuỳ chọn
+                                                                <input type="hidden"/>
+                                                                <button class=" cart_button_style btn-cart left-to add_to_cart" title="Thêm vào giỏ hàng">
+                                                                    <span>
+                                                                        <span class="fa fa-shopping-basket"></span>
+                                                                    </span>
+                                                                    Giỏ hàng
                                                                 </button>
-                                                                
                                                             </div>
                                                         </form>
-                                                        
+
                                                     </div>
 
                                                 </div>

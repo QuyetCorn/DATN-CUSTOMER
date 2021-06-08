@@ -20,36 +20,117 @@
 </div>
 </section> 
 <div class="container bg_white">
-<div class="row">
-    <div class="col-lg-12 col-md-12">
-        <div class="page_title page__  margin-top-20 margin-bottom-20">
-            <h1 class="title_page_h1"><span>Giỏ hàng</span></h1>
+    <div class="row">
+        <div class="col-lg-12 col-md-12">
+            <div class="page_title page__  margin-top-20 margin-bottom-20">
+                <h1 class="title_page_h1"><span>Giỏ hàng</span></h1>
+            </div>
         </div>
     </div>
 </div>
-</div>
 
-<section class="main-cart-page main-container col1-layout">
-	<div class="main container hidden-xs hidden-sm bg_white">
 
-		<div class="col-main cart_desktop_page cart-page"><div class="cart page_cart hidden-xs"><form action="/cart" method="post" novalidate="" class="margin-bottom-0"><div class="bg-scroll"><div class="cart-thead"><div style="width: 45%" class="a-left">Sản phẩm</div><div style="width: 25%" class="a-center"><span class="nobr">Giá</span></div><div style="width: 14%" class="a-center">Số lượng</div><div style="width: 16%" class="a-right">Tổng tiền</div></div><div class="cart-tbody"><div class="item-cart productid-15567687"><div style="width: 10%" class="image"><a class="product-image" title="Giày Converse Star 70 Wordmark Wool One Star '74 Camo - Xanh rêu" href="/giay-converse-one-star-74-camo"><img width="75" height="auto" alt="Giày Converse Star 70 Wordmark Wool One Star '74 Camo - Xanh rêu" src="//bizweb.dktcdn.net/thumb/compact/100/286/794/products/20min833641c2cb07436482b58a095.jpg"></a></div><div style="width: 35%" class="a-left"><h3 class="product-name"> <a class="text2line" href="/giay-converse-one-star-74-camo">Giày Converse Star 70 Wordmark Wool One Star '74 Camo</a> </h3><span class="variant-title">Xanh rêu</span><a class="remove-itemx remove-item-cart" title="Xóa" href="javascript:;" data-id="15567687"><span><i class="fa fa-times"></i> Xoá</span></a></div><div style="width: 26%" class="a-center"><span class="item-price"> <span class="price">500.000₫/Kg</span></span></div><div style="width: 14%" class="a-center"><div class="input_qty_pr"><input class="variantID" type="hidden" name="variantId" value="15567687"><input type="text" maxlength="12" onkeypress="validate(event)" min="0" class="input-text number-sidebar input_pop input_pop qtyItem15567687" id="qtyItem15567687" name="Lines" size="4" value="1"><button onclick="var result = document.getElementById('qtyItem15567687'); var qtyItem15567687 = result.value; if( !isNaN( qtyItem15567687 )) result.value++;return false;" class="increase_pop items-count btn-plus" type="button"><i class="fa fa-caret-up"></i></button><button onclick="var result = document.getElementById('qtyItem15567687'); var qtyItem15567687 = result.value; if( !isNaN( qtyItem15567687 ) &amp;&amp; qtyItem15567687 > 1 ) result.value--;return false;" disabled="" class="reduced_pop items-count btn-minus" type="button"><i class="fa fa-caret-down"></i></button></div></div><div style="width: 15%" class="a-right"><span class="cart-price"> <span class="price">500.000₫</span> </span></div><div style="width: 5%" class="a-center"></div></div><div class="item-cart productid-15567673"><div style="width: 10%" class="image"><a class="product-image" title="Chuck Taylor All Star Converse Wordmark - Xanh" href="/giay-converse-cao-cap"><img width="75" height="auto" alt="Chuck Taylor All Star Converse Wordmark - Xanh" src="//bizweb.dktcdn.net/thumb/compact/100/286/794/products/1min.jpg"></a></div><div style="width: 35%" class="a-left"><h3 class="product-name"> <a class="text2line" href="/giay-converse-cao-cap">Chuck Taylor All Star Converse Wordmark</a> </h3><span class="variant-title">Xanh</span><a class="remove-itemx remove-item-cart" title="Xóa" href="javascript:;" data-id="15567673"><span><i class="fa fa-times"></i> Xoá</span></a></div><div style="width: 26%" class="a-center"><span class="item-price"> <span class="price">450.000₫/Kg</span></span></div><div style="width: 14%" class="a-center"><div class="input_qty_pr"><input class="variantID" type="hidden" name="variantId" value="15567673"><input type="text" maxlength="12" onkeypress="validate(event)" min="0" class="input-text number-sidebar input_pop input_pop qtyItem15567673" id="qtyItem15567673" name="Lines" size="4" value="1"><button onclick="var result = document.getElementById('qtyItem15567673'); var qtyItem15567673 = result.value; if( !isNaN( qtyItem15567673 )) result.value++;return false;" class="increase_pop items-count btn-plus" type="button"><i class="fa fa-caret-up"></i></button><button onclick="var result = document.getElementById('qtyItem15567673'); var qtyItem15567673 = result.value; if( !isNaN( qtyItem15567673 ) &amp;&amp; qtyItem15567673 > 1 ) result.value--;return false;" disabled="" class="reduced_pop items-count btn-minus" type="button"><i class="fa fa-caret-down"></i></button></div></div><div style="width: 15%" class="a-right"><span class="cart-price"> <span class="price">450.000₫</span> </span></div><div style="width: 5%" class="a-center"></div></div></div></div></form><div class="cart-collaterals cart_submit row"><div class="totals col-sm-12 col-md-12 col-xs-12"><div class="totals"><div class="inner"><div class="fot_totals shopping-cart-table-total col-lg-6 col-md-6 col-sm-6 col-lg-offset-6 col-md-offset-6 col-sm-offset-6"><div class="total_price"><span class="total_text"></span><span class="total_p">Tổng tiền thanh toán: <span class="totals_price price">950.000₫</span></span></div></div></div></div></div></div><div class="checkout_button margin-bottom-50"><button class="btn btn-primary button btn-proceed-checkout f-right" title="Tiến hành đặt hàng" type="button" onclick="window.location.href='thanhtoan'">
-        <span>Tiến hành thanh toán</span></button><button class="btn btn-white f-right" title="Tiếp tục mua hàng" type="button" onclick="window.location.href='/collections/all'"><span>Tiếp tục mua hàng</span></button></div></div></div>
+    <section class="main-cart-page main-container col1-layout">
+        <div class="main container hidden-xs hidden-sm bg_white">
+        
+            <div class="col-main cart_desktop_page cart-page">
+                <div class="cart page_cart hidden-xs">
+                @if(count($cart->items)>0)
 
-	</div>
-	<div class="cart-mobile hidden-md hidden-lg container">
-		<form action="giohang" method="post" novalidate="" class="margin-bottom-0">
-			<div class="header-cart" style="background:#fff;">
-				
-				
-				
-			</div>
+                    @if(Session::get('message'))
+                        <div class="alert alert-success" style='text-align: center;'>
+                            {{ Session::get('message') }}
+                        </div>				
+                    @endif
+                    <form action="/cart" method="post" novalidate="" class="margin-bottom-0">
+                        <div class="bg-scroll"><div class="cart-thead"><div style="width: 45%" class="a-left">Sản phẩm</div>
+                        <div style="width: 25%" class="a-center"><span class="nobr">Giá</span></div>
+                        <div style="width: 14%" class="a-center">Số lượng</div>
+                        <div style="width: 16%" class="a-right">Tổng tiền</div>
+                    </div>
+                    <div class="cart-tbody">
+                        @if(Session::has('cart'))
+                            @foreach($product_cart as $product)
+                                <div class="item-cart">
+                                    <div style="width: 10%" class="image">
+                                        <a class="product-image" title="{{$product['item']['ten_sp']}}" href="{{route('chitietsanpham',$product['item']['id'])}}">
+                                            <img width="75" height="auto" alt="{{$product['item']['ten_sp']}}" src="assets/images/{{$product['item']['hinh_anh']}}"></a>
+                                    </div>
+                                    <div style="width: 35%" class="a-left">
+                                        <h3 class="product-name"> 
+                                            <a class="text2line" href="{{route('chitietsanpham',$product['item']['id'])}}">{{$product['item']['ten_sp']}}</a> </h3>
+                                                <span class="variant-title">{{$product['item']['mau_sac']}}</span>
+                                                <a class="remove-itemx remove-item-cart" title="Xóa"  href="{{route('cart-del',$product['item']['id'])}}">
+                                                <span>
+                                                    <i class="fa fa-times"></i> Xoá
+                                                </span>
+                                            </a>
+                                    </div>
 
-			<div class="header-cart-content" style="background:#fff;"><div class="cart_page_mobile content-product-list"><div class="item-product item-mobile-cart item productid-15567687 "><div class="item-product-cart-mobile"><a href="/giay-converse-one-star-74-camo">	</a><a class="product-images1" href="/giay-converse-one-star-74-camo" title="Giày Converse Star 70 Wordmark Wool One Star '74 Camo - Xanh rêu"><img width="80" height="150" alt="" src="//bizweb.dktcdn.net/thumb/small/100/286/794/products/20min833641c2cb07436482b58a095.jpg"></a></div><div class="title-product-cart-mobile"><h3><a class="text2line" href="/giay-converse-one-star-74-camo" title="Giày Converse Star 70 Wordmark Wool One Star '74 Camo - Xanh rêu">Giày Converse Star 70 Wordmark Wool One Star '74 Camo - Xanh rêu</a></h3><p>Giá: <span>500.000₫</span></p></div><div class="select-item-qty-mobile"><div class="txt_center in_put check_"><input class="variantID" type="hidden" name="variantId" value="15567687"><button onclick="var result = document.getElementById('qtyMobile15567687'); var qtyMobile15567687 = result.value; if( !isNaN( qtyMobile15567687 ) &amp;&amp; qtyMobile15567687 > 1 ) result.value--;return false;" class="reduced items-count btn-minus" type="button">–</button><input type="number" maxlength="12" min="1" class="input-text mobile_input number-sidebar qtyMobile15567687" id="qtyMobile15567687" name="Lines" size="4" value="1"><button onclick="var result = document.getElementById('qtyMobile15567687'); var qtyMobile15567687 = result.value; if( !isNaN( qtyMobile15567687 )) result.value++;return false;" class="increase items-count btn-plus" type="button">+</button></div><a class="button remove-item remove-item-cart" href="javascript:;" data-id="15567687">Xoá</a></div></div><div class="item-product item-mobile-cart item productid-15567673 "><div class="item-product-cart-mobile"><a href="/giay-converse-cao-cap">	</a><a class="product-images1" href="/giay-converse-cao-cap" title="Chuck Taylor All Star Converse Wordmark - Xanh"><img width="80" height="150" alt="" src="//bizweb.dktcdn.net/thumb/small/100/286/794/products/1min.jpg"></a></div><div class="title-product-cart-mobile"><h3><a class="text2line" href="/giay-converse-cao-cap" title="Chuck Taylor All Star Converse Wordmark - Xanh">Chuck Taylor All Star Converse Wordmark - Xanh</a></h3><p>Giá: <span>450.000₫</span></p></div><div class="select-item-qty-mobile"><div class="txt_center in_put check_"><input class="variantID" type="hidden" name="variantId" value="15567673"><button onclick="var result = document.getElementById('qtyMobile15567673'); var qtyMobile15567673 = result.value; if( !isNaN( qtyMobile15567673 ) &amp;&amp; qtyMobile15567673 > 1 ) result.value--;return false;" class="reduced items-count btn-minus" type="button">–</button><input type="number" maxlength="12" min="1" class="input-text mobile_input number-sidebar qtyMobile15567673" id="qtyMobile15567673" name="Lines" size="4" value="1"><button onclick="var result = document.getElementById('qtyMobile15567673'); var qtyMobile15567673 = result.value; if( !isNaN( qtyMobile15567673 )) result.value++;return false;" class="increase items-count btn-plus" type="button">+</button></div><a class="button remove-item remove-item-cart" href="javascript:;" data-id="15567673">Xoá</a></div></div></div><div class="header-cart-price" style=""><div class="title-cart a-center"><span class="total_mobile a-center">Tổng tiền: <span class=" totals_price_mobile">950.000₫</span><span></span></span></div><div class="checkout"><button class="btn-proceed-checkout-mobile" title="Tiến hành thanh toán" type="button" onclick="window.location.href='thanhtoan'"><span>
-            Tiến hành thanh toán</span></button><button class="btn btn-white contin" title="Tiếp tục mua hàng" type="button" onclick="window.location.href='/collections/all'"><span>Tiếp tục mua hàng</span></button></div></div></div>
 
-		</form>
+                                        
+                                    <div style="width: 26%" class="a-center">
+                                        @if($product['item']['giam_gia']>0)
+                                            
+                                                <span class="price product-price-old">{{number_format($product['item']['gia'])}}đ</span>
+                                            
+                                            
+                                                <span class="price product-price" style="color: #000ed0;font-size:20px;font-weight:bold;">{{number_format($product['item']['gia']*((100-$product['item']['giam_gia'])/100))}}đ</span>
+                                            
+                                        @else
+                                            
+                                                <span class="price product-price" style="color: #000ed0;font-size:20px;font-weight:bold;">{{number_format($product['item']['gia'])}}đ</span>
+                                            
+                                        @endif
+                                    </div>
 
-	</div>
+                                    
+                                    
+                                    <div style="width: 14%" class="a-center">
+                                        <div class="input_qty_pr">
+                                            <input class="variantID" type="hidden">
+                                                <input type="text" maxlength="12" onkeypress="validate(event)" min="0" class="input-text number-sidebar input_pop input_pop qtyItem15567687" id="qtyItem15567687" name="Lines" size="4" value="1">
+                                                    <button onclick="var result = document.getElementById('qtyItem15567687'); var qtyItem15567687 = result.value; if( !isNaN( qtyItem15567687 )) result.value++;return false;" class="increase_pop items-count btn-plus" type="button">
+                                                        <i class="fa fa-caret-up"></i>
+                                                    </button>
+                                                    <button onclick="var result = document.getElementById('qtyItem15567687'); var qtyItem15567687 = result.value; if( !isNaN( qtyItem15567687 ) &amp;&amp; qtyItem15567687 > 1 ) result.value--;return false;" disabled="" class="reduced_pop items-count btn-minus" type="button">
+                                                        <i class="fa fa-caret-down"></i>
+                                                    </button>
+                                                </input>
+                                        </div>
+                                    </div>
+                                    
+                                    <div style="width: 15%" class="a-right">
+                                        <span class="cart-price"> 
+                                            <span class="price">{{Session('cart')->totalPrice}}</span>
+                                        </span>
+                                    </div>
+                                    
+                                    <div style="width: 5%" class="a-center"></div>
+                                    
+                                </div>
+                            @endforeach
+                        @endif
+
+
+                    
+                        <button class="btn btn-primary button btn-proceed-checkout f-right" title="Tiến hành đặt hàng" type="button" onclick="window.location.href='thanhtoan'"> 
+                            <span>Tiến hành thanh toán</span>
+                        </button>
+                @else
+
+                    <h3> Không có sản phẩm nào trong giỏ hàng </h3>
+
+                @endif
+
+                        <button class="btn btn-white f-right" title="Tiếp tục mua hàng" type="button" onclick="window.location.href='sanpham'">
+                            <span>Tiếp tục mua hàng</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
 
 </section>
 

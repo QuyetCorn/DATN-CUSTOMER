@@ -74,10 +74,16 @@
                                         <div class="top-cart-contain">
                                             <div class="mini-cart cart_hover text-xs-center" onclick="window.location.href='giohang'">
                                                 <div class="heading-cart">
-                                                    <span class="cart_num_x hidden-lg"><span class="cartCount  count_item_pr"></span></span>
+                                                    <span class="cart_num_x hidden-lg">
+                                                        <span class="cartCount  count_item_pr"></span>
+                                                    </span>
                                                     <span class="cart-icon"></span>
                                                     <a class="mr_top" href="giohang">
-                                                        <span class="cart_num" id="cart-total"><span class="color_"><span class="cartCount  count_item_pr"> </span></span></span>
+                                                        <span class="cart_num" id="cart-total">
+                                                            <span class="color_">
+                                                                <span class="cartCount  count_item_pr"> </span>
+                                                            </span>
+                                                        </span>
                                                     </a>
                                                 </div>
                                                 <div class="top-cart-content">

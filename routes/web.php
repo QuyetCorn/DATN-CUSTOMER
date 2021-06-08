@@ -41,20 +41,17 @@ Route::group(['namespace' => 'User'], function() {
     Route::get('/tintuc', 'TinTucController@index')->name('tintuc');
     Route::get('/chitietsanpham/{id}', 'CTSPController@index')->name('chitietsanpham');
     Route::get('/chitiettintuc', 'TinTucController@chitiettintuc')->name('chitiettintuc');
-    Route::get('/giohang', 'GioHangController@index')->name('giohang');
     Route::get('/thanhtoan', 'ThanhToanController@index')->name('thanhtoan');
     Route::get('/gioithieu', 'GioiThieuController@index')->name('gioithieu');
     Route::get('/lienhe', 'LienHeController@index')->name('lienhe');
     Route::get('/loai_sp/{type}', 'LoaiSPController@index')->name('loai_sp');
     Route::get('/sanpham/new', 'SanPhamController@new')->name('sanphamnew');
-    // Danh muc
-    Route::get('/balo', 'DanhMucController@baloIndex')->name('balo');
-    Route::get('/tuixach', 'DanhMucController@tuixachIndex')->name('balo');
-    Route::get('/vali', 'DanhMucController@valiIndex')->name('vali');
-    Route::get('/xemthem', 'DanhMucController@xemthemIndex')->name('xemthem');
-    Route::get('/sanphamkhuyenmai', 'DanhMucController@sanphamkhuyenmaiIndex')->name('sanphamkhuyenmai');
-    Route::get('/sanphammoi', 'DanhMucController@sanphammoiIndex')->name('sanphammoi');
-    Route::get('/sanphamnoibat', 'DanhMucController@sanphamnoibatIndex')->name('sanphamnoibat');
+
+    Route::get('/giohang', 'GioHangController@index')->name('giohang');
+    Route::get('/cart-add/{id}','GioHangController@cartAdd')->name('cart-add');
+    Route::get('/cart-del/{id}','GioHangController@cartDel')->name('cart-del');
+
+
 });
 
 
