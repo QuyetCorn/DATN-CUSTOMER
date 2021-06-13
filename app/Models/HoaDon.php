@@ -15,6 +15,6 @@ class HoaDon extends Model
     }
 
     public function khachhang() {
-        return $this->belongsTo('App\KhachHang','khach_hang_id','id');
+        return $this->belongsTo('App\KhachHang','khach_dat_hang_id','id');
     }
 }

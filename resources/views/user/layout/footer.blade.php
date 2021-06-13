@@ -148,7 +148,9 @@
                     </div>
                 </div>
     
-                <a href="#" id="back-to-top" class="backtop" title="Lên đầu trang"><i class="fa fa-angle-double-up"></i></a>
+                <a href="#" id="back-to-top" class="backtop" title="Lên đầu trang">
+                    <i class="fa fa-angle-double-up"></i>
+                </a>
     
     
                 <a class="hidden-lg phone_backtotop left_bottom" title="Gọi ngay" href="tel:0902068068"><i class="fa fa-phone"></i></a>

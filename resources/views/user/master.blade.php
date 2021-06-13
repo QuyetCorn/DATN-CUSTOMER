@@ -8,10 +8,7 @@
     @yield('content')
     
     @include('user.layout.footer')
-
-    @include('user.layout.popup_cart')
-    
-      
+   
     <script>
         $(document).ready(function ($) {
             awe_backtotop();

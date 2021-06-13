@@ -3,67 +3,60 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-
-use App\Providers\Session;
+use App\Models\GioHang;
+use Illuminate\Support\Facades\Session;
 
 
 class GioHang
 {
 	public $items = null;
-	public $totalQty = 0;
-	public $totalPrice = 0;
+	public $tongSL = 0;
+	public $tongTien = 0;
 
 	public function __construct($oldCart){
 		if($oldCart){
 			$this->items = $oldCart->items;
-			$this->totalQty = $oldCart->totalQty;
-			$this->totalPrice = $oldCart->totalPrice;
+			$this->tongSL = $oldCart->tongSL;
+			$this->tongTien = $oldCart->tongTien;
 		}
 	}
 
 	public function add($item, $id){
-		if($item->promotion_price == 0){
-			$giohang = ['qty'=>0, 'price' => $item->unit_price, 'item' => $item];
+		$gia = 0;
+		if($item->giam_gia!=0){
+			   $gia = $item->gia*((100-$item->giam_gia)/100);
+		}else{
+			   $gia = $item->gia;
 		}
-		else{
-			$giohang = ['qty'=>0, 'price' => $item->promotion_price, 'item' => $item];
-		}
+		$giohang = ['so_luong'=>0, 'gia' => $gia, 'item' => $item];
 		if($this->items){
-			if(array_key_exists($id, $this->items)){
-				$giohang = $this->items[$id];
-			}
+			   if(array_key_exists($id, $this->items)){
+					  $giohang = $this->items[$id];
+			   }
 		}
-		$giohang['qty']++;
-		if($item->promotion_price == 0){
-			$giohang['price'] = $item->unit_price * $giohang['qty'];
-		}
-		else{
-			$giohang['price'] = $item->promotion_price * $giohang['qty'];
-		}
+		$giohang['so_luong']++;
+		$giohang['gia'] = $gia * $giohang['so_luong'];
 		$this->items[$id] = $giohang;
-		$this->totalQty++;
-		if($item->promotion_price == 0){
-			$this->totalPrice += $item->unit_price;
-		}
-		else{
-			$this->totalPrice += $item->promotion_price;
-		}
-		
-	}
+		$this->tongSL++;
+		$this->tongTien += $gia;
+  	}
+
+
 	//xóa 1
 	public function reduceByOne($id){
-		$this->items[$id]['qty']--;
-		$this->items[$id]['price'] -= $this->items[$id]['item']['price'];
-		$this->totalQty--;
-		$this->totalPrice -= $this->items[$id]['item']['price'];
-		if($this->items[$id]['qty']<=0){
+		$this->items[$id]['so_luong']--;
+		$this->items[$id]['gia'] -= $this->items[$id]['item']['gia'];
+		$this->tongSL--;
+		$this->tongTien -= $this->items[$id]['item']['gia'];
+		if($this->items[$id]['so_luong']<=0){
 			unset($this->items[$id]);
 		}
 	}
+	
 	//xóa nhiều
 	public function removeItem($id){
-		$this->totalQty -= $this->items[$id]['qty'];
-		$this->totalPrice -= $this->items[$id]['price'];
+		$this->tongSL -= $this->items[$id]['so_luong'];
+		$this->tongTien -= $this->items[$id]['gia'];
 		unset($this->items[$id]);
 	}
 }

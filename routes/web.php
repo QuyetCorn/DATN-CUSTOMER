@@ -41,7 +41,6 @@ Route::group(['namespace' => 'User'], function() {
     Route::get('/tintuc', 'TinTucController@index')->name('tintuc');
     Route::get('/chitietsanpham/{id}', 'CTSPController@index')->name('chitietsanpham');
     Route::get('/chitiettintuc', 'TinTucController@chitiettintuc')->name('chitiettintuc');
-    Route::get('/thanhtoan', 'ThanhToanController@index')->name('thanhtoan');
     Route::get('/gioithieu', 'GioiThieuController@index')->name('gioithieu');
     Route::get('/lienhe', 'LienHeController@index')->name('lienhe');
     Route::get('/loai_sp/{type}', 'LoaiSPController@index')->name('loai_sp');
@@ -50,6 +49,9 @@ Route::group(['namespace' => 'User'], function() {
     Route::get('/giohang', 'GioHangController@index')->name('giohang');
     Route::get('/cart-add/{id}','GioHangController@cartAdd')->name('cart-add');
     Route::get('/cart-del/{id}','GioHangController@cartDel')->name('cart-del');
+    
+    Route::get('/dathang', 'DatHangController@index')->name('dathang');
+    Route::post('/dat-hang','DatHangController@datHang')->name('dat-hang');
 
 
 });

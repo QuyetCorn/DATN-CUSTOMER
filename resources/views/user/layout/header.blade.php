@@ -81,7 +81,9 @@
                                                     <a class="mr_top" href="giohang">
                                                         <span class="cart_num" id="cart-total">
                                                             <span class="color_">
-                                                                <span class="cartCount  count_item_pr"> </span>
+                                                                @if(Session::has('cart'))
+                                                                    <span class="cartCount  count_item_pr">{{Session('cart')->tongSL}} </span>
+                                                                @endif
                                                             </span>
                                                         </span>
                                                     </a>
@@ -227,13 +229,13 @@
                         </div>
                     </nav>
                     <div class=" hidden-sm hidden-xs contact_phone_menu menu_index_phone">
-                        <a href="/collections/all">Đặc Biệt</a>
-                        <a href="/collections/all">
+                        <!-- <a href="/collections/all">Đặc Biệt</a> -->
+                        <!-- <a href="sanpham">
                             Black Friday
     
                             <img src="//bizweb.dktcdn.net/100/286/794/themes/637857/assets/icon-hot.png?1618737291739" alt="Hot" />
     
-                        </a>
+                        </a> -->
                     </div>
                 </div>
             </div>

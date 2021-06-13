@@ -1,25 +1,30 @@
 @extends('user.master')
 @section('content')
 
-    <section class="bread-crumb clearfix">
-<span class="crumb-border"></span>
-<div class="container">
-    <div class="row">
-        <div class="col-xs-12 a-left">
-            <ul class="breadcrumb">					
-                <li class="home">
-                    <a itemprop="url" href="trangchu" ><span >Trang chủ</span></a>						
-                    <span class="mr_lr"> <i class="fa fa-angle-right"></i> </span>
-                </li>
-                
-                
-                <li><strong ><span >Tất cả sản phẩm</span></strong></li>
+<section class="bread-crumb clearfix">
+    <span class="crumb-border"></span>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 a-left">
+                <ul class="breadcrumb">					
+                    <li class="home">
+                        <a itemprop="url" href="trangchu" ><span >Trang chủ</span></a>						
+                        <span class="mr_lr"> <i class="fa fa-angle-right"></i> </span>
+                    </li>
                     
                     
-            </ul>
+                    <li><strong ><span >Tất cả sản phẩm</span></strong></li>
+
+                    @if(Session::get('message'))
+                        <div class="alert alert-success" style='text-align: center;'>
+                            {{ Session::get('message') }}
+                        </div>
+                    @endif
+                            
+                </ul>
+            </div>
         </div>
     </div>
-</div>
 </section>  
 
 <div class="container margin-bottom-15 bg_white">
@@ -97,14 +102,16 @@
                         <h3 class="product-name"><a class="text2line" href="{{route('chitietsanpham',$sp->id)}}" title="{{$sp->ten_sp}}">{{$sp->ten_sp}}</a></h3>
 
                         @if($sp->giam_gia>0)
-                        <div class="price-box clearfix">			
-                            <span class="price product-price-old">
-                            {{number_format($sp->gia)}}đ		
-                            </span>		
-                            <span class="price product-price">{{number_format($sp->gia*((100-$sp->giam_gia)/100))}}đ</span>
-                        </div>
+                            <div class="price-box clearfix">			
+                                <span class="price product-price-old">
+                                    {{number_format($sp->gia)}}đ		
+                                </span>		
+                                <span class="price product-price">{{number_format($sp->gia*((100-$sp->giam_gia)/100))}}đ</span>
+                            </div>
                         @else
-                            <span class="price product-price">{{number_format($sp->gia)}}đ</span>
+                            <div class="price-box clearfix">
+                                <span class="price product-price">{{number_format($sp->gia)}}đ</span>
+                            </div>
                         @endif
 
     

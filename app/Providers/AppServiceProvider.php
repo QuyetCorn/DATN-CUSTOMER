@@ -31,11 +31,11 @@ class AppServiceProvider extends ServiceProvider
             $view->with('loai_sp',$loai_sp);
         });
 
-        view()->composer('user.page.giohang',function($view){
+        view()->composer(['user.page.giohang','user.page.dathang'],function($view){
             if(Session('cart')) {
                 $oldCart = Session::get('cart');
                 $cart = new GioHang($oldCart);
-                $view->with(['cart'=>Session::get('cart'),'product_cart'=>$cart->items,'totalPrice'=>$cart->totalPrice,'totalQty'=>$cart->totalQty]);
+                $view->with(['cart'=>Session::get('cart'),'product_cart'=>$cart->items,'tongTien'=>$cart->tongTien,'tongSL'=>$cart->tongSL]);
             }
         });
     }

@@ -13,6 +13,12 @@
                     </li>
                     <li><strong ><span >{{$loaisp->ten_loai}}</span></strong></li>
                     
+
+                    @if(Session::get('message'))
+                        <div class="alert alert-success" style='text-align: center;'>
+                            {{ Session::get('message') }}
+                        </div>
+                    @endif
                 </ul>
             </div>
         </div>
@@ -97,14 +103,16 @@
                         <h3 class="product-name"><a class="text2line" href="/giay-converse-star-collar-break" title="{{$sp->ten_sp}}">{{$sp->ten_sp}}</a></h3>
 
                         @if($sp->giam_gia>0)
-                        <div class="price-box clearfix">			
-                            <span class="price product-price-old">
-                            {{number_format($sp->gia)}}đ		
-                            </span>		
-                            <span class="price product-price">{{number_format($sp->gia*((100-$sp->giam_gia)/100))}}đ</span>
-                        </div>
+                            <div class="price-box clearfix">			
+                                <span class="price product-price-old">
+                                {{number_format($sp->gia)}}đ		
+                                </span>		
+                                <span class="price product-price">{{number_format($sp->gia*((100-$sp->giam_gia)/100))}}đ</span>
+                            </div>
                         @else
-                        <span class="price product-price">{{number_format($sp->gia)}}đ</span>
+                            <div class="price-box clearfix">
+                                <span class="price product-price">{{number_format($sp->gia)}}đ</span>
+                            </div>
                         @endif
 
     

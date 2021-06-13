@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateHoaDon extends Migration
+class CreateKhachDatHang extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,13 @@ class CreateHoaDon extends Migration
      */
     public function up()
     {
-        Schema::create('hoa_don', function (Blueprint $table) {
+        Schema::create('khach_dat_hang', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('khach_dat_hang_id');
-            $table->datetime('ngay_dat');
-            $table->double('tong_tien');
-            $table->string('ghi_chu', 255)->nullable();
+            $table->string('email', 30)->nullable();
+            $table->string('ho_ten', 50);
+            $table->string('sdt', 10)->nullable();
+            $table->string('dia_chi', 100)->nullable();
+            $table->string('gioi_tinh', 100)->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
@@ -31,6 +32,6 @@ class CreateHoaDon extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('hoa_don');
+        Schema::dropIfExists('khach_dat_hang');
     }
 }
