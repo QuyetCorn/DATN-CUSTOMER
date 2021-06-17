@@ -36,6 +36,7 @@ Route::group(['namespace' => 'User'], function() {
     Route::post('/edit_Image/{id}','khachhangController@edit_hinhanh')->name('update_image');
     
     //page
+    Route::get('/', 'TrangChuController@index')->name('trangchu');
     Route::get('/trangchu', 'TrangChuController@index')->name('trangchu');
     Route::get('/sanpham', 'SanPhamController@index')->name('sanpham');
     Route::get('/tintuc', 'TinTucController@index')->name('tintuc');
@@ -52,6 +53,8 @@ Route::group(['namespace' => 'User'], function() {
     
     Route::get('/dathang', 'DatHangController@index')->name('dathang');
     Route::post('/dat-hang','DatHangController@datHang')->name('dat-hang');
+
+    Route::get('/search', 'TrangChuController@search')->name('search');
 
 
 });

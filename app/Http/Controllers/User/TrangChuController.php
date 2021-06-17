@@ -18,6 +18,13 @@ class TrangChuController extends Controller
 
         $sp_moi = ChiTietSanPham::orderBy('id', 'desc')->limit(8)->get();
         $sanphamsale = ChiTietSanPham::where('giam_gia','<>',0)->paginate(6);
-        return view('user.page.trangchu',compact('slide'),compact('sup_slide','sanpham','sanphamsale','sp_moi'));
+        return view('user.page.trangchu',compact('slide','sup_slide','sanpham','sanphamsale','sp_moi'));
+    }
+
+    public function search(Request $req) {
+        $sanpham = ChiTietSanPham::where('ten_sp','like','%'.$req->key.'%')
+                                ->orWhere('gia',$req->key)
+                                ->get();
+        return view('user.page.search',compact('sanpham'));
     }
 }

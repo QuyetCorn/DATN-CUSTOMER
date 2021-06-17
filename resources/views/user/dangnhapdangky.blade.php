@@ -65,28 +65,44 @@
 		<div class="contact-form1">
 			<div class="contact-w3-agileits">
 				<h3>Form Đăng Ký</h3>
-				<form action="{{ route('dangky') }}" method="post">
-				{{ csrf_field() }}
+				<form action="{{ route('dangky') }}" method="post" id="form-dang-ky">
+					{{ csrf_field() }}
+ 					@if(count($errors)>0)
+ 						<div class="alert alert-danger">
+ 							@foreach($errors->all() as $err)
+ 								{{$err}}
+							@endforeach
+						</div>
+					@endif
+ 					@if(Session::has('message'))
+					 <div class="alert alert-success">{{Session::get('message')}}</div>
+					@endif
 						<div class="form-sub-w3ls">
-							<input placeholder="Họ Tên"  type="text" required="" name="txtname">
+							<input placeholder="Họ Tên"  type="text"  name="txtname">
 							<div class="icon-agile">
 								<i class="fa fa-user" aria-hidden="true"></i>
 							</div>
 						</div>
 						<div class="form-sub-w3ls">
-							<input placeholder="Email" class="mail" type="email" required="" name="txtemail">
+							<input placeholder="Email" class="mail" type="email"  name="txtemail">
 							<div class="icon-agile">
 								<i class="fa fa-envelope-o" aria-hidden="true"></i>
 							</div>
 						</div>
 						<div class="form-sub-w3ls">
-							<input placeholder="Mật Khẩu"  type="password" required=""name="txtpassword">
+							<input placeholder="Số điện thoại" class="number" type="text"  name="txtphone">
+							<div class="icon-agile">
+								<i class="fa fa-user" aria-hidden="true"></i>
+							</div>
+						</div>
+						<div class="form-sub-w3ls">
+							<input placeholder="Mật Khẩu"  type="password" name="txtpassword">
 							<div class="icon-agile">
 								<i class="fa fa-unlock-alt" aria-hidden="true"></i>
 							</div>
 						</div>
 						<div class="form-sub-w3ls">
-							<input placeholder="Nhập Lại Mật Khẩu"  type="password" required=""name="txtrepassword">
+							<input placeholder="Nhập Lại Mật Khẩu"  type="password" name="txtrepassword">
 							<div class="icon-agile">
 								<i class="fa fa-unlock-alt" aria-hidden="true"></i>
 							</div>
@@ -107,9 +123,28 @@
 	
 	<script type="text/javascript" src="{{asset('assets/js/jquery-2.1.4.min.js')}}"></script>
 
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 	<!-- pop-up-box-js-file -->  
 		<script src="{{asset('assets/js/jquery.magnific-popup.js')}}" type="text/javascript"></script>
 	<!--//pop-up-box-js-file -->
+ 	
+	<script>
+		$( "#form-dang-ky" ).submit(function( event ) {
+  			alert( "Handler for .submit() called." );
+			  	$.ajax({
+				type: "POST",
+				url: {{ route('dangky') }},
+				data: $( this ).serializeArray(),
+				success: function(response) {
+					console.log("response: ", response);
+				}
+				});
+  		event.preventDefault();
+		});
+	</script>
+
+
 	<script>
 		$(document).ready(function() {
 		$('.w3_play_icon,.w3_play_icon1,.w3_play_icon2').magnificPopup({

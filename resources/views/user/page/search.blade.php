@@ -11,14 +11,16 @@
                         <a itemprop="url" href="trangchu" ><span >Trang chủ</span></a>						
                         <span class="mr_lr"> <i class="fa fa-angle-right"></i> </span>
                     </li>
-                    <li><strong ><span >{{$loaisp->ten_loai}}</span></strong></li>
                     
+                    
+                    <li><strong ><span >Tìm kiếm</span></strong></li>
 
                     @if(Session::get('message'))
                         <div class="alert alert-success" style='text-align: center;'>
                             {{ Session::get('message') }}
                         </div>
                     @endif
+                            
                 </ul>
             </div>
         </div>
@@ -26,49 +28,46 @@
 </section>  
 
 <div class="container margin-bottom-15 bg_white">
-    <div class="wrp_border_collection">
-        <div class="row">
-            <section class="main_container collection collection_container col-lg-9 col-md-9 col-sm-12 col-lg-push-3 col-md-push-3">
-                <div class="page_title margin-top-5">
-                    <h1 class="title_page_h1">
-
-                    <span>{{$loaisp->ten_loai}}</span>
-                     </h1>
-                </div>
-                
-                <div class="category-products products">
+<div class="wrp_border_collection">
+    <div class="row">
+        <section class="main_container collection collection_container col-lg-9 col-md-9 col-sm-12 col-lg-push-3 col-md-push-3">
+            <div class="page_title margin-top-5">
+                <h1 class="title_page_h1"><span>Kết quả tìm kiếm</span> </h1>
+            </div>
+            
+            <div class="category-products products">
                     
                 <div class="sortPagiBar">
-                
-                    <div class="srt">
-                        <div class="wr_sort col-sm-12">
-                            <div class="text-sm-right">
-                                <div class="sortPagiBar sortpage text-sm-right">
-                                    <div id="sort-by">
-                                        <label class="left hidden-xs">Sắp xếp: </label>
-                                        <div class="border_sort">
-                                            <select onChange="sortby(this.value)">
-                                                <option class="valued" value="default">Mặc định</option>
-                                                <option value="price-asc">Giá tăng dần</option>
-                                                <option value="price-desc">Giá giảm dần</option>
-                                                <option value="alpha-asc">Từ A-Z</option>
-                                                <option value="alpha-desc">Từ Z-A</option>
-                                                <option value="created-asc">Mới đến cũ</option>
-                                                <option value="created-desc">Cũ đến mới</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                            </div>
-                        </div>
+<div class="srt">
+    <div class="wr_sort col-sm-12">
+        <div class="text-sm-right">
+            <div class="sortPagiBar sortpage text-sm-right">
+                <div id="sort-by">
+                    <label class="left hidden-xs">Sắp xếp: </label>
+                    <div class="border_sort">
+                        <select onChange="sortby(this.value)">
+                            <option class="valued" value="default">Mặc định</option>
+                            <option value="price-asc">Giá tăng dần</option>
+                            <option value="price-desc">Giá giảm dần</option>
+                            <option value="alpha-asc">Từ A-Z</option>
+                            <option value="alpha-desc">Từ Z-A</option>
+                            <option value="created-asc">Mới đến cũ</option>
+                            <option value="created-desc">Cũ đến mới</option>
+                        </select>
                     </div>
                 </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</div>
+</div>
 
-<!-- San pham -->
+
 <section class="products-view products-view-grid collection_reponsive">
     <div class="row">
-        @foreach($sp_theoloai as $sp)
+        @foreach($sanpham as $sp)
         <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 product-col">
             <div class="item saler_item">
                                 
@@ -86,7 +85,7 @@
                         <div class="product-action-grid clearfix">
                             <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9746938" enctype="multipart/form-data">
                                 <div>
-                                    <a title="xem nhanh" href="{{route('chitietsanpham',$sp->id)}}" data-handle="{{$sp->ten_sp}}" class="button_wh_40 btn_view right-to quick-view"><i class="fa fa-search"></i>
+                                    <a title="xem nhanh" href="{{route('chitietsanpham',$sp->id)}}"  class="button_wh_40 btn_view right-to quick-view"><i class="fa fa-search"></i>
                                         <span class="tooltips qv"><span>Xem nhanh</span></span>
                                     </a>
                                 </div>
@@ -100,12 +99,16 @@
                             <div class="bizweb-product-reviews-badge" data-id="9746938"></div>
                         </div>
     
-                        <h3 class="product-name"><a class="text2line" href="/giay-converse-star-collar-break" title="{{$sp->ten_sp}}">{{$sp->ten_sp}}</a></h3>
+                        <h3 class="product-name"><a class="text2line" href="{{route('chitietsanpham',$sp->id)}}" title="{{$sp->ten_sp}}">{{$sp->ten_sp}}</a></h3>
 
                         @if($sp->giam_gia>0)
                             <div class="price-box clearfix">			
                                 <span class="price product-price-old">
-                                {{number_format($sp->gia)}}đ		
+                                    
+                                    
+                                    
+                                    
+                                    {{number_format($sp->gia)}}đ		
                                 </span>		
                                 <span class="price product-price">{{number_format($sp->gia*((100-$sp->giam_gia)/100))}}đ</span>
                             </div>
@@ -126,12 +129,12 @@
                                         <span>
                                             <span class="fa fa-shopping-basket"></span>
                                         </span>
-                                        Giỏ hàng
+                                            Giỏ hàng
                                     </button>
                                 </div>
                             </form>
 
-                        </div>
+</div>
 
                 </div>
             </div>			
@@ -140,26 +143,22 @@
     @endforeach
 <!--End 1 sp  -->
 
-
 <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 product-col">
 <!-- <div class="item saler_item"> -->
-<div class="product-box">															
-<div class="product-thumbnail">
-
+    <div class="product-box">															
+        <div class="product-thumbnail">
+        </div>
+    </div>			
 </div>
-</div>			
-</div>
-</div>		
-        
+    
 </section>		
                 
- </div>
+</div>
 </section>
         
         <aside class="dqdt-sidebar sidebar left left-content col-xs-12 col-lg-3 col-md-3 col-sm-12  col-lg-pull-9 col-md-pull-9">
             
 
-<script src="//bizweb.dktcdn.net/100/286/794/themes/637857/assets/search_filter.js?1618737291739" type="text/javascript"></script>
 <div class="aside-filter">
 <div class="filter-container thismobile">	
     <div class="filter-container__selected-filter" style="display: none;">
@@ -173,7 +172,7 @@
     </div>
 </div>
 <div class="aside-title-filter">
-    <h2><span>Tìm Theo</span></h2>
+    <h2><span>Tìm theo</span></h2>
 </div>
 
 
@@ -360,10 +359,8 @@
         </ul>
     </div>
 </aside>
-
-
-
 </div>
+
 <script>
 var selectedSortby;
 var tt = 'Thứ tự';
@@ -713,7 +710,7 @@ function doSearch(page, options) {
     </div>
 </div>
 </div>
-      
+
 </body>
 </html>
 @endsection

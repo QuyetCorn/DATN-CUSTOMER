@@ -87,9 +87,9 @@
 
                                     <div class="product-box">
                                         <div class="product-thumbnail">
-                                            @if($sp->phan_tram_giam>0)
+                                            @if($sp->giam_gia>0)
                                             <span class="sale_count"><span class="bf_">-
-                                            {{$sp->phan_tram_giam}}%
+                                            {{$sp->giam_gia}}%
                                             </span></span>
                                             @endif
    
@@ -198,9 +198,9 @@
 
                                     <div class="product-box">
                                         <div class="product-thumbnail">
-                                            @if($sp->phan_tram_giam>0)
+                                            @if($sp->giam_gia>0)
                                             <span class="sale_count"><span class="bf_">-
-                                            {{$sp->phan_tram_giam}}%
+                                            {{$sp->giam_gia}}%
                                             </span></span>
                                             @endif
    
@@ -300,9 +300,9 @@
 
                                     <div class="product-box">
                                         <div class="product-thumbnail">
-                                            @if($sp->phan_tram_giam>0)
+                                            @if($sp->giam_gia>0)
                                             <span class="sale_count"><span class="bf_">-
-                                            {{$sp->phan_tram_giam}}%
+                                            {{$sp->giam_gia}}%
                                             </span></span>
                                             @endif
    
@@ -411,9 +411,9 @@
 
                                     <div class="product-box">
                                         <div class="product-thumbnail">
-                                            @if($sp->phan_tram_giam>0)
+                                            @if($sp->giam_gia>0)
                                             <span class="sale_count"><span class="bf_">-
-                                            {{$sp->phan_tram_giam}}%
+                                            {{$sp->giam_gia}}%
                                             </span></span>
                                             @endif
    

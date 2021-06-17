@@ -40,9 +40,8 @@
                                 <!-- Support -->
                                 <div class="search_header col-lg-6 col-md-6 col-sm-12 hidden-xs">
                                     <div class="header_searchs">
-                                        <form class="input-group search-bar" action="/search" method="get" role="search">
-                                            
-                                            <input type="search" name="query" value="" placeholder="Tìm kiếm sản phẩm... " class="input-group-field st-default-search-input search-text" autocomplete="off" required>
+                                        <form action="{{route('search')}}" method="get" class="input-group search-bar" role="search">
+                                            <input type="text" name="key" placeholder="Tìm kiếm sản phẩm... " class="input-group-field st-default-search-input search-text">
                                             <span class="input-group-btn">
                                                 <button class="btn icon-fallback-text">
                                                     Tìm Kiếm
@@ -117,7 +116,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="top-cart-contain f-right hidden-lg hidden-md hidden">
+                                        <!-- <div class="top-cart-contain f-right hidden-lg hidden-md hidden">
                                             <div class="mini-cart text-xs-center">
                                                 <div class="heading-cart">
                                                     <a href="/cart">
@@ -126,12 +125,12 @@
                                                     </a>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="header_search_ col-lg-12 col-md-12 col-sm-12 col-xs-12 hidden-lg hidden-md hidden-sm">
+                        <!-- <div class="header_search_ col-lg-12 col-md-12 col-sm-12 col-xs-12 hidden-lg hidden-md hidden-sm">
                             <div class="search_full">
                                 <form class="form_search" action="/search" method="get" role="search">
                                     <input type="search" name="query" value="" placeholder="Tìm kiếm" class="input_search" autocomplete="off">
@@ -142,7 +141,7 @@
                                     </span>
                                 </form>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>

@@ -19,24 +19,35 @@ class DangNhapDangKyController extends Controller
     }
 
     public function dangky(Request $request) {
+
+        $this->validate($request,
+            [
+                'txtemail'=>'required|email|unique:khach_hang,email',
+                'txtpassword'=>'required|min:6|max:20',
+                'txtname'=>'required',
+                'txtphone'=>'required|min:10',
+                'txtrepassword'=>'required|same:password'
+            ],
+            [
+                'txtemail.required'=>'Vui lòng nhập email',
+                'txtemail.email'=>'Không đúng định dạng email',
+                'txtemail.unique'=>'Email đã tồn tại',
+                'txtpassword.required'=>'Vui lòng nhập mật khẩu',
+                'txtpassword.min'=>'Mật khẩu ít nhất 6 ký tự!',
+                'txtpassword.max'=>'Mật khẩu không quá 20 ký tự!',
+                'txtrepassword.same'=>'Mật khẩu không trùng khớp',
+                'txtname.required'=>'Vui lòng nhập họ tên',
+            ]
+            );
+
         $user = new khachhang;
-        $email = KhachHang::where('email','Like',$request->txtemail) ->first();
-        if($email){
-            return back()->with('message','Email đã tồn tại!');
-        }
-        else{
-            if($request->txtrepassword==$request->txtpassword)
-            {
-            $user->ho_ten = $request->txtname;
-            $user->email = $request->txtemail;
-            $user->password = Hash::make($request->txtpassword);
-            $user->vaitro = 1;
-            $user->save();
-            return back()->with('message','Đăng ký thành công !');;
-            }
-            else
-            return back()->with('message','nhập lại mật khẩu không chính xác!');
-         }
+        $user->ho_ten = $request->txtname;
+        $user->email = $request->txtemail;
+        $user->sdt = $request->txtphone;
+        $user->password = Hash::make($request->txtpassword);
+        $user->vaitro = 1;
+        $user->save();
+        return back()->with('message','Đăng ký thành công !');          
     }
 
 
@@ -53,8 +64,7 @@ class DangNhapDangKyController extends Controller
             'password.required'=>'Vui lòng nhập mật khẩu',
             'password.min'=>'Mật khẩu ít nhất 6 ký tự!',
             'password.max'=>'Mật khẩu không quá 20 ký tự!'
-        ]
-        );
+        ]);
         
         $credentials = [
             'email'         => $request->email,

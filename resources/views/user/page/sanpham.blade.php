@@ -73,9 +73,9 @@
                                 
                 <div class="product-box">															
                     <div class="product-thumbnail">
-                        @if($sp->phan_tram_giam>0)
+                        @if($sp->giam_gia>0)
                         <span class="sale_count">
-                            <span class="bf_">- {{$sp->phan_tram_giam}}% </span>
+                            <span class="bf_">- {{$sp->giam_gia}}% </span>
                         </span>
                         @endif
                         <a href="{{route('chitietsanpham',$sp->id)}}" class="image_link display_flex" data-images="assets/images/{{$sp->hinh_anh}}"  title="{{$sp->ten_sp}}">
@@ -83,9 +83,9 @@
                         </a>
 
                         <div class="product-action-grid clearfix">
-                            <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9746938" enctype="multipart/form-data">
+                            <form  class="variants form-nut-grid" data-id="product-actions-9746938" enctype="multipart/form-data">
                                 <div>
-                                    <a title="xem nhanh" href="{{route('chitietsanpham',$sp->id)}}" data-handle="giay-converse-star-collar-break" class="button_wh_40 btn_view right-to quick-view"><i class="fa fa-search"></i>
+                                    <a title="xem nhanh" href="{{route('chitietsanpham',$sp->id)}}" class="button_wh_40 btn_view right-to quick-view"><i class="fa fa-search"></i>
                                         <span class="tooltips qv"><span>Xem nhanh</span></span>
                                     </a>
                                 </div>
@@ -104,6 +104,10 @@
                         @if($sp->giam_gia>0)
                             <div class="price-box clearfix">			
                                 <span class="price product-price-old">
+                                    
+                                    
+                                    
+                                    
                                     {{number_format($sp->gia)}}đ		
                                 </span>		
                                 <span class="price product-price">{{number_format($sp->gia*((100-$sp->giam_gia)/100))}}đ</span>
@@ -359,6 +363,7 @@
 
 
 </div>
+
 <script>
 var selectedSortby;
 var tt = 'Thứ tự';
@@ -708,11 +713,7 @@ function doSearch(page, options) {
     </div>
 </div>
 </div>
-    
-@endsection
-
-
-    
 </body>
 </html>
+@endsection
 
