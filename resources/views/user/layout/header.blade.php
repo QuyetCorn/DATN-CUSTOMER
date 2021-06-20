@@ -207,20 +207,24 @@
     
                                     </ul>
                                 </li>
-    
-    
-    
-                                <li class=" nav-item nav-items ">
-                                    <a href="tintuc" class="nav-link">
-                                        TIN TỨC </a>
-                                </li>
-    
-    
-    
+     
                                 <li class=" nav-item nav-items ">
 
-                                <a href="lienhe" class="nav-link">
-                                        LIÊN HỆ </a>
+                                    <a href="{{route('sanphamsale')}}" class="nav-link">
+                                            SẢN PHẨM SALE </a>
+                                </li>
+
+                                <li class=" nav-item nav-items ">
+
+                                    <a href="{{route('sanphamnew')}}" class="nav-link">
+                                            SẢN PHẨM MỚI </a>
+                                </li>
+
+
+                                <li class=" nav-item nav-items ">
+
+                                    <a href="sanphammoi" class="nav-link">
+                                            LIÊN HỆ </a>
                                 </li>
     
     

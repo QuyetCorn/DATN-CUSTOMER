@@ -38,14 +38,19 @@ Route::group(['namespace' => 'User'], function() {
     //page
     Route::get('/', 'TrangChuController@index')->name('trangchu');
     Route::get('/trangchu', 'TrangChuController@index')->name('trangchu');
+
     Route::get('/sanpham', 'SanPhamController@index')->name('sanpham');
-    Route::get('/tintuc', 'TinTucController@index')->name('tintuc');
-    Route::get('/chitietsanpham/{id}', 'CTSPController@index')->name('chitietsanpham');
-    Route::get('/chitiettintuc', 'TinTucController@chitiettintuc')->name('chitiettintuc');
-    Route::get('/gioithieu', 'GioiThieuController@index')->name('gioithieu');
-    Route::get('/lienhe', 'LienHeController@index')->name('lienhe');
-    Route::get('/loai_sp/{type}', 'LoaiSPController@index')->name('loai_sp');
     Route::get('/sanpham/new', 'SanPhamController@new')->name('sanphamnew');
+    Route::get('/sanpham/sale', 'SanPhamController@sale')->name('sanphamsale');
+    
+    Route::get('/chitietsanpham/{id}', 'CTSPController@index')->name('chitietsanpham');
+
+    Route::get('/gioithieu', 'GioiThieuController@index')->name('gioithieu');
+
+    Route::get('/lienhe', 'LienHeController@index')->name('lienhe');
+
+    Route::get('/loai_sp/{type}', 'LoaiSPController@index')->name('loai_sp');
+
 
     Route::get('/giohang', 'GioHangController@index')->name('giohang');
     Route::get('/cart-add/{id}','GioHangController@cartAdd')->name('cart-add');

@@ -15,7 +15,7 @@
                         
                         
                         <li>
-                            <a itemprop="url" href="/san-pham-khuyen-mai"><span >Sản phẩm khuyến mãi</span></a>						
+                            <a itemprop="url" href="{{route('loai_sp',$loai_sp->id)}}"><span >{{$loai_sp->ten_loai}}</span></a>					
                             <span class="mr_lr"> <i class="fa fa-angle-right"></i> </span>
                         </li>
                         
@@ -37,7 +37,7 @@
                     <div class="dear_title">
                         <h2 class="title_head_ border_content">
                             <a href="frontpage" title="Sản phẩm bán chạy">
-                                Sản phẩm bán chạy</a>
+                                Sản phẩm SALE</a>
                         </h2>
                     </div>
                     <div class="clearfix"></div>
@@ -46,18 +46,19 @@
                                 <div  class="owl_col_details owl-carousel owl-theme " data-nav="true" data-lg-items="1" data-md-items="1" data-height="false" data-xs-items="1" data-sm-items="1" data-margin="15">
 
                                     <div class="item">
+                                    @foreach($sanphamsale as $sps)
                                         <div class="hot_sale_product">
                                             <div class="item-img-horizontal">
                                                 
-                                                <a href="" class="product-image" title="">
-                                                    <img src="//bizweb.dktcdn.net/thumb/compact/100/286/794/products/1-4-2.jpg?v=1517304826530" alt="Balo laplop Solo Pro ARC Black">
+                                                <a href="{{route('chitietsanpham',$sps->id)}}" class="product-image" title="">
+                                                    <img src="assets/images/{{$sps->hinh_anh}}" alt="{{$sps->ten_sp}}">
                                                 </a>
                                                 
                                             </div>
                                             <div class="item-info-horizontal">
                                                 <h3 class="item-name text2line">
-                                                    <a href="/balo-laplop-solo-pro-arc-black" title="Balo laplop Solo Pro ARC Black">
-                                                        Balo laplop Solo Pro ARC Black
+                                                    <a href="{{route('chitietsanpham',$sps->id)}}" title="{{$sps->ten_sp}}">
+                                                        {{$sps->ten_sp}}
                                                     </a>
                                                 </h3>
                                                 
@@ -65,104 +66,16 @@
                                                 <div class="price-box clearfix">			
                                                     
                                                     <span class="price product-price-old">
-                                                        950.000₫			
+                                                        {{number_format($sps->gia)}}đ			
                                                     </span>		
                                                         
-                                                    <span class="price product-price">860.000₫</span>
+                                                    <span class="price product-price">{{number_format($sps->gia*((100-$sps->giam_gia)/100))}}đ</span>
                                                 </div>		
                                                 
                                                 
                                             </div>
                                         </div>
-
-
-                                        <div class="hot_sale_product">
-                                            <div class="item-img-horizontal">
-                                                
-                                                <a href="/balo-mikkor-irvin-charcoal-orange" class="product-image" title="Balo Mikkor Irvin Charcoal/Orange">
-                                                    <img src="//bizweb.dktcdn.net/thumb/compact/100/286/794/products/1-3.jpg?v=1517327927920" alt="Balo Mikkor Irvin Charcoal/Orange">
-                                                </a>
-                                                
-                                            </div>
-                                            <div class="item-info-horizontal">
-                                                <h3 class="item-name text2line">
-                                                    <a href="/balo-mikkor-irvin-charcoal-orange" title="Balo Mikkor Irvin Charcoal/Orange">
-                                                        Balo Mikkor Irvin Charcoal/Orange
-                                                    </a>
-                                                </h3>
-                                                
-                                                
-                                                <div class="price-box clearfix">			
-                                                    
-                                                    <span class="price product-price-old">
-                                                        1.200.000₫			
-                                                    </span>		
-                                                        
-                                                    <span class="price product-price">750.000₫</span>
-                                                </div>		
-                                                
-                                                
-                                            </div>
-                                        </div>
-
-
-                                        <div class="hot_sale_product">
-                                            <div class="item-img-horizontal">
-                                                
-                                                <a href="/vali-ricardo-spectrum-20-inch-5-tac-den" class="product-image" title="Vali Ricardo Spectrum 20 inch 5 tấc - Đen">
-                                                    <img src="//bizweb.dktcdn.net/thumb/compact/100/286/794/products/1-d759a515-8ee4-447f-a51b-9be521c66a3a.jpg?v=1517328908890" alt="Vali Ricardo Spectrum 20 inch 5 tấc - Đen">
-                                                </a>
-                                                
-                                            </div>
-                                            <div class="item-info-horizontal">
-                                                <h3 class="item-name text2line">
-                                                    <a href="/vali-ricardo-spectrum-20-inch-5-tac-den" title="Vali Ricardo Spectrum 20 inch 5 tấc - Đen">
-                                                        Vali Ricardo Spectrum 20 inch 5 tấc - Đen
-                                                    </a>
-                                                </h3>
-                                                
-                                                
-                                                <div class="price-box clearfix">			
-                                                    
-                                                    <span class="price product-price-old">
-                                                        4.000.000₫			
-                                                    </span>		
-                                                        
-                                                    <span class="price product-price">3.700.000₫</span>
-                                                </div>		
-                                                
-                                                
-                                            </div>
-                                        </div>
-
-
-                                        <div class="hot_sale_product">
-                                            <div class="item-img-horizontal">
-                                                
-                                                <a href="/giay-vai-converse-3" class="product-image" title="Giày converse One Star Leather + Tapestry">
-                                                    <img src="//bizweb.dktcdn.net/thumb/compact/100/286/794/products/3min2aeb1bce236543fcad76752f82.jpg?v=1516862308167" alt="Giày converse One Star Leather + Tapestry">
-                                                </a>
-                                                
-                                            </div>
-                                            <div class="item-info-horizontal">
-                                                <h3 class="item-name text2line">
-                                                    <a href="/giay-vai-converse-3" title="Giày converse One Star Leather + Tapestry">
-                                                        Giày converse One Star Leather + Tapestry
-                                                    </a>
-                                                </h3>
-                                                
-                                                
-                                                <div class="price-box clearfix">			
-                                                    
-                                                    <span class="price product-price-old">
-                                                        800.000₫			
-                                                    </span>		
-                                                        
-                                                    <span class="price product-price">700.000₫</span>
-                                                </div>		 
-                                            </div>
-                                        </div>
-
+                                    @endforeach
                                     </div>
                                     
                                 </div>
@@ -380,12 +293,12 @@
                             </div> -->
                             
                             
-                            <div class="social-sharing ">
+                            <!-- <div class="social-sharing ">
                                 <span class="ttt">Chia sẻ: </span>
                                 <div class="addthis_inline_share_toolbox share_add">
                                     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-58589c2252fc2da4"></script>
                                 </div>
-                            </div>
+                            </div> -->
                                                         
                         </div>
                     </div>

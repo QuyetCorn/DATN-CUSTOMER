@@ -13,7 +13,12 @@ class SanPhamController extends Controller
         return view('user.page.sanpham',compact('sanpham'));
     }
     public function new() {
-        $sanpham = ChiTietSanPham::orderBy('id', 'desc')->get();
+        $sanpham = ChiTietSanPham::where('new',1)->get();
+        return view('user.page.sanpham',compact('sanpham'));
+    }
+
+    public function sale() {
+        $sanpham = ChiTietSanPham::where('giam_gia','<>',0)->get();
         return view('user.page.sanpham',compact('sanpham'));
     }
 }
