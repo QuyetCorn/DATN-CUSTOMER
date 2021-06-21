@@ -221,7 +221,7 @@
                         <div role="tabpanel" class="tab-pane active" id="tab21">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 wrap_owl_product_">
                                 <div class="owl_product_ owl-carousel" data-nav="true" data-lg-items="5" data-md-items="4" data-height="false" data-xs-items="2" data-sm-items="3" data-margin="0">
-                                    @foreach($sp_moi as $sp)
+                                    @foreach($sanphammoi as $sp)
                                         <div class="item saler_item first">
                                             <div class="owl_item_product">
 
@@ -324,7 +324,7 @@
                         <div role="tabpanel" class="tab-pane active" id="tab21">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 wrap_owl_product_">
                                 <div class="owl_product_ owl-carousel" data-nav="true" data-lg-items="5" data-md-items="4" data-height="false" data-xs-items="2" data-sm-items="3" data-margin="0">
-                                    @foreach($sp_moi as $sp)
+                                    @foreach($sanpham as $sp)
                                         <div class="item saler_item first">
                                             <div class="owl_item_product">
 

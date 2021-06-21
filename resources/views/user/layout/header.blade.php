@@ -9,14 +9,12 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-6 hidden-xs top_content_">
+                <!-- <div class="col-lg-6 col-md-6 col-sm-6 hidden-xs top_content_">
                     <ul class="contact_top right">
                         <li class="li_contact"><span><span class="ti ti-location-pin"></span> <a href="/he-thong-cua-hang">Địa điểm các cửa hàng <i class="fa fa-angle-down"></i></a></span>
                         </li>
-                        <li class="li_contact"><span><span class="ti ti-package"></span> <a href="/apps/kiem-tra-don-hang">Theo dõi đơn hàng của bạn</a></span>
-                        </li>
                     </ul>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -223,7 +221,7 @@
 
                                 <li class=" nav-item nav-items ">
 
-                                    <a href="sanphammoi" class="nav-link">
+                                    <a href="lienhe" class="nav-link">
                                             LIÊN HỆ </a>
                                 </li>
     

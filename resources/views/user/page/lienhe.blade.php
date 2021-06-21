@@ -19,7 +19,7 @@
                 </li>
 
                 <li >
-                    <h2 style="color: #81d742;text-align: left" class="vc_custom_heading">LIÊN HỆ VỚI SMARKET<p></p></h2>             
+                    <h2 style="color: #0a0475;text-align: left" class="vc_custom_heading">LIÊN HỆ VỚI SMARKET<p></p></h2>             
                 </li>
 
                 <li >
@@ -39,11 +39,10 @@
             
                         <li>                
                             <div class="social_right">
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-pinterest"></i></a>
-                                <a href="#"><i class="fa fa-google-plus"></i></a>
-                                <a href="#"><i class="fa fa-youtube"></i></a>
+                                <a href="https://www.facebook.com/Quyet76">
+                                    <i class="fa fa-facebook"></i>
+                                </a>   
+                                <a href="https://www.youtube.com/channel/UCQqRWkSbrajmeIJbS0r_B_g"><i class="fa fa-youtube"></i></a>
                             </div>
                         <li>
                     </ul>
@@ -65,6 +64,7 @@
 </div>
 
 
-@endsection	
+
 </body>
 </html>
+@endsection	

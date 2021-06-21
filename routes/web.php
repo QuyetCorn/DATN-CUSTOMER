@@ -61,6 +61,9 @@ Route::group(['namespace' => 'User'], function() {
 
     Route::get('/search', 'TrangChuController@search')->name('search');
 
+    Route::get('/chinhsachthanhtoan', 'TrangChuController@chinhsachthanhtoan')->name('chinhsachthanhtoan');
+    Route::get('/chinhsachdoitrabaohanh', 'TrangChuController@chinhsachdoitrabaohanh')->name('chinhsachdoitrabaohanh');
+
 
 });
 
