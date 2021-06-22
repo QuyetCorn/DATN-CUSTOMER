@@ -65,52 +65,58 @@
 		<div class="contact-form1">
 			<div class="contact-w3-agileits">
 				<h3>Form Đăng Ký</h3>
-				<form action="{{ route('dangky') }}" method="post" id="form-dang-ky">
+				<form action="{{ route('dangky') }}" method="post" id="form">
 					{{ csrf_field() }}
- 					@if(count($errors)>0)
+					@if(Session::get('message'))
+						<div class="alert alert-success">
+							{{ Session::get('message') }}
+						</div>
+					@endif
+					<!-- @if(count($errors)>0)
  						<div class="alert alert-danger">
  							@foreach($errors->all() as $err)
  								{{$err}}
 							@endforeach
-						</div>
-					@endif
- 					@if(Session::has('message'))
-					 <div class="alert alert-success">{{Session::get('message')}}</div>
-					@endif
+					@endif -->
 						<div class="form-sub-w3ls">
-							<input placeholder="Họ Tên"  type="text"  name="txtname">
+							<span class="text-danger">@error('txtname') {{ $message }} @enderror</span>
+							<input placeholder="Họ Tên"  type="text"  name="txtname" required="">
 							<div class="icon-agile">
 								<i class="fa fa-user" aria-hidden="true"></i>
 							</div>
 						</div>
 						<div class="form-sub-w3ls">
-							<input placeholder="Email" class="mail" type="email"  name="txtemail">
+							<span class="text-danger">@error('txtemail') {{ $message }} @enderror</span>
+							<input placeholder="Email" class="mail" type="email"  name="txtemail" required="">
 							<div class="icon-agile">
 								<i class="fa fa-envelope-o" aria-hidden="true"></i>
 							</div>
 						</div>
 						<div class="form-sub-w3ls">
-							<input placeholder="Số điện thoại" class="number" type="text"  name="txtphone">
+							<span class="text-danger">@error('txtphone') {{ $message }} @enderror</span>
+							<input placeholder="Số điện thoại" class="number" type="text"  name="txtphone" maxlength="10" required="">
 							<div class="icon-agile">
 								<i class="fa fa-user" aria-hidden="true"></i>
 							</div>
 						</div>
 						<div class="form-sub-w3ls">
-							<input placeholder="Mật Khẩu"  type="password" name="txtpassword">
+							<span class="text-danger">@error('txtpassword') {{ $message }} @enderror</span>
+							<input placeholder="Mật Khẩu"  type="password" name="txtpassword" maxlength="20" required="">
 							<div class="icon-agile">
 								<i class="fa fa-unlock-alt" aria-hidden="true"></i>
 							</div>
 						</div>
 						<div class="form-sub-w3ls">
-							<input placeholder="Nhập Lại Mật Khẩu"  type="password" name="txtrepassword">
+							<span class="text-danger">@error('txtrepassword') {{ $message }} @enderror</span>
+							<input placeholder="Nhập Lại Mật Khẩu"  type="password" name="txtrepassword" required="">
 							<div class="icon-agile">
 								<i class="fa fa-unlock-alt" aria-hidden="true"></i>
 							</div>
 						</div>
-					<div class="login-check">
+					<!-- <div class="login-check">
 						 <label class="checkbox"><input type="checkbox" name="checkbox" checked="">
 							Tôi chấp nhận các Điều khoản & Điều kiện</label>
-					</div>
+					</div> -->
 					<div class="submit-w3l">
 						<input type="submit" value="Đăng Ký">
 					</div>
@@ -129,7 +135,7 @@
 		<script src="{{asset('assets/js/jquery.magnific-popup.js')}}" type="text/javascript"></script>
 	<!--//pop-up-box-js-file -->
  	
-	<script>
+	<!-- <script>
 		$( "#form-dang-ky" ).submit(function( event ) {
   			alert( "Handler for .submit() called." );
 			  	$.ajax({
@@ -142,7 +148,7 @@
 				});
   		event.preventDefault();
 		});
-	</script>
+	</script> -->
 
 
 	<script>

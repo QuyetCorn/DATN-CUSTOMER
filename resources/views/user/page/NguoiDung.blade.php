@@ -13,7 +13,7 @@
                         <span class="mr_lr"> <i class="fa fa-angle-right"></i> </span>
                     </li>
                     
-                    <li><strong><span >người dùng</span></strong><li>
+                    <li><strong><span >Người dùng</span></strong><li>
                     
                 </ul>
             </div>
@@ -27,12 +27,9 @@
 
     <!-- ADD DIV -->
 
-
-                          
-         
+  
             <div id="main_product" class="details-product col-lg-9 col-md-9 col-sm-12 col-xs-12">	
                 
-            
                 <div class="details">
                     <div class="rows">
                         <div class="product-detail-left col-xs-10 col-sm-6 col-md-6 col-lg-6" >
@@ -217,7 +214,6 @@
 						</div>
                         <div class="form-sub-w3ls">
 							<input placeholder="Giới Tính"  type="text" required="" name="type" id="type">
-							
 						</div>
                         
 					</div>
@@ -278,6 +274,7 @@
                 $('#type').val(users.gioi_tinh);
                 $('#image').val(users.image);
                 $("#update-khachhang").modal('toggle');
+                
             });
             
         }
@@ -288,8 +285,8 @@
             var phone=  $('#phone').val();
             var lat = $('#lat').val();
             var type = $('#type').val();
-           
             var _token=$("input[name=_token]").val();
+            location.reload();
             $.ajax({
                 url: "{{ route('update_nguoidung')}}",
                 type:'PUT',
@@ -313,6 +310,7 @@
                     setTimeout(function() {
                     window.location.href="{{ route('nguoidung',$user->id) }}"                    
                   }, 500);
+                    
                 }
                
             });
@@ -332,7 +330,8 @@
             };
         }
 </script>
-@endsection	
+
+
 
     <script type='text/javascript'>
     
@@ -342,3 +341,4 @@
     </script>
 </body>
 </html>
+@endsection	

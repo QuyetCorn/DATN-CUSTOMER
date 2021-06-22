@@ -15,10 +15,10 @@ class CreateKhachHangTable extends Migration
     {
         Schema::create('khach_hang', function (Blueprint $table) {
             $table->id();
-            $table->string('email', 30)->nullable();
+            $table->string('email', 30);
             $table->string('password');
             $table->string('ho_ten', 50);
-            $table->string('sdt', 10)->nullable();
+            $table->string('sdt', 10);
             $table->string('dia_chi', 100)->nullable();
             $table->string('gioi_tinh', 100)->nullable();
             $table->string('hinh_dai_dien')->nullable();

@@ -17,6 +17,15 @@ class DatHangController extends Controller
     }
 
     public function datHang(Request $req) {
+        $this->validate($req,
+            [
+                'phone'=>'min:10',
+            ],
+            [
+                'phone.min'=>'Số điện thoại không đúng định dạng!',
+            ]
+            );
+
         $giohang = Session::get('cart');
 
         $khachdathang = new KhachDatHang;

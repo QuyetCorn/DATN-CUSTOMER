@@ -23,20 +23,27 @@ class DangNhapDangKyController extends Controller
         $this->validate($request,
             [
                 'txtemail'=>'required|email|unique:khach_hang,email',
-                'txtpassword'=>'required|min:6|max:20',
+                'txtpassword'=>'required|min:6|',
                 'txtname'=>'required',
-                'txtphone'=>'required|min:10',
-                'txtrepassword'=>'required|same:password'
+                'txtphone'=>'required|min:10|',
+                'txtrepassword'=>'required|same:txtpassword'
             ],
             [
-                'txtemail.required'=>'Vui lòng nhập email',
-                'txtemail.email'=>'Không đúng định dạng email',
-                'txtemail.unique'=>'Email đã tồn tại',
-                'txtpassword.required'=>'Vui lòng nhập mật khẩu',
+                'txtemail.required'=>'Vui lòng nhập email!',
+                'txtemail.email'=>'Không đúng định dạng email!',
+                'txtemail.unique'=>'Email đã tồn tại!',
+
+                'txtpassword.required'=>'Vui lòng nhập mật khẩu!',
                 'txtpassword.min'=>'Mật khẩu ít nhất 6 ký tự!',
-                'txtpassword.max'=>'Mật khẩu không quá 20 ký tự!',
-                'txtrepassword.same'=>'Mật khẩu không trùng khớp',
-                'txtname.required'=>'Vui lòng nhập họ tên',
+                
+                'txtname.required'=>'Vui lòng nhập họ tên!',
+
+                'txtphone.required'=>'Vui lòng nhập số điện thoại!',
+                'txtphone.min'=>'Số điện thoại không đúng định dạng!',
+
+                'txtrepassword.required'=>'Vui lòng nhập nhập lại mật khẩu!',
+                'txtrepassword.same'=>'Mật khẩu không trùng khớp!',
+                
             ]
             );
 
@@ -45,7 +52,7 @@ class DangNhapDangKyController extends Controller
         $user->email = $request->txtemail;
         $user->sdt = $request->txtphone;
         $user->password = Hash::make($request->txtpassword);
-        $user->vaitro = 1;
+        $user->vai_tro_id = 1;
         $user->save();
         return back()->with('message','Đăng ký thành công !');          
     }

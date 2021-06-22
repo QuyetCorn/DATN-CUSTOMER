@@ -94,7 +94,7 @@
                                                                 Email
                                                             </label>
                                                             
-                                                            <input name="email" id="email" type="email" class="field__input" @if(Auth::check()) value="{{Auth::user()->email}}" @endif>
+                                                            <input name="email" id="email" type="email" class="field__input" required="" @if(Auth::check()) value="{{Auth::user()->email}}" @endif>
                                                             
                                                         </div>
 
@@ -105,7 +105,7 @@
                                                     <div class="field " data-bind-class="{'field--show-floating-label': billing.name}">
                                                         <div class="field__input-wrapper">
                                                             <label for="billingName" class="field__label">Họ và tên người nhận hàng</label>
-                                                            <input name="hoten" id="billingName" type="text" class="field__input" @if(Auth::check()) value="{{Auth::user()->ho_ten}}" @endif>
+                                                            <input name="hoten" id="billingName" type="text" class="field__input" required="" @if(Auth::check()) value="{{Auth::user()->ho_ten}}" @endif>
                                                         </div>
 
                                                     </div>
@@ -115,18 +115,18 @@
                                                             <label for="billingGender" class="field__label">Giới tính</label>
                                                             @if(Auth::check())
                                                                 @if(Auth::user()->gioi_tinh=="Nam")
-                                                                    <input type="radio" name="gioitinh" value="Nam" id="nam" checked > Nam
-                                                                    <input type="radio" name="gioitinh" value="Nữ" id="nữ" > Nữ
+                                                                    <input type="radio" name="gioitinh" value="Nam" id="nam" checked required=""> Nam
+                                                                    <input type="radio" name="gioitinh" value="Nữ" id="nữ" required=""> Nữ
                                                                 @elseif(Auth::user()->gioi_tinh=="Nữ")
-                                                                    <input type="radio" name="gioitinh" value="Nam" id="nam" > Nam
-                                                                    <input type="radio" name="gioitinh" value="Nữ" id="nữ"  checked> Nữ
+                                                                    <input type="radio" name="gioitinh" value="Nam" id="nam" required=""> Nam
+                                                                    <input type="radio" name="gioitinh" value="Nữ" id="nữ"  checkedrequired=""> Nữ
                                                                 @else
-                                                                    <input type="radio" name="gioitinh" value="Nam" id="nam" > Nam
+                                                                    <input type="radio" name="gioitinh" value="Nam" id="nam" required=""> Nam
                                                                     <input type="radio" name="gioitinh" value="Nữ" id="nữ"> Nữ
                                                                 @endif
                                                             @else
-                                                                <input type="radio" name="gioitinh" value="Nam" id="nam" > Nam
-                                                                <input type="radio" name="gioitinh" value="Nữ" id="nữ"> Nữ
+                                                                <input type="radio" name="gioitinh" value="Nam" id="nam" required=""> Nam
+                                                                <input type="radio" name="gioitinh" value="Nữ" id="nữ"required=""> Nữ
                                                             @endif
 
                                                         </div>
@@ -138,7 +138,8 @@
                                                             <label for="billingPhone" class="field__label">
                                                                 Số điện thoại người nhận
                                                             </label>
-                                                            <input name="sdt" id="billingPhone" type="tel" class="field__input" @if(Auth::check()) value="{{Auth::user()->sdt}}" @endif>
+                                                                <span style="color:red;">@error('phone') {{ $message }} @enderror</span>
+                                                            <input name="phone" id="billingPhone" type="tel" class="field__input" required="" maxlength="10" @if(Auth::check()) value="{{Auth::user()->sdt}}" @endif>
                                                         </div>
 
                                                     </div>
@@ -150,7 +151,7 @@
                                                             <label for="billingAddress" class="field__label">
                                                                 Địa chỉ người nhận (Ghi rõ ràng)
                                                             </label>
-                                                            <input name="diachi" id="billingAddress" type="text" class="field__input" >
+                                                            <input name="diachi" id="billingAddress" type="text" class="field__input" required="">
                                                         </div>
 
                                                     </div>

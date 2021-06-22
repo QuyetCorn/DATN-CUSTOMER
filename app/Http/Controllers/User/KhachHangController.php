@@ -13,7 +13,7 @@ class KhachHangController extends Controller
 {
     public function nguoidung($id) {
         $user = khachhang::findOrFail($id);
-        return view('user.page.NguoiDung',compact('user'));
+        return view('user.page.nguoidung',compact('user'));
     }
 
     public function doipassword($id,request $request) {
@@ -25,13 +25,17 @@ class KhachHangController extends Controller
                 {
                     $user->password = Hash::make($request->Newpassword);
                     $user->save();
-                    Session::flash('message', 'đổi mật khẩu thành công!');
+                    Session::flash('message', 'Đổi mật khẩu thành công!');
+                }
+                if($request->Password==$request->Newpassword)
+                {
+                    Session::flash('message', 'Mật khẩu mới phải khác với mật khẩu cũ!');
                 }
                 else
-                Session::flash('message', 'nhập lại không trùng khớp!');
+                Session::flash('message', 'Nhập lại không trùng khớp!');
            }
         else
-            Session::flash('message', 'mật khẩu không trùng khớp!');
+            Session::flash('message', 'Mật khẩu không chính xác!');
         return back();
          
     }
@@ -53,9 +57,9 @@ class KhachHangController extends Controller
             }
         }
         if($user->save())
-            Session::flash('message', 'successfully!');
+            Session::flash('message', 'Cập nhập hình ảnh thành công!');
         else
-            Session::flash('message', 'Failure!');
+            Session::flash('message', 'Cập nhập hình ảnh thất bại!');
         return back(); 
             
     }
@@ -68,7 +72,8 @@ class KhachHangController extends Controller
         $user->dia_chi=$request->lat;
         $user->gioi_tinh= $request->type;
         if( $user->save())
-        Session::flash('message', 'đổi thông tin thành công!');
-        return view('user.page.NguoiDung',compact('user'));
+        Session::flash('message', 'Đổi thông tin thành công!');
+        return view('user.page.nguoidung',compact('user'));
+        return back();
     }
 }
