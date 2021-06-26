@@ -55,9 +55,11 @@ Route::group(['namespace' => 'User'], function() {
     Route::get('/giohang', 'GioHangController@index')->name('giohang');
     Route::get('/cart-add/{id}','GioHangController@cartAdd')->name('cart-add');
     Route::get('/cart-del/{id}','GioHangController@cartDel')->name('cart-del');
+    Route::get('/update-cart-qty/{id}','GioHangController@updateCartQty')->name('update-cart-qty');
     
     Route::get('/dathang', 'DatHangController@index')->name('dathang');
     Route::post('/dat-hang','DatHangController@datHang')->name('dat-hang');
+
 
     Route::get('/search', 'TrangChuController@search')->name('search');
 

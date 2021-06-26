@@ -4,6 +4,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\GioHang;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
 
@@ -42,21 +43,34 @@ class GioHang
   	}
 
 
-	//xóa 1
-	public function reduceByOne($id){
-		$this->items[$id]['so_luong']--;
-		$this->items[$id]['gia'] -= $this->items[$id]['item']['gia'];
-		$this->tongSL--;
-		$this->tongTien -= $this->items[$id]['item']['gia'];
-		if($this->items[$id]['so_luong']<=0){
-			unset($this->items[$id]);
-		}
-	}
-	
-	//xóa nhiều
+	//xóa cart
 	public function removeItem($id){
 		$this->tongSL -= $this->items[$id]['so_luong'];
 		$this->tongTien -= $this->items[$id]['gia'];
 		unset($this->items[$id]);
+	}
+
+	public function updateQty($item,$qty, $id){
+		if($qty != $this->items[$id]['so_luong']){
+			$gia = 0;
+			if($item->giam_gia!=0){
+				$gia = $item->gia*((100-$item->giam_gia)/100);
+			}else{
+				$gia = $item->gia;
+			}
+			if($this->items){
+				if(array_key_exists($id, $this->items)){
+						$giohang = $this->items[$id];
+				}
+			}
+			$giohang['so_luong']=$qty;
+			$giohang['gia'] = $gia * $giohang['so_luong'];
+			$this->items[$id] = $giohang;
+
+			$tt=$this->items[$id]['so_luong'] - $this->tongSL;
+			
+			$this->tongSL+=$tt;
+			$this->tongTien += $gia;
+		}
 	}
 }

@@ -35,4 +35,14 @@ class GioHangController extends Controller
         $chitietsanpham = ChiTietSanPham::where('id',$req->id)->first();
         return view('user.page.giohang');
     }
+
+    public function updateCartQty(Request $req, $id) {
+        $sanpham = ChiTietSanPham::find($id);
+        $oldCart = Session::has('cart')?Session::get('cart'):null;
+        $cart = new GioHang($oldCart);
+        $quantity = $req->quantity;
+        $cart->updateQty($sanpham,$quantity,$id);
+        $req->session()->put('cart',$cart);
+        return redirect()->back()->with('message', 'Cập nhập số lượng thành công! ');
+    }
 }

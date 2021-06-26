@@ -42,7 +42,6 @@
                                 {{ Session::get('message') }}
                             </div>				
                         @endif
-                        <form action="/cart" method="post" novalidate="" class="margin-bottom-0">
                             <div class="bg-scroll">
                                 <div class="cart-thead">
                                     <div style="width: 45%" class="a-left">Sản phẩm</div>
@@ -55,7 +54,8 @@
                             </div>
 
                             <div class="cart-tbody">
-                                
+
+                                    <!-- Ảnh và màu sắc -->
                                     @foreach($product_cart as $product)
                                         <div class="item-cart">
                                             <div style="width: 10%" class="image">
@@ -76,7 +76,7 @@
                                             </div>
 
 
-                                        
+                                            <!-- Giá -->
                                             <div style="width: 26%" class="a-center">
                                                 @if($product['item']['giam_gia']>0)
                                                     
@@ -93,23 +93,15 @@
                                             </div>
 
                                     
-                                    
+                                            <!-- Số lượng -->
                                             <div style="width: 14%" class="a-center">
-                                            
-                                                <span class="product-thumbnail__quantity" style="font-size: 18px; font-weight: bold;">{{$product['so_luong']}}</span>
-                                                <!-- <div class="input_qty_pr"> 
-                                                    <input class="variantID" type="hidden">
-                                                        <input type="text" maxlength="12" onkeypress="validate(event)" min="0" class="input-text number-sidebar input_pop input_pop qtyItem15567687" id="qtyItem15567687" name="Lines" size="4" value="1">
-                                                            <button onclick="var result = document.getElementById('qtyItem15567687'); var qtyItem15567687 = result.value; if( !isNaN( qtyItem15567687 )) result.value++;return false;" class="increase_pop items-count btn-plus" type="button">
-                                                                <i class="fa fa-caret-up"></i>
-                                                            </button>
-                                                            <button onclick="var result = document.getElementById('qtyItem15567687'); var qtyItem15567687 = result.value; if( !isNaN( qtyItem15567687 ) &amp;&amp; qtyItem15567687 > 1 ) result.value--;return false;" disabled="" class="reduced_pop items-count btn-minus" type="button">
-                                                                <i class="fa fa-caret-down"></i>
-                                                            </button>
-                                                        </input>
-                                                </div> -->
+                                                <form action="{{route('update-cart-qty',$product['item']['id'])}}" method="GET">
+                                                    <input style="text-align: center;font-weight:bold;font-size: 16px;" class="cart_quantity_input" type="number" name="quantity" value="{{$product['so_luong']}}" required="" maxlength="2" min="1">
+                                                    <input style="color:blue;font-weight:bold;font-size: 16px;" type="submit" value="Cập nhập" name="update_qty" class="btn btn-default btn-sm">
+                                                </form>
                                             </div>
 
+                                            <!-- Tổng tiền -->
                                             @if($product['item']['giam_gia']>0)
                                                 <div style="width: 15%; font-size:19px; font-weight:bold;color:#000000" class="a-right">
                                                     <span class="cart-price"> 

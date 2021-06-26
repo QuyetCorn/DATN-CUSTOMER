@@ -264,13 +264,13 @@
                                 <form action="{{route('cart-add',$chitietsanpham->id)}}" method="GET">
                                     
                                     <div class="form-group form_button_details ">
-                                        <header class="not_bg hidden">Số lượng:</header>
+                                        <!-- <header class="not_bg hidden">Số lượng:</header>
                                         <div class="custom input_number_product custom-btn-number form-control">									
                                             <button class="btn_num num_1 button button_qty" onClick="var result = document.getElementById('qtym'); var qtypro = result.value; if( !isNaN( qtypro ) &amp;&amp; qtypro &gt; 1 ) result.value--;return false;" type="button">-</button>
                                                 <input type="text" id="qtym" name="soluong" value="1"  onkeyup="valid(this,'numbers')" onkeypress='validate(event)' class="form-control prd_quantity">
                                                 <input name="sanphamId_hidden" type="hidden" value="{{$chitietsanpham->id}}"/>
                                             <button class="btn_num num_2 button button_qty" onClick="var result = document.getElementById('qtym'); var qtypro = result.value; if( !isNaN( qtypro )) result.value++;return false;" type="button">+</button>
-                                        </div>
+                                        </div> -->
                                                                             
                                         <button type="submit" class="btn btn-lg  btn-cart button_cart_buy_enable add_to_cart btn_buy" title="Cho vào giỏ hàng">
                                             <i class="fa fa-shopping-basket hidden" ></i>&nbsp;&nbsp;
