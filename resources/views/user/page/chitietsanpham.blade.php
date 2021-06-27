@@ -264,13 +264,10 @@
                                 <form action="{{route('cart-add',$chitietsanpham->id)}}" method="GET">
                                     
                                     <div class="form-group form_button_details ">
-                                        <!-- <header class="not_bg hidden">Số lượng:</header>
+                                        <header class="not_bg ">Số lượng:</header>
                                         <div class="custom input_number_product custom-btn-number form-control">									
-                                            <button class="btn_num num_1 button button_qty" onClick="var result = document.getElementById('qtym'); var qtypro = result.value; if( !isNaN( qtypro ) &amp;&amp; qtypro &gt; 1 ) result.value--;return false;" type="button">-</button>
-                                                <input type="text" id="qtym" name="soluong" value="1"  onkeyup="valid(this,'numbers')" onkeypress='validate(event)' class="form-control prd_quantity">
-                                                <input name="sanphamId_hidden" type="hidden" value="{{$chitietsanpham->id}}"/>
-                                            <button class="btn_num num_2 button button_qty" onClick="var result = document.getElementById('qtym'); var qtypro = result.value; if( !isNaN( qtypro )) result.value++;return false;" type="button">+</button>
-                                        </div> -->
+                                            <input style="text-align: center;font-weight:bold;font-size: 16px;" class="cart_quantity_input" type="number" name="quantity" value="1" required="" maxlength="2" min="1">
+                                        </div>
                                                                             
                                         <button type="submit" class="btn btn-lg  btn-cart button_cart_buy_enable add_to_cart btn_buy" title="Cho vào giỏ hàng">
                                             <i class="fa fa-shopping-basket hidden" ></i>&nbsp;&nbsp;
@@ -340,15 +337,10 @@
                                     </div>	
                                 </div>	
                                 
+                            
+                                
                                 
                                 <div id="tab-2" class="tab-content">
-                                    <div class="rte">
-                                        Các nội dung Hướng dẫn mua hàng viết ở đây	
-                                    </div>
-                                </div>	
-                                
-                                
-                                <div id="tab-3" class="tab-content">
                                     <div class="rte">
                                         <div id="sapo-product-reviews" class="sapo-product-reviews" data-id="9724997">
                                             <div id="sapo-product-reviews-noitem" style="display: none;">

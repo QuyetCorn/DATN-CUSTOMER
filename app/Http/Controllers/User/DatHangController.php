@@ -27,7 +27,6 @@ class DatHangController extends Controller
             );
 
         $giohang = Session::get('cart');
-
         $khachdathang = new KhachDatHang;
         $khachdathang->email = $req->email;
         $khachdathang->ho_ten = $req->hoten;

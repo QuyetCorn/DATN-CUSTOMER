@@ -324,11 +324,11 @@
                                                                 </th>
                                                                 @if($product['item']['giam_gia']>0)
                                                                     <td class="product__price">
-                                                                        {{number_format($product['item']['gia']*((100-$product['item']['giam_gia'])/100))}}đ
+                                                                        {{number_format($product['so_luong']*($product['item']['gia']*((100-$product['item']['giam_gia'])/100)))}}đ
                                                                     </td>
                                                                 @else
                                                                     <td class="product__price">
-                                                                        {{number_format($product['item']['gia'])}}đ
+                                                                        {{number_format($product['so_luong']*$product['item']['gia'])}}đ
                                                                     </td>
                                                                 @endif
                                                             </tr>

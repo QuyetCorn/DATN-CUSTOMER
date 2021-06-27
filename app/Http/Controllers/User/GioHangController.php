@@ -16,8 +16,11 @@ class GioHangController extends Controller
         $sanpham = ChiTietSanPham::find($id);
         $oldCart = Session('cart')?Session::get('cart'):null;
         $cart = new GioHang($oldCart);
-        $cart->add($sanpham, $id);
+        $quantity = $req->quantity;
+        $cart->add($sanpham,$quantity, $id);
         $req->session()->put('cart',$cart);
+
+        $giohang = new GioHang;
 
         return redirect()->back()->with('message', 'Thêm vào giỏ hàng thành công !');
     }

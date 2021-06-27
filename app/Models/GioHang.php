@@ -8,8 +8,12 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
 
-class GioHang
+class GioHang extends Model
 {
+
+	use HasFactory;
+    protected $table = "gio_hang";
+
 	public $items = null;
 	public $tongSL = 0;
 	public $tongTien = 0;
@@ -22,7 +26,7 @@ class GioHang
 		}
 	}
 
-	public function add($item, $id){
+	public function add($item,$qty, $id){
 		$gia = 0;
 		if($item->giam_gia!=0){
 			   $gia = $item->gia*((100-$item->giam_gia)/100);
@@ -35,10 +39,16 @@ class GioHang
 					  $giohang = $this->items[$id];
 			   }
 		}
-		$giohang['so_luong']++;
+		if($qty != 0){ 
+			$giohang['so_luong']=$qty;
+			$this->tongSL+=$qty;
+		}
+		else {
+			$giohang['so_luong']++;
+			$this->tongSL++;
+		}	
 		$giohang['gia'] = $gia * $giohang['so_luong'];
 		$this->items[$id] = $giohang;
-		$this->tongSL++;
 		$this->tongTien += $gia;
   	}
 
