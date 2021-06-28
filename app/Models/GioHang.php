@@ -18,69 +18,79 @@ class GioHang extends Model
 	public $tongSL = 0;
 	public $tongTien = 0;
 
-	public function __construct($oldCart){
-		if($oldCart){
+	public function __construct($oldCart) {
+		if($oldCart) {
 			$this->items = $oldCart->items;
 			$this->tongSL = $oldCart->tongSL;
 			$this->tongTien = $oldCart->tongTien;
 		}
 	}
 
-	public function add($item,$qty, $id){
+	public function add($item,$qty, $id) {
 		$gia = 0;
-		if($item->giam_gia!=0){
+		if($item->giam_gia!=0) {
 			   $gia = $item->gia*((100-$item->giam_gia)/100);
-		}else{
+		}else {
 			   $gia = $item->gia;
 		}
 		$giohang = ['so_luong'=>0, 'gia' => $gia, 'item' => $item];
-		if($this->items){
+		if($this->items) {
 			   if(array_key_exists($id, $this->items)){
 					  $giohang = $this->items[$id];
 			   }
 		}
-		if($qty != 0){ 
+		if($qty != 0) { 
 			$giohang['so_luong']=$qty;
 			$this->tongSL+=$qty;
+			$this->tongTien += $gia * $giohang['so_luong'];
 		}
 		else {
 			$giohang['so_luong']++;
 			$this->tongSL++;
-		}	
-		$giohang['gia'] = $gia * $giohang['so_luong'];
-		$this->items[$id] = $giohang;
-		$this->tongTien += $gia;
+			$this->tongTien += $gia;
+		}
+		
+		$this->items[$id] = $giohang;	
   	}
 
 
 	//xóa cart
-	public function removeItem($id){
-		$this->tongSL -= $this->items[$id]['so_luong'];
-		$this->tongTien -= $this->items[$id]['gia'];
+	public function removeItem($id) {
+		// $this->tongSL -= $this->items[$id]['so_luong'];
+		// $this->tongTien -= $this->items[$id]['gia'];
+		$this->tongSL = 0;
+		$this->tongTien = 0;
 		unset($this->items[$id]);
 	}
 
-	public function updateQty($item,$qty, $id){
-		if($qty != $this->items[$id]['so_luong']){
+	public function updateQty($item,$qty, $id) {
+		if($qty != $this->items[$id]['so_luong']) {
 			$gia = 0;
-			if($item->giam_gia!=0){
+			if($item->giam_gia!=0) {
+				
 				$gia = $item->gia*((100-$item->giam_gia)/100);
-			}else{
+			}else {
 				$gia = $item->gia;
 			}
-			if($this->items){
-				if(array_key_exists($id, $this->items)){
+			if($this->items) {
+				if(array_key_exists($id, $this->items)) {
 						$giohang = $this->items[$id];
 				}
 			}
+
+			$giaCu = $gia * $this->items[$id]['so_luong'];
+			$soLuongCu = $this->items[$id]['so_luong'];
+
 			$giohang['so_luong']=$qty;
 			$giohang['gia'] = $gia * $giohang['so_luong'];
 			$this->items[$id] = $giohang;
 
-			$tt=$this->items[$id]['so_luong'] - $this->tongSL;
+			$tongSLUpdate = $this->tongSL + $giohang['so_luong'] - $soLuongCu;
+			$this->tongSL = $tongSLUpdate;
+
+			$tongTienUpDate = $this->tongTien + $giohang['gia'] - $giaCu ;
+			$this->tongTien = $tongTienUpDate;
 			
-			$this->tongSL+=$tt;
-			$this->tongTien += $gia;
 		}
 	}
 }

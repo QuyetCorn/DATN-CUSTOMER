@@ -66,6 +66,8 @@ Route::group(['namespace' => 'User'], function() {
     Route::get('/chinhsachthanhtoan', 'TrangChuController@chinhsachthanhtoan')->name('chinhsachthanhtoan');
     Route::get('/chinhsachdoitrabaohanh', 'TrangChuController@chinhsachdoitrabaohanh')->name('chinhsachdoitrabaohanh');
 
+    Route::post('/vacancies/searchcat', 'SanPhamController@searchcat');
+
 
 });
 

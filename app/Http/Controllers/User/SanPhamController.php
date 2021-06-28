@@ -21,4 +21,17 @@ class SanPhamController extends Controller
         $sanpham = ChiTietSanPham::where('giam_gia','<>',0)->get();
         return view('user.page.sanpham',compact('sanpham'));
     }
+
+    public function searchcat()
+    {
+    
+        $cat = \Input::get('cat');
+    
+        $cat = (int) $cat;
+    
+        $vacancies = \Vacancy::where('category_id', '=', $cat)->get();
+    
+        return \View::make('vacancies.empty')->with('vacancies', $vacancies); 
+    
+    }
 }

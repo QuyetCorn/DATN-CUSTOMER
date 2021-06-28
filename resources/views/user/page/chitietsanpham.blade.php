@@ -233,7 +233,7 @@
                                     <div class="taxable">
                                         <span class="valibled">Tình trạng:</span>
                                         <span style="color:red;">
-                                            <span>
+                                            <span style="font-size: 17px; font-weight: bold;">
                                                 
                                                 Hết hàng
                                                 
@@ -261,6 +261,7 @@
                             </div>
                             
                             <div class="form-product col-sm-12 form-border">
+                            @if($chitietsanpham->tinh_trang==1)
                                 <form action="{{route('cart-add',$chitietsanpham->id)}}" method="GET">
                                     
                                     <div class="form-group form_button_details ">
@@ -275,6 +276,7 @@
                                         </button>									
                                     </div>
                                 </form>
+                            @endif
                             </div>
                             
                             

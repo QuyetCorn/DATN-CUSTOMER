@@ -191,7 +191,7 @@
             <li class="filter-item filter-item--check-box filter-item--green">
                 <span>
                     <label for="filter-duoi-100-000d">
-                        <input type="checkbox" id="filter-duoi-100-000d" onchange="toggleFilter(this);" data-group="Khoảng giá" data-field="price_min" data-text="Dưới 100.000đ" value="(<100000)" data-operator="OR">
+                        <input type="checkbox" id="cat1" name="category[]" onchange="toggleFilter(this);" data-group="Khoảng giá" data-field="price_min" data-text="Dưới 100.000đ" value="(<100000)" data-operator="OR">
                         <i class="fa"></i>
                         Giá dưới 100.000đ
                     </label>
@@ -207,7 +207,7 @@
             <li class="filter-item filter-item--check-box filter-item--green">
                 <span>
                     <label for="filter-100-000d-200-000d">
-                        <input type="checkbox" id="filter-100-000d-200-000d" onchange="toggleFilter(this)" data-group="Khoảng giá" data-field="price_min" data-text="100.000đ - 200.000đ" value="(>100000 AND <200000)" data-operator="OR">
+                        <input type="checkbox" id="cat2" name="category[]" onchange="toggleFilter(this)" data-group="Khoảng giá" data-field="price_min" data-text="100.000đ - 200.000đ" value="(>100000 AND <200000)" data-operator="OR">
                         <i class="fa"></i>
                         100.000đ - 200.000đ							
                     </label>
@@ -222,7 +222,7 @@
             <li class="filter-item filter-item--check-box filter-item--green">
                 <span>
                     <label for="filter-200-000d-300-000d">
-                        <input type="checkbox" id="filter-200-000d-300-000d" onchange="toggleFilter(this)" data-group="Khoảng giá" data-field="price_min" data-text="200.000đ - 300.000đ" value="(>200000 AND <300000)" data-operator="OR">
+                        <input type="checkbox" id="cat3" name="category[]" onchange="toggleFilter(this)" data-group="Khoảng giá" data-field="price_min" data-text="200.000đ - 300.000đ" value="(>200000 AND <300000)" data-operator="OR">
                         <i class="fa"></i>
                         200.000đ - 300.000đ							
                     </label>
@@ -237,7 +237,7 @@
             <li class="filter-item filter-item--check-box filter-item--green">
                 <span>
                     <label for="filter-300-000d-500-000d">
-                        <input type="checkbox" id="filter-300-000d-500-000d" onchange="toggleFilter(this)" data-group="Khoảng giá" data-field="price_min" data-text="300.000đ - 500.000đ" value="(>300000 AND <500000)" data-operator="OR">
+                        <input type="checkbox" id="cat4" name="category[]" onchange="toggleFilter(this)" data-group="Khoảng giá" data-field="price_min" data-text="300.000đ - 500.000đ" value="(>300000 AND <500000)" data-operator="OR">
                         <i class="fa"></i>
                         300.000đ - 500.000đ							
                     </label>
@@ -252,7 +252,7 @@
             <li class="filter-item filter-item--check-box filter-item--green">
                 <span>
                     <label for="filter-500-000d-1-000-000d">
-                        <input type="checkbox" id="filter-500-000d-1-000-000d" onchange="toggleFilter(this)" data-group="Khoảng giá" data-field="price_min" data-text="500.000đ - 1.000.000đ" value="(>500000 AND <1000000)" data-operator="OR">
+                        <input type="checkbox" id="cat5" name="category[]" onchange="toggleFilter(this)" data-group="Khoảng giá" data-field="price_min" data-text="500.000đ - 1.000.000đ" value="(>500000 AND <1000000)" data-operator="OR">
                         <i class="fa"></i>
                         500.000đ - 1.000.000đ							
                     </label>
@@ -261,7 +261,7 @@
             <li class="filter-item filter-item--check-box filter-item--green">
                 <span>
                     <label for="filter-tren1-000-000d">
-                        <input type="checkbox" id="filter-tren1-000-000d" onchange="toggleFilter(this)" data-group="Khoảng giá" data-field="price_min" data-text="Trên 1.000.000đ" value="(>1000000)" data-operator="OR">
+                        <input type="checkbox" id="cat6" name="category[]" onchange="toggleFilter(this)" data-group="Khoảng giá" data-field="price_min" data-text="Trên 1.000.000đ" value="(>1000000)" data-operator="OR">
                         <i class="fa"></i>
                         Giá trên 1.000.000đ
                     </label>
@@ -699,6 +699,49 @@ function doSearch(page, options) {
                 $('.aside.aside-mini-products-list.filter').toggleClass('active');
             });
         });
+
+        $(document).ready(function () {
+
+$(':checkbox').click(function (e) {
+
+    e.preventDefault();
+
+    var cat = $(':checkbox:checked').val();
+
+        $.post('/vacancies/searchcat', {cat: cat}, function(markup)
+        {
+            $('#search-results').html(markup);
+        });            
+
+    console.log(cat);
+
+    });
+
+});
+
+$(document).ready(function () {
+
+var categories = [];
+
+// Listen for 'change' event, so this triggers when the user clicks on the checkboxes labels
+$('input[name="category[]"]').on('change', function (e) {
+
+    e.preventDefault();
+    categories = []; // reset 
+
+    $('input[name="category[]"]:checked').each(function()
+    {
+        categories.push($(this).val());
+    });
+
+    $.post('/vacancies/searchcat', {categories: categories}, function(markup)
+    {
+        $('#search-results').html(markup);
+        var count = $('#count').val(); // vacancies count, from hidden input   
+        $(".page-title").html("(" + count + ")");            
+    });            
+
+});
     </script>	
 
             <span class="border-das-sider"></span>

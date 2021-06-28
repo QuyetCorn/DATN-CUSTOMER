@@ -20,7 +20,7 @@ class GioHangController extends Controller
         $cart->add($sanpham,$quantity, $id);
         $req->session()->put('cart',$cart);
 
-        $giohang = new GioHang;
+        // $giohang = new GioHang;
 
         return redirect()->back()->with('message', 'Thêm vào giỏ hàng thành công !');
     }
