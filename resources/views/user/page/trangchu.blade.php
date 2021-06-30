@@ -197,7 +197,7 @@
         </section>
     </section>
     
-    <section class="awe-section-3">
+    <!-- <section class="awe-section-3">
         <h3 class="hidden">&nbsp;</h3>
         <link rel="preload" as="script" href="//bizweb.dktcdn.net/100/286/794/themes/637857/assets/jquery-cycle22.js?1618737291739" />
         <script src="//bizweb.dktcdn.net/100/286/794/themes/637857/assets/jquery-cycle22.js?1618737291739" type="text/javascript"></script>
@@ -208,14 +208,14 @@
                         <h2 class="title_head_ border_content">
                             <a href="{{route('sanphamnew')}}" title="Sản phẩm Mới" >Sản Phẩm Mới</a>
                         </h2>
-                        <!-- Nav tabs -->
+                         
                         <div class="loop_two_ctrl visible-xs">
                             <span id="loop_two_prev">&lt;</span>
                             <span id="loop_two_next">&gt;</span>
                         </div>
     
                     </div>
-                    <!-- Tab panes -->
+                    
                     <div class="tab-content">
                       
                         <div role="tabpanel" class="tab-pane active" id="tab21">
@@ -298,7 +298,7 @@
                 </div>
             </div>
         </section>
-    </section>
+    </section> -->
 
     <section class="awe-section-6">
         <h3 class="hidden">&nbsp;</h3>
@@ -536,7 +536,7 @@
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 dear_title">
                         <h2 class="title_head_ border_content">
-                            <a href="#" title="Đối tác">Đối tác</a>
+                            <a href="#" title="Thương Hiệu">Thương Hiệu</a>
                         </h2>
                     </div>
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 wrap_owl_product_">
