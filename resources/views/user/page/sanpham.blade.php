@@ -45,15 +45,15 @@
                 <div id="sort-by">
                     <label class="left hidden-xs">Sắp xếp: </label>
                     <div class="border_sort">
-                        <select onChange="sortby(this.value)">
-                            <option class="valued" value="default">Mặc định</option>
-                            <option value="price-asc">Giá tăng dần</option>
-                            <option value="price-desc">Giá giảm dần</option>
-                            <option value="alpha-asc">Từ A-Z</option>
-                            <option value="alpha-desc">Từ Z-A</option>
-                            <option value="created-asc">Mới đến cũ</option>
-                            <option value="created-desc">Cũ đến mới</option>
-                        </select>
+                            <select name="sort" id="sort">
+                                <option class="valued" value="{{Request::url()}}?sort_by=none">Mặc định</option>
+                                <option value="{{Request::url()}}?sort_by=tang-dan">Giá tăng dần</option>
+                                <option value="{{Request::url()}}?sort_by=giam-dan">Giá giảm dần</option>
+                                <option value="{{Request::url()}}?sort_by=moi-cu">Mới đến cũ</option>
+                                <option value="{{Request::url()}}?sort_by=cu-moi">Cũ đến mới</option>
+                                <option value="{{Request::url()}}?sort_by=A-Z">Từ A->Z</option>
+                                <option value="{{Request::url()}}?sort_by=Z-A">Từ Z->A</option>
+                            </select>        
                     </div>
                 </div>
             </div>
@@ -182,13 +182,22 @@
         <div class="title_module"><h2><span>Khoảng giá</span></h2></div>
     </div>
     <div class="aside-content filter-group">
-        <ul>
+        <ul name="sort-price" id="sort-price" >
+
+            <li><a href="{{Request::url()}}?price=1">Dưới 300.000 đ</a></li>
+            <li><a href="{{Request::url()}}?price=2">Từ 300.000 đ -> 500.000 đ</a></li>
+            <li><a href="{{Request::url()}}?price=3">Từ 500.000 đ -> 700.000 đ</a></li>
+            <li><a href="{{Request::url()}}?price=4">Từ 700.000 đ -> 1.000.000 đ</a></li>
+            <li><a href="{{Request::url()}}?price=5">Từ 1.000.000 đ -> 1.200.000 đ</a></li>
+            <li><a href="{{Request::url()}}?price=6">Từ 1.200.000 đ -> 1.500.000 đ</a></li>
+            <li><a href="{{Request::url()}}?price=7">Từ 1.500.000 đ -> 2.000.000 đ</a></li>
+            <li><a href="{{Request::url()}}?price=8">Lớn hơn 2.000.000 đ</a></li>
              
             
             
             
             
-            <li class="filter-item filter-item--check-box filter-item--green">
+            <!-- <li class="filter-item filter-item--check-box filter-item--green">
                 <span>
                     <label for="filter-duoi-100-000d">
                         <input type="checkbox" id="cat1" name="category[]" onchange="toggleFilter(this);" data-group="Khoảng giá" data-field="price_min" data-text="Dưới 100.000đ" value="(<100000)" data-operator="OR">
@@ -266,7 +275,7 @@
                         Giá trên 1.000.000đ
                     </label>
                 </span>
-            </li>
+            </li> -->
                                                         
             
                                             
@@ -274,7 +283,7 @@
     </div>
 </aside>
 
-<aside class="aside-item filter-tag-style-1">
+<!-- <aside class="aside-item filter-tag-style-1">
     <div class="aside-title aside-title-fillter">
         <div class="title_module"><h2><span>Màu sắc</span></h2></div>
     </div>
@@ -358,391 +367,11 @@
 
         </ul>
     </div>
-</aside>
+</aside> -->
 
 
 
 </div>
-
-<script>
-var selectedSortby;
-var tt = 'Thứ tự';
-var selectedViewData = "data";
-var filter = new Bizweb.SearchFilter()
-
-filter.addValue("collection", "collections", "1436287", "AND");
-
-function toggleFilter(e) {
-    _toggleFilter(e);
-    renderFilterdItems();
-    doSearch(1);
-}
-function _toggleFilterdqdt(e) {
-    var $element = $(e);
-    var group = 'Khoảng giá';
-    var field = 'price_min';
-    var operator = 'OR';	 
-    var value = $element.attr("data-value");	
-    filter.deleteValuedqdt(group, field, value, operator);
-    filter.addValue(group, field, value, operator);
-    renderFilterdItems();
-    doSearch(1);
-}
-
-function _toggleFilter(e) {
-    var $element = $(e);
-    var group = $element.attr("data-group");
-    var field = $element.attr("data-field");
-    var text = $element.attr("data-text");
-    var value = $element.attr("value");
-    var operator = $element.attr("data-operator");
-    var filterItemId = $element.attr("id");
-
-    if (!$element.is(':checked')) {
-        filter.deleteValue(group, field, value, operator);
-    }
-    else{
-        filter.addValue(group, field, value, operator);
-    }
-
-    $(".catalog_filters li[data-handle='" + filterItemId + "']").toggleClass("active");
-}
-
-function renderFilterdItems() {
-    var $container = $(".filter-container__selected-filter-list ul");
-    $container.html("");
-
-    $(".filter-container input[type=checkbox]").each(function(index) {
-        if ($(this).is(':checked')) {
-            var id = $(this).attr("id");
-            var name = $(this).closest("label").text();
-
-            addFilteredItem(name, id);
-        }
-    });
-
-    if($(".filter-container input[type=checkbox]:checked").length > 0)
-        $(".filter-container__selected-filter").show();
-    else
-        $(".filter-container__selected-filter").hide();
-}
-function addFilteredItem(name, id) {
-    var filteredItemTemplate = "<li class='filter-container__selected-filter-item' for='{3}'><a href='javascript:void(0)' onclick=\"{0}\"><i class='fa fa-close'></i> {1}</a></li>";
-    filteredItemTemplate = filteredItemTemplate.replace("{0}", "removeFilteredItem('" + id + "')");
-    filteredItemTemplate = filteredItemTemplate.replace("{1}", name);
-    filteredItemTemplate = filteredItemTemplate.replace("{3}", id);
-    var $container = $(".filter-container__selected-filter-list ul");
-    $container.append(filteredItemTemplate);
-}
-function removeFilteredItem(id) {
-    $(".filter-container #" + id).trigger("click");
-}
-function clearAllFiltered() {
-    filter = new Bizweb.SearchFilter();
-    
-    filter.addValue("collection", "collections", "1436287", "AND");
-    
-
-    $(".filter-container__selected-filter-list ul").html("");
-    $(".filter-container input[type=checkbox]").attr('checked', false);
-    $(".filter-container__selected-filter").hide();
-
-    doSearch(1);
-}
-function doSearch(page, options) {
-    if(!options) options = {};
-           //NProgress.start();
-           $('.aside.aside-mini-products-list.filter').removeClass('active');
-           awe_showPopup('.loading');
-           filter.search({
-               view: selectedViewData,
-               page: page,
-               sortby: selectedSortby,
-               success: function (html) {
-                   var $html = $(html);
-                   // Muốn thay thẻ DIV nào khi filter thì viết như này
-                   var $categoryProducts = $($html[0]); 
-                   var xxx = $categoryProducts.find('.call-count');
-                   $('.tt span').text(xxx.text());
-
-                   $(".category-products").html($categoryProducts.html());
-                   pushCurrentFilterState({sortby: selectedSortby, page: page});
-                   awe_hidePopup('.loading');
-                   initQuickView();
-                   $('.add_to_cart').click(function(e){
-                       e.preventDefault();
-                       var $this = $(this);						   
-                       var form = $this.parents('form');						   
-                       $.ajax({
-                           type: 'POST',
-                           url: '/cart/add.js',
-                           async: false,
-                           data: form.serialize(),
-                           dataType: 'json',
-                           error: addToCartFail,
-                           beforeSend: function() {  
-                               if(window.theme_load == "icon"){
-                                   awe_showLoading('.btn-addToCart');
-                               } else{
-                                   awe_showPopup('.loading');
-                               }
-                           },
-                           success: addToCartSuccess,
-                           cache: false
-                       });
-                   });
-                   $('html, body').animate({
-                       scrollTop: $('.category-products').offset().top
-                   }, 0);
-
-                   // setTimeout(function(){					 
-                   // 	owl_thumb_image();
-                   // 	hover_thumb_image();
-                   // },200);
-                   // count_product();
-                   
-                   resortby(selectedSortby);
-                   callbackW();
-                   $('.open-filters').removeClass('open');
-                   $('.dqdt-sidebar').removeClass('open');
-                   $('.tt span').text(xxx.text());
-                   if (window.BPR !== undefined){
-                   return window.BPR.initDomEls(), window.BPR.loadBadges();
-               }
-
-
-                }
-            });		
-
-        }
-
-        function sortby(sort) {			 
-            switch(sort) {
-                case "price-asc":
-                selectedSortby = "price_min:asc";					   
-                break;
-                case "price-desc":
-                selectedSortby = "price_min:desc";
-                break;
-                case "alpha-asc":
-                selectedSortby = "name:asc";
-                break;
-                case "alpha-desc":
-                selectedSortby = "name:desc";
-                break;
-                case "created-desc":
-                selectedSortby = "created_on:desc";
-                break;
-                case "created-asc":
-                selectedSortby = "created_on:asc";
-                break;
-                default:
-                selectedSortby = "";
-                break;
-            }
-
-            doSearch(1);
-        }
-
-        function resortby(sort) {
-            switch(sort) {				  
-                case "price_min:asc":
-                tt = "Giá tăng dần";
-                break;
-                case "price_min:desc":
-                tt = "Giá giảm dần";
-                break;
-                case "name:asc":
-                tt = "Từ A-Z";
-                break;
-                case "name:desc":
-                tt = "Từ Z-A";
-                break;
-                case "created_on:desc":
-                tt = "Cũ đến mới";
-                break;
-                case "created_on:asc":
-                tt = "Mới đến cũ";
-                break;
-                default:
-                tt = "Mặc định";
-                break;
-            }			   
-            $('#sort-by > div > select .valued').html(tt);
-
-
-        }
-
-
-        function _selectSortby(sort) {			 
-            resortby(sort);
-            switch(sort) {
-                case "price-asc":
-                selectedSortby = "price_min:asc";
-                break;
-                case "price-desc":
-                selectedSortby = "price_min:desc";
-                break;
-                case "alpha-asc":
-                selectedSortby = "name:asc";
-                break;
-                case "alpha-desc":
-                selectedSortby = "name:desc";
-                break;
-                case "created-desc":
-                selectedSortby = "created_on:desc";
-                break;
-                case "created-asc":
-                selectedSortby = "created_on:asc";
-                break;
-                default:
-                selectedSortby = sort;
-                break;
-            }
-        }
-
-        function toggleCheckbox(id) {
-            $(id).click();
-        }
-
-        function pushCurrentFilterState(options) {
-
-            if(!options) options = {};
-            var url = filter.buildSearchUrl(options);
-            var queryString = url.slice(url.indexOf('?'));			  
-            if(selectedViewData == 'data_list'){
-                queryString = queryString + '&view=list';				 
-            }
-            else{
-                queryString = queryString + '&view=grid';				   
-            }
-
-            pushState(queryString);
-        }
-
-        function pushState(url) {
-            window.history.pushState({
-                turbolinks: true,
-                url: url
-            }, null, url)
-        }
-        function switchView(view) {			  
-            switch(view) {
-                case "list":
-                selectedViewData = "data_list";					   
-                break;
-                default:
-                selectedViewData = "data";
-
-                break;
-            }			   
-            var url = window.location.href;
-           var page = getParameter(url, "page");
-           if(page != '' && page != null){
-               doSearch(page);
-           }else{
-               doSearch(1);
-           }
-        }
-
-        function selectFilterByCurrentQuery() {
-            var isFilter = false;
-            var url = window.location.href;
-            var queryString = decodeURI(window.location.search);
-            var filters = queryString.match(/\(.*?\)/g);
-            if(queryString) {
-               isFilter = true;
-           }
-            if(filters && filters.length > 0) {
-                filters.forEach(function(item) {
-                    item = item.replace(/\(\(/g, "(");
-                    var element = $(".filter-container input[value='" + item + "']");
-                    element.attr("checked", "checked");
-                    _toggleFilter(element);
-                });
-
-                isFilter = true;
-            }
-
-            var sortOrder = getParameter(url, "sortby");
-            if(sortOrder) {
-                _selectSortby(sortOrder);
-            }
-
-            if(isFilter) {
-                doSearch(1);
-            }
-        }
-
-        function getParameter(url, name) {
-            name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-            var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
-            results = regex.exec(url);
-            return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-        }
-
-        $( document ).ready(function() {
-            selectFilterByCurrentQuery();
-            $('.filter-group .filter-group-title').click(function(e){
-                $(this).parent().toggleClass('active');
-            });
-
-            $('.filter-mobile').click(function(e){
-                $('.aside.aside-mini-products-list.filter').toggleClass('active');
-            });
-
-            $('#show-admin-bar').click(function(e){
-                $('.aside.aside-mini-products-list.filter').toggleClass('active');
-            });
-
-            $('.filter-container__selected-filter-header-title').click(function(e){
-                $('.aside.aside-mini-products-list.filter').toggleClass('active');
-            });
-        });
-
-        $(document).ready(function () {
-
-$(':checkbox').click(function (e) {
-
-    e.preventDefault();
-
-    var cat = $(':checkbox:checked').val();
-
-        $.post('/vacancies/searchcat', {cat: cat}, function(markup)
-        {
-            $('#search-results').html(markup);
-        });            
-
-    console.log(cat);
-
-    });
-
-});
-
-$(document).ready(function () {
-
-var categories = [];
-
-// Listen for 'change' event, so this triggers when the user clicks on the checkboxes labels
-$('input[name="category[]"]').on('change', function (e) {
-
-    e.preventDefault();
-    categories = []; // reset 
-
-    $('input[name="category[]"]:checked').each(function()
-    {
-        categories.push($(this).val());
-    });
-
-    $.post('/vacancies/searchcat', {categories: categories}, function(markup)
-    {
-        $('#search-results').html(markup);
-        var count = $('#count').val(); // vacancies count, from hidden input   
-        $(".page-title").html("(" + count + ")");            
-    });            
-
-});
-    </script>	
 
             <span class="border-das-sider"></span>
         </aside>

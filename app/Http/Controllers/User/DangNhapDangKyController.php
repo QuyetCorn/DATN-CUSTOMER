@@ -72,13 +72,14 @@ class DangNhapDangKyController extends Controller
             'password.min'=>'Mật khẩu ít nhất 6 ký tự!',
             'password.max'=>'Mật khẩu không quá 20 ký tự!'
         ]);
+        $remember_me  = ( !empty( $request->remember_me ) )? TRUE : FALSE;
         
         $credentials = [
             'email'         => $request->email,
             'password'      => $request->password
         ];
 
-        if(Auth::attempt($credentials)) {
+        if(Auth::attempt($credentials,$remember_me)) {
             return redirect()->route('trangchu');
         } else{
             return back()->with('message','Email hoặc mật khẩu chưa chính xác!');
@@ -87,7 +88,7 @@ class DangNhapDangKyController extends Controller
 
     public function dangxuat() {
         Auth::logout();
-        return redirect()->route('trangchu');
+        return back();
     }
 
   

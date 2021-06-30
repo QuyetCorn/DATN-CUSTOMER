@@ -47,8 +47,8 @@
 				<input type="password" name="password" placeholder="MẬT KHẨU" >
 				<ul class="agileinfotickwthree">
 					<li>
-						<input type="checkbox" id="brand1" value="">
-						<label for="brand1"><span></span>Nhớ Mật Khẩu</label>
+						<input type="checkbox" name="remember_me" value="remember_me">
+						<label for="remember_me"><span></span>Nhớ Mật Khẩu</label>
 						<a href="#">Quên Mật Khẩu?</a>
 					</li>
 				</ul>

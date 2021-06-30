@@ -218,7 +218,7 @@
 
 
 
-                                @if($chitietsanpham->tinh_trang==1)
+                                @if($chitietsanpham->so_luong>0)
                                     <div class="taxable">
                                         <span class="valibled">Tình trạng:</span>
                                         <span style="color:green;">
