@@ -68,6 +68,8 @@ Route::group(['namespace' => 'User'], function() {
 
     Route::post('/vacancies/searchcat', 'SanPhamController@searchcat');
 
+    Route::post('insert-rating','CTSPController@insert_rating')->name('insert_rating');
+
 
 });
 

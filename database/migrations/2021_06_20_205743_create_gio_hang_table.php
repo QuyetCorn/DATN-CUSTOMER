@@ -15,9 +15,11 @@ class CreateGioHangTable extends Migration
     {
         Schema::create('gio_hang', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('khach_hang_id');
+            $table->foreignId('khach_dat_hang_id');
             $table->string('ma_gio_hang');
             $table->string('tong_tien')->default(0);
+            $table->datetime('ngay_dat');
+            $table->string('ghi_chu', 255)->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

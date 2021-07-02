@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateHoaDon extends Migration
+class CreateDanhGiaTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,11 @@ class CreateHoaDon extends Migration
      */
     public function up()
     {
-        Schema::create('hoa_don', function (Blueprint $table) {
+        Schema::create('danh_gia', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('khach_dat_hang_id');
-            $table->double('tong_tien');
-            $table->datetime('ngay_dat');
-            $table->string('ghi_chu', 255)->nullable();
+            $table->foreignId('chi_tiet_sp_id');
+            $table->integer('diem',1);
             $table->timestamps();
-            $table->softDeletes();
         });
     }
 
@@ -31,6 +28,6 @@ class CreateHoaDon extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('hoa_don');
+        Schema::dropIfExists('danh_gia');
     }
 }

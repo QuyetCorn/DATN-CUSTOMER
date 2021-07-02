@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\KhachDatHang;
 use App\Models\HoaDon;
+use App\Models\GioHang;
 use App\Models\ChiTietHoaDon;
 use Illuminate\Support\Facades\Session;
 use App\Http\Controllers\User\datetime;
@@ -41,6 +42,13 @@ class DatHangController extends Controller
         $hoadon->tong_tien = $giohang->tongTien;
         $hoadon->ghi_chu = $req->ghichu;
         $hoadon->save();
+
+        // $giohang1 = new GioHang;
+        // $giohang1->khach_dat_hang_id = $khachdathang->id;
+        // $giohang1->ngay_dat = date('Y-m-d');
+        // $giohang1->tong_tien = $giohang->tongTien;
+        // $giohang1->ghi_chu = $req->ghichu;
+        // $giohang1->save();
 
         foreach($giohang->items as $key => $value) {
             $chitiethoadon = new ChiTietHoaDon;

@@ -160,7 +160,7 @@
             
 
 <div class="aside-filter">
-<div class="filter-container thismobile">	
+<!-- <div class="filter-container thismobile">	
     <div class="filter-container__selected-filter" style="display: none;">
         <div class="filter-container__selected-filter-header clearfix">
             <span class="filter-container__selected-filter-header-title"><i class="fa fa-arrow-left hidden-sm-up"></i> Bạn chọn</span>
@@ -170,7 +170,7 @@
             <ul></ul>
         </div>
     </div>
-</div>
+</div> -->
 <div class="aside-title-filter">
     <h2><span>Tìm theo</span></h2>
 </div>

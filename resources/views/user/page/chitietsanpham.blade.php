@@ -265,15 +265,16 @@
                                 <form action="{{route('cart-add',$chitietsanpham->id)}}" method="GET">
                                     
                                     <div class="form-group form_button_details ">
-                                        <header class="not_bg ">Số lượng:</header>
+                                        <header style="font-weight:bold;font-size: 18px;" class="not_bg ">Số lượng:</header>
                                         <div class="custom input_number_product custom-btn-number form-control">									
-                                            <input style="text-align: center;font-weight:bold;font-size: 16px;" class="cart_quantity_input" type="number" name="quantity" value="1" required="" maxlength="2" min="1">
+                                            <input style="text-align: center;font-weight:bold;font-size: 18px;" class="cart_quantity_input" type="number" name="quantity" value="1" required="" maxlength="2" min="1">
                                         </div>
                                                                             
                                         <button type="submit" class="btn btn-lg  btn-cart button_cart_buy_enable add_to_cart btn_buy" title="Cho vào giỏ hàng">
-                                            <i class="fa fa-shopping-basket hidden" ></i>&nbsp;&nbsp;
+                                            <i class="fa fa-shopping-basket hidden" ></i>
                                             <span style="font-size: 16px; font-weight: bold;"  >THÊM VÀO GIỎ HÀNG</span>
-                                        </button>									
+                                        </button>
+                                        <br><br>
                                     </div>
                                 </form>
                             @endif
@@ -315,7 +316,7 @@
                                         <h3><span>Thông tin sản phẩm</span></h3>
                                     </li>																	 
                                     
-                                    <li class="tab-link" data-tab="tab-3">
+                                    <li class="tab-link" data-tab="tab-2">
                                         <h3><span>Đánh giá(APP)</span></h3>
                                     </li>																	
                                     
@@ -334,7 +335,9 @@
                                             - Ngăn laptop: &nbsp;{{$chitietsanpham->ngan}}</p>
                                         <p style="text-align: center;">&nbsp;</p>
                                         <p style="text-align: center;">&nbsp;</p>
+                                        <iframe width="810" height="480" src="https://www.youtube.com/embed/Gv5a70e6FDk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                         <p style="text-align: center;">
+                                        
                                         <img alt="{{$chitietsanpham->ten_sp}}" data-thumb="original" original-height="800" original-width="800" src="assets/images/{{$chitietsanpham->hinh_anh}}" /></p>                                 
                                     </div>	
                                 </div>	
@@ -355,17 +358,39 @@
                                                 </div>
                                             </div>
 
-                                    </div>
+                                         </div>
 
-                                </div>
-                            </div>	
+                                         <ul class="list-inline" title="Điểm trung bình đánh giá">
+                                            @for($count=1;$count<=5;$count++)
+                                                @php
+                                                    if($count <= $rating) {
+                                                        $color = 'color:#ffcc00;';
+                                                    }
+                                                    else {
+                                                        $color = 'color:#ccc;';
+                                                    }
+                                                @endphp
+                                                <li title="Đánh giá sao"
+                                                    id=""
+                                                    data-index="{{$count}}"
+                                                    data-chi_tiet_sp_id="{{$chitietsanpham->id}}"
+                                                    data-rating="$rating"
+                                                    class="rating"
+                                                    style="cursor:pointer;{{$color}} font-size:30px;">
+                                                    &#9733;
+                                                    </li>
+                                            @endfor                                              
+                                        </ul>
+
+                                    </div>
+                                </div>	
                                 
+                            </div>
                         </div>
-                    </div>
                         
 
+                    </div>
                 </div>
-            </div>
                 
 
 
@@ -475,6 +500,60 @@
             console.log('2');
         }
 
+        //Xóa màu khi hover chuột đến
+        function remove_background(chitietspid) {
+            for(var count = 1; count <=5; count++) {
+                $('#' +chitietspid+ '-' +count).css('color','#ccc');
+            }
+        }
+        //Hover chuột đánh giá sao
+        $(document).on('mouseenter','.rating',function() {
+            var index = $(this).data('index');
+            var chitietspid = $(this).data('chi_tiet_sp_id');
+
+            remove_background(chitietspid);
+
+            // alert(index);
+            // alert(chitietspid);
+
+            for(var count = 1; count <= index; count++) {
+                $('#'+chitietspid+'-'+count).css('color','#ffcc00');  
+            }
+        });
+
+        //Nhả chuột không đánh giá
+        $(document).on('mouseleave','.rating',function() {
+            var index = $(this).data('index');
+            var chitietspid = $(this).data('chi_tiet_sp_id');
+            var rating = $(this).data('rating');
+
+            remove_background(chitietspid);
+            for(var count=1; count<=index; count++) {
+                $('#'+chitietspid+'-'+count).css('color','#ffcc00');  
+            }
+
+        })
+
+        $(document).on('click','.rating',function() {
+            var index = $(this).data('index');
+            var chitietspid = $(this).data('chi_tiet_sp_id');
+            var _token = $('input[name="_token"]').val();
+            $.ajax({
+                url:"{{url('insert-rating')}}",
+                method:"POST",
+                data:{index:index,chitietspid:chitietspid,_token:_token},
+                success:function(data) {
+                    if(data == 'done') {
+                        alert("Bạn đã đánh giá " +index+" trên 5 sao");
+                    }
+                    else {
+                        alert("Lỗi đánh giá");
+                    }
+                }
+            })
+
+        })
+
         $("#gallery_02").owlCarousel({
             navigation : true,
             nav: true,
@@ -575,7 +654,7 @@ setTimeout(function(){
     
 
 
-@endsection	
+
 
 
     <script type='text/javascript'>
@@ -585,3 +664,4 @@ setTimeout(function(){
     </script>
 </body>
 </html>
+@endsection	

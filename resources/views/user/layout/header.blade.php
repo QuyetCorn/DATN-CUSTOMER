@@ -212,11 +212,11 @@
                                             SẢN PHẨM SALE </a>
                                 </li>
 
-                                <!-- <li class=" nav-item nav-items ">
+                                <li class=" nav-item nav-items ">
 
                                     <a href="{{route('sanphamnew')}}" class="nav-link">
                                             SẢN PHẨM MỚI </a>
-                                </li> -->
+                                </li>
 
 
                                 <li class=" nav-item nav-items ">
