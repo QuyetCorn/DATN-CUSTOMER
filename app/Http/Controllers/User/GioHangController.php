@@ -36,7 +36,7 @@ class GioHangController extends Controller
     public function index(Request $req)
     {
         $chitietsanpham = ChiTietSanPham::where('id',$req->id)->first();
-        return view('user.page.giohang');
+        return view('user.page.gio-hang.giohang');
     }
 
     public function updateCartQty(Request $req, $id) {

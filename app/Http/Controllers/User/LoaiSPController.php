@@ -67,6 +67,6 @@ class LoaiSPController extends Controller
 
         }
         
-        return view('user.page.loai_sp',compact('sp_theoloai','loaisp'));
+        return view('user.page.loai-san-pham.loai_sp',compact('sp_theoloai','loaisp'));
     }
 }

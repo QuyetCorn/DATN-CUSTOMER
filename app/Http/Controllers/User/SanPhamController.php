@@ -66,7 +66,7 @@ class SanPhamController extends Controller
 
         }
 
-        return view('user.page.sanpham',compact('sanpham'));
+        return view('user.page.san-pham.sanpham',compact('sanpham'));
     }
     public function new() {
         $sanpham = ChiTietSanPham::where('new',1)->get();
@@ -126,7 +126,7 @@ class SanPhamController extends Controller
 
         }
   
-        return view('user.page.sanpham',compact('sanpham'));
+        return view('user.page.san-pham.sanpham',compact('sanpham'));
     }
 
     public function sale() {
@@ -186,7 +186,7 @@ class SanPhamController extends Controller
 
         }
 
-        return view('user.page.sanpham',compact('sanpham'));
+        return view('user.page.san-pham.sanpham',compact('sanpham'));
 
     }
 

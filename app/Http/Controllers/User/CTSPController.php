@@ -22,7 +22,7 @@ class CTSPController extends Controller
         $rating = DanhGia::where('chi_tiet_sp_id',$chitietsanpham->id)->avg('diem');
         $rating = round($rating);
 
-        return view('user.page.chitietsanpham',compact('chitietsanpham','sanphamtuongtu','loai_sp','sanphamsale','rating'));
+        return view('user.page.san-pham.chitietsanpham',compact('chitietsanpham','sanphamtuongtu','loai_sp','sanphamsale','rating'));
     }
 
     public function insert_rating(Request $req) {

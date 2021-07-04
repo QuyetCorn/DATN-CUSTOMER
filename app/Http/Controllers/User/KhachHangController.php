@@ -13,7 +13,7 @@ class KhachHangController extends Controller
 {
     public function nguoidung($id) {
         $user = khachhang::findOrFail($id);
-        return view('user.page.nguoidung',compact('user'));
+        return view('user.page.nguoi-dung.nguoidung',compact('user'));
     }
 
     public function doipassword($id,request $request) {
@@ -73,7 +73,7 @@ class KhachHangController extends Controller
         $user->gioi_tinh= $request->type;
         if( $user->save())
         Session::flash('message', 'Đổi thông tin thành công!');
-        return view('user.page.nguoidung',compact('user'));
+        return view('user.page.nguoi-dung.nguoidung',compact('user'));
         return back();
     }
 }

@@ -8,6 +8,6 @@ use Illuminate\Http\Request;
 class LienHeController extends Controller
 {
     public function index() {
-        return view('user.page.lienhe');
+        return view('user.page.trang-chu.lienhe');
     }
 }

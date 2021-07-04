@@ -17,20 +17,20 @@ class TrangChuController extends Controller
         $sanpham = ChiTietSanPham::All();
         // $sanphammoi = ChiTietSanPham::where('new',1)->get();
         $sanphamsale = ChiTietSanPham::where('giam_gia','<>',0)->get();
-        return view('user.page.trangchu',compact('slide','sup_slide','sanpham','sanphamsale'));
+        return view('user.page.trang-chu.trangchu',compact('slide','sup_slide','sanpham','sanphamsale'));
     }
 
     public function search(Request $req) {
         $sanpham = ChiTietSanPham::where('ten_sp','like','%'.$req->key.'%')
                                 ->orWhere('gia',$req->key)
                                 ->get();
-        return view('user.page.search',compact('sanpham'));
+        return view('user.page.trang-chu.search',compact('sanpham'));
     }
 
     public function chinhsachthanhtoan(){
-        return view('user.page.chinhsachthanhtoan');
+        return view('user.page.chinh-sach.chinhsachthanhtoan');
     }
     public function chinhsachdoitrabaohanh(){
-        return view('user.page.chinhsachdoitrabaohanh');
+        return view('user.page.chinh-sach.chinhsachdoitrabaohanh');
     }
 }
