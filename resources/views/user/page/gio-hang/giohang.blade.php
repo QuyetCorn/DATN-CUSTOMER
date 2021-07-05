@@ -80,14 +80,14 @@
                                             <div style="width: 26%" class="a-center">
                                                 @if($product['item']['giam_gia']>0)
                                                     
-                                                        <span class="price product-price-old">{{number_format($product['item']['gia'])}}đ</span>
+                                                        <span class="price product-price-old">{{number_format($product['item']['gia'],0,",",".")}} đ</span>
                                                     
                                                     
-                                                        <span class="price product-price" style="color: #000ed0;font-size:20px;font-weight:bold;">{{number_format($product['item']['gia']*((100-$product['item']['giam_gia'])/100))}}đ</span>
+                                                        <span class="price product-price" style="color: #000ed0;font-size:20px;font-weight:bold;">{{number_format($product['item']['gia']*((100-$product['item']['giam_gia'])/100),0,",",".")}} đ</span>
                                                     
                                                 @else
                                                     
-                                                        <span class="price product-price" style="color: #000ed0;font-size:20px;font-weight:bold;">{{number_format($product['item']['gia'])}}đ</span>
+                                                        <span class="price product-price" style="color: #000ed0;font-size:20px;font-weight:bold;">{{number_format($product['item']['gia'],0,",",".")}} đ</span>
                                                     
                                                 @endif
                                             </div>
@@ -106,7 +106,7 @@
                                                 <div style="width: 15%; font-size:19px; font-weight:bold;color:#000000" class="a-right">
                                                     <span class="cart-price"> 
                                                         <span style="font-size:20px; font-weight:bold;color:#000ed0" class="price">
-                                                            {{number_format($product['so_luong']*$product['item']['gia']*((100-$product['item']['giam_gia'])/100))}}đ
+                                                            {{number_format($product['so_luong']*$product['item']['gia']*((100-$product['item']['giam_gia'])/100),0,",",".")}} đ
                                                         </span>
                                                     </span>
                                                 </div>
@@ -115,7 +115,7 @@
                                                 <div style="width: 15%; font-size:19px; font-weight:bold;color:#000000" class="a-right">
                                                     <span class="cart-price"> 
                                                         <span style="font-size:20px; font-weight:bold;color:#000ed0" class="price">
-                                                            {{number_format($product['so_luong']*$product['item']['gia'])}}đ
+                                                            {{number_format($product['so_luong']*$product['item']['gia'],0,",",".")}} đ
                                                         </span>
                                                     </span>
                                                 </div>

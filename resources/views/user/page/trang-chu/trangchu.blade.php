@@ -159,9 +159,9 @@
     
                                             <div class="price-box clearfix">
                                                 <span class="price product-price-old">
-                                                    {{number_format($sp->gia)}}đ
+                                                    {{number_format($sp->gia,0,",",".")}} đ
                                                 </span>
-                                                <span class="price product-price">{{number_format($sp->gia*((100-$sp->giam_gia)/100))}}đ</span>
+                                                <span class="price product-price">{{number_format($sp->gia*((100-$sp->giam_gia)/100),0,",",".")}} đ</span>
                                             </div>
     
     
@@ -263,9 +263,9 @@
                 
                                                         <div class="price-box clearfix">
                                                             <span class="price product-price-old">
-                                                                {{number_format($sp->gia)}}đ
+                                                                {{number_format($sp->gia,0,",",".")}} đ
                                                             </span>
-                                                            <span class="price product-price">{{number_format($sp->gia*((100-$sp->giam_gia)/100))}}đ</span>
+                                                            <span class="price product-price">{{number_format($sp->gia*((100-$sp->giam_gia)/100),0,",",".")}} đ</span>
                                                         </div>
                 
                 

@@ -108,13 +108,13 @@
                                     
                                     
                                     
-                                    {{number_format($sp->gia)}}đ		
+                                    {{number_format($sp->gia,0,",",".")}} đ		
                                 </span>		
-                                <span class="price product-price">{{number_format($sp->gia*((100-$sp->giam_gia)/100))}}đ</span>
+                                <span class="price product-price">{{number_format($sp->gia*((100-$sp->giam_gia)/100),0,",",".")}} đ</span>
                             </div>
                         @else
                             <div class="price-box clearfix">
-                                <span class="price product-price">{{number_format($sp->gia)}}đ</span>
+                                <span class="price product-price">{{number_format($sp->gia,0,",",".")}} đ</span>
                             </div>
                         @endif
 
@@ -185,12 +185,12 @@
         <ul name="sort-price" id="sort-price" >
 
             <li><a href="{{Request::url()}}?price=1">Dưới 300.000 đ</a></li>
-            <li><a href="{{Request::url()}}?price=2">Từ 300.000 đ -> 500.000 đ</a></li>
-            <li><a href="{{Request::url()}}?price=3">Từ 500.000 đ -> 700.000 đ</a></li>
-            <li><a href="{{Request::url()}}?price=4">Từ 700.000 đ -> 1.000.000 đ</a></li>
-            <li><a href="{{Request::url()}}?price=5">Từ 1.000.000 đ -> 1.200.000 đ</a></li>
-            <li><a href="{{Request::url()}}?price=6">Từ 1.200.000 đ -> 1.500.000 đ</a></li>
-            <li><a href="{{Request::url()}}?price=7">Từ 1.500.000 đ -> 2.000.000 đ</a></li>
+            <li><a href="{{Request::url()}}?price=2">Từ 300.000 đ - 500.000 đ</a></li>
+            <li><a href="{{Request::url()}}?price=3">Từ 500.000 đ - 700.000 đ</a></li>
+            <li><a href="{{Request::url()}}?price=4">Từ 700.000 đ - 1.000.000 đ</a></li>
+            <li><a href="{{Request::url()}}?price=5">Từ 1.000.000 đ - 1.200.000 đ</a></li>
+            <li><a href="{{Request::url()}}?price=6">Từ 1.200.000 đ - 1.500.000 đ</a></li>
+            <li><a href="{{Request::url()}}?price=7">Từ 1.500.000 đ - 2.000.000 đ</a></li>
             <li><a href="{{Request::url()}}?price=8">Lớn hơn 2.000.000 đ</a></li>
              
             

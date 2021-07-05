@@ -66,10 +66,10 @@
                                                 <div class="price-box clearfix">			
                                                     
                                                     <span class="price product-price-old">
-                                                        {{number_format($sps->gia)}}đ			
+                                                        {{number_format($sps->gia,0,",",".")}} đ			
                                                     </span>		
                                                         
-                                                    <span class="price product-price">{{number_format($sps->gia*((100-$sps->giam_gia)/100))}}đ</span>
+                                                    <span class="price product-price">{{number_format($sps->gia*((100-$sps->giam_gia)/100),0,",",".")}} đ</span>
                                                 </div>		
                                                 
                                                 
@@ -198,20 +198,20 @@
 
                                 @if($chitietsanpham->giam_gia>0)
                                     <span class="special-price">
-                                        <span class="price product-price">{{number_format($chitietsanpham->gia*((100-$chitietsanpham->giam_gia)/100))}}đ</span>
+                                        <span class="price product-price">{{number_format($chitietsanpham->gia*((100-$chitietsanpham->giam_gia)/100),0,",",".")}} đ</span>
                                         <meta itemprop="priceCurrency" content="VND">
                                     </span>
                                     <span class="old-price">
                                         <span class="price" itemprop="priceSpecification">
                                             
-                                        {{number_format($chitietsanpham->gia)}}đ
+                                        {{number_format($chitietsanpham->gia,0,",",".")}} đ
                                             
                                         </span>
                                         <meta itemprop="priceCurrency" content="VND">
                                     </span>
                                 @else
                                     <span class="special-price">
-                                        <span class="price product-price" itemprop="price">{{number_format($chitietsanpham->gia)}}đ</span>
+                                        <span class="price product-price" itemprop="price">{{number_format($chitietsanpham->gia,0,",",".")}} đ</span>
                                         <meta itemprop="priceCurrency" content="VND">
                                     </span>
                                 @endif
