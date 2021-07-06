@@ -149,13 +149,13 @@
                                     
                                     <div class="item">
                                         <a>
-                                            @if (isset($chitietsanpham->anh_chi_tiet_sp))
+                                            <!-- @if (isset($chitietsanpham->anh_chi_tiet_sp))
                                                 @foreach ($chitietsanpham->anh_chi_tiet_sp as $img)
                                                     <div class="file-thumb position-relative d-inline-flex mx-2 my-2" style="width: 6rem">
                                                         <img data-img="{{ $img }}" src="{{ $img }}" alt="{{$chitietsanpham->ten_sp}}">
                                                     </div>
                                                 @endforeach
-                                            @endif
+                                            @endif -->
                                             
                                         </a>
                                     </div>
