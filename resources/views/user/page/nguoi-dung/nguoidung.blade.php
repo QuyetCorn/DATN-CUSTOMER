@@ -46,7 +46,7 @@
                    
                         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 details-pro">
                             <div class="title_pr">
-                                <h1 class="title-product" itemprop="name">{{$user->ho_ten}}</h1>
+                                <h1 class="title-product" itemprop="name">{{$user->ten}}</h1>
                                 
                                 <div class="reviews_details_product">
                                     <div class="sapo-product-reviews-badge sapo-product-reviews-badge-detail" data-id="9724997"></div>
@@ -268,7 +268,7 @@
         {
             $.get('/edits_khachhang/'+id, function(users){
                 $('#id').val(users.id);
-                $('#name').val(users.ho_ten);
+                $('#name').val(users.ten);
                 $('#phone').val(users.sdt);
                 $('#lat').val(users.dia_chi);
                 $('#type').val(users.gioi_tinh);
@@ -300,7 +300,7 @@
                 },
                 success: function(response) {
                     $('#id').text(response.id);
-                    $('#name').text(response.ho_ten);
+                    $('#name').text(response.ten);
                     $('#phone').text(response.sdt);
                     $('#lat').text(response.dia_chi);
                     $('#type').text(response.gioi_tinh);

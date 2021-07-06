@@ -17,7 +17,7 @@ class CreateKhachHangTable extends Migration
             $table->id();
             $table->string('email', 30);
             $table->string('password');
-            $table->string('ho_ten', 50);
+            $table->string('ten', 50);
             $table->string('sdt', 10);
             $table->string('dia_chi', 100)->nullable();
             $table->string('gioi_tinh', 100)->nullable();

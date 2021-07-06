@@ -21,4 +21,12 @@ class SanPham extends Model
             'id' // trường mà chúng ta muốn liên kết ở bảng trung gian.
         );
     }
+
+    public function getAnhSpAttribute() {
+        if (empty($this->hinh_anh)) {
+            return null;
+        }
+
+        return request()->getSchemeAndHttpHost(). '/anh_sp/'. $this->hinh_anh;
+    }
 }

@@ -67,7 +67,7 @@ class KhachHangController extends Controller
 
     public function edit_khachhang(request $request){
         $user = khachhang::find( $request->id);
-        $user->ho_ten=$request->name;
+        $user->ten=$request->name;
         $user->sdt=$request->phone;
         $user->dia_chi=$request->lat;
         $user->gioi_tinh= $request->type;

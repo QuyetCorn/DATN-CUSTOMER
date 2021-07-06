@@ -149,7 +149,14 @@
                                     
                                     <div class="item">
                                         <a>
-                                            <img data-img="assets/images/{{$chitietsanpham->hinh_anh}}" src="assets/images/{{$chitietsanpham->hinh_anh}}" alt="{{$chitietsanpham->ten_sp}}">
+                                            @if (isset($chitietsanpham->anh_chi_tiet_sp))
+                                                @foreach ($chitietsanpham->anh_chi_tiet_sp as $img)
+                                                    <div class="file-thumb position-relative d-inline-flex mx-2 my-2" style="width: 6rem">
+                                                        <img data-img="{{ $img }}" src="{{ $img }}" alt="{{$chitietsanpham->ten_sp}}">
+                                                    </div>
+                                                @endforeach
+                                            @endif
+                                            
                                         </a>
                                     </div>
                                     
@@ -329,10 +336,10 @@
                                             - Chất Liệu: &nbsp;{{$chitietsanpham->chat_lieu}}<br />
                                             - Số Ngăn: &nbsp;{{$chitietsanpham->so_ngan}}<br />
                                             - Màu: &nbsp;{{$chitietsanpham->mau_sac}}<br />
-                                            - Khối Lượng: &nbsp;{{$chitietsanpham->khoi_luong}}<br />
-                                            - Kích Thước (DàixRộngxCao): &nbsp;{{$chitietsanpham->kich_thuoc}}<br />
-                                            - Tải Trọng: &nbsp;{{$chitietsanpham->tai_trong}}<br>
-                                            - Ngăn laptop: &nbsp;{{$chitietsanpham->ngan}}</p>
+                                            - Khối Lượng: &nbsp;{{$chitietsanpham->khoi_luong}} Kg<br />
+                                            - Kích Thước (DàixRộngxCao): &nbsp;{{$chitietsanpham->kich_thuoc}} cm<br />
+                                            - Tải Trọng: &nbsp;{{$chitietsanpham->tai_trong}} Kg<br>
+                                            - Ngăn laptop: &nbsp;{{$chitietsanpham->ngan_lap}} inch</p>
                                         <p style="text-align: center;">&nbsp;</p>
                                         <p style="text-align: center;">&nbsp;</p>
                                         <iframe width="810" height="480" src="https://www.youtube.com/embed/Gv5a70e6FDk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

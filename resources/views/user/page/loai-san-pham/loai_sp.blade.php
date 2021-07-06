@@ -11,7 +11,7 @@
                         <a itemprop="url" href="trangchu" ><span >Trang chủ</span></a>						
                         <span class="mr_lr"> <i class="fa fa-angle-right"></i> </span>
                     </li>
-                    <li><strong ><span >{{$loaisp->ten_loai}}</span></strong></li>
+                    <li><strong ><span >{{$loaisp->ten}}</span></strong></li>
                     
 
                     @if(Session::get('message'))

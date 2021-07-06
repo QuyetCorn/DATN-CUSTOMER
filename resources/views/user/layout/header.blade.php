@@ -57,7 +57,7 @@
                                                 <div class="log">
                                                     <ul>
                                                     @if(Auth::check())
-                                                    <li><a class="text-color"href="{{route('nguoidung',Auth::user()->id)}}">{{Auth::user()->ho_ten}}</a>
+                                                    <li><a class="text-color"href="{{route('nguoidung',Auth::user()->id)}}">{{Auth::user()->ten}}</a>
                                                     <li><a class="text-color" href="dangxuat" title="Đăng xuất">Đăng Xuất</a>
                                                     @else
                                                     <li><a class="text-color" href="dangnhapdangky" title="Đăng nhập">Đăng nhập hoặc Đăng ký</a>
@@ -161,7 +161,7 @@
     
                                 @foreach($loai_sp as $loaisp)
                                 <li class="nav_item lv1">
-                                    <a style="font-weight: bold;" href="{{route('loai_sp',$loaisp->id)}}" title="{{$loaisp->ten_loai}}">{{$loaisp->ten_loai}}</a>
+                                    <a style="font-weight: bold;" href="{{route('loai_sp',$loaisp->id)}}" title="{{$loaisp->ten}}">{{$loaisp->ten}}</a>
                                 </li>
                                 @endforeach
                             </ul>
@@ -198,7 +198,7 @@
                                     @foreach($loai_sp as $loaisp)
                                         <li class="nav_item lv1">
                                         
-                                            <a class="nav-link" href="{{route('loai_sp',$loaisp->id)}} title="{{$loaisp->ten_loai}}">{{$loaisp->ten_loai}}</a>
+                                            <a class="nav-link" href="{{route('loai_sp',$loaisp->id)}} title="{{$loaisp->ten}}">{{$loaisp->ten}}</a>
                                         
                                         </li>
                                     @endforeach

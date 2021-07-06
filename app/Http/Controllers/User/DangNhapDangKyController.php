@@ -48,7 +48,7 @@ class DangNhapDangKyController extends Controller
             );
 
         $user = new khachhang;
-        $user->ho_ten = $request->txtname;
+        $user->ten = $request->txtname;
         $user->email = $request->txtemail;
         $user->sdt = $request->txtphone;
         $user->password = Hash::make($request->txtpassword);

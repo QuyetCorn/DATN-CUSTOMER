@@ -27,7 +27,7 @@ class CreateChiTietSPTable extends Migration
             $table->string('khoi_luong', 100)->nullable();
             $table->string('kich_thuoc', 100)->nullable();
             $table->string('tai_trong', 100)->nullable();
-            $table->string('ngan', 100)->nullable();
+            $table->string('ngan_lap', 100)->nullable();
             $table->integer('so_luong')->default(0);
             $table->string('giam_gia',10)->default(0);
             // $table->integer('new',1)->default(0);
