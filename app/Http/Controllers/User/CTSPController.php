@@ -22,21 +22,6 @@ class CTSPController extends Controller
         $rating = DanhGia::where('chi_tiet_sp_id',$chitietsanpham->id)->avg('diem');
         $rating = round($rating);
 
-        if ( !empty($chitietsanpham)) {
-            if($files = $req->file('hinh_anh')) {
-                $images = [];
-                foreach ($files as $file) {
-                    $fileName = Upload::store($file, "anh_ctsp");
-                    $images[] = $fileName;
-                }
-                // $product->update(['hinh_anh' => Upload::store($files[0], "anh_sp")]);
-                $chitietsanpham->update(['hinh_anh' => $images]);
-            }
-
-            $status = "success";
-            $message = $this->msgStoreSuc;
-        }
-
         return view('user.page.san-pham.chitietsanpham',compact('chitietsanpham','sanphamtuongtu','loai_sp','sanphamsale','rating'));
     }
 

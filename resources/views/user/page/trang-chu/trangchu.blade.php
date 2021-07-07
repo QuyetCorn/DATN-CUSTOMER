@@ -230,9 +230,9 @@
                                                 <div class="product-box">
                                                     <div class="product-thumbnail">
                                                         @if($sp->giam_gia>0)
-                                                        <span class="sale_count"><span class="bf_">-
-                                                        {{$sp->giam_gia}}%
-                                                        </span></span>
+                                                            <span class="sale_count"><span class="bf_">-
+                                                                {{$sp->giam_gia}}%
+                                                            </span></span>
                                                         @endif
             
                                                         <a href="{{route('chitietsanpham',$sp->id)}}" class="image_link display_flex" data-images="assets/images/{{$sp->hinh_anh}}" title="{{$sp->ten_sp}}">
@@ -259,13 +259,18 @@
                 
                                                         <h3 class="product-name"><a class="text2line" href="{{route('chitietsanpham',$sp->id)}}" title="{{$sp->ten_sp}}">{{$sp->ten_sp}}</a></h3>
                 
-                
-                
+                                                        
                                                         <div class="price-box clearfix">
-                                                            <span class="price product-price-old">
-                                                                {{number_format($sp->gia,0,",",".")}} đ
-                                                            </span>
-                                                            <span class="price product-price">{{number_format($sp->gia*((100-$sp->giam_gia)/100),0,",",".")}} đ</span>
+                                                            @if($sp->giam_gia > 0)
+                                                                <span class="price product-price-old">
+                                                                    {{number_format($sp->gia,0,",",".")}} đ
+                                                                </span>
+                                                                <span class="price product-price">{{number_format($sp->gia*((100-$sp->giam_gia)/100),0,",",".")}} đ</span>
+                                                            @else
+                                                                <span class="price product-price">
+                                                                    {{number_format($sp->gia,0,",",".")}} đ
+                                                                </span>
+                                                            @endif
                                                         </div>
                 
                 

@@ -22,11 +22,4 @@ class SanPham extends Model
         );
     }
 
-    public function getAnhSpAttribute() {
-        if (empty($this->hinh_anh)) {
-            return null;
-        }
-
-        return request()->getSchemeAndHttpHost(). '/anh_sp/'. $this->hinh_anh;
-    }
 }

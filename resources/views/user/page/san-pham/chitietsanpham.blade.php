@@ -145,20 +145,14 @@
                                     </div>
                                 </div>
                                 
-                                <div id="gallery_02" class="col-sm-12 col-xs-12 col-lg-5 col-md-5 owl_width no-padding owl-carousel owl-theme thumbnail-product thumb_product_details not-dqowl" data-loop="false" data-lg-item="3" data-md-items="3" data-sm-items="3" data-xs-items="3" data-margin="10">
-                                    
-                                    <div class="item">
-                                        <a>
-                                            <!-- @if (isset($chitietsanpham->anh_chi_tiet_sp))
-                                                @foreach ($chitietsanpham->anh_chi_tiet_sp as $img)
-                                                    <div class="file-thumb position-relative d-inline-flex mx-2 my-2" style="width: 6rem">
-                                                        <img data-img="{{ $img }}" src="{{ $img }}" alt="{{$chitietsanpham->ten_sp}}">
-                                                    </div>
-                                                @endforeach
-                                            @endif -->
-                                            
-                                        </a>
-                                    </div>
+                                <!-- <div id="gallery_02" class="col-sm-12 col-xs-12 col-lg-5 col-md-5 owl_width no-padding owl-carousel owl-theme thumbnail-product thumb_product_details not-dqowl" data-loop="false" data-lg-item="3" data-md-items="3" data-sm-items="3" data-xs-items="3" data-margin="10">
+                                    @foreach($arr as $hinh_anh)
+                                        <div class="item">
+                                            <a>
+                                                <img data-img="anh_ctsp/{{$hinh_anh}}" src="anh_ctsp/{{$hinh_anh}}" alt="{{$hinh_anh}}">
+                                            </a>
+                                        </div>
+                                    @endforeach -->
                                     
                                     <!-- <div class="item">
                                         <a href="#" data-image="https://bizweb.dktcdn.net/100/286/794/products/2-3.jpg?v=1517327927920" data-zoom-image="//bizweb.dktcdn.net/thumb/1024x1024/100/286/794/products/2-3.jpg?v=1517327927920">
@@ -447,12 +441,12 @@
                                                     @if($sp->giam_gia>0)
                                                     <div class="price-box clearfix">			
                                                         <span class="price product-price-old">
-                                                        {{number_format($sp->gia)}}đ		
+                                                        {{number_format($sp->gia,0,",",".")}} đ		
                                                         </span>		
-                                                        <span class="price product-price">{{number_format($sp->gia*((100-$sp->giam_gia)/100))}}đ</span>
+                                                        <span class="price product-price">{{number_format($sp->gia*((100-$sp->giam_gia)/100),0,",",".")}} đ</span>
                                                     </div>
                                                     @else
-                                                    <span class="price product-price">{{number_format($sp->gia)}}đ</span>
+                                                    <span class="price product-price">{{number_format($sp->gia,0,",",".")}} đ</span>
                                                     @endif
 
                                 
